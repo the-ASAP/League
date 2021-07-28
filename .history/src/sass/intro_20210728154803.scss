@@ -1,0 +1,46 @@
+.intro__image {
+    margin-top: 2.5rem;
+    background: url(../img/forest.png) no-repeat;
+    width: 100%;
+    height: 29.25rem;
+    object-fit: cover;
+}
+
+
+.desc__wrapper {
+    margin-top: 3.9375rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.desc__block {
+    display: flex;
+    justify-content: center;
+}
+
+.desc__icon {
+    margin-right: 2.375rem;
+}
+
+.desc__info {
+    width: 16.875rem;
+}
+
+.desc__subtitle {
+    font-family: Inter;
+    font-style: medium;
+    font-size: 1.125rem;
+    line-height: 1.19;
+    color: #27AE60;
+}
+
+.desc__text {
+    font-family: Inter;
+    font-style: Medium;
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    line-height: 1.12;
+    
+    color: #4F4F4F;
+    margin-top: 0.5625rem;
+}

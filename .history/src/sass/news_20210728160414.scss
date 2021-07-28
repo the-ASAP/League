@@ -1,0 +1,24 @@
+.news {
+    margin-top: 5.9375rem;
+    font-family: Inter;
+    font-style: Medium;
+    font-size: 2.25rem;
+
+    color: #4f4f4f;
+}
+
+.news__content {
+    display: flex;
+}
+.post {
+    background: url(../img/post.png);
+    width: 27.0625rem;
+    height: 18.75rem;
+    position: relative;
+}
+
+.post__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
