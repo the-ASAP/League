@@ -24,15 +24,23 @@
   position: relative;
 }
 
+.post__buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
 .post__category {
-  height: 1.4375rem;
+  margin-top: 20px;
+  height: 29px;
   background-color: #27AE60;
   padding: 0.1875rem 0.75rem;
-  margin-left: 1.25rem;
   border-radius: 0.25rem;
+  font-family: Golos;
   color: #fff;
   font-size: 0.875rem;
-  line-height: 1.37;
+  line-height: 1.4375rem;
 }
 
 .post__title {
@@ -59,6 +67,7 @@
 }
 
 .post__number {
+  font-family: Golos;
   font-size: 1rem;
   line-height: 1.4375rem;
   letter-spacing: -1.5%;
@@ -68,6 +77,7 @@
 }
 
 .post__date {
+  font-family: Golos;
   font-size: 1rem;
   line-height: 1.4375rem;
   letter-spacing: -1.5%;
