@@ -1,0 +1,9 @@
+@import 'mixins';
+
+.social {
+
+}
+
+.social__title {
+    @include h2;
+}

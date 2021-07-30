@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .header__container {
   margin-top: 2.1875rem;
   width: 100%;
@@ -185,15 +187,23 @@
   margin-top: 0.5625rem;
 }
 
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
 .news {
   margin-top: 5.9375rem;
 }
 
 .news__title {
   font-family: Inter;
+  font-style: normal;
   font-weight: 500;
   font-size: 2.25rem;
-  color: #4f4f4f;
+  line-height: 1.22;
+  color: #4F4F4F;
 }
 
 .news__content {
@@ -310,16 +320,23 @@
   margin-right: 1.4375rem;
 }
 
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
 .analytics {
   margin-top: 6.25rem;
 }
 
 .analytics__title {
   font-family: Inter;
+  font-style: normal;
   font-weight: 500;
   font-size: 2.25rem;
-  line-height: 2.75rem;
-  color: #4f4f4f;
+  line-height: 1.22;
+  color: #4F4F4F;
 }
 
 .analytics__info {
@@ -333,4 +350,508 @@
   height: 34.375rem;
   background-color: #f2f2f2;
   border-radius: 0.75rem;
+}
+
+.praph__title {
+  max-width: 33.25rem;
+  margin: 28px 0 0 37px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: #333333;
+}
+
+.materials {
+  width: 26.9375rem;
+  height: 34.375rem;
+  margin-left: 1.375rem;
+  background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
+  border-radius: 0.75rem;
+  position: relative;
+}
+
+.materials__picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.5;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.materials__info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.625rem 2.75rem;
+}
+
+.materials__title {
+  max-width: 272px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #F2F2F2;
+}
+
+.company {
+  display: flex;
+}
+
+.company__title {
+  margin-left: 0.3125rem;
+  max-width: 9.5625rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.19;
+  /* or 119% */
+  letter-spacing: -1.5px;
+  /* Gray 6 */
+  color: #F2F2F2;
+}
+
+.notes {
+  margin-top: 2rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox + .checkbox {
+  margin-top: 0.875rem;
+}
+
+.checkbox__input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox__input:checked {
+  border: none;
+}
+
+.color_green:checked {
+  background-color: #95B403;
+}
+
+.color_violet:checked {
+  background-color: #6C6AE0;
+}
+
+.color_pink:checked {
+  background-color: #C05394;
+}
+
+.color_blue:checked {
+  background-color: #48BCED;
+}
+
+.color_yellow:checked {
+  background-color: #BDAD1E;
+}
+
+.checkbox__input:checked:after {
+  content: "\2714";
+  color: #fff;
+}
+
+.checkbox__text {
+  margin-left: 0.75rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: #333333;
+}
+
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
+.association {
+  margin-top: 6.25rem;
+}
+
+.association__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 1.22;
+  color: #4F4F4F;
+}
+
+.positions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.875rem;
+}
+
+.position {
+  width: 32%;
+  height: 18.125rem;
+  border-radius: 0.75rem;
+  background-color: #F2F2F2;
+  margin-bottom: 1.25rem;
+}
+
+.position:first-child {
+  background-color: #39AD46;
+}
+
+.position:first-child h3 {
+  color: #fff;
+}
+
+.position:nth-child(3n+2) {
+  margin: 0 2%;
+}
+
+.position__icon {
+  margin: 2.3125rem 0 0 2.4375rem;
+}
+
+.position__text {
+  max-width: 13.125rem;
+  margin-top: 4.625rem;
+  margin-left: 2.4375rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #4f4f4f;
+}
+
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
+.directory {
+  margin-top: 6.25rem;
+}
+
+.directory__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 1.22;
+  color: #4F4F4F;
+}
+
+.accordion__wrapper {
+  position: relative;
+}
+
+.accordion {
+  width: 100%;
+  height: 5.625rem;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  border-radius: 12px;
+  margin-top: 2.875rem;
+  padding: 0 2.3125rem 0 2.9375rem;
+}
+
+.accordion__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.625rem;
+  cursor: pointer;
+}
+
+.accordion + .accordion {
+  margin-top: 20px;
+}
+
+.accordion__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #4F4F4F;
+}
+
+.accordion__information {
+  max-width: 32.875rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: #333333;
+}
+
+.accordion__button {
+  margin-top: 0.875rem;
+  margin-bottom: 2.0625rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: #27AE60;
+}
+
+.directory__button {
+  background-color: #39AD46;
+  padding: 1.0625rem 2.3125rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.375rem;
+  position: relative;
+  margin: 3.75rem auto 0;
+}
+
+.directory__button span {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  color: #f2f2f2;
+  margin-right: 1.4375rem;
+}
+
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
+.meeting {
+  margin-top: 6.25rem;
+}
+
+.meeting__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 1.22;
+  color: #4F4F4F;
+}
+
+.meetingDate {
+  margin-top: 2.875rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.meetingDate__buttons {
+  display: flex;
+}
+
+.meetingDate__button {
+  height: 2.375rem;
+  border-radius: 1.625rem;
+  border: 1px solid #39AD46;
+  background-color: #fff;
+  margin-right: 0.625rem;
+  color: #39AD46;
+  padding: 0 1.5rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.44;
+  letter-spacing: -0.015em;
+}
+
+.meetingDate__readMore {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.44;
+  letter-spacing: -0.015em;
+  color: #4F4F4F;
+}
+
+.carousel__post {
+  margin-top: 2.5625rem;
+}
+
+.carousel__post .post {
+  width: 100%;
+}
+
+.carousel__post .post__wrapper {
+  width: 100%;
+  height: 18.75rem;
+  position: relative;
+}
+
+.carousel__post .post__image {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: -1;
+}
+
+.carousel__post .post__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
+}
+
+.carousel__post .post__category {
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 29px;
+  background-color: #27AE60;
+  padding: 0.1875rem 0.75rem;
+  border-radius: 0.25rem;
+  font-family: Golos;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.4375rem;
+}
+
+.carousel__post .post__title {
+  margin-top: 1.5625rem;
+  height: 7.6875rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  color: #4F4F4F;
+}
+
+.carousel__post .post__views {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel__post .post__count {
+  display: flex;
+  align-items: center;
+}
+
+.carousel__post .post__number {
+  font-family: Golos;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  letter-spacing: -1.5%;
+  color: #828282;
+  height: 100%;
+  margin-left: 0.375rem;
+}
+
+.carousel__post .post__date {
+  font-family: Golos;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  letter-spacing: -1.5%;
+  color: #828282;
+  height: 100%;
+  margin-right: 0.375rem;
+}
+
+.carousel__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.carousel__button {
+  width: 51px;
+  height: 51px;
+  border: 1px solid #39AD46;
+  border-radius: 50%;
+  margin-left: 0.875rem;
+}
+
+.nextButton {
+  background-color: #39AD46;
+}
+
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
+.social {
+  margin-top: 6.25rem;
+}
+
+.social__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 1.22;
+  color: #4F4F4F;
+}
+
+.carousel__cards {
+  margin: 2.5rem 0 4.375rem;
+}
+
+.card {
+  width: 27.0625rem;
+  height: 16.25rem;
+  border-radius: 0.75rem;
+  background: #F2F2F2;
+  padding: 1.875rem;
+}
+
+.card__subtitle {
+  margin-top: 1.5rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: #39AD46;
+}
+
+.card__text {
+  margin-top: 1rem;
+  max-width: 22.375rem;
+  font-family: Golos;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.44;
+  letter-spacing: -0.015em;
+  color: #4F4F4F;
 }

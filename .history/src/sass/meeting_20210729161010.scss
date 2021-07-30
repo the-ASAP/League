@@ -1,0 +1,53 @@
+@import 'mixins';
+
+.meeting {
+    margin-top: 6.25rem;
+}
+
+.meeting__title {
+    @include h2;
+}
+
+.meetingDate {
+    margin-top: 2.875rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.meetingDate__buttons {
+    display: flex;
+}
+
+.meetingDate__button {
+    height: 2.375rem;
+    border-radius: 1.625rem;
+
+    border: 1px solid #39AD46;
+    background-color: #fff;
+    margin-right: 0.625rem;
+
+    color: #39AD46;
+    padding: 0 1.5rem;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.44;
+
+    letter-spacing: -0.015em;
+}
+
+.meetingDate__readMore {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.44;
+    /* identical to box height, or 144% */
+
+    letter-spacing: -0.015em;
+
+    color: #4F4F4F;
+}

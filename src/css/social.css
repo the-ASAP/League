@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
+.social {
+  margin-top: 6.25rem;
+}
+
+.social__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 1.22;
+  color: #4F4F4F;
+}
+
+.carousel__cards {
+  margin: 2.5rem 0 4.375rem;
+}
+
+.card {
+  width: 27.0625rem;
+  height: 16.25rem;
+  border-radius: 0.75rem;
+  background: #F2F2F2;
+  padding: 1.875rem;
+}
+
+.card__subtitle {
+  margin-top: 1.5rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: #39AD46;
+}
+
+.card__text {
+  margin-top: 1rem;
+  max-width: 22.375rem;
+  font-family: Golos;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.44;
+  letter-spacing: -0.015em;
+  color: #4F4F4F;
+}

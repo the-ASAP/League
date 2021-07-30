@@ -1,12 +1,22 @@
+@charset "UTF-8";
+
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
 .news {
   margin-top: 5.9375rem;
 }
 
 .news__title {
   font-family: Inter;
+  font-style: normal;
   font-weight: 500;
   font-size: 2.25rem;
-  color: #4f4f4f;
+  line-height: 1.22;
+  color: #4F4F4F;
 }
 
 .news__content {

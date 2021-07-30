@@ -1,0 +1,156 @@
+@import 'mixins';
+
+.analytics {
+    margin-top: 6.25rem;
+}
+.analytics__title {
+    @include h2;
+}
+
+.analytics__info {
+    width: 100%;
+    display: flex;
+    margin-top: 2.875rem;
+}
+
+.graph {
+    width: 55.1875rem;
+    height: 34.375rem;
+    background-color: #f2f2f2;
+    border-radius: 0.75rem;
+}
+
+.praph__title {
+    max-width: 33.25rem;
+    margin: 28px 0 0 37px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.44;
+
+    color: #333333;
+}
+
+.materials {
+    width: 26.9375rem;
+    height: 34.375rem;
+    margin-left: 1.375rem;
+    background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%); 
+    border-radius: 0.75rem;
+    position: relative;
+}
+.materials__picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.materials__info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.625rem 2.75rem;
+}
+.materials__title {
+    max-width: 272px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.25;
+
+    color: #F2F2F2;
+}
+
+.company {
+    display: flex;
+}
+.company__title {
+    margin-left: 0.3125rem;
+    max-width: 9.5625rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.19;
+    /* or 119% */
+
+    letter-spacing: -1.5px;
+
+    /* Gray 6 */
+
+    color: #F2F2F2;
+}
+
+.notes {
+    margin-top: 2rem;
+}
+
+.checkbox {
+    display: flex;
+}
+
+.checkbox__input {
+    width: 20px;
+    height: 20px;
+    padding: 0.375rem;
+        
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.checkbox__input:checked {
+    background-color: #95B403;
+    border: none;
+}
+
+.checkbox__input:checked:after {
+    content: "\2714";
+    color: #fff;
+    width: 20px;
+    height: 20px;
+}
+// .checkbox__input[type=checkbox]:after {
+//     content: "";
+//     background-color: #95B403;
+//     display: inline-block;
+//     visibility: visible;
+//     border: 1px solid black;
+// }
+  
+// .checkbox__input[type=checkbox]:checked:after {
+//     content: "\2714";
+//     width: 20px;
+//     height: 20px;
+//     color: #fff;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
+
+.checkbox__text {
+    margin-left: 0.75rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.44;
+
+    color: #333333;
+}

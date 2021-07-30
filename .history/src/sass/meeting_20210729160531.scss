@@ -1,0 +1,16 @@
+@import 'mixins';
+
+.meeting {
+    margin-top: 6.25rem;
+}
+
+.meeting__title {
+    @include h2;
+}
+
+.meetingDate {
+    margin-top: 2.875rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
