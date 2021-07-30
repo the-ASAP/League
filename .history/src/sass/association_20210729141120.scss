@@ -1,0 +1,16 @@
+@import 'mixins';
+
+.association {
+    margin-top: 6.25rem;
+}
+.association__title {
+    @include h2;
+}
+
+.positions {
+    display: flex;
+    flex-wrap: wrap;
+}
+.position {
+    width: 32%;
+}

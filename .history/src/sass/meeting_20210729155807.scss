@@ -1,0 +1,9 @@
+@import 'mixins';
+
+.meeting {
+    marign-top: 100px;
+}
+
+.meeting__title {
+    @include h2;
+}

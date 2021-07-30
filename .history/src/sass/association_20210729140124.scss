@@ -1,0 +1,5 @@
+@import 'mixins';
+
+.association__title {
+    @include h2;
+}

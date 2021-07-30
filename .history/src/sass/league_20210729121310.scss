@@ -1,0 +1,13 @@
+@import 'header';
+@import 'intro';
+@import 'news';
+@import 'analytics';
+
+@mixin h2{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 12.2;
+    color: #4F4F4F;
+}

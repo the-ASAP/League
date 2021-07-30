@@ -1,0 +1,9 @@
+@import 'mixins';
+
+.directory {
+    margin-top: 6.25rem;
+}
+
+.directory__title {
+    @include h2;
+}

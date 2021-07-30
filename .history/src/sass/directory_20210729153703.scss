@@ -1,0 +1,48 @@
+@import 'mixins';
+
+.directory {
+    margin-top: 6.25rem;
+}
+
+.directory__title {
+    @include h2;
+}
+
+.accordion__wrapper {
+    position: relative;
+}
+
+.accordion {
+    width: 100%;
+    height: 5.625rem;
+    overflow: hidden;
+    background-color: gray;
+    
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    margin-top: 2.875rem;
+}
+
+.accordion__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.3125rem 0 2.9375rem;
+}
+
+
+.accordion + .accordion {
+    margin-top: 20px;
+}
+
+.accordion__title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.25;
+
+    color: #4F4F4F;
+}

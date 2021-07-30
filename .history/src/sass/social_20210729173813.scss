@@ -1,0 +1,16 @@
+@import 'mixins';
+
+.social {
+    margin-top: 6.25rem;
+}
+
+.social__title {
+    @include h2;
+}
+
+.card {
+    width: 27.0625rem;
+    height: 16.25rem;
+    border-radius: 0.75rem;
+    background: #F2F2F2;
+}

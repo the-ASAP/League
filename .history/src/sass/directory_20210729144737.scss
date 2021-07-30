@@ -1,0 +1,36 @@
+@import 'mixins';
+
+.directory {
+    margin-top: 6.25rem;
+}
+
+.directory__title {
+    @include h2;
+}
+
+.accordion {
+    width: 100%;
+    height: 5.625rem;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+}
+.accordion:after {
+    content: '+'; /* Unicode character for "plus" sign (+) */
+    color: #BDBDBD;
+    font-weight: 700;
+    font-size: 1.5rem;
+    float: right;
+}
+
+.accordion__title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.25;
+
+    color: #4F4F4F;
+}
