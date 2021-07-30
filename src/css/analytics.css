@@ -70,7 +70,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.625rem 2.75rem;
+  padding: 2.625rem 2.75rem 3.5rem;
 }
 
 .materials__title {
@@ -108,59 +108,60 @@
 .checkbox {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .checkbox + .checkbox {
   margin-top: 0.875rem;
 }
 
-.checkbox__input {
-  width: 20px;
-  height: 20px;
-  border: 1px solid black;
-  border-radius: 3px;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.checkbox__input:checked {
-  border: none;
-}
-
-.color_green:checked {
-  background-color: #95B403;
-}
-
-.color_violet:checked {
-  background-color: #6C6AE0;
-}
-
-.color_pink:checked {
-  background-color: #C05394;
-}
-
-.color_blue:checked {
-  background-color: #48BCED;
-}
-
-.color_yellow:checked {
-  background-color: #BDAD1E;
-}
-
-.checkbox__input:checked:after {
-  content: "\2714";
-  color: #fff;
-}
-
-.checkbox__text {
-  margin-left: 0.75rem;
+.customCheckbox + label {
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.44;
   color: #333333;
+  cursor: pointer;
+}
+
+.customCheckbox + label::before {
+  content: '';
+  display: inline-flex;
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #000;
+  border-radius: 0.1875rem;
+  margin-right: 0.75rem;
+  top: 0.1875rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.customCheckbox:checked + label::before {
+  background-color: #95B403;
+  border: 1px solid #95B403;
+  background-image: url("../img/icons/check.svg");
+}
+
+#input_2:checked + label::before {
+  background-color: #6C6AE0;
+  border: 1px solid #6C6AE0;
+}
+
+#input_3:checked + label::before,
+#input_6:checked + label::before {
+  background-color: #C05394;
+  border: 1px solid #C05394;
+}
+
+#input_4:checked + label::before {
+  background-color: #48BCED;
+  border: 1px solid #48BCED;
+}
+
+#input_5:checked + label::before {
+  background-color: #BDAD1E;
+  border: 1px solid #BDAD1E;
 }

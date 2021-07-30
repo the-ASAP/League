@@ -2,7 +2,8 @@ $('.accordion__main').click((event) => {
     const $accordion = $(event.currentTarget).parent()
 
     if ( $($accordion).hasClass('active') ) {
-        $($accordion).removeClass('active') 
+        // .slideToggle('slow', function() {}) 
+        $($accordion).removeClass('active')
         $($accordion).animate({
             height: '5.625rem',
         }, 500)

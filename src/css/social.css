@@ -39,6 +39,9 @@
   font-size: 1.125rem;
   line-height: 1.44;
   color: #39AD46;
+  width: fit-content;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #39AD46;
 }
 
 .card__text {
