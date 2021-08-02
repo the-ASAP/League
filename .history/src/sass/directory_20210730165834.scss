@@ -8,7 +8,9 @@
     @include h2;
 }
 
-
+.accordion__wrapper:first-child {
+    margin-top: 2.875rem;
+}
 
 .accordion__wrapper {
     position: relative;

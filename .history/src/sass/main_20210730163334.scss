@@ -57,6 +57,13 @@ ul {
     height: 100%;
 }
 
+.mobileWraper {
+    margin: 0 auto;
+    max-width: 25rem;
+    position: relative;
+    height: 100%;
+}
+
 a {
     color: $accent;
     display: inline-block;

@@ -1187,10 +1187,6 @@
   color: #4F4F4F;
 }
 
-.carousel__cards {
-  margin: 2.5rem 0 4.375rem;
-}
-
 .card {
   width: 27.0625rem;
   height: 16.25rem;
@@ -1222,6 +1218,10 @@
   line-height: 1.44;
   letter-spacing: -0.015em;
   color: #4F4F4F;
+}
+
+.carousel__social {
+  margin-top: 2.5rem;
 }
 
 .carouselSocial__buttons {
@@ -1502,7 +1502,7 @@ ul {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1340px;
+  max-width: 83.75rem;
   position: relative;
   height: 100%;
 }
@@ -1645,5 +1645,29 @@ input:-webkit-autofill:focus {
 @media (max-width: 1024px) {
   html {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 48rem) {
+  .wrapper {
+    max-width: 400px;
+  }
+
+  .header__container {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .header__language {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .header__search {
+    display: none;
   }
 }

@@ -19,10 +19,6 @@
   color: #4F4F4F;
 }
 
-.carousel__cards {
-  margin: 2.5rem 0 4.375rem;
-}
-
 .card {
   width: 27.0625rem;
   height: 16.25rem;
@@ -54,6 +50,10 @@
   line-height: 1.44;
   letter-spacing: -0.015em;
   color: #4F4F4F;
+}
+
+.carousel__social {
+  margin-top: 2.5rem;
 }
 
 .carouselSocial__buttons {
