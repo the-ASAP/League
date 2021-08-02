@@ -4,7 +4,7 @@
   }
 
   .analytics__info {
-    display: block;
+    flex-direction: column;
   }
 
   .graph {
@@ -19,6 +19,15 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #333;
+  }
+
+  .customCheckbox + label {
+    font-size: 0.875rem;
+    line-height: 1.64;
+  }
+
+  .checkbox + .checkbox {
+    margin-top: 1.5rem;
   }
 
   .materials {

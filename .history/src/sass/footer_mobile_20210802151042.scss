@@ -1,0 +1,46 @@
+@media (max-width: 48rem) {
+    .footer {
+        margin-top: 7.5rem;
+
+        padding: 3.125rem 1rem 0;
+    }
+    .footerInfo {
+        display: block;
+        padding-bottom: 77px;
+    }  
+    
+    .footerRefs__column {
+        width: 100%;
+    }
+
+    .footerInfo__mainInfo {
+        margin-top: 3.6875rem;
+    }
+
+    .footerInfo__mainInfo + .footerInfo__mainInfo {
+        margin-top: 1.125rem;
+    }
+
+    .footerForm {
+        margin-top: 3rem;
+    }
+    .footerForm__inputText {
+        width: 100%;
+    }
+
+    .footerRefs {
+        display: block;
+    }
+
+    .footerRefs__text {
+        display: none;
+    }
+
+    .footerRefs__subtitle + .footerRefs__text {
+        margin-top: 0;
+    }
+    
+    .footerRefs__text + .footerRefs__subtitle {
+        margin-top: 0;
+    }
+}

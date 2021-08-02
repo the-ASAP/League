@@ -1,8 +1,12 @@
+let itemsInCarousel = 3
+
+$(window).width() <= 768 ? itemsInCarousel = 1 : itemsInCarousel = 3 
+
 const carousel__meeting = $('.carousel__meeting')
 const carousel__social = $('.carousel__social')
 
 carousel__meeting.owlCarousel({
-    items: 3,
+    items: itemsInCarousel,
     margin: 20,
     loop: true,
     nav: true,
@@ -23,7 +27,7 @@ carousel__meeting.owlCarousel({
 })
 
 carousel__social.owlCarousel({
-    items: 3,
+    items: itemsInCarousel,
     margin: 20,
     loop: true,
     nav: true,

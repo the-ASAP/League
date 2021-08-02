@@ -1,0 +1,27 @@
+@media (max-width: 48rem) {
+    .association__title {
+        margin-top: 5.5rem;
+    }
+
+    .positions {
+        display: block;
+        margin-top: 2.1875rem;
+    }
+
+    .position {
+        width: 100%;
+        height: 14.375rem;
+    }
+    .position:nth-child(3n+2) {
+        margin: 0;
+    }
+    .position__icon {
+        margin: 1.6875rem 0 0 1.9375rem;
+
+        width: 5rem;
+        height: 5rem;
+    }
+    .position__text {
+        margin-top: 0.25rem;
+    }
+}

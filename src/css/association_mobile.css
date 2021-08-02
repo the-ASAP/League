@@ -24,6 +24,9 @@
   }
 
   .position__text {
+    max-width: 10.9375rem;
     margin-top: 0.25rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
   }
 }

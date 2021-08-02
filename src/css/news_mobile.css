@@ -30,7 +30,13 @@
     margin-top: 1.875rem;
   }
 
+  .post__title {
+    padding-bottom: 2.8125rem;
+    height: 100%;
+  }
+
   .news__button {
+    padding: 1.0625rem 1.25rem;
     margin-top: 4.0625rem;
     width: 100%;
     justify-content: center;
@@ -39,5 +45,7 @@
   .news__button span {
     font-weight: 500;
     font-size: 0.875rem;
+    width: 100%;
+    margin: 0;
   }
 }

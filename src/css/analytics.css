@@ -23,6 +23,7 @@
   width: 100%;
   display: flex;
   margin-top: 2.875rem;
+  flex-wrap: wrap;
 }
 
 .graph {
@@ -177,7 +178,7 @@
   }
 
   .analytics__info {
-    display: block;
+    flex-direction: column;
   }
 
   .graph {
@@ -192,6 +193,15 @@
     font-size: 1rem;
     line-height: 1.5;
     color: #333;
+  }
+
+  .customCheckbox + label {
+    font-size: 0.875rem;
+    line-height: 1.64;
+  }
+
+  .checkbox + .checkbox {
+    margin-top: 1.5rem;
   }
 
   .materials {
@@ -226,7 +236,7 @@
   .analytics__title {
     font-weight: 500;
     font-size: 1.875rem;
-    line-height: 1.13;
+    line-height: 1.4375rem;
     color: #333;
   }
 }

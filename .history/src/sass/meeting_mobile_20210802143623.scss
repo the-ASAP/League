@@ -1,0 +1,10 @@
+@media (max-width: 48rem) {
+    .meetingDate {
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .meetingDate__readMore {
+        display: none;
+    }
+}

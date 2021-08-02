@@ -1,0 +1,26 @@
+@media (max-width: 48rem) {
+    .footer {
+        margin-top: 7.5rem;
+
+        padding: 3.125rem 1rem 0;
+    }
+    .footerInfo {
+        display: block;
+    }  
+    
+    .footerRefs__column {
+        width: 100%;
+    }
+
+    .footerInfo__mainInfo {
+        margin-top: 3.6875rem;
+    }
+
+    .footerInfo__mainInfo + .footerInfo__mainInfo {
+        margin-top: 1.125rem;
+    }
+
+    .footerForm {
+        margin-top: 3rem;
+    }
+}

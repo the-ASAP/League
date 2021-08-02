@@ -1,0 +1,27 @@
+@media (max-width: 48rem) {
+    .directory {
+        margin-top: 8.125rem;
+    }
+    .accordion__wrapper {
+        margin-top: 2.25rem;
+    }
+    .accordion__wrapper + .accordion__wrapper {
+        margin-top: 1.25rem;
+    }
+    .accordion {
+        margin: 0;
+    }
+    
+    .directory__button {
+        margin-top: 4.0625rem;
+        width: 100%;
+        justify-content: center;
+
+        span {
+            font-weight: 500;
+            font-size: 0.875rem;
+            width: 100%;
+            margin: 0
+        }
+    }
+}

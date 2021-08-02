@@ -1,0 +1,20 @@
+@media (max-width: 48rem) {
+    .social {
+        margin-top: 7.5rem;
+    }
+    .carouselSocial__buttons {
+        margin-top: 2.5rem;
+    }
+    
+    .card__subtitle:first-child {
+        max-width: 12rem;
+        background-color: red;
+    }
+
+    .card__text {
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 1.43;
+    }
+}
