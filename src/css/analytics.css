@@ -32,7 +32,7 @@
   border-radius: 0.75rem;
 }
 
-.praph__title {
+.graph__title {
   max-width: 33.25rem;
   margin: 28px 0 0 37px;
   font-family: Inter;
@@ -52,7 +52,8 @@
   position: relative;
 }
 
-.materials__picture {
+.materials__picture,
+.materials__picture_mobile {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -62,6 +63,10 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.materials__picture_mobile {
+  display: none;
 }
 
 .materials__info {
@@ -164,4 +169,64 @@
 #input_5:checked + label::before {
   background-color: #BDAD1E;
   border: 1px solid #BDAD1E;
+}
+
+@media (max-width: 48rem) {
+  .analytics {
+    margin-top: 6.9375rem;
+  }
+
+  .analytics__info {
+    display: block;
+  }
+
+  .graph {
+    width: 100%;
+    height: 36.875rem;
+  }
+
+  .graph__title {
+    max-width: 100%;
+    margin: 1.25rem 0.75rem 0 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  .materials {
+    order: 1;
+    width: 100%;
+    height: 14.375rem;
+    margin: 3.4375rem 0 0;
+  }
+
+  .materials__picture {
+    display: none;
+  }
+
+  .materials__picture_mobile {
+    display: block;
+  }
+
+  .materials__info {
+    padding: 1.25rem 1.5625rem 1.5rem;
+  }
+
+  .materials__title {
+    max-width: 11.0625rem;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .notes {
+    margin-top: 3.125rem;
+  }
+
+  .analytics__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.13;
+    color: #333;
+  }
 }

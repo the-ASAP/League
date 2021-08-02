@@ -1,23 +1,36 @@
 @media (max-width: 48rem) {
-  .wrapper {
-    max-width: 400px;
-  }
-
   .header__container {
     margin-top: 2rem;
     width: 100%;
-    padding: 0 1rem;
+  }
+
+  .header__logo {
+    order: -1;
+  }
+
+  .header__logo img {
+    width: 9.9375rem;
+    height: 3.1875rem;
+  }
+
+  .header__buttons {
+    display: flex;
   }
 
   .header__language {
     display: none;
   }
 
-  .navbar {
-    display: none;
+  .header__search {
+    display: block;
   }
 
-  .header__search {
+  .header__menu_mobile {
+    display: block;
+    margin-left: 0.625rem;
+  }
+
+  .navbar {
     display: none;
   }
 }

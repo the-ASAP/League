@@ -23,7 +23,7 @@
   margin-top: 2.875rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 }
 
@@ -175,4 +175,13 @@
 
 .carouselMeeting__button:hover svg path {
   fill: #f2f2f2;
+}
+
+@media (max-width: 48rem) {
+  .meeting__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.13;
+    color: #333;
+  }
 }

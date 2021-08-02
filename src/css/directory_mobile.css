@@ -1,0 +1,17 @@
+@media (max-width: 48rem) {
+  .directory {
+    margin-top: 8.125rem;
+  }
+
+  .accordion__wrapper {
+    margin-top: 2.25rem;
+  }
+
+  .accordion__wrapper + .accordion__wrapper {
+    margin-top: 1.25rem;
+  }
+
+  .accordion {
+    margin: 0;
+  }
+}

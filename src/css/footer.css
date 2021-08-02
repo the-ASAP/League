@@ -16,19 +16,15 @@
 .footerInfo {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 3.5625rem;
   border-bottom: 1px solid #F2F2F2;
 }
 
-.footerInfo__logo,
-.footerInfo__mainInfo,
-.footerForm {
-  width: calc(100% / 4);
-}
-
 .footerInfo__logo {
   display: flex;
+  width: 20%;
 }
 
 .footerInfo__title {
@@ -51,11 +47,16 @@
   line-height: 1.15;
   letter-spacing: -0.015em;
   color: #F2F2F2;
+  width: 20%;
 }
 
 .form__email {
   display: flex;
   margin-top: 0.9375rem;
+}
+
+.footerForm {
+  width: 20%;
 }
 
 .footerForm__title {
@@ -96,12 +97,13 @@
 .footerRefs {
   margin-top: 2.1875rem;
   display: flex;
+  justify-content: space-between;
   padding-bottom: 3.25rem;
   border-bottom: 1px solid #F2F2F2;
 }
 
 .footerRefs__column {
-  width: calc(100% / 4);
+  width: 20%;
 }
 
 .footerRefs__subtitle {

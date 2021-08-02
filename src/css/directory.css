@@ -111,3 +111,28 @@
   color: #F2F2F2;
   margin-right: 1.4375rem;
 }
+
+@media (max-width: 48rem) {
+  .directory {
+    margin-top: 8.125rem;
+  }
+
+  .accordion__wrapper {
+    margin-top: 2.25rem;
+  }
+
+  .accordion__wrapper + .accordion__wrapper {
+    margin-top: 1.25rem;
+  }
+
+  .accordion {
+    margin: 0;
+  }
+
+  .directory__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.13;
+    color: #333;
+  }
+}

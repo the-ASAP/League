@@ -1,0 +1,38 @@
+@media (max-width: 48rem) {
+    .header__container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .header__logo_mobile {
+        display: block;
+        order: -1;
+    }
+
+    .header__buttons {
+        display: flex;
+    }
+
+    .header__language {
+        display: none;
+    }
+    .header__search {
+        display: block;
+    }
+    
+    .header__menu_mobile {
+        display: block;
+        margin-left: 0.625rem;
+    }
+
+
+    .navbar {
+        display: none;
+    }
+
+
+}

@@ -1,0 +1,31 @@
+@media (max-width: 48rem) {
+    .wrapper {
+        max-width: 400px;
+    }
+
+    .header__container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .header__logo {
+        order: -1;
+    }
+    .header__language {
+        display: none;
+    }
+    .header__search {
+        display: block;
+    }
+    
+    .header__menu_mobile {
+        display: block;
+    }
+
+
+    .navbar {
+        display: none;
+    }
+
+
+}
