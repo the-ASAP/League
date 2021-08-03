@@ -224,7 +224,7 @@
 
 .intro__button {
   margin-top: 3.375rem;
-  padding: 19px 40px 15px;
+  height: 3.5625rem;
   background-color: #39AD46;
   border-radius: 0.375rem;
   color: #f2f2f2;
@@ -264,7 +264,7 @@
 }
 
 .desc__info {
-  width: 16.875rem;
+  width: 100%;
 }
 
 .desc__subtitle {
@@ -1070,9 +1070,9 @@
 }
 
 .carousel__meeting .post__category {
-  margin-top: 20px;
-  margin-left: 20px;
-  height: 29px;
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
+  height: 1.8125rem;
   background-color: #27AE60;
   padding: 0.1875rem 0.75rem;
   border-radius: 0.25rem;
@@ -1393,10 +1393,12 @@
   padding: 0.625rem;
   color: #F2F2F2;
   background-color: #39AD46;
+  opacity: 0.6;
 }
 
 .footerForm__inputText::placeholder {
   color: #f2f2f2;
+  opacity: 0.6;
 }
 
 .footerForm__inputSubmit {
@@ -1412,6 +1414,7 @@
   background-position: center;
   font-size: 0;
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .footerRefs {
@@ -1703,7 +1706,7 @@ input:-webkit-autofill:focus {
   }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .header__container {
     margin-top: 2rem;
     width: 100%;
@@ -1770,7 +1773,7 @@ input:-webkit-autofill:focus {
   }
 
   .intro__infoBlock {
-    margin-top: 0.375rem;
+    margin-top: 15px;
   }
 
   .intro__text {
@@ -1821,6 +1824,7 @@ input:-webkit-autofill:focus {
 
   .desc__text {
     line-height: 1.64;
+    width: 100%;
   }
 
   .news {
@@ -1857,6 +1861,18 @@ input:-webkit-autofill:focus {
   .post__title {
     padding-bottom: 2.8125rem;
     height: 100%;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .post__category {
+    margin: 10px 0 0 10px;
+  }
+
+  .post__number,
+  .post__date {
+    font-size: 12px;
+    line-height: 23px;
   }
 
   .news__button {
@@ -1871,20 +1887,6 @@ input:-webkit-autofill:focus {
     font-size: 0.875rem;
     width: 100%;
     margin: 0;
-  }
-
-  .news__title {
-    font-weight: 500;
-    font-size: 1.875rem;
-    line-height: 1.4375rem;
-    color: #333;
-  }
-
-  .news__title_mobile {
-    font-weight: 500;
-    font-size: 1.875rem;
-    line-height: 1.4375rem;
-    color: #333;
   }
 
   .analytics {
@@ -1912,6 +1914,11 @@ input:-webkit-autofill:focus {
   .customCheckbox + label {
     font-size: 0.875rem;
     line-height: 1.64;
+    display: flex;
+  }
+
+  .customCheckbox + label::before {
+    flex-shrink: 0;
   }
 
   .checkbox + .checkbox {
@@ -1947,13 +1954,6 @@ input:-webkit-autofill:focus {
     margin-top: 3.125rem;
   }
 
-  .analytics__title {
-    font-weight: 500;
-    font-size: 1.875rem;
-    line-height: 1.4375rem;
-    color: #333;
-  }
-
   .association__title {
     margin-top: 5.5rem;
   }
@@ -1983,13 +1983,6 @@ input:-webkit-autofill:focus {
     margin-top: 0.25rem;
     font-size: 1.25rem;
     line-height: 1.3;
-  }
-
-  .association__title {
-    font-weight: 500;
-    font-size: 1.875rem;
-    line-height: 1.4375rem;
-    color: #333;
   }
 
   .directory {
@@ -2030,7 +2023,7 @@ input:-webkit-autofill:focus {
 
   .directory__button {
     padding: 1.0625rem 1.25rem;
-    margin-top: 4.0625rem;
+    margin-top: 40px;
     width: 100%;
     justify-content: center;
   }
@@ -2040,13 +2033,6 @@ input:-webkit-autofill:focus {
     font-size: 0.875rem;
     width: 100%;
     margin: 0;
-  }
-
-  .directory__title {
-    font-weight: 500;
-    font-size: 1.875rem;
-    line-height: 1.4375rem;
-    color: #333;
   }
 
   .meetingDate {
@@ -2070,6 +2056,30 @@ input:-webkit-autofill:focus {
     margin-top: 2.8125rem;
   }
 
+  .carousel__meeting .post {
+    width: 334px;
+  }
+
+  .carousel__meeting .post__category {
+    margin-right: 10px;
+  }
+
+  .carousel__meeting .post__category {
+    margin: 10px 0 0 10px;
+  }
+
+  .carousel__meeting .post__title {
+    height: 100%;
+    margin-top: 22px;
+    padding-bottom: 45px;
+  }
+
+  .carousel__meeting .post__number,
+  .carousel__meeting .post__date {
+    font-size: 12px;
+    line-height: 23px;
+  }
+
   .carouselMeeting__buttons {
     margin-top: 4.0625rem;
   }
@@ -2088,33 +2098,28 @@ input:-webkit-autofill:focus {
     margin: 0;
   }
 
-  .meeting__title {
-    font-weight: 500;
-    font-size: 1.875rem;
-    line-height: 1.4375rem;
-    color: #333;
-  }
-
   .social {
-    margin-top: 7.5rem;
+    margin-top: 120px;
   }
 
   .carouselSocial__buttons {
-    margin-top: 2.5rem;
+    margin-top: 40px;
+  }
+
+  .card__icon {
+    margin-bottom: 24px;
+  }
+
+  .card__subtitle {
+    display: inline;
   }
 
   .card__text {
+    display: block;
     font-family: Inter;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.43;
-  }
-
-  .social__title {
-    font-weight: 500;
-    font-size: 1.875rem;
-    line-height: 1.4375rem;
-    color: #333;
   }
 
   .footer {
@@ -2243,6 +2248,57 @@ input:-webkit-autofill:focus {
   .license__logo svg {
     width: 5rem;
     height: 1.125rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .news__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.4375rem;
+    color: #333;
+  }
+
+  .news__title_mobile {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.4375rem;
+    color: #333;
+  }
+
+  .analytics__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.4375rem;
+    color: #333;
+  }
+
+  .association__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.4375rem;
+    color: #333;
+  }
+
+  .directory__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.4375rem;
+    color: #333;
+  }
+
+  .meeting__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.4375rem;
+    color: #333;
+  }
+
+  .social__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.4375rem;
+    color: #333;
   }
 
   .wrapper {

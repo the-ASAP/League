@@ -1,4 +1,4 @@
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .news {
     margin-top: 6.375rem;
   }
@@ -33,6 +33,18 @@
   .post__title {
     padding-bottom: 2.8125rem;
     height: 100%;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .post__category {
+    margin: 10px 0 0 10px;
+  }
+
+  .post__number,
+  .post__date {
+    font-size: 12px;
+    line-height: 23px;
   }
 
   .news__button {

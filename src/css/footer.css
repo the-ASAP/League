@@ -73,10 +73,12 @@
   padding: 0.625rem;
   color: #F2F2F2;
   background-color: #39AD46;
+  opacity: 0.6;
 }
 
 .footerForm__inputText::placeholder {
   color: #f2f2f2;
+  opacity: 0.6;
 }
 
 .footerForm__inputSubmit {
@@ -92,6 +94,7 @@
   background-position: center;
   font-size: 0;
   cursor: pointer;
+  opacity: 0.6;
 }
 
 .footerRefs {
@@ -201,7 +204,7 @@
   color: #F2F2F2;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .footer {
     margin-top: 7.5rem;
     padding: 3.125rem 1rem 0;

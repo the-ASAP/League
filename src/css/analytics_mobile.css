@@ -1,4 +1,4 @@
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .analytics {
     margin-top: 6.9375rem;
   }
@@ -24,6 +24,11 @@
   .customCheckbox + label {
     font-size: 0.875rem;
     line-height: 1.64;
+    display: flex;
+  }
+
+  .customCheckbox + label::before {
+    flex-shrink: 0;
   }
 
   .checkbox + .checkbox {

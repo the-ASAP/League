@@ -1,4 +1,4 @@
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .meetingDate {
     margin-top: 2rem;
   }
@@ -18,6 +18,30 @@
 
   .carousel__meeting {
     margin-top: 2.8125rem;
+  }
+
+  .carousel__meeting .post {
+    width: 334px;
+  }
+
+  .carousel__meeting .post__category {
+    margin-right: 10px;
+  }
+
+  .carousel__meeting .post__category {
+    margin: 10px 0 0 10px;
+  }
+
+  .carousel__meeting .post__title {
+    height: 100%;
+    margin-top: 22px;
+    padding-bottom: 45px;
+  }
+
+  .carousel__meeting .post__number,
+  .carousel__meeting .post__date {
+    font-size: 12px;
+    line-height: 23px;
   }
 
   .carouselMeeting__buttons {

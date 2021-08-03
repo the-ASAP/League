@@ -82,7 +82,7 @@
   left: 0;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .header__container {
     margin-top: 2rem;
     width: 100%;

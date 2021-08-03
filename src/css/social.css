@@ -67,22 +67,33 @@
   margin-top: 4.375rem;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .social {
-    margin-top: 7.5rem;
+    margin-top: 120px;
   }
 
   .carouselSocial__buttons {
-    margin-top: 2.5rem;
+    margin-top: 40px;
+  }
+
+  .card__icon {
+    margin-bottom: 24px;
+  }
+
+  .card__subtitle {
+    display: inline;
   }
 
   .card__text {
+    display: block;
     font-family: Inter;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.43;
   }
+}
 
+@media (max-width: 48rem) {
   .social__title {
     font-weight: 500;
     font-size: 1.875rem;

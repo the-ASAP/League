@@ -1,4 +1,4 @@
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .intro__image {
     margin-top: 1.875rem;
     background: linear-gradient(180deg, rgba(34, 43, 69, 0.96) -18.88%, rgba(57, 173, 70, 0) 128.72%), url("../img/forest_mobile.png");
@@ -30,7 +30,7 @@
   }
 
   .intro__infoBlock {
-    margin-top: 0.375rem;
+    margin-top: 15px;
   }
 
   .intro__text {
@@ -81,5 +81,6 @@
 
   .desc__text {
     line-height: 1.64;
+    width: 100%;
   }
 }
