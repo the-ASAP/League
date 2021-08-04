@@ -69,6 +69,10 @@
     display: none;
   }
 
+  .desc__info {
+    width: 100%;
+  }
+
   .desc__icon {
     margin-right: 2.5rem;
   }

@@ -5,10 +5,9 @@ const carousel__social = $('.carousel__social')
 
 carousel__meeting.owlCarousel({
     dots: false,
-    autoWidth: true,
-    margin: 16,
+    autoWidth: false,
     items: 1,
-    margin: 20,
+    margin: 5,
     loop: true,
     nav: true,
     navContainer: '.carouselMeeting__buttons',
@@ -36,7 +35,7 @@ carousel__meeting.owlCarousel({
 carousel__social.owlCarousel({
     dots: false,
     items: 1,
-    margin: false,
+    margin: 16,
     loop: true,
     nav: true,
     navContainer: '.carouselSocial__buttons',
@@ -54,7 +53,9 @@ carousel__social.owlCarousel({
     ],
     responsive: {
         1240: {
-            items: 1
+            items: 3,
+            margin: 20,
+            autoWidth: false,
         }
     }
 })

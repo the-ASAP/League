@@ -8,12 +8,13 @@
 	<meta name="keywords" content="ключевые, слова, через, запятую">
 	<link rel="shortcut icon" type='image/png' href="img/icons/favicon.ico" />
 	<title>League</title>
-	<link rel="stylesheet" href="css/main.css?t=1627968320540" type="text/css">
+	<link rel="stylesheet" href="css/main.css?t=1628080523403" type="text/css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="vendors/css/owl.carousel.min.css?t=1627968320540">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="vendors/css/owl.carousel.min.css?t=1628080523403">
 </head>
 <body>
 	<!-- <div class="preloader"></div> -->
@@ -255,10 +256,24 @@
     <div class="wrapper">
         <h2 class="analytics__title">Аналитика</h2>
         <div class="analytics__info">
-            <div class="graph">
+            <div class="graph">           
                 <p class="graph__title">
                     Ценовой индекс на основные виды продукции целлюлозно-бумажной промышленности России
                 </p>
+                <div class="graph__input__wrapper">
+                    <input type="date" value="2021-08-08" class="graph__input" name="startDate"/>
+                    <input type="date" value="2021-08-08" class="graph__input" name="endDate"/>
+                    <div class="customInput">
+                        <p class="customInput__values">21.08 - 29.08</p>
+                        <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.4167 19.1666H2.58333C1.57081 19.1666 0.75 18.3458 0.75 17.3333V4.49992C0.75 3.4874 1.57081 2.66659 2.58333 2.66659H4.41667V0.833252H6.25V2.66659H11.75V0.833252H13.5833V2.66659H15.4167C16.4292 2.66659 17.25 3.4874 17.25 4.49992V17.3333C17.25 18.3458 16.4292 19.1666 15.4167 19.1666ZM2.58333 8.16659V17.3333H15.4167V8.16659H2.58333ZM2.58333 4.49992V6.33325H15.4167V4.49992H2.58333ZM13.5833 15.4999H11.75V13.6666H13.5833V15.4999ZM9.91667 15.4999H8.08333V13.6666H9.91667V15.4999ZM6.25 15.4999H4.41667V13.6666H6.25V15.4999ZM13.5833 11.8333H11.75V9.99992H13.5833V11.8333ZM9.91667 11.8333H8.08333V9.99992H9.91667V11.8333ZM6.25 11.8333H4.41667V9.99992H6.25V11.8333Z" fill="#27AE60"/>
+                        </svg>                                                   
+                    </div>
+                    <div id="date_range"></div>
+                </div>
+                <div class="graph__canvas__wrapper">
+                    <canvas id="Graph" class="graph__canvas"></canvas>
+                </div>
             </div>
             <div class="materials">
                 <img src="img/materials__picture.png" alt="" class="materials__picture" />
@@ -727,12 +742,16 @@
     </div>
 </footer>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
+	<script src="vendors/js/jquery-3.5.1.min.js?t=1628080523403"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="vendors/js/jquery-datepicker.js?t=1628080523403"></script>
 	
-	<script src="vendors/js/jquery-3.5.1.min.js?t=1627968320540"></script>
-	<script src="vendors/js/owl.carousel.min.js?t=1627968320540"></script>
-	<script src="vendors/js/accordion.js?t=1627968320540"></script>
-	<script src="vendors/js/carousel.js?t=1627968320540"></script>
-	<script src="js/script.js?t=1627968320540"></script>
+	<script src="vendors/js/owl.carousel.min.js?t=1628080523403"></script>
+	<script src="vendors/js/accordion.js?t=1628080523403"></script>
+	<script src="vendors/js/carousel.js?t=1628080523403"></script>
+	<script src="vendors/js/graph.js?t=1628080523403"></script>
+	<script src="js/script.js?t=1628080523403"></script>
 
 </body>
 </html>

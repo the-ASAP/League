@@ -46,6 +46,7 @@
 
 .intro__button {
   margin-top: 3.375rem;
+  width: 15.5rem;
   height: 3.5625rem;
   background-color: #39AD46;
   border-radius: 0.375rem;
@@ -86,7 +87,7 @@
 }
 
 .desc__info {
-  width: 100%;
+  width: 270px;
 }
 
 .desc__subtitle {
@@ -176,6 +177,10 @@
   .desc:nth-child(1):after,
   .desc:nth-child(2):after {
     display: none;
+  }
+
+  .desc__info {
+    width: 100%;
   }
 
   .desc__icon {
