@@ -1,4 +1,6 @@
 const ctx = $('#Graph')
+const mobile = $(window).width() < 768
+console.log(mobile)
 
 const randomDatapoints = (lenghtArr, min, max) => {
     let res = []
@@ -60,7 +62,7 @@ const data = {
 const Graph = new Chart(ctx, {
     type: 'line',
     data: data,
-    responsive: true,
+    // responsive: true,
     options: {
         showAllTooltips: true,
         responsive: true,
@@ -92,6 +94,12 @@ const Graph = new Chart(ctx, {
         },
     },
 })
+
+if(mobile) {
+    Graph.canvas.parentNode.style.height = '500px';
+    Graph.canvas.parentNode.style.width = '100%';
+    Graph.resize()
+}
 
 const hiddenGraph = (input, id) => {
     if(input.checked) {

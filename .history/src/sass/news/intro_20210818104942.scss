@@ -1,0 +1,77 @@
+.intro {
+    margin-top: 4.3125rem;
+
+    &__info {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.625rem;
+        line-height: 3.125rem;
+
+        color: #4F4F4F;
+    }
+}
+
+.return {
+    display: flex;
+    align-items: center;
+
+    &__button {
+        width: 50px;
+        height: 50px;
+        border: 1px solid $green;
+        border-radius: 50%;
+        transition: all 0.2s ease-in;
+    }
+    
+    &__button:hover {
+        background-color: $green;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &__text {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+
+        color: #828282;
+    }
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    margin: 3.125rem 3.75rem 0;
+
+    &__button {
+        padding: 0.5625rem 0;
+        border-radius: 5.375rem;
+        transition: all 0.2s ease-in;
+
+        font-family: Golos;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.4375rem;
+
+        color: $migGray;
+    }
+
+    &__button:hover {
+        background-color: $green;
+        color: #fff;
+    }
+}

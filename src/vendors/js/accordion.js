@@ -6,13 +6,13 @@ $('.accordion__main').click((event) => {
         $($accordion).removeClass('active')
         $($accordion).animate({
             height: '5.625rem',
-        }, 500)
+        }, 200)
     }
     else {
         $($accordion).addClass('active')
         $($accordion).animate({
             height: $($accordion).get(0).scrollHeight
-        }, 500, function() {
+        }, 200, function() {
             $(this).height('auto')
         })
     }

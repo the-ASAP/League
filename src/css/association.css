@@ -31,22 +31,7 @@
   border-radius: 0.75rem;
   background-color: #F2F2F2;
   margin-bottom: 1.25rem;
-}
-
-.position:first-child {
-  background-color: #39AD46;
-}
-
-.position:first-child h3 {
-  color: #fff;
-}
-
-.position:nth-child(3n+2) {
-  margin: 0 2%;
-}
-
-.position__icon {
-  margin: 2.3125rem 0 0 2.4375rem;
+  transition: all 0.2s ease-in;
 }
 
 .position__text {
@@ -58,7 +43,31 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 1.25;
-  color: #4f4f4f;
+  color: #4F4F4F;
+}
+
+.position__icon {
+  margin: 2.3125rem 0 0 2.4375rem;
+}
+
+.position:first-child .position__icon path {
+  fill: #39ad46;
+}
+
+.position:hover {
+  background-color: #39AD46;
+}
+
+.position:hover .position__text {
+  color: #fff;
+}
+
+.position:hover .position__icon path {
+  fill: #fff;
+}
+
+.position:nth-child(3n+2) {
+  margin: 0 2%;
 }
 
 @media (max-width: 768px) {

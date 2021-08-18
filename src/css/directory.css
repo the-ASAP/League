@@ -72,6 +72,9 @@
 
 .accordion__information {
   max-width: 32.875rem;
+}
+
+.accordion__information p {
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
@@ -135,10 +138,11 @@
     line-height: 1.15;
   }
 
-  .accordion__information {
+  .accordion__information p {
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.71;
+    color: #333333;
   }
 
   .accordion__button {
