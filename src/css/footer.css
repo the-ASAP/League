@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+:root {
+  --main-green: #39ad46;
+  --second-green: #27ae60;
+  --dark-gray: #4f4f4f;
+  --mid-gray: #828282;
+  --light-gray: #f2f2f2;
+  --extra-gray: #333;
+}
+
 /*Кнопка меню*/
 
 /*В разметке обязательно должна иметь внутренний span */

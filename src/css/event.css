@@ -595,6 +595,119 @@ input:-webkit-autofill:focus {
   max-width: 100%;
 }
 
+:root {
+  --main-green: #39ad46;
+  --second-green: #27ae60;
+  --dark-gray: #4f4f4f;
+  --mid-gray: #828282;
+  --light-gray: #f2f2f2;
+  --extra-gray: #333;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+.modal__close {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+  height: 20px;
+  width: 20px;
+  background: #0400ff;
+}
+
+.modal__close::after,
+.modal__close::before {
+  transition: background-color 0.3s;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #000000;
+  position: absolute;
+  top: 50%;
+  right: calc(50% - 10px);
+}
+
+.modal__close::after {
+  transform: rotate(45deg);
+}
+
+.modal__close::before {
+  transform: rotate(135deg);
+}
+
+.modal__close:hover::after,
+.modal__close:hover::before {
+  background-color: #0400ff;
+}
+
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
+.intro {
+  margin-top: 4.3125rem;
+}
+
+.intro__info {
+  position: relative;
+  padding-bottom: 3.8125rem;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.intro__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.625rem;
+  line-height: 3.125rem;
+  color: #4F4F4F;
+}
+
+.return {
+  display: flex;
+  align-items: center;
+}
+
+.return__button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #39AD46;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+  margin-right: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.return__button:hover {
+  background-color: #39AD46;
+  border: 1px solid #39AD46;
+}
+
+.return__button:hover svg path {
+  fill: #fff;
+}
+
+.return__text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  color: #828282;
+}
+
+.wrapper_event {
+  width: 41.25rem;
+}
+
 @media (max-width: 1600px) {
   html {
     font-size: 16px;

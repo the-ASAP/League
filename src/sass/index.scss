@@ -1,9 +1,8 @@
-@import 'main';
-
-@import 'index/intro';
-@import 'index/news';
-@import 'index/analytics';
-@import 'index/association';
-@import 'index/directory';
-@import 'index/meeting';
-@import 'index/social';
+@import "root.scss";
+@import "index/intro.scss";
+@import "index/news.scss";
+@import "index/analytics.scss";
+@import "index/association.scss";
+@import "index/directory.scss";
+@import "index/meeting.scss";
+@import "index/social.scss";
