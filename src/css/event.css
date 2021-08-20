@@ -7,6 +7,7 @@
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
   --extra-gray: #333;
+  --golos-font: Golos;
 }
 
 .modal {
@@ -62,6 +63,7 @@
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
   --extra-gray: #333;
+  --golos-font: Golos;
 }
 
 .modal {
@@ -117,6 +119,7 @@
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
   --extra-gray: #333;
+  --golos-font: Golos;
 }
 
 .header__container {
@@ -207,6 +210,7 @@
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
   --extra-gray: #333;
+  --golos-font: Golos;
 }
 
 .modal {
@@ -602,6 +606,7 @@ input:-webkit-autofill:focus {
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
   --extra-gray: #333;
+  --golos-font: Golos;
 }
 
 .modal {

@@ -8,21 +8,55 @@
 
 .accordion {
    width: 100%;
-   height: 5.625rem;
    overflow: hidden;
    background-color: $lightGray;
-
    border-radius: 12px;
-
    margin-top: 2.875rem;
    padding: 0 2.3125rem 0 2.9375rem;
-}
 
-.accordion__icon {
-   transition: transform 0.3s ease-in;
+   &__icon {
+      transition: transform 0.3s ease-in;
+      path {
+         transition: fill 0.3s ease-in;
+      }
+   }
 
-   path {
-      transition: fill 0.3s ease-in;
+   &__main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 5.625rem;
+      cursor: pointer;
+   }
+
+   & + & {
+      margin-top: 1.25rem;
+   }
+
+   h3 {
+      font-weight: 500;
+      line-height: 1.25;
+   }
+
+   &__information {
+      max-width: 32.875rem;
+      display: none;
+
+      p {
+         color: $extraGray;
+      }
+
+      a {
+         margin-top: 0.875rem;
+         margin-bottom: 2.0625rem;
+
+         font-family: Inter;
+         font-weight: 500;
+         font-size: 1.125rem;
+         line-height: 1.44;
+
+         color: $secondGreen;
+      }
    }
 }
 
@@ -34,43 +68,6 @@
          fill: $secondGreen;
       }
    }
-}
-
-.accordion__main {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   height: 5.625rem;
-
-   cursor: pointer;
-}
-
-.accordion + .accordion {
-   margin-top: 20px;
-}
-
-.accordion__title {
-   line-height: 1.25;
-}
-
-.accordion__information {
-   max-width: 32.875rem;
-
-   p {
-      color: $extraGray;
-   }
-}
-
-.accordion__button {
-   margin-top: 0.875rem;
-   margin-bottom: 2.0625rem;
-
-   font-family: Inter;
-   font-weight: 500;
-   font-size: 1.125rem;
-   line-height: 1.44;
-
-   color: $secondGreen;
 }
 
 .directory__button {

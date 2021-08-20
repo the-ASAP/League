@@ -12,6 +12,8 @@ $font: sans-serif;
    --light-gray: #f2f2f2;
 
    --extra-gray: #333;
+
+   --golos-font: Golos;
 }
 
 $firstGreen: var(--main-green);
@@ -20,3 +22,5 @@ $darkGray: var(--dark-gray);
 $midGray: var(--mid-gray);
 $lightGray: var(--light-gray);
 $extraGray: var(--extra-gray);
+
+$golosFont: var(--golos-font);

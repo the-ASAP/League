@@ -1,20 +1,9 @@
-$('.accordion__main').click((event) => {
-    const $accordion = $(event.currentTarget).parent()
+function accordion(btn, content) {
+   $(btn).on("click", function () {
+      $(this).parent().find(content).slideToggle();
+   });
+}
 
-    if ( $($accordion).hasClass('active') ) {
-        // .slideToggle('slow', function() {}) 
-        $($accordion).removeClass('active')
-        $($accordion).animate({
-            height: '5.625rem',
-        }, 200)
-    }
-    else {
-        $($accordion).addClass('active')
-        $($accordion).animate({
-            height: $($accordion).get(0).scrollHeight
-        }, 200, function() {
-            $(this).height('auto')
-        })
-    }
-})
- 
+$().ready(() => {
+   accordion(".accordion__main", ".accordion__information");
+});
