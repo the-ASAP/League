@@ -31,7 +31,7 @@
    &__button {
       width: 50px;
       height: 50px;
-      border: 1px solid #39ad46;
+      border: 1px solid $firstGreen;
       border-radius: 50%;
       transition: all 0.2s ease-in;
       margin-right: 1.25rem;
@@ -42,8 +42,8 @@
    }
 
    &__button:hover {
-      background-color: #39ad46;
-      border: 1px solid #39ad46;
+      background-color: $firstGreen;
+      border-color: $firstGreen;
 
       svg {
          path {
@@ -300,7 +300,7 @@
 }
 
 .news__button {
-   background-color: #39ad46;
+   background-color: $firstGreen;
    padding: 1.0625rem 2.3125rem;
    display: flex;
    align-items: center;
@@ -314,7 +314,69 @@
       font-size: 1rem;
       line-height: 1.4375rem;
 
-      color: #f2f2f2;
+      color: $lightGray;
       margin-right: 1.4375rem;
+   }
+}
+
+.paggination {
+   display: flex;
+
+   &__button {
+      width: 2.625rem;
+      height: 2.625rem;
+      border: 1px solid #d9d9d9;
+      border-radius: 2px;
+
+      font-family: Inter;
+      font-size: 1rem;
+      line-height: 1.87;
+      color: rgba(0, 0, 0, 0.85);
+
+      transition: all 0.3s ease-in;
+      margin-right: 0.9375rem;
+      position: relative;
+
+      &:first-child::before,
+      &:first-child::after,
+      &:last-child::before,
+      &:last-child::after {
+         content: "";
+         width: 8px;
+         height: 1px;
+         background-color: #bdbdbd;
+
+         position: absolute;
+         top: 45%;
+         left: 50%;
+      }
+
+      &:first-child::before {
+         transform: translateX(-50%) rotate(45deg);
+         top: 60%;
+      }
+      &:first-child::after {
+         transform: translateX(-50%) rotate(-45deg);
+      }
+      &:last-child::before {
+         transform: translateX(-50%) rotate(45deg);
+      }
+      &:last-child::after {
+         transform: translateX(-50%) rotate(-45deg);
+         top: 60%;
+      }
+
+      &:hover {
+         background-color: $firstGreen;
+         color: #fff;
+         border-color: $firstGreen;
+
+         &:first-child::before,
+         &:first-child::after,
+         &:last-child::before,
+         &:last-child::after {
+            background-color: #fff;
+         }
+      }
    }
 }
