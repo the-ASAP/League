@@ -1,0 +1,18 @@
+@media (max-width: 48rem) {
+    .wrapper {
+        max-width: 400px;
+    }
+
+    .header__container {
+        margin: 0;
+        width: 100%
+    }
+
+    .header__language {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
+}

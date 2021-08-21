@@ -1,0 +1,65 @@
+@import 'mixins';
+
+.footer {
+    margin-top: 6.25rem;
+    width: 100%;
+
+    padding: 2.9375rem 4rem 0;
+    background-color: #39AD46;
+}
+
+.footerInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;   
+}
+
+.footerInfo__logo, .footerInfo__mainInfo, .footerForm {
+    width: calc(100% / 4);
+}
+
+.footerInfo__logo {
+    display: flex;
+} 
+
+.footerInfo__title {
+    margin-left: 1.25rem;
+
+    max-width: 9.1875rem;
+    font-family: Golos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.44;
+    letter-spacing: -0.015em;
+
+    color: #F2F2F2;
+}
+
+.footerInfo__mainInfo {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+
+    color: #F2F2F2;
+}
+
+.footerForm__input {
+    margin-top: 0.9375rem;
+
+    width: 21.25rem;
+    height: 3rem;
+    border: 1px solid #F2F2F2;
+    border-radius: 0.4375rem;
+
+    padding: 0.625rem;
+    
+    color: #F2F2F2;
+    background-color: #39AD46;
+}
+.footerForm__input::placeholder {
+    color: #f2f2f2;
+}

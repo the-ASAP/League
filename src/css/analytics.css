@@ -23,6 +23,8 @@
   width: 100%;
   display: flex;
   margin-top: 2.875rem;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 .graph {
@@ -32,7 +34,7 @@
   border-radius: 0.75rem;
 }
 
-.praph__title {
+.graph__title {
   max-width: 33.25rem;
   margin: 28px 0 0 37px;
   font-family: Inter;
@@ -41,6 +43,69 @@
   font-size: 1.125rem;
   line-height: 1.44;
   color: #333333;
+}
+
+.graph__canvas__wrapper {
+  width: 48.4375rem;
+  height: 23.125rem;
+  margin-top: 16px;
+  margin-left: 2.25rem;
+}
+
+.graph__input__wrapper {
+  width: 100%;
+}
+
+.graph__input {
+  display: none;
+}
+
+.customInput {
+  width: 15.25rem;
+  height: 2.5rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  margin: 1rem 0 0 2.25rem;
+  padding: 9px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.customInput__values {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: #4F4F4F;
+}
+
+.ui-datepicker {
+  display: none !important;
+  position: absolute;
+  top: 8.4375rem;
+  left: 0;
+  margin-left: 37px;
+}
+
+.ui-datepicker .selected-start:not(.selected-end) a,
+.ui-datepicker .selected-end:not(.selected-start) a {
+  background: #F3FDD5;
+}
+
+.ui-datepicker .selected.first-of-month:not(.selected-start) a {
+  border-left: 2px dotted #D4E7F6;
+  padding-left: 1px;
+}
+
+.ui-datepicker .selected.last-of-month:not(.selected-end) a {
+  border-right: 2px dotted #D4E7F6;
+  padding-right: 1px;
+}
+
+.graph__canvas {
+  width: 100%;
 }
 
 .materials {
@@ -52,7 +117,8 @@
   position: relative;
 }
 
-.materials__picture {
+.materials__picture,
+.materials__picture_mobile {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -64,13 +130,17 @@
   left: 0;
 }
 
+.materials__picture_mobile {
+  display: none;
+}
+
 .materials__info {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.625rem 2.75rem;
+  padding: 2.625rem 2.75rem 3.5rem;
 }
 
 .materials__title {
@@ -108,59 +178,169 @@
 .checkbox {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .checkbox + .checkbox {
   margin-top: 0.875rem;
 }
 
-.checkbox__input {
-  width: 20px;
-  height: 20px;
-  border: 1px solid black;
-  border-radius: 3px;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.checkbox__input:checked {
-  border: none;
-}
-
-.color_green:checked {
-  background-color: #95B403;
-}
-
-.color_violet:checked {
-  background-color: #6C6AE0;
-}
-
-.color_pink:checked {
-  background-color: #C05394;
-}
-
-.color_blue:checked {
-  background-color: #48BCED;
-}
-
-.color_yellow:checked {
-  background-color: #BDAD1E;
-}
-
-.checkbox__input:checked:after {
-  content: "\2714";
-  color: #fff;
-}
-
-.checkbox__text {
-  margin-left: 0.75rem;
+.customCheckbox + label {
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.44;
   color: #333333;
+  cursor: pointer;
+}
+
+.customCheckbox + label::before {
+  content: '';
+  display: inline-flex;
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #000;
+  border-radius: 0.1875rem;
+  margin-right: 0.75rem;
+  top: 0.1875rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.customCheckbox:checked + label::before {
+  background-color: #95B403;
+  border: 1px solid #95B403;
+  background-image: url("../img/icons/check.svg");
+}
+
+#input_2:checked + label::before {
+  background-color: #6C6AE0;
+  border: 1px solid #6C6AE0;
+}
+
+#input_3:checked + label::before,
+#input_6:checked + label::before {
+  background-color: #C05394;
+  border: 1px solid #C05394;
+}
+
+#input_4:checked + label::before {
+  background-color: #48BCED;
+  border: 1px solid #48BCED;
+}
+
+#input_5:checked + label::before {
+  background-color: #BDAD1E;
+  border: 1px solid #BDAD1E;
+}
+
+#input_6:checked + label::before {
+  background-color: #C05394;
+  border: 1px solid #C05394;
+}
+
+@media (max-width: 768px) {
+  .analytics {
+    margin-top: 6.9375rem;
+  }
+
+  .analytics__info {
+    flex-direction: column;
+  }
+
+  .graph {
+    width: 100%;
+    height: 36.875rem;
+  }
+
+  .graph__canvas__wrapper {
+    margin-left: 0;
+    padding: 0 17px;
+    width: 100%;
+  }
+
+  .graph__canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .graph__input__wrapper {
+    width: 100%;
+    padding: 0 17px;
+    margin-top: 30px;
+  }
+
+  .customInput {
+    margin: 0;
+    width: 100%;
+  }
+
+  .graph__input {
+    width: 100%;
+    position: relative;
+    margin: 0;
+  }
+
+  .graph__title {
+    max-width: 100%;
+    margin: 20px 17px 0;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+  }
+
+  .customCheckbox + label {
+    font-size: 0.875rem;
+    line-height: 1.64;
+    display: flex;
+  }
+
+  .customCheckbox + label::before {
+    flex-shrink: 0;
+  }
+
+  .checkbox + .checkbox {
+    margin-top: 1.5rem;
+  }
+
+  .materials {
+    order: 1;
+    width: 100%;
+    height: 14.375rem;
+    margin: 3.4375rem 0 0;
+  }
+
+  .materials__picture {
+    display: none;
+  }
+
+  .materials__picture_mobile {
+    display: block;
+  }
+
+  .materials__info {
+    padding: 1.25rem 1.5625rem 1.5rem;
+  }
+
+  .materials__title {
+    max-width: 11.0625rem;
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .notes {
+    margin-top: 3.125rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .analytics__title {
+    font-weight: 500;
+    font-size: 1.875rem;
+    line-height: 1.4375rem;
+    color: #333;
+  }
 }

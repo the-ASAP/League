@@ -1,0 +1,41 @@
+@media (max-width: 48rem) {
+    .wrapper {
+        max-width: 400px;
+    }
+
+    .intro__image {
+        margin-top: 1.875rem;
+        background: linear-gradient(180deg, rgba(34, 43, 69, 0.96) -18.88%, rgba(57, 173, 70, 0) 128.72%), url('../img/forest_mobile.png');
+        background-size: 100%;
+        width: 100%;
+        height: 31.4375rem;
+        object-fit: cover;
+    
+        position: relative;
+        display: flex;
+        
+        border-radius: 1rem;
+    }
+
+    .intro__info {
+        display: block;
+    }
+
+    .intro__wrapper {
+        display: block;
+        margin-top: 1.5625rem;
+        padding: 0 1.0625rem 0 1.375rem;
+    }
+    
+    .intro__title {
+        font-size: 2.625rem;
+        line-height: 3rem;
+        height: 100%;
+
+        color: #F2F2F2;
+    }
+
+    .intro__infoBlock {
+        margin-top: 0.3125rem;
+    }
+}

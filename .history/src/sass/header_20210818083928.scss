@@ -1,0 +1,129 @@
+@import 'header_mobile.scss';
+
+.header__container {
+    margin-top: 2.1875rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__search, .header__menu_mobile{
+    height: 2.625rem;
+    width: 2.625rem;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__menu_mobile {
+    display: none;
+}
+
+.header__button {
+    height: 1.4375rem;
+    border: none;
+
+  
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.44;
+
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+
+    color: #4F4F4F;
+
+    opacity: 0.2;
+    
+}
+.active {
+    opacity: 1;
+}
+
+.navbar {
+    margin-top: 4.0625rem;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 1.25rem;
+    width: 100%;
+    padding: 0 53px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.44s;
+    /* identical to box height, or 144% */
+
+    text-align: center;
+
+    /* Gray 2 */
+
+    color: #4F4F4F;
+}
+.navbar__item:after {
+    content: '';
+    background-image: url(../img/icons/border.svg);
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.navbar__item:first-child:before {
+    content: '';
+    background-image: url(../img/icons/border.svg);
+    width: 1px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .header__container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .header__logo {
+        order: -1;
+
+        img {
+            width: 9.9375rem;
+            height: 3.1875rem;
+        }
+    }
+
+    .header__buttons {
+        display: flex;
+    }
+
+    .header__language {
+        display: none;
+    }
+    .header__search {
+        display: block;
+    }
+    
+    .header__menu_mobile {
+        display: block;
+        margin-left: 0.625rem;
+    }
+
+
+    .navbar {
+        display: none;
+    }
+
+
+}

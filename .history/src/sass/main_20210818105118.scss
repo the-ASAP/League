@@ -1,0 +1,165 @@
+@import 'media';
+@import 'mixins';
+
+@import 'header';
+@import 'footer';
+
+
+@font-face {
+    font-family: "Golos";
+    src: url("../fonts/Golos-Text_Regular.woff2") format("woff2")
+}
+
+html {
+    font-size: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font; // FF MAIN
+    cursor: default;
+    background-color: $bgc;
+    color: $gen;
+    // @extend %scrollbar;
+}
+
+section {
+    position: relative;
+}
+
+h1 {
+    font-family: Inter sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    color: $darkGray;
+}
+
+h2 {
+    font-family: Inter sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+
+
+    color: $darkGray;
+}
+
+h3 {
+    font-family: Inter sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+
+    color: #4F4F4F;
+}
+
+h4 {
+    font-family: Inter sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.02em;
+
+    color: $darkGray;
+}
+
+p {
+    color: $text;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 83.75rem;
+    position: relative;
+    height: 100%;
+
+    @media (max-width: 48rem) {
+        width: 90%;
+    }
+}
+
+a {
+    color: $accent;
+    display: inline-block;
+    text-decoration: none;
+}
+
+svg {
+    min-height: 1rem;
+    // height: 1rem;
+}
+
+textarea,
+button,
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: $font;
+    border: none;
+    background: none;
+    outline: none;
+
+    &[disabled] {
+        cursor: default;
+        opacity: .7;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+
+// убирает цвет автокомплита у инпута
+input {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        font-size: 1rem;
+        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+// Шаблон для модального окна
+// .modal Обязательный класс для всех модальных окон, для попапов используем класс .popup который экстендит(@extend) класс modal или описываем свой.
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    @extend %flexbox;
+    justify-content: center;
+    //Вложенное окно с контентом, необходимо задать фиксированные размерыж
+    &__box{
+        padding: 2rem 3rem;
+        box-sizing: border-box;
+        position: relative;
+        background-color: $bgc;
+        overflow: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    // Кнопка закрытия
+    &__close{
+        @extend %close-btn;
+    }
+}

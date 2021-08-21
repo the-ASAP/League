@@ -1,0 +1,28 @@
+@media (max-width: 48rem) {
+    .news {
+        margin-top: 6.375rem;
+    }
+
+    .news__title {
+        display: none;
+    }
+
+    .news__title_mobile {
+        display: block;
+    }
+
+    .news__content { 
+        display: block;
+        margin-top: 2.25rem;
+    }
+
+    .post {
+        width: 100%;
+    }
+    .post + .post {
+        margin-top: 1.875rem;
+    }
+    .post:nth-child(3n+2) {
+        margin: 0;
+    }
+}
