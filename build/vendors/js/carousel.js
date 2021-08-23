@@ -53,3 +53,27 @@ $().ready(() => {
       },
    });
 });
+
+$().ready(() => {
+   owlGallery(".carouselEvent", {
+      dots: false,
+      items: 1,
+      loop: true,
+      nav: true,
+      margin: 10,
+      navContainer: ".carouselEvent__buttons",
+      navClass: ["carouselEvent__prev", "carouselEvent__next"],
+   });
+});
+
+$().ready(() => {
+   owlGallery(".carouselOther", {
+      dots: false,
+      items: 3,
+      loop: true,
+      nav: true,
+      margin: 10,
+      navContainer: ".carouselOther__buttons",
+      navClass: ["carouselOther__prev", "carouselOther__next"],
+   });
+});
