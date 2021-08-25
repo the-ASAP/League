@@ -60,6 +60,7 @@ $().ready(() => {
         items: 1,
         loop: true,
         nav: true,
+        margin: 10,
         navContainer: ".carouselEvent__buttons",
         navClass: ["carouselEvent__prev", "carouselEvent__next"],
     });

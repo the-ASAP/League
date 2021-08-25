@@ -148,11 +148,19 @@
     li {
         font-size: 1.125rem;
         line-height: 1.44;
-
         color: $darkGray;
+        padding-left: 1.5rem;
+        position: relative;
 
-        &::marker {
-            color: $firstGreen;
+        &::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            background-color: $firstGreen;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 4.5px);
+            left: 0;
         }
     }
     li + li {
