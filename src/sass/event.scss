@@ -1,453 +1,459 @@
-@import "main";
 @import "mixins";
 
 .intro {
-   margin-top: 4.3125rem;
+    margin-top: 4.3125rem;
 
-   &__info {
-      position: relative;
+    &__info {
+        position: relative;
 
-      padding-bottom: 3.8125rem;
-      border-bottom: 1px solid #bdbdbd;
-   }
+        padding-bottom: 3.8125rem;
+        border-bottom: 1px solid #bdbdbd;
+    }
 
-   &__title {
-      font-family: Inter;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 2.625rem;
-      line-height: 3.125rem;
+    &__title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.625rem;
+        line-height: 3.125rem;
 
-      color: #4f4f4f;
-   }
+        color: #4f4f4f;
+    }
 }
 
 .return {
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
 
-   &__button {
-      width: 50px;
-      height: 50px;
-      border: 1px solid #39ad46;
-      border-radius: 50%;
-      transition: all 0.2s ease-in;
-      margin-right: 1.25rem;
+    &__button {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #39ad46;
+        border-radius: 50%;
+        transition: all 0.2s ease-in;
+        margin-right: 1.25rem;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-   &__button:hover {
-      background-color: #39ad46;
-      border: 1px solid #39ad46;
+    &__button:hover {
+        background-color: #39ad46;
+        border: 1px solid #39ad46;
 
-      svg {
-         path {
-            fill: #fff;
-         }
-      }
-   }
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
 
-   &__text {
-      font-family: Inter;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 0.875rem;
-      line-height: 1.1875rem;
+    &__text {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
 
-      color: #828282;
-   }
+        color: #828282;
+    }
 }
 
 .wrapper_event {
-   width: 41.25rem;
-   margin: 0 auto;
+    width: 41.25rem;
+    margin: 0 auto;
 }
 
 .event {
-   margin-top: 4.6875rem;
+    margin-top: 4.6875rem;
 
-   &__meta {
-      display: flex;
-   }
+    &__meta {
+        display: flex;
+    }
 
-   &__date,
-   &__count {
-      font-family: $golosFont;
-      color: #bdbdbd;
-      margin-right: 2.0625rem;
-   }
+    &__view {
+        display: flex;
+        align-items: center;
 
-   &__tags {
-      margin-top: 1.25rem;
-   }
-   &__tag {
-      background: #27ae60;
-      border-radius: 4px;
-      font-family: $golosFont;
-      font-size: 0.875rem;
-      line-height: 1.64;
-      color: #fff;
-      padding: 0.1875rem 0.75rem;
-      margin-right: 1.25rem;
-   }
+        svg {
+            margin-right: 0.3125rem;
+        }
+    }
+    &__date,
+    &__count {
+        font-family: $golosFont;
+        color: #bdbdbd;
+        margin-right: 2.0625rem;
+    }
 
-   &__title {
-      margin-top: 2.5rem;
-      color: $darkGray;
-      font-weight: 500;
-      font-size: 2.25rem;
-      line-height: 1.22;
-   }
+    &__tags {
+        margin-top: 1.25rem;
+    }
+    &__tag {
+        background: #27ae60;
+        border-radius: 4px;
+        font-family: $golosFont;
+        font-size: 0.875rem;
+        line-height: 1.64;
+        color: #fff;
+        padding: 0.1875rem 0.75rem;
+        margin-right: 1.25rem;
+    }
 
-   &__image {
-      width: 41.25rem;
-      height: 26.25rem;
-      margin: 3.625rem auto;
-      position: relative;
+    &__title {
+        margin-top: 2.5rem;
+        color: $darkGray;
+        font-weight: 500;
+        font-size: 2.25rem;
+        line-height: 1.22;
+    }
 
-      img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         border-radius: 12px;
-      }
-   }
+    &__image {
+        width: 41.25rem;
+        height: 26.25rem;
+        margin: 3.625rem auto;
+        position: relative;
 
-   &__share {
-      background-color: $firstGreen;
-      width: 3.125rem;
-      height: 3.125rem;
-      border-radius: 12px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    }
 
-      position: absolute;
-      top: 0;
-      right: -4.375rem;
-   }
+    &__share {
+        background-color: $firstGreen;
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 0;
+        right: -4.375rem;
+    }
 }
 
 .content {
-   margin-top: 3.75rem;
+    margin-top: 3.75rem;
 
-   h3 + p {
-      margin-top: 2.5rem;
-   }
-   p + p {
-      margin-top: 1.875rem;
-   }
+    ul {
+        margin-top: 2.5rem;
+        list-style-position: inside;
+    }
+    li {
+        font-size: 1.125rem;
+        line-height: 1.44;
 
-   li {
-      font-size: 1.125rem;
-      line-height: 1.44;
+        color: $darkGray;
 
-      color: $darkGray;
+        &::marker {
+            color: $firstGreen;
+        }
+    }
+    li + li {
+        margin-top: 0.75rem;
+    }
 
-      &::marker {
-         color: green;
-      }
-   }
+    &__author,
+    &__source {
+        margin-top: 3.9375rem;
 
-   p + li {
-      margin-top: 2.5rem;
-   }
-   li + li {
-      margin-top: 0.75rem;
-   }
+        span {
+            font-size: 1rem;
+            line-height: 1.44;
+            letter-spacing: -0.015em;
 
-   blockquote {
-      margin: 2.5rem 0;
-   }
+            color: $darkGray;
+            margin-right: 0.75rem;
+        }
+    }
 
-   &__author,
-   &__source {
-      margin-top: 3.9375rem;
+    &__source {
+        margin-top: 0.75rem;
 
-      span {
-         font-size: 1rem;
-         line-height: 1.44;
-         letter-spacing: -0.015em;
+        &_ref {
+            font-family: $golosFont;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.44;
+            letter-spacing: -0.015em;
 
-         color: $darkGray;
-         margin-right: 0.75rem;
-      }
-   }
+            color: $firstGreen;
+        }
+    }
 
-   &__source {
-      margin-top: 0.75rem;
+    &__buttons {
+        margin-top: 2.75rem;
+        display: flex;
+        padding-bottom: 0.875rem;
+        border-bottom: 1px solid #bdbdbd;
+    }
 
-      &_ref {
-         font-family: $golosFont;
-         text-transform: uppercase;
-         font-weight: 500;
-         font-size: 1rem;
-         line-height: 1.44;
-         letter-spacing: -0.015em;
+    &__button {
+        border: 1px solid $firstGreen;
+        border-radius: 26px;
+        font-size: 0.875rem;
+        line-height: 1.36;
+        padding: 0.4688rem 1.125rem;
+        color: $firstGreen;
+        margin-right: 1rem;
+        transition: background-color, color 0.2s ease-in;
 
-         color: $firstGreen;
-      }
-   }
-
-   &__buttons {
-      margin-top: 2.75rem;
-      display: flex;
-      padding-bottom: 0.875rem;
-      border-bottom: 1px solid #bdbdbd;
-   }
-
-   &__button {
-      border: 1px solid $firstGreen;
-      border-radius: 26px;
-      font-size: 0.875rem;
-      line-height: 1.36;
-      padding: 0.4688rem 1.125rem;
-      color: $firstGreen;
-      margin-right: 1rem;
-   }
+        &:hover {
+            background-color: $firstGreen;
+            color: #fff;
+        }
+    }
 }
 
 .carouselEvent {
-   margin-top: 2.5rem;
+    margin-top: 2.5rem;
 
-   img {
-      border-radius: 15px;
-   }
+    img {
+        border-radius: 15px;
+    }
 
-   &__buttons {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 0.8125rem;
-   }
+    &__buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0.8125rem;
+    }
 
-   &__prev,
-   &__next {
-      width: 3.1875rem;
-      height: 3.1875rem;
-      border: 1px solid $firstGreen;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 0.875rem;
-      transition: background-color 0.3s ease-in;
-   }
+    &__prev,
+    &__next {
+        width: 3.1875rem;
+        height: 3.1875rem;
+        border: 1px solid $firstGreen;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.875rem;
+        transition: background-color 0.3s ease-in;
+    }
 
-   &__prev:hover,
-   &__next:hover {
-      background-color: $firstGreen;
-      svg {
-         path {
-            fill: $lightGray;
-         }
-      }
-   }
+    &__prev:hover,
+    &__next:hover {
+        background-color: $firstGreen;
+        svg {
+            path {
+                fill: $lightGray;
+            }
+        }
+    }
 
-   &__next {
-      transform: rotate(180deg);
-   }
+    &__next {
+        transform: rotate(180deg);
+    }
 
-   &__info {
-      display: flex;
-      justify-content: space-between;
-   }
-   &__signature {
-      display: block;
-      font-family: $golosFont;
-      font-size: 0.875rem;
-      font-weight: 1.14;
-      color: $darkGray;
-      margin-top: 1.375rem;
-   }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__signature {
+        display: block;
+        font-family: $golosFont;
+        font-size: 0.875rem;
+        font-weight: 1.14;
+        color: $darkGray;
+        margin-top: 1.375rem;
+    }
 }
 
 .documents {
-   margin-top: 2.875rem;
+    margin-top: 2.875rem;
 
-   &__title {
-      font-family: $golosFont;
-      font-weight: 500;
-      font-size: 1.625rem;
-      line-height: 1.15;
+    &__title {
+        font-family: $golosFont;
+        font-weight: 500;
+        font-size: 1.625rem;
+        line-height: 1.15;
 
-      color: $darkGray;
-   }
+        color: $darkGray;
+    }
 }
 
 .document {
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   padding: 0.9375rem 1.25rem;
-   background: $lightGray;
-   border-radius: 8px;
-   margin-top: 1.8125rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9375rem 1.25rem;
+    background: $lightGray;
+    border-radius: 8px;
+    margin-top: 1.8125rem;
 
-   & + & {
-      margin-top: 0.875rem;
-   }
+    & + & {
+        margin-top: 0.875rem;
+    }
 
-   &__info {
-      display: flex;
+    &__info {
+        display: flex;
 
-      svg {
-         margin-right: 1.25rem;
-      }
-   }
+        svg {
+            margin-right: 1.25rem;
+        }
+    }
 
-   &__title {
-      font-family: $golosFont;
-      font-size: 0.875rem;
-      line-height: 1.14;
-      max-width: 23.6875rem;
-      color: $midGray;
-   }
+    &__title {
+        font-family: $golosFont;
+        font-size: 0.875rem;
+        line-height: 1.14;
+        max-width: 23.6875rem;
+        color: $midGray;
+    }
+
+    &__download {
+    }
 }
 
 .otherNews {
-   margin-top: 6.25rem;
-   padding-top: 3.5rem;
+    margin-top: 6.25rem;
+    padding-top: 3.5rem;
+    margin-bottom: 6.25rem;
 
-   &__info {
-      display: flex;
-      justify-content: space-between;
-   }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .carouselOther {
-   margin-top: 2.5rem;
+    margin-top: 2.5rem;
 
-   &__buttons {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 0.8125rem;
-   }
+    &__buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0.8125rem;
+    }
 
-   &__prev,
-   &__next {
-      width: 3.1875rem;
-      height: 3.1875rem;
-      border: 1px solid $firstGreen;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 0.875rem;
-      transition: background-color 0.3s ease-in;
-   }
+    &__prev,
+    &__next {
+        width: 3.1875rem;
+        height: 3.1875rem;
+        border: 1px solid $firstGreen;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.875rem;
+        transition: background-color 0.3s ease-in;
+    }
 
-   &__prev:hover,
-   &__next:hover {
-      background-color: $firstGreen;
-      svg {
-         path {
-            fill: $lightGray;
-         }
-      }
-   }
+    &__prev:hover,
+    &__next:hover {
+        background-color: $firstGreen;
+        svg {
+            path {
+                fill: $lightGray;
+            }
+        }
+    }
 
-   &__next {
-      transform: rotate(180deg);
-   }
+    &__next {
+        transform: rotate(180deg);
+    }
 
-   &__info {
-      display: flex;
-      justify-content: space-between;
-   }
-   &__signature {
-      display: block;
-      font-family: $golosFont;
-      font-size: 0.875rem;
-      font-weight: 1.14;
-      color: $darkGray;
-      margin-top: 1.375rem;
-   }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__signature {
+        display: block;
+        font-family: $golosFont;
+        font-size: 0.875rem;
+        font-weight: 1.14;
+        color: $darkGray;
+        margin-top: 1.375rem;
+    }
 }
 
 .post__wrapper {
-   width: 100%;
-   height: 18.75rem;
-   position: relative;
+    width: 100%;
+    height: 18.75rem;
+    position: relative;
 }
 
 .post__image {
-   background-image: url("../img/post.png");
-   border-top-left-radius: 8px;
-   border-top-right-radius: 8px;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   position: absolute;
-   top: 0;
-   left: 0;
-   cursor: pointer;
+    background-image: url("../img/post.png");
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
 }
 
 .post__buttons {
-   position: relative;
-   display: flex;
-   flex-wrap: wrap;
-   margin-right: 1.25rem;
-   z-index: 1;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1.25rem;
+    z-index: 1;
 }
 
 .post__category {
-   margin-top: 1.25rem;
-   margin-left: 1.25rem;
-   height: 1.8125rem;
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
+    height: 1.8125rem;
 
-   background-color: $secondGreen;
-   padding: 0.1875rem 0.75rem;
-   border-radius: 4px;
+    background-color: $secondGreen;
+    padding: 0.1875rem 0.75rem;
+    border-radius: 4px;
 
-   font-family: $golosFont;
-   color: #fff;
-   font-size: 0.875rem;
-   line-height: 1.64;
+    font-family: $golosFont;
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.64;
 }
 
 .post__title {
-   margin-top: 1.5625rem;
+    margin-top: 1.5625rem;
 
-   border-bottom: 1px solid #e0e0e0;
-   padding-bottom: 2.5rem;
-   font-weight: 600;
-   font-size: 1.125rem;
-   line-height: 1.56;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 2.5rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.56;
 
-   color: $darkGray;
+    color: $darkGray;
 }
 
 .post__views {
-   margin-top: 0.5rem;
-   display: flex;
-   justify-content: space-between;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 .post__count {
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .post__number {
-   font-family: $golosFont;
-   font-size: 1rem;
-   line-height: 1.44;
-   letter-spacing: -1.5%;
-   color: $midGray;
+    font-family: $golosFont;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: -1.5%;
+    color: $midGray;
 
-   height: 100%;
-   margin-left: 0.375rem;
+    height: 100%;
+    margin-left: 0.375rem;
 }
 
 .post__date {
-   font-family: $golosFont;
-   font-size: 1rem;
-   line-height: 1.44;
-   letter-spacing: -1.5%;
-   color: $midGray;
-   height: 100%;
-   margin-right: 0.375rem;
+    font-family: $golosFont;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: -1.5%;
+    color: $midGray;
+    height: 100%;
+    margin-right: 0.375rem;
 }

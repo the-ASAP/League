@@ -291,6 +291,10 @@
   transform: rotate(180deg);
 }
 
+.newsPage {
+  margin-bottom: 6.25rem;
+}
+
 .intro {
   margin-top: 4.3125rem;
 }

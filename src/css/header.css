@@ -30,7 +30,7 @@
   line-height: 1.44;
   letter-spacing: -0.015em;
   text-transform: uppercase;
-  color: #4F4F4F;
+  color: #4f4f4f;
   opacity: 0.2;
 }
 
@@ -43,8 +43,8 @@
   display: flex;
   justify-content: space-between;
   padding: 1.1875rem 0;
-  border-top: 1px solid #E0E0E0;
-  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .navbar__item {
@@ -53,20 +53,18 @@
   justify-content: center;
   height: 1.25rem;
   width: 100%;
-  padding: 0 53px;
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.44s;
-  /* identical to box height, or 144% */
+  line-height: 1.44;
   text-align: center;
   /* Gray 2 */
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .navbar__item:after {
-  content: '';
+  content: "";
   background-image: url(../img/icons/border.svg);
   width: 1px;
   height: 20px;
