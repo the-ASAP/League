@@ -100,8 +100,8 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 1.625rem 0 1.75rem 2.4375rem;
+    justify-content: space-between;
+    padding: 1.625rem 2.4375rem 1.75rem;
 
     &__details {
         margin-top: 1.25rem;
@@ -119,25 +119,31 @@
         line-height: 1.44;
         letter-spacing: -0.015em;
         color: $darkGray;
+        display: block;
     }
 
-    &__ref {
-        position: absolute;
-        top: 1.625rem;
-        right: 2.4375rem;
-        font-family: Inter;
-        font-size: 1.125rem;
-        line-height: 1.44;
-        color: $firstGreen;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__picture {
+        max-width: 8.75rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__logo {
         mix-blend-mode: darken;
-        max-width: 8.75rem;
         object-fit: contain;
-        background-color: $lightGray;
-        position: absolute;
-        top: 1.625rem;
-        left: 2.4375rem;
+    }
+
+    &__ref {
+        font-family: Inter;
+        font-size: 1.125rem;
+        line-height: 1.44;
+        color: $firstGreen;
     }
 }
