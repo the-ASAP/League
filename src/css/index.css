@@ -860,6 +860,10 @@
   transform: rotate(180deg);
 }
 
+.indexPage {
+  margin-bottom: 6.25rem;
+}
+
 @media (max-width: 768px) {
   .intro__image {
     margin-top: 1.875rem;
