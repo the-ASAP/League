@@ -28,7 +28,7 @@
     &__button {
         width: 50px;
         height: 50px;
-        border: 1px solid #39ad46;
+        border: 1px solid $firstGreen;
         border-radius: 50%;
         transition: all 0.2s ease-in;
         margin-right: 1.25rem;
@@ -39,8 +39,8 @@
     }
 
     &__button:hover {
-        background-color: #39ad46;
-        border: 1px solid #39ad46;
+        background-color: $firstGreen;
+        border: 1px solid $firstGreen;
 
         svg {
             path {
@@ -56,7 +56,7 @@
         font-size: 0.875rem;
         line-height: 1.1875rem;
 
-        color: #828282;
+        color: $midGray;
     }
 }
 
@@ -148,11 +148,19 @@
     li {
         font-size: 1.125rem;
         line-height: 1.44;
-
         color: $darkGray;
+        padding-left: 1.5rem;
+        position: relative;
 
-        &::marker {
-            color: $firstGreen;
+        &::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            background-color: $firstGreen;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 4.5px);
+            left: 0;
         }
     }
     li + li {
@@ -325,6 +333,10 @@
 
 .carouselOther {
     margin-top: 2.5rem;
+
+    .owl-stage-outer {
+        border-radius: 12px;
+    }
 
     &__buttons {
         display: flex;
