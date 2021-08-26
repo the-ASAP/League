@@ -62,7 +62,7 @@ h3 {
     font-style: normal;
     font-weight: 500;
     font-size: 1.5rem;
-    line-height: 1.875rem;
+    line-height: 1;
 
     color: $darkGray;
 }
@@ -72,7 +72,7 @@ h4 {
     font-style: normal;
     font-weight: 600;
     font-size: 1.125rem;
-    line-height: 2.5rem;
+    line-height: 2.22;
     letter-spacing: 0.02em;
 
     color: $darkGray;
@@ -152,6 +152,10 @@ blockquote {
         background-color: $firstGreen;
         border-radius: 1px;
     }
+}
+
+img {
+    width: 100%;
 }
 
 button {

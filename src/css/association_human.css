@@ -621,6 +621,142 @@ input:-webkit-autofill:focus {
   max-width: 100%;
 }
 
+.intro {
+  margin-top: 4.3125rem;
+}
+
+.intro__info {
+  position: relative;
+  padding-bottom: 3.8125rem;
+  border-bottom: 2px solid var(--main-green);
+}
+
+.intro__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.625rem;
+  line-height: 3.125rem;
+  color: var(--dark-gray);
+}
+
+.return {
+  display: flex;
+  align-items: center;
+}
+
+.return__button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--main-green);
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+  margin-right: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.return__button:hover {
+  background-color: var(--main-green);
+  border: 1px solid var(--main-green);
+}
+
+.return__button:hover svg path {
+  fill: #fff;
+}
+
+.return__text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  color: var(--mid-gray);
+}
+
+.human {
+  display: flex;
+  margin-top: 3.0625rem;
+}
+
+.human__picture {
+  width: 26.875rem;
+  height: 31.1875rem;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-right: 4.75rem;
+}
+
+.human__info {
+  max-width: 29.5rem;
+  margin-top: 0.3125rem;
+}
+
+.human__position {
+  margin-top: 1.25rem;
+  line-height: 1.25;
+}
+
+.human__text {
+  margin-top: 1.25rem;
+}
+
+.human__textPhone {
+  margin-top: 2.1875rem;
+}
+
+.human__textEmail {
+  margin-top: 2.5rem;
+}
+
+.human__phone,
+.human__email {
+  margin-top: 0.5625rem;
+  color: var(--main-green);
+}
+
+.progress {
+  margin-top: 3.75rem;
+  padding: 2.5rem 2.875rem 2.875rem;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  margin-bottom: 6.25rem;
+}
+
+.progress__title {
+  line-height: 1.25;
+}
+
+.progress__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.progress__item {
+  list-style: none;
+  max-width: 43%;
+  padding-left: 1.5rem;
+  position: relative;
+  font-family: Inter;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  margin-bottom: 1.25rem;
+}
+
+.progress__item::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--main-green);
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+
 @media (max-width: 1600px) {
   html {
     font-size: 16px;

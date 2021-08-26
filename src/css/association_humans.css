@@ -621,6 +621,84 @@ input:-webkit-autofill:focus {
   max-width: 100%;
 }
 
+.intro {
+  margin-top: 4.3125rem;
+}
+
+.intro__info {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.intro__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.625rem;
+  line-height: 1.19;
+  color: #4f4f4f;
+}
+
+.association {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2.8125rem;
+  border-bottom: 2px solid #bdbdbd;
+  margin-top: 3.125rem;
+}
+
+.association__button {
+  border-radius: 5px;
+  border: 1px solid #bdbdbd;
+  padding: 0.5625rem 2rem;
+  margin-right: 0.9375rem;
+  font-family: var(--golos-font);
+  font-size: 1rem;
+  line-height: 1.44;
+  color: var(--mid-gray);
+  transition: background-color, color 0.2s ease-in;
+  margin-bottom: 0.9375rem;
+}
+
+.association__button:hover {
+  background-color: var(--main-green);
+  color: #fff;
+}
+
+.title {
+  margin-top: 2.5rem;
+}
+
+.team {
+  margin: 2.5rem 0 8.75rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.human {
+  width: calc((100% - 40px) / 3);
+  margin-bottom: 2.5rem;
+}
+
+.human:nth-child(3n + 2) {
+  margin: 0 1.25rem 2.5rem;
+}
+
+.human__picture {
+  object-fit: contain;
+  max-height: 29.9375rem;
+  border-radius: 12px;
+}
+
+.human__name {
+  margin-top: 2.5rem;
+  line-height: 1.25;
+}
+
+.human__position {
+  margin-top: 1.25rem;
+}
+
 @media (max-width: 1600px) {
   html {
     font-size: 16px;
