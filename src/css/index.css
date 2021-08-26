@@ -350,6 +350,11 @@
   display: flex;
 }
 
+.company img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
 .company__title {
   margin-left: 0.3125rem;
   max-width: 9.5625rem;
