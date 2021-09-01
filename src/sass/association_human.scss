@@ -5,9 +5,6 @@
 
     &__info {
         position: relative;
-
-        padding-bottom: 3.8125rem;
-        border-bottom: 2px solid $firstGreen;
     }
 
     &__title {
@@ -62,7 +59,7 @@
 
 .human {
     display: flex;
-    margin-top: 3.0625rem;
+    margin-top: 3.75rem;
 
     &__picture {
         width: 26.875rem;
@@ -106,7 +103,7 @@
     padding: 2.5rem 2.875rem 2.875rem;
     background-color: $lightGray;
     border-radius: 8px;
-    margin-bottom: 6.25rem;
+    margin-bottom: 12.25rem;
 
     &__title {
         line-height: 1.25;

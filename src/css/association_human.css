@@ -3,6 +3,7 @@
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;
+  --hover-green: #58ca65;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -59,6 +60,7 @@
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;
+  --hover-green: #58ca65;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -115,6 +117,7 @@
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;
+  --hover-green: #58ca65;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -204,6 +207,7 @@
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;
+  --hover-green: #58ca65;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -627,8 +631,6 @@ input:-webkit-autofill:focus {
 
 .intro__info {
   position: relative;
-  padding-bottom: 3.8125rem;
-  border-bottom: 2px solid var(--main-green);
 }
 
 .intro__title {
@@ -677,7 +679,7 @@ input:-webkit-autofill:focus {
 
 .human {
   display: flex;
-  margin-top: 3.0625rem;
+  margin-top: 3.75rem;
 }
 
 .human__picture {
@@ -721,7 +723,7 @@ input:-webkit-autofill:focus {
   padding: 2.5rem 2.875rem 2.875rem;
   background-color: var(--light-gray);
   border-radius: 8px;
-  margin-bottom: 6.25rem;
+  margin-bottom: 12.25rem;
 }
 
 .progress__title {

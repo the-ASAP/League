@@ -1,49 +1,5 @@
 @import "main";
-
-.intro {
-    margin-top: 4.3125rem;
-
-    &__info {
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
-
-    &__title {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 2.625rem;
-        line-height: 1.19;
-
-        color: #4f4f4f;
-    }
-}
-
-.association {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 2.8125rem;
-    border-bottom: 2px solid #bdbdbd;
-    margin-top: 3.125rem;
-
-    &__button {
-        border-radius: 5px;
-        border: 1px solid #bdbdbd;
-        padding: 0.5625rem 2rem;
-        margin-right: 0.9375rem;
-        font-family: $golosFont;
-        font-size: 1rem;
-        line-height: 1.44;
-        color: $midGray;
-        transition: background-color, color 0.2s ease-in;
-        margin-bottom: 0.9375rem;
-
-        &:hover {
-            background-color: $firstGreen;
-            color: #fff;
-        }
-    }
-}
+@import "associationHeader";
 
 .joining {
     width: 41.25rem;
@@ -93,6 +49,129 @@
             position: absolute;
             top: calc(50% - 4.5px);
             left: 0;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        margin-top: 3.25rem;
+    }
+    &__button {
+        width: 50%;
+        border-bottom: 2px solid #f2f2f2;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.44;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $midGray;
+        padding: 1.5rem 0;
+        border-radius: 8px 8px 0px 0px;
+
+        &:focus {
+            color: $firstGreen;
+            background-color: $lightGray;
+            border-bottom: 4px solid $firstGreen;
+        }
+    }
+
+    &__picture {
+        width: 41.25rem;
+        height: 26.25rem;
+        margin: 3.625rem auto;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    }
+
+    &__share {
+        background-color: $firstGreen;
+        width: 3.125rem;
+        height: 3.125rem;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: 0;
+        right: -4.375rem;
+    }
+}
+
+.document {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9375rem 1.25rem;
+    background: $lightGray;
+    border-radius: 8px;
+    margin-top: 1.8125rem;
+
+    & + & {
+        margin-top: 0.875rem;
+    }
+
+    &__info {
+        display: flex;
+
+        svg {
+            margin-right: 1.25rem;
+        }
+    }
+
+    &__title {
+        font-family: $golosFont;
+        font-size: 0.875rem;
+        line-height: 1.14;
+        max-width: 23.6875rem;
+        color: $midGray;
+    }
+
+    &__download {
+    }
+}
+
+.contacs {
+    width: 41.3125rem;
+    height: 16.375rem;
+    background-color: $lightGray;
+    border-radius: 8px;
+    display: flex;
+    padding: 3.25rem 3.875rem;
+    margin: 1.25rem 0 6.25rem;
+
+    .email,
+    .phone {
+        width: 50%;
+
+        &__icon {
+            display: block;
+        }
+        &__title {
+            display: block;
+            margin-top: 1.25rem;
+            font-family: Inter;
+            font-size: 1.125rem;
+            line-height: 1.44;
+            text-decoration-line: underline;
+            color: $firstGreen;
+        }
+        &__text {
+            display: block;
+            max-width: 12.75rem;
+            margin-top: 15px;
+            font-family: $golosFont;
+            font-size: 1rem;
+            line-height: 1.44;
+            letter-spacing: -0.015em;
+            color: $darkGray;
         }
     }
 }
