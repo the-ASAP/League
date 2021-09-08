@@ -1,40 +1,45 @@
 .analytics {
     margin-top: 6.25rem;
-}
 
-.analytics__info {
-    width: 100%;
-    display: flex;
-    margin-top: 2.875rem;
-    flex-wrap: wrap;
-    position: relative;
+    &__info {
+        width: 100%;
+        display: flex;
+        margin-top: 2.875rem;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: space-between;
+    }
 }
 
 .graph {
-    width: 55.1875rem;
+    width: 65%;
     height: 34.375rem;
     background-color: $lightGray;
     border-radius: 0.75rem;
-}
 
-.graph__text {
-    max-width: 33.25rem;
-    margin: 1.75rem 0 0 2.3125rem;
-}
+    &__text {
+        max-width: 33.25rem;
+        margin: 1.75rem 0 0 2.3125rem;
+    }
 
-.graph__canvas__wrapper {
-    width: 48.4375rem;
-    height: 23.125rem;
-    margin-top: 1rem;
-    margin-left: 2.25rem;
-}
+    &__canvas__wrapper {
+        width: 48.4375rem;
+        height: 23.125rem;
+        margin-top: 1rem;
+        margin-left: 2.25rem;
+    }
 
-.graph__input__wrapper {
-    width: 100%;
-}
+    &__input__wrapper {
+        width: 100%;
+    }
 
-.graph__input {
-    display: none;
+    &__input {
+        display: none;
+    }
+
+    &__canvas {
+        width: 100%;
+    }
 }
 
 .customInput {
@@ -73,51 +78,44 @@
     padding-right: 1px;
 }
 
-.graph__canvas {
-    width: 100%;
-}
-
 .materials {
-    width: 26.9375rem;
+    width: 33%;
     height: 34.375rem;
     margin-left: 1.375rem;
-    background: linear-gradient(
-        0deg,
-        rgba(34, 43, 69, 0.96) -14.52%,
-        rgba(57, 173, 70, 0) 198.45%
-    );
+    background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
     border-radius: 0.75rem;
     position: relative;
-}
 
-.materials__picture,
-.materials__picture_mobile {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0.75rem;
-    opacity: 0.5;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+    &__picture,
+    &__picture_mobile {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.75rem;
+        opacity: 0.5;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 
-.materials__picture_mobile {
-    display: none;
-}
+    &__picture_mobile {
+        display: none;
+    }
 
-.materials__info {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2.625rem 2.75rem 3.5rem;
-}
-.materials__title {
-    max-width: 17rem;
-    color: $lightGray;
+    &__info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.625rem 2.75rem 3.5rem;
+    }
+
+    &__title {
+        max-width: 17rem;
+        color: $lightGray;
+    }
 }
 
 .company {
@@ -127,15 +125,16 @@
         width: 3.75rem;
         height: 3.75rem;
     }
-}
-.company__title {
-    margin-left: 0.3125rem;
-    max-width: 9.5625rem;
-    font-size: 1.125rem;
-    line-height: 1.19;
-    letter-spacing: -0.0938rem;
 
-    color: $lightGray;
+    &__title {
+        margin-left: 0.3125rem;
+        max-width: 9.5625rem;
+        font-size: 1.125rem;
+        line-height: 1.19;
+        letter-spacing: -0.0938rem;
+
+        color: $lightGray;
+    }
 }
 
 .notes {
@@ -178,88 +177,85 @@
 }
 
 .customCheckbox:checked + label::before {
-    background-color: #95b403;
-    border: 1px solid #95b403;
+    background-color: #00e096;
+    border: 1px solid #00e096;
     background-image: url("../img/icons/check.svg");
 }
 
 #input_2:checked + label::before {
-    background-color: #6c6ae0;
-    border: 1px solid #6c6ae0;
+    background-color: #006fd6;
+    border: 1px solid #006fd6;
 }
 
-#input_3:checked + label::before,
-#input_6:checked + label::before {
-    background-color: #c05394;
-    border: 1px solid #c05394;
+#input_3:checked + label::before {
+    background-color: #ff3d71;
+    border: 1px solid #ff3d71;
 }
 
 #input_4:checked + label::before {
-    background-color: #48bced;
-    border: 1px solid #48bced;
+    background-color: #9b51e0;
+    border: 1px solid #9b51e0;
 }
 
 #input_5:checked + label::before {
-    background-color: #bdad1e;
-    border: 1px solid #bdad1e;
+    background-color: #39ad46;
+    border: 1px solid #39ad46;
 }
 
 #input_6:checked + label::before {
-    background-color: #c05394;
-    border: 1px solid #c05394;
+    background-color: #ffc94d;
+    border: 1px solid #ffc94d;
 }
 
 @media (max-width: 768px) {
     .analytics {
         margin-top: 6.9375rem;
-    }
 
-    .analytics__info {
-        // display: block;
-        flex-direction: column;
+        &__info {
+            flex-direction: column;
+        }
     }
 
     .graph {
         width: 100%;
-        height: 36.875rem;
-    }
-    .graph__canvas__wrapper {
-        // display: none;
-        margin-left: 0;
-        padding: 0 1.0625rem;
-        width: 100%;
-    }
-    .graph__canvas {
-        width: 100%;
         height: auto;
+
+        &__canvas__wrapper {
+            margin-left: 0;
+            padding: 0 1.0625rem;
+            width: 100%;
+        }
+
+        &__canvas {
+            width: 100%;
+            height: auto;
+        }
+
+        &__input__wrapper {
+            width: 100%;
+            padding: 0 1.0625rem;
+            margin-top: 1.875rem;
+        }
+
+        &__input {
+            width: 100%;
+            position: relative;
+            margin: 0;
+        }
+
+        &__title {
+            max-width: 100%;
+            margin: 1.25rem 1.0625rem 0;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: $extraGray;
+        }
     }
 
-    .graph__input__wrapper {
-        width: 100%;
-        padding: 0 1.0625rem;
-        margin-top: 1.875rem;
-        // display: none;
-    }
     .customInput {
         margin: 0;
         width: 100%;
-    }
-
-    .graph__input {
-        width: 100%;
-        position: relative;
-        margin: 0;
-    }
-
-    .graph__title {
-        max-width: 100%;
-        margin: 1.25rem 1.0625rem 0;
-
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.5;
-
-        color: $extraGray;
     }
     .customCheckbox + label {
         font-size: 0.875rem;
@@ -279,23 +275,24 @@
         width: 100%;
         height: 14.375rem;
         margin: 3.4375rem 0 0;
-    }
 
-    .materials__picture {
-        display: none;
-    }
-    .materials__picture_mobile {
-        display: block;
-    }
+        &__picture {
+            display: none;
+        }
 
-    .materials__info {
-        padding: 1.25rem 1.5625rem 1.5rem;
-    }
+        &__picture_mobile {
+            display: block;
+        }
 
-    .materials__title {
-        max-width: 11.0625rem;
-        font-size: 1.25rem;
-        line-height: 1.3;
+        &__info {
+            padding: 1.25rem 1.5625rem 1.5rem;
+        }
+
+        &__title {
+            max-width: 11.0625rem;
+            font-size: 1.25rem;
+            line-height: 1.3;
+        }
     }
 
     .notes {

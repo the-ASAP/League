@@ -32,6 +32,11 @@ $().ready(() => {
                 margin: 20,
                 autoWidth: false,
             },
+            768: {
+                margin: 20,
+                autoWidth: false,
+                items: 2,
+            },
         },
     });
 
@@ -49,6 +54,11 @@ $().ready(() => {
                 margin: 20,
                 autoWidth: false,
                 items: 3,
+            },
+            768: {
+                margin: 20,
+                autoWidth: false,
+                items: 2,
             },
         },
     });
