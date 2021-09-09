@@ -147,8 +147,8 @@
 }
 
 .return__button {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border: 1px solid var(--main-green);
   border-radius: 50%;
   transition: all 0.2s ease-in;
@@ -169,15 +169,15 @@
 
 .return__text {
   font-family: Inter;
-  font-style: normal;
   font-weight: 500;
   font-size: 0.875rem;
-  line-height: 1.1875rem;
+  line-height: 1.36;
   color: var(--mid-gray);
 }
 
 .wrapper_event {
   width: 41.25rem;
+  position: relative;
   margin: 0 auto;
 }
 
@@ -323,14 +323,15 @@
 }
 
 .content__button {
-  border: 1px solid var(--main-green);
-  border-radius: 26px;
+  background-color: #efefef;
+  border-radius: 5px;
   font-size: 0.875rem;
+  font-weight: 500;
   line-height: 1.36;
-  padding: 0.4688rem 1.125rem;
-  color: var(--main-green);
-  margin-right: 1rem;
-  transition: background-color, color 0.2s ease-in;
+  padding: 0.4063rem 1rem;
+  color: var(--dark-gray);
+  margin-right: 0.75rem;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 .content__button:hover {
@@ -534,5 +535,80 @@
   .post__date {
     font-size: 0.75rem;
     line-height: 1.4375rem;
+  }
+
+  .wrapper_event {
+    width: 90%;
+  }
+
+  .intro {
+    margin-top: 2.625rem;
+  }
+
+  .intro__info {
+    padding: 0;
+    border: none;
+  }
+
+  .event {
+    margin-top: 1.6875rem;
+  }
+
+  .event__title {
+    margin-top: 1.25rem;
+  }
+
+  .event__image {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .event__image img {
+    margin: 1.5rem 0;
+  }
+
+  .event__share {
+    position: relative;
+    right: 0;
+  }
+
+  .content {
+    margin: 0;
+  }
+
+  .otherNews {
+    padding: 0;
+    margin-top: 5rem;
+  }
+
+  .otherNews__info-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .otherNews__more {
+    background: var(--main-green);
+    border-radius: 6px;
+    padding: 0.75rem 0.875rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .otherNews__more span {
+    font-family: Inter;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: 0.015em;
+    color: #fff;
+    margin-right: 2.125rem;
+  }
+
+  .hiden {
+    display: none;
   }
 }

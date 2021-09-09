@@ -523,6 +523,10 @@
   flex-wrap: wrap;
 }
 
+.news__button_mobile {
+  display: none;
+}
+
 .pagination {
   display: flex;
   border-bottom: 1px solid #bdbdbd;

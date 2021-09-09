@@ -669,6 +669,7 @@ input:-webkit-autofill:focus {
 }
 
 .association__button {
+  height: 3.4375rem;
   border-radius: 5px;
   border: 1px solid #bdbdbd;
   padding: 0.5625rem 2rem;

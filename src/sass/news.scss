@@ -217,6 +217,10 @@
         margin-top: 2.875rem;
         flex-wrap: wrap;
     }
+
+    &__button_mobile {
+        display: none;
+    }
 }
 
 .pagination {
@@ -360,10 +364,6 @@
     .post:not(:first-child) {
         .post__wrapper {
             height: auto;
-
-            // img {
-            //     display: none;
-            // }
         }
         .post__image {
             display: none;

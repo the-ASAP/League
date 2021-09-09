@@ -20,6 +20,7 @@ const owlGallery = (selector, params) => {
 $().ready(() => {
     owlGallery(".carouselSocial", {
         dots: false,
+        autoWidth: false,
         items: 1,
         margin: 16,
         loop: true,
@@ -51,9 +52,9 @@ $().ready(() => {
         navClass: ["carouselMeeting__prev", "carouselMeeting__next"],
         responsive: {
             1240: {
+                items: 3,
                 margin: 20,
                 autoWidth: false,
-                items: 3,
             },
             768: {
                 margin: 20,
@@ -73,17 +74,41 @@ $().ready(() => {
         margin: 10,
         navContainer: ".carouselEvent__buttons",
         navClass: ["carouselEvent__prev", "carouselEvent__next"],
+        responsive: {
+            1240: {
+                items: 3,
+                margin: 20,
+                autoWidth: false,
+            },
+            768: {
+                margin: 20,
+                autoWidth: false,
+                items: 2,
+            },
+        },
     });
 });
 
 $().ready(() => {
     owlGallery(".carouselOther", {
         dots: false,
-        items: 3,
+        items: 1,
         loop: true,
         nav: true,
         margin: 10,
         navContainer: ".carouselOther__buttons",
         navClass: ["carouselOther__prev", "carouselOther__next"],
+        responsive: {
+            1240: {
+                items: 3,
+                margin: 20,
+                autoWidth: false,
+            },
+            768: {
+                items: 2,
+                margin: 20,
+                autoWidth: false,
+            },
+        },
     });
 });

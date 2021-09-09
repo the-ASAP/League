@@ -80,8 +80,8 @@
                 <img src="img/post.png" alt="event" />
                 <a href="/" class="event__share">
                     <svg
-                        width="24"
-                        height="25"
+                        width="1.5rem"
+                        height="1.5rem"
                         viewBox="0 0 24 25"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -311,7 +311,7 @@
                 <div class="otherNews">
                     <div class="otherNews__info">
                         <h2 class="otherNews__title">Другие новости</h2>
-                        <div class="carouselOther__buttons"></div>
+                        <div class="carouselOther__buttons hiden"></div>
                     </div>
                     <div class="owl-carousel owl-theme carouselOther">
                         @import "post.html"
@@ -320,6 +320,26 @@
                         <!--  -->
                         @import "post.html"
                         <!--  -->
+                    </div>
+                    <div class="otherNews__info-mobile">
+                        <button type="button" class="otherNews__more">
+                            <span>Читать больше</span>
+                            <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M5.53022 0.469727L4.46956 1.53039L8.18923 5.25006H-0.000113487V6.75006H8.18923L4.46956 10.4697L5.53022 11.5304L11.0605 6.00006L5.53022 0.469727Z"
+                                    fill="white"
+                                />
+                            </svg>
+                        </button>
+                        <div class="carouselOther__buttons"></div>
                     </div>
                 </div>
             </div>
