@@ -223,9 +223,9 @@
 .event__title {
   margin-top: 2.5rem;
   color: var(--dark-gray);
-  font-weight: 500;
-  font-size: 2.25rem;
-  line-height: 1.22;
+  font-weight: 400;
+  font-size: 2;
+  line-height: 1.44;
 }
 
 .event__image {
@@ -429,7 +429,6 @@
 }
 
 .document__title {
-  font-family: var(--golos-font);
   font-size: 0.875rem;
   line-height: 1.14;
   max-width: 23.6875rem;
@@ -445,6 +444,10 @@
 .otherNews__info {
   display: flex;
   justify-content: space-between;
+}
+
+.otherNews__more {
+  display: none;
 }
 
 .carouselOther {
@@ -514,11 +517,14 @@
   .post {
     width: 100%;
     margin-bottom: 0;
-    padding-bottom: 1.3125rem;
   }
 
   .post + .post {
-    margin-top: 1.875rem;
+    margin-top: 3.125rem;
+  }
+
+  .post__wrapper {
+    height: 80vw;
   }
 
   .post__title {
@@ -556,6 +562,9 @@
 
   .event__title {
     margin-top: 1.25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.42;
   }
 
   .event__image {
@@ -580,6 +589,10 @@
     margin: 0;
   }
 
+  .content__author span {
+    display: block;
+  }
+
   .otherNews {
     padding: 0;
     margin-top: 5rem;
@@ -589,6 +602,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 3.625rem;
   }
 
   .otherNews__more {
@@ -610,5 +624,13 @@
 
   .hiden {
     display: none;
+  }
+
+  .document__title {
+    max-width: 65%;
+  }
+
+  .carouselOther__buttons {
+    margin: 0;
   }
 }

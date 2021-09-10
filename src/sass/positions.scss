@@ -4,6 +4,7 @@
     &__title {
         text-align: center;
         margin-top: 4.1875rem;
+        font-weight: 400;
     }
 }
 
@@ -52,7 +53,8 @@
 @media (max-width: 768px) {
     .positions {
         &__title {
-            max-width: 90%;
+            font-size: 2.25rem;
+            line-height: 1.28;
             margin: 4.1875rem auto 0;
         }
     }

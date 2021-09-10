@@ -545,6 +545,11 @@
   justify-content: space-between;
 }
 
+.meeting__info {
+  display: flex;
+  justify-content: space-between;
+}
+
 .meeting__all {
   padding: 0.5313rem 1.5rem;
   color: var(--dark-gray);
@@ -563,7 +568,6 @@
 }
 
 .carouselMeeting__buttons {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
 }
@@ -943,11 +947,14 @@
   .post {
     width: 100%;
     margin-bottom: 0;
-    padding-bottom: 1.3125rem;
   }
 
   .post + .post {
-    margin-top: 1.875rem;
+    margin-top: 3.125rem;
+  }
+
+  .post__wrapper {
+    height: 80vw;
   }
 
   .post__title {
@@ -1006,6 +1013,7 @@
   .graph {
     width: 100%;
     height: auto;
+    padding-bottom: 1.25rem;
   }
 
   .graph__canvas__wrapper {
@@ -1038,6 +1046,13 @@
     font-size: 1rem;
     line-height: 1.5;
     color: var(--extra-gray);
+  }
+
+  .graph__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--extra-gray);
+    margin: 1.25rem 1rem 0;
   }
 
   .customInput {
@@ -1123,6 +1138,18 @@
     margin-top: 8.125rem;
   }
 
+  .directory__button {
+    padding: 0.7813rem 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .directory__button span {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.44;
+    letter-spacing: 0.015em;
+  }
+
   .accordion__wrapper {
     margin-top: 2.25rem;
   }
@@ -1141,11 +1168,22 @@
     line-height: 1.15;
   }
 
+  .accordion__main h3 {
+    width: 90%;
+  }
+
   .accordion__information p {
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.71;
     color: var(--extra-gray);
+  }
+
+  .accordion__information a {
+    float: right;
+    font-size: 0.875rem;
+    line-height: 1.86;
+    margin: 2.125rem 0 1.875rem;
   }
 
   .accordion__button {
@@ -1156,20 +1194,32 @@
     line-height: 1.86;
   }
 
-  .directory__button {
-    padding: 0.7813rem 1.5rem;
-    margin-top: 2.5rem;
-  }
-
-  .directory__button span {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.44;
-    letter-spacing: 0.015em;
-  }
-
   .meeting__all {
     display: none;
+  }
+
+  .meeting__info {
+    align-items: flex-end;
+    margin-top: 5.3125rem;
+  }
+
+  .meeting__more {
+    background: var(--main-green);
+    border-radius: 6px;
+    padding: 0.75rem 0.875rem;
+    display: flex;
+    align-items: center;
+    width: 12.625rem;
+    height: 3rem;
+  }
+
+  .meeting__more span {
+    font-family: Inter;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: 0.015em;
+    color: #fff;
+    margin-right: 2.125rem;
   }
 
   .meetingDate {
@@ -1217,10 +1267,6 @@
     line-height: 1.4375rem;
   }
 
-  .carouselMeeting__buttons {
-    margin-top: 4.0625rem;
-  }
-
   .directory__finalButton {
     padding: 1.0625rem 1.25rem;
     margin-top: 4.0625rem;
@@ -1266,11 +1312,14 @@
   .post {
     width: 100%;
     margin-bottom: 0;
-    padding-bottom: 1.3125rem;
   }
 
   .post + .post {
-    margin-top: 1.875rem;
+    margin-top: 3.125rem;
+  }
+
+  .post__wrapper {
+    height: 80vw;
   }
 
   .post__title {

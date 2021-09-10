@@ -111,11 +111,14 @@
   .post {
     width: 100%;
     margin-bottom: 0;
-    padding-bottom: 1.3125rem;
   }
 
   .post + .post {
-    margin-top: 1.875rem;
+    margin-top: 3.125rem;
+  }
+
+  .post__wrapper {
+    height: 80vw;
   }
 
   .post__title {

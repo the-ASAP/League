@@ -74,18 +74,6 @@ $().ready(() => {
         margin: 10,
         navContainer: ".carouselEvent__buttons",
         navClass: ["carouselEvent__prev", "carouselEvent__next"],
-        responsive: {
-            1240: {
-                items: 3,
-                margin: 20,
-                autoWidth: false,
-            },
-            768: {
-                margin: 20,
-                autoWidth: false,
-                items: 2,
-            },
-        },
     });
 });
 

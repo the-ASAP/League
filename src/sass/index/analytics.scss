@@ -219,6 +219,7 @@
     .graph {
         width: 100%;
         height: auto;
+        padding-bottom: 1.25rem;
 
         &__canvas__wrapper {
             margin-left: 0;
@@ -250,6 +251,13 @@
             font-size: 1rem;
             line-height: 1.5;
             color: $extraGray;
+        }
+
+        &__text {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: $extraGray;
+            margin: 1.25rem 1rem 0;
         }
     }
 

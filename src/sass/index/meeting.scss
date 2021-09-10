@@ -7,6 +7,11 @@
         justify-content: space-between;
     }
 
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__all {
         padding: 0.5313rem 1.5rem;
         color: $darkGray;
@@ -21,53 +26,10 @@
     }
 }
 
-// .meetingDate {
-//     margin-top: 2.875rem;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: flex-end;
-//     width: 100%;
-
-//     &__buttons {
-//         display: flex;
-//     }
-
-//     &__button {
-//         height: 2.375rem;
-//         border-radius: 1.625rem;
-//         border: 1px solid $firstGreen;
-//         background-color: #fff;
-//         margin-right: 0.625rem;
-//         color: #bdbdbd;
-//         padding: 0 1.5rem;
-//         font-family: Inter;
-//         font-size: 1rem;
-//         line-height: 1.44;
-//         letter-spacing: -0.015em;
-//         border: 1px solid #bdbdbd;
-
-//         &:focus {
-//             border: 1px solid $firstGreen;
-//             color: $firstGreen;
-//         }
-//     }
-
-//     &__readMore {
-//         font-family: Inter;
-//         font-style: normal;
-//         font-weight: normal;
-//         font-size: 1rem;
-//         line-height: 1.44;
-//         letter-spacing: -0.015em;
-//         color: $darkGray;
-//     }
-// }
-
 .carouselMeeting {
     margin-top: 2.5625rem;
 
     &__buttons {
-        width: 100%;
         display: flex;
         justify-content: flex-end;
     }
@@ -130,6 +92,30 @@
         &__all {
             display: none;
         }
+
+        &__info {
+            align-items: flex-end;
+            margin-top: 5.3125rem;
+        }
+
+        &__more {
+            background: $firstGreen;
+            border-radius: 6px;
+            padding: 0.75rem 0.875rem;
+            display: flex;
+            align-items: center;
+            width: 12.625rem;
+            height: 3rem;
+
+            span {
+                font-family: Inter;
+                font-size: 1rem;
+                line-height: 1.44;
+                letter-spacing: 0.015em;
+                color: #fff;
+                margin-right: 2.125rem;
+            }
+        }
     }
     .meetingDate {
         margin-top: 2rem;
@@ -168,10 +154,6 @@
             font-size: 0.75rem;
             line-height: 1.4375rem;
         }
-    }
-
-    .carouselMeeting__buttons {
-        margin-top: 4.0625rem;
     }
 
     .directory__finalButton {

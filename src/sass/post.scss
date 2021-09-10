@@ -97,14 +97,13 @@
     .post {
         width: 100%;
         margin-bottom: 0;
-        padding-bottom: 1.3125rem;
 
         & + & {
-            margin-top: 1.875rem;
+            margin-top: 3.125rem;
         }
 
         &__wrapper {
-            // height: 40vh;
+            height: 80vw;
         }
 
         &__title {

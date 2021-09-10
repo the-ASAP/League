@@ -104,9 +104,9 @@
     &__title {
         margin-top: 2.5rem;
         color: $darkGray;
-        font-weight: 500;
-        font-size: 2.25rem;
-        line-height: 1.22;
+        font-weight: 400;
+        font-size: 2;
+        line-height: 1.44;
     }
 
     &__image {
@@ -310,7 +310,6 @@
     }
 
     &__title {
-        font-family: $golosFont;
         font-size: 0.875rem;
         line-height: 1.14;
         max-width: 23.6875rem;
@@ -329,6 +328,10 @@
     &__info {
         display: flex;
         justify-content: space-between;
+    }
+
+    &__more {
+        display: none;
     }
 }
 
@@ -407,6 +410,9 @@
 
         &__title {
             margin-top: 1.25rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 1.42;
         }
 
         &__image {
@@ -429,6 +435,12 @@
     }
     .content {
         margin: 0;
+
+        &__author {
+            span {
+                display: block;
+            }
+        }
     }
     .otherNews {
         padding: 0;
@@ -438,6 +450,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 3.625rem;
         }
 
         &__more {
@@ -459,5 +472,17 @@
     }
     .hiden {
         display: none;
+    }
+
+    .document {
+        &__title {
+            max-width: 65%;
+        }
+    }
+
+    .carouselOther {
+        &__buttons {
+            margin: 0;
+        }
     }
 }
