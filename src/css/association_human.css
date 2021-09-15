@@ -541,6 +541,13 @@ p {
   height: 100%;
 }
 
+.wrapper_middle {
+  margin: 0 auto;
+  max-width: 65%;
+  position: relative;
+  height: 100%;
+}
+
 a {
   font-family: Inter;
   color: #0400ff;
@@ -991,6 +998,10 @@ input:-webkit-autofill:focus {
 @media (max-width: 83.75rem) {
   .wrapper {
     width: 90%;
+  }
+
+  .wrapper_middle {
+    width: 100%;
   }
 }
 

@@ -2,11 +2,16 @@
 @import "associationHeader";
 
 .title {
-    margin-top: 2.5rem;
+    padding: 1.875rem 0;
+    border-bottom: 1px solid #bdbdbd;
+
+    h2 {
+        text-align: center;
+    }
 }
 
 .team {
-    margin: 2.5rem 0 8.75rem;
+    margin: 4.625rem 0 8.75rem;
     display: flex;
     flex-wrap: wrap;
 }

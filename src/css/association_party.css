@@ -541,6 +541,13 @@ p {
   height: 100%;
 }
 
+.wrapper_middle {
+  margin: 0 auto;
+  max-width: 65%;
+  position: relative;
+  height: 100%;
+}
+
 a {
   font-family: Inter;
   color: #0400ff;
@@ -664,7 +671,7 @@ input:-webkit-autofill:focus {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 2.8125rem;
-  border-bottom: 2px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
   margin-top: 3.125rem;
 }
 
@@ -678,7 +685,7 @@ input:-webkit-autofill:focus {
   font-size: 1rem;
   line-height: 1.44;
   color: var(--mid-gray);
-  transition: background-color, color 0.2s ease-in;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
   margin-bottom: 0.9375rem;
 }
 
@@ -1013,6 +1020,10 @@ input:-webkit-autofill:focus {
 @media (max-width: 83.75rem) {
   .wrapper {
     width: 90%;
+  }
+
+  .wrapper_middle {
+    width: 100%;
   }
 }
 
