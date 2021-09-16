@@ -5,9 +5,6 @@
 
     &__info {
         position: relative;
-
-        padding-bottom: 3.8125rem;
-        border-bottom: 2px solid $firstGreen;
     }
 
     &__title {
@@ -50,20 +47,18 @@
     }
 
     &__text {
-        font-family: Inter;
-        font-style: normal;
         font-weight: 500;
         font-size: 0.875rem;
-        line-height: 1.1875rem;
-
+        line-height: 1.36;
         color: $midGray;
     }
 }
 
 .info {
-    margin-top: 3.75rem;
+    margin-top: 3.125rem;
     display: flex;
 }
+
 .partner {
     width: 27rem;
     min-height: 20rem;
@@ -90,7 +85,6 @@
         margin: 2rem auto 0;
         display: block;
         color: $firstGreen;
-        font-family: Inter;
         text-align: center;
         font-weight: 500;
         font-size: 1.5rem;
@@ -99,7 +93,6 @@
 }
 .content {
     max-width: 43.8125rem;
-    margin-top: 4.4375rem;
 
     ul {
         margin-top: 2.5rem;
@@ -120,12 +113,16 @@
             background-color: $firstGreen;
             border-radius: 50%;
             position: absolute;
-            top: calc(50% - 4.5px);
+            top: 8px;
             left: 0;
         }
     }
     li + li {
         margin-top: 0.75rem;
+    }
+
+    p {
+        margin-top: 1.75rem;
     }
 }
 
@@ -144,7 +141,6 @@
     &__buttons {
         display: flex;
         justify-content: flex-end;
-        margin-top: 0.8125rem;
     }
 
     &__prev,
@@ -177,6 +173,8 @@
     &__info {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin-top: 1.5rem;
     }
     &__signature {
         display: block;
@@ -184,7 +182,6 @@
         font-size: 0.875rem;
         font-weight: 1.14;
         color: $darkGray;
-        margin-top: 1.375rem;
     }
 }
 
@@ -196,7 +193,6 @@
         font-weight: 500;
         font-size: 1.625rem;
         line-height: 1.15;
-
         color: $darkGray;
     }
 }
@@ -216,6 +212,7 @@
 
     &__info {
         display: flex;
+        align-items: center;
 
         svg {
             margin-right: 1.25rem;
@@ -229,13 +226,10 @@
         max-width: 23.6875rem;
         color: $midGray;
     }
-
-    &__download {
-    }
 }
 
 .map {
-    margin-top: 3.75rem;
+    margin-top: 6.25rem;
 
     &__title {
         line-height: 1.25;
@@ -243,8 +237,8 @@
 }
 
 .yandexMap {
-    margin-top: 2.5rem;
-    margin-bottom: 5.625rem;
+    margin-top: 3.75rem;
+    margin-bottom: 4.375rem;
     width: 100%;
     height: 31.25rem;
     border-radius: 12px;

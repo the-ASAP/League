@@ -4,6 +4,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -61,6 +62,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -118,6 +120,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -129,6 +132,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -214,6 +218,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -482,7 +487,6 @@ html {
 body {
   font-family: sans-serif;
   cursor: default;
-  background-color: #f5f5f5;
   color: #000000;
 }
 
@@ -534,6 +538,10 @@ p {
   color: var(--dark-gray);
 }
 
+span {
+  font-family: Inter;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 83.75rem;
@@ -565,7 +573,7 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: sans-serif;
+  font-family: Inter;
   border: none;
   background: none;
   outline: none;
@@ -695,6 +703,12 @@ input:-webkit-autofill:focus {
   margin-top: 3.75rem;
 }
 
+.human__name {
+  font-size: 2rem;
+  line-height: 1.37;
+  font-weight: 400;
+}
+
 .human__picture {
   width: 26.875rem;
   height: 31.1875rem;
@@ -710,25 +724,32 @@ input:-webkit-autofill:focus {
 
 .human__position {
   margin-top: 1.25rem;
-  line-height: 1.25;
+  font-size: 1.125rem;
+  line-height: 1.67;
+  font-weight: 400;
 }
 
 .human__text {
   margin-top: 1.25rem;
+  line-height: 1.67;
 }
 
 .human__textPhone {
   margin-top: 2.1875rem;
+  line-height: 1.67;
 }
 
 .human__textEmail {
   margin-top: 2.5rem;
+  line-height: 1.67;
 }
 
 .human__phone,
 .human__email {
   margin-top: 0.5625rem;
   color: var(--main-green);
+  font-size: 1.125rem;
+  line-height: 1.67;
 }
 
 .progress {
@@ -757,7 +778,7 @@ input:-webkit-autofill:focus {
   position: relative;
   font-family: Inter;
   font-size: 1.125rem;
-  line-height: 1.44;
+  line-height: 1.67;
   margin-bottom: 1.25rem;
 }
 
@@ -769,7 +790,7 @@ input:-webkit-autofill:focus {
   background-color: var(--main-green);
   position: absolute;
   left: 0;
-  top: 9px;
+  top: 8px;
 }
 
 @media (max-width: 1600px) {

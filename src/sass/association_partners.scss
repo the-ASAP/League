@@ -1,6 +1,16 @@
 @import "main";
 @import "associationHeader";
 
+.title {
+    padding: 1.875rem 0;
+    border-bottom: 1px solid #bdbdbd;
+
+    h2 {
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
 .partners {
     &__title {
         margin-top: 3.125rem;
@@ -10,8 +20,8 @@
 .partners__list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 3.75rem;
-    margin-bottom: 3.125rem;
+    margin-top: 2.6875rem;
+    margin-bottom: 10.3125rem;
 }
 
 .partner {

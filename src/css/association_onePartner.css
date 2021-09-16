@@ -4,6 +4,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -23,8 +24,6 @@
 
 .intro__info {
   position: relative;
-  padding-bottom: 3.8125rem;
-  border-bottom: 2px solid var(--main-green);
 }
 
 .intro__title {
@@ -72,7 +71,7 @@
 }
 
 .info {
-  margin-top: 3.75rem;
+  margin-top: 3.125rem;
   display: flex;
 }
 
@@ -112,7 +111,6 @@
 
 .content {
   max-width: 43.8125rem;
-  margin-top: 4.4375rem;
 }
 
 .content ul {
@@ -141,6 +139,12 @@
 
 .content li + li {
   margin-top: 0.75rem;
+}
+
+.content p {
+  line-height: 1.67;
+  margin-top: 1.75rem;
+  max-width: 60%;
 }
 
 .documents {
@@ -172,6 +176,7 @@
 
 .document__info {
   display: flex;
+  align-items: center;
 }
 
 .document__info svg {

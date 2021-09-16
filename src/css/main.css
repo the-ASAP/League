@@ -4,6 +4,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -61,6 +62,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -118,6 +120,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -129,6 +132,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -214,6 +218,7 @@
   --main-green: #39ad46;
   --second-green: #27ae60;
   --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
   --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
@@ -482,7 +487,6 @@ html {
 body {
   font-family: sans-serif;
   cursor: default;
-  background-color: #f5f5f5;
   color: #000000;
 }
 
@@ -534,6 +538,10 @@ p {
   color: var(--dark-gray);
 }
 
+span {
+  font-family: Inter;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 83.75rem;
@@ -565,7 +573,7 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-family: sans-serif;
+  font-family: Inter;
   border: none;
   background: none;
   outline: none;

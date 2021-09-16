@@ -22,9 +22,7 @@ html {
 body {
     font-family: $font; // FF MAIN
     cursor: default;
-    background-color: $bgc;
     color: $gen;
-    // @extend %scrollbar;
 }
 
 section {
@@ -86,6 +84,10 @@ p {
     color: $darkGray;
 }
 
+span {
+    font-family: Inter;
+}
+
 // ul {
 //    list-style: none;
 // }
@@ -130,7 +132,7 @@ input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-family: $font;
+    font-family: Inter;
     border: none;
     background: none;
     outline: none;

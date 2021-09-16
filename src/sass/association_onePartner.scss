@@ -5,9 +5,6 @@
 
     &__info {
         position: relative;
-
-        padding-bottom: 3.8125rem;
-        border-bottom: 2px solid $firstGreen;
     }
 
     &__title {
@@ -61,7 +58,7 @@
 }
 
 .info {
-    margin-top: 3.75rem;
+    margin-top: 3.125rem;
     display: flex;
 }
 .partner {
@@ -99,7 +96,6 @@
 }
 .content {
     max-width: 43.8125rem;
-    margin-top: 4.4375rem;
 
     ul {
         margin-top: 2.5rem;
@@ -124,8 +120,15 @@
             left: 0;
         }
     }
+
     li + li {
         margin-top: 0.75rem;
+    }
+
+    p {
+        line-height: 1.67;
+        margin-top: 1.75rem;
+        max-width: 60%;
     }
 }
 
@@ -158,6 +161,7 @@
 
     &__info {
         display: flex;
+        align-items: center;
 
         svg {
             margin-right: 1.25rem;
