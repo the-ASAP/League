@@ -1,0 +1,111 @@
+@import "root";
+@import "associationHeader";
+
+.title {
+    padding: 1.875rem 0;
+    border-bottom: 1px solid #bdbdbd;
+
+    h2 {
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.documentsPage {
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 20.9375rem;
+        margin: 2.875rem auto 0;
+    }
+
+    &__button {
+        border-radius: 6px;
+        padding: 0.75rem;
+        border: 1px solid #e0e0e0;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.44;
+        color: $midGray;
+        width: 10rem;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            color: #fff;
+            background-color: $firstGreen;
+            border-color: $firstGreen;
+        }
+    }
+
+    &__content {
+        margin-top: 2.3125rem;
+        margin-bottom: 5.9375rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.document {
+    width: calc((100% - 2.5rem) / 3);
+    height: 18.75rem;
+    background: $lightGray;
+    border-radius: 12px;
+    padding: 1.875rem 2.5rem;
+    position: relative;
+    margin-bottom: 1.25rem;
+
+    &__date {
+        display: block;
+        font-size: 1.125rem;
+        line-height: 1.67;
+        color: $midGray;
+    }
+    &__text {
+        display: block;
+        margin-top: 0.75rem;
+        font-size: 1.125rem;
+        line-height: 1.67;
+        color: $darkGray;
+    }
+    &__show {
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.44;
+        color: $firstGreen;
+    }
+    &__info {
+        position: absolute;
+        bottom: 1.75rem;
+        right: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__pdf {
+        width: 1.75rem;
+        height: 2.25rem;
+    }
+
+    &__size {
+        font-size: 0.75rem;
+        line-height: 1.67;
+        color: #a2a2a2;
+        margin-left: 0.5rem;
+    }
+
+    &__download {
+        width: 1.875rem;
+        height: 1.875rem;
+        border-radius: 50%;
+        margin-left: 0.75rem;
+        border: 1px solid $firstGreen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:nth-child(3n + 2) {
+        margin: 0 1.25rem 1.25rem;
+    }
+}

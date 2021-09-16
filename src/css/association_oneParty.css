@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+:root {
+  --main-green: #39ad46;
+  --second-green: #27ae60;
+  --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
+  --dark-gray: #4f4f4f;
+  --mid-gray: #828282;
+  --light-gray: #f2f2f2;
+  --extra-gray: #333;
+  --golos-font: Golos;
+}
+
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
+.intro {
+  margin-top: 4.3125rem;
+}
+
+.intro__info {
+  position: relative;
+}
+
+.intro__title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.625rem;
+  line-height: 3.125rem;
+  color: var(--dark-gray);
+}
+
+.return {
+  display: flex;
+  align-items: center;
+}
+
+.return__button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--main-green);
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+  margin-right: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.return__button:hover {
+  background-color: var(--main-green);
+  border: 1px solid var(--main-green);
+}
+
+.return__button:hover svg path {
+  fill: #fff;
+}
+
+.return__text {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.36;
+  color: var(--mid-gray);
+}
+
+.info {
+  margin-top: 3.125rem;
+  display: flex;
+}
+
+.partner {
+  width: 27rem;
+  min-height: 20rem;
+  height: fit-content;
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  margin-right: 4.6875rem;
+  padding: 1.625rem 0 2.1875rem;
+}
+
+.partner__picture {
+  margin: 0 auto;
+  max-width: 15rem;
+  display: flex;
+  justify-content: center;
+}
+
+.partner__logo {
+  object-fit: contain;
+  mix-blend-mode: darken;
+  width: 100%;
+}
+
+.partner__ref {
+  margin: 2rem auto 0;
+  display: block;
+  color: var(--main-green);
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.content {
+  max-width: 43.8125rem;
+}
+
+.content ul {
+  margin-top: 2.5rem;
+  list-style: none;
+}
+
+.content li {
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: var(--dark-gray);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.content li::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: var(--main-green);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+
+.content li + li {
+  margin-top: 0.75rem;
+}
+
+.content p {
+  margin-top: 1.75rem;
+}
+
+.carouselEvent {
+  margin-top: 2.5rem;
+}
+
+.carouselEvent .owl-stage-outer {
+  border-radius: 12px;
+}
+
+.carouselEvent img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.carouselEvent__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.carouselEvent__prev,
+.carouselEvent__next {
+  width: 3.1875rem;
+  height: 3.1875rem;
+  border: 1px solid var(--main-green);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.875rem;
+  transition: background-color 0.3s ease-in;
+}
+
+.carouselEvent__prev:hover,
+.carouselEvent__next:hover {
+  background-color: var(--main-green);
+}
+
+.carouselEvent__prev:hover svg path,
+.carouselEvent__next:hover svg path {
+  fill: var(--light-gray);
+}
+
+.carouselEvent__next {
+  transform: rotate(180deg);
+}
+
+.carouselEvent__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.carouselEvent__signature {
+  display: block;
+  font-family: var(--golos-font);
+  font-size: 0.875rem;
+  font-weight: 1.14;
+  color: var(--dark-gray);
+}
+
+.documents {
+  margin-top: 2.875rem;
+}
+
+.documents__title {
+  font-family: var(--golos-font);
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 1.15;
+  color: var(--dark-gray);
+}
+
+.document {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9375rem 1.25rem;
+  background: var(--light-gray);
+  border-radius: 8px;
+  margin-top: 1.8125rem;
+}
+
+.document + .document {
+  margin-top: 0.875rem;
+}
+
+.document__info {
+  display: flex;
+  align-items: center;
+}
+
+.document__info svg {
+  margin-right: 1.25rem;
+}
+
+.document__title {
+  font-family: var(--golos-font);
+  font-size: 0.875rem;
+  line-height: 1.14;
+  max-width: 23.6875rem;
+  color: var(--mid-gray);
+}
+
+.map {
+  margin-top: 6.25rem;
+}
+
+.map__title {
+  line-height: 1.25;
+}
+
+.yandexMap {
+  margin-top: 3.75rem;
+  margin-bottom: 4.375rem;
+  width: 100%;
+  height: 31.25rem;
+  border-radius: 12px;
+}

@@ -1,0 +1,113 @@
+@import "main";
+@import "associationHeader";
+
+.title {
+    padding: 1.875rem 0;
+    border-bottom: 1px solid #bdbdbd;
+
+    h2 {
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.partners {
+    &__title {
+        margin-top: 3.125rem;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 32rem;
+        margin: 2.875rem auto 0;
+    }
+
+    &__button {
+        border-radius: 6px;
+        padding: 0.75rem;
+        border: 1px solid #e0e0e0;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.44;
+        color: $midGray;
+        width: 15.625rem;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            color: #fff;
+            background-color: $firstGreen;
+            border-color: $firstGreen;
+        }
+    }
+}
+
+.partners__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3.125rem;
+    margin-bottom: 14.375rem;
+}
+
+.partner {
+    &:nth-child(3n + 2) {
+        margin: 1.25rem 1.25rem 0;
+    }
+
+    position: relative;
+    width: calc((100% - 40px) / 3);
+    height: 18.75rem;
+    background-color: $lightGray;
+    border-radius: 12px;
+    margin-top: 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.625rem 2.4375rem 1.75rem;
+
+    &__details {
+        margin-top: 1.25rem;
+        font-family: Inter;
+        font-size: 1rem;
+        line-height: 1.44;
+        letter-spacing: -0.015em;
+        color: $firstGreen;
+    }
+
+    &__text {
+        max-width: 19.0625rem;
+        font-family: Inter;
+        font-size: 1rem;
+        line-height: 1.44;
+        letter-spacing: -0.015em;
+        color: $darkGray;
+        display: block;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__picture {
+        max-width: 8.75rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__logo {
+        mix-blend-mode: darken;
+        object-fit: contain;
+        width: auto;
+    }
+
+    &__ref {
+        font-family: Inter;
+        font-size: 1.125rem;
+        line-height: 1.44;
+        color: $firstGreen;
+    }
+}

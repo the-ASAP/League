@@ -1,128 +1,111 @@
-.header__container {
-   margin-top: 2.1875rem;
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
+@import "root";
+.header {
+    &__container {
+        margin-top: 2.1875rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__search,
+    &__menu_mobile {
+        height: 2.625rem;
+        width: 2.625rem;
+        background-color: $lightGray;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__menu_mobile {
+        display: none;
+    }
+
+    &__button {
+        height: 1.4375rem;
+        border: none;
+        font-family: Inter;
+        font-size: 1rem;
+        line-height: 1.44;
+        letter-spacing: -0.015em;
+        text-transform: uppercase;
+        color: $darkGray;
+        opacity: 0.2;
+    }
 }
 
-.header__search,
-.header__menu_mobile {
-   height: 2.625rem;
-   width: 2.625rem;
-   background-color: #f2f2f2;
-   border-radius: 50%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.header__menu_mobile {
-   display: none;
-}
-
-.header__button {
-   height: 1.4375rem;
-   border: none;
-
-   font-family: Inter;
-   font-style: normal;
-   font-weight: normal;
-   font-size: 1rem;
-   line-height: 1.44;
-
-   letter-spacing: -0.015em;
-   text-transform: uppercase;
-
-   color: #4f4f4f;
-
-   opacity: 0.2;
-}
 .active {
-   opacity: 1;
+    opacity: 1;
 }
 
 .navbar {
-   margin-top: 1.5rem;
-   display: flex;
-   justify-content: space-between;
-   padding: 1.1875rem 0;
-   border-top: 1px solid #e0e0e0;
-   border-bottom: 1px solid #e0e0e0;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1875rem 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 1.25rem;
+        width: 100%;
+        font-family: Inter;
+        font-size: 1rem;
+        line-height: 1.44;
+        text-align: center;
+        color: $darkGray;
+
+        &:after {
+            content: "";
+            background-image: url(../img/icons/border.svg);
+            width: 1px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &:last-child::after {
+            display: none;
+        }
+    }
 }
-.navbar__item {
-   position: relative;
-   display: flex;
-   justify-content: center;
-   height: 1.25rem;
-   width: 100%;
-
-   font-family: Inter;
-   font-style: normal;
-   font-weight: 400;
-   font-size: 1rem;
-   line-height: 1.44;
-
-   text-align: center;
-
-   /* Gray 2 */
-
-   color: #4f4f4f;
-}
-.navbar__item:after {
-   content: "";
-   background-image: url(../img/icons/border.svg);
-   width: 1px;
-   height: 20px;
-   position: absolute;
-   top: 0;
-   right: 0;
-}
-
-.navbar__item:last-child:after {
-   display: none;
-}
-
-// .navbar__item:first-child:before {
-//     content: '';
-//     background-image: url(../img/icons/border.svg);
-//     width: 1px;
-//     height: 20px;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-// }
 
 @media (max-width: 768px) {
-   .header__container {
-      margin-top: 2rem;
-      width: 100%;
-   }
+    .header__container {
+        margin-top: 2rem;
+        width: 100%;
+    }
 
-   .header__logo {
-      order: -1;
+    .header__logo {
+        order: -1;
 
-      img {
-         width: 9.9375rem;
-         height: 3.1875rem;
-      }
-   }
+        img {
+            width: 9.9375rem;
+            height: 3.1875rem;
+        }
+    }
 
-   .header__buttons {
-      display: flex;
-   }
+    .header__buttons {
+        display: flex;
+    }
 
-   .header__language {
-      display: none;
-   }
-   .header__search {
-      display: block;
-   }
+    .header__language {
+        display: none;
+    }
 
-   .header__menu_mobile {
-      display: block;
-      margin-left: 0.625rem;
-   }
+    .header__menu_mobile {
+        display: block;
+        margin-left: 0.625rem;
+        display: flex;
+        align-items: center;
+    }
 
-   .navbar {
-      display: none;
-   }
+    .navbar {
+        display: none;
+    }
 }

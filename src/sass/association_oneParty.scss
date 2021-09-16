@@ -1,0 +1,245 @@
+@import "mixins";
+
+.intro {
+    margin-top: 4.3125rem;
+
+    &__info {
+        position: relative;
+    }
+
+    &__title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.625rem;
+        line-height: 3.125rem;
+
+        color: $darkGray;
+    }
+}
+
+.return {
+    display: flex;
+    align-items: center;
+
+    &__button {
+        width: 50px;
+        height: 50px;
+        border: 1px solid $firstGreen;
+        border-radius: 50%;
+        transition: all 0.2s ease-in;
+        margin-right: 1.25rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__button:hover {
+        background-color: $firstGreen;
+        border: 1px solid $firstGreen;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.36;
+        color: $midGray;
+    }
+}
+
+.info {
+    margin-top: 3.125rem;
+    display: flex;
+}
+
+.partner {
+    width: 27rem;
+    min-height: 20rem;
+    height: fit-content;
+    background-color: $lightGray;
+    border-radius: 12px;
+    margin-right: 4.6875rem;
+    padding: 1.625rem 0 2.1875rem;
+
+    &__picture {
+        margin: 0 auto;
+        max-width: 15rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__logo {
+        object-fit: contain;
+        mix-blend-mode: darken;
+        width: 100%;
+    }
+
+    &__ref {
+        margin: 2rem auto 0;
+        display: block;
+        color: $firstGreen;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+}
+.content {
+    max-width: 43.8125rem;
+
+    ul {
+        margin-top: 2.5rem;
+        list-style: none;
+    }
+    li {
+        font-size: 1.125rem;
+        line-height: 1.44;
+        color: $darkGray;
+
+        padding-left: 1.5rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            background-color: $firstGreen;
+            border-radius: 50%;
+            position: absolute;
+            top: 8px;
+            left: 0;
+        }
+    }
+    li + li {
+        margin-top: 0.75rem;
+    }
+
+    p {
+        margin-top: 1.75rem;
+    }
+}
+
+.carouselEvent {
+    margin-top: 2.5rem;
+
+    .owl-stage-outer {
+        border-radius: 12px;
+    }
+
+    img {
+        border-radius: 15px;
+        width: 100%;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__prev,
+    &__next {
+        width: 3.1875rem;
+        height: 3.1875rem;
+        border: 1px solid $firstGreen;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.875rem;
+        transition: background-color 0.3s ease-in;
+    }
+
+    &__prev:hover,
+    &__next:hover {
+        background-color: $firstGreen;
+        svg {
+            path {
+                fill: $lightGray;
+            }
+        }
+    }
+
+    &__next {
+        transform: rotate(180deg);
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+    &__signature {
+        display: block;
+        font-family: $golosFont;
+        font-size: 0.875rem;
+        font-weight: 1.14;
+        color: $darkGray;
+    }
+}
+
+.documents {
+    margin-top: 2.875rem;
+
+    &__title {
+        font-family: $golosFont;
+        font-weight: 500;
+        font-size: 1.625rem;
+        line-height: 1.15;
+        color: $darkGray;
+    }
+}
+
+.document {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9375rem 1.25rem;
+    background: $lightGray;
+    border-radius: 8px;
+    margin-top: 1.8125rem;
+
+    & + & {
+        margin-top: 0.875rem;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 1.25rem;
+        }
+    }
+
+    &__title {
+        font-family: $golosFont;
+        font-size: 0.875rem;
+        line-height: 1.14;
+        max-width: 23.6875rem;
+        color: $midGray;
+    }
+}
+
+.map {
+    margin-top: 6.25rem;
+
+    &__title {
+        line-height: 1.25;
+    }
+}
+
+.yandexMap {
+    margin-top: 3.75rem;
+    margin-bottom: 4.375rem;
+    width: 100%;
+    height: 31.25rem;
+    border-radius: 12px;
+}

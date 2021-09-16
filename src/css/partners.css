@@ -585,6 +585,10 @@ blockquote::before {
   border-radius: 1px;
 }
 
+img {
+  width: 100%;
+}
+
 button {
   cursor: pointer;
 }

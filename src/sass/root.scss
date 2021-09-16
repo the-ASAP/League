@@ -5,19 +5,24 @@ $text: #c0c0c0;
 $font: sans-serif;
 
 :root {
-   --main-green: #39ad46;
-   --second-green: #27ae60;
-   --dark-gray: #4f4f4f;
-   --mid-gray: #828282;
-   --light-gray: #f2f2f2;
+    --main-green: #39ad46;
+    --second-green: #27ae60;
+    --hover-green: #58ca65;
+    --dark-green: #1e7d5b;
 
-   --extra-gray: #333;
+    --dark-gray: #4f4f4f;
+    --mid-gray: #828282;
+    --light-gray: #f2f2f2;
+    --extra-gray: #333;
 
-   --golos-font: Golos;
+    --golos-font: Golos;
 }
 
 $firstGreen: var(--main-green);
 $secondGreen: var(--second-green);
+$hoverGreen: var(--hover-green);
+$darkGreen: var(--dark-green);
+
 $darkGray: var(--dark-gray);
 $midGray: var(--mid-gray);
 $lightGray: var(--light-gray);

@@ -1,0 +1,322 @@
+@import "root";
+@import "associationHeader";
+
+.title {
+    padding: 1.875rem 0;
+    border-bottom: 1px solid #bdbdbd;
+
+    h2 {
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+.results {
+    margin-top: 3rem;
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        width: 12.9375rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 0.75rem 4.625rem;
+        color: $firstGreen;
+        font-weight: 500;
+        font-size: 1.125rem;
+        line-height: 1.44;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease-in;
+
+        &:hover {
+            background-color: $lightGray;
+        }
+    }
+
+    &__info {
+        margin-top: 1.6875rem;
+        background: $lightGray;
+        border-radius: 8px;
+        padding: 3.125rem 12.875rem 3.125rem 2.875rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        ul {
+            list-style: none;
+        }
+        li {
+            margin-bottom: 1rem;
+            width: 41%;
+            list-style: none;
+            font-size: 1.125rem;
+            line-height: 1.67;
+            color: $darkGray;
+            padding-left: 1.5rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 9px;
+                height: 9px;
+                background-color: $firstGreen;
+                border-radius: 50%;
+                position: absolute;
+                top: 8px;
+                left: 0;
+            }
+        }
+    }
+}
+
+.alliance {
+    margin-top: 3.875rem;
+
+    &__title {
+        max-width: 50%;
+        margin: 0 auto;
+        font-size: 2rem;
+        line-height: 1.37;
+        font-weight: 400;
+        text-align: center;
+
+        &_green {
+            color: $firstGreen;
+        }
+    }
+
+    &__text {
+        font-size: 1.125rem;
+        line-height: 1.67;
+        text-align: center;
+        max-width: 39%;
+        margin: 0 auto;
+    }
+}
+
+.greenCircle {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: $firstGreen;
+    margin: 1.625rem auto 1rem;
+}
+
+.members {
+    margin-top: 4.8125rem;
+    display: grid;
+    grid-template-areas:
+        "square main square_4"
+        "square_2 main square_5";
+    grid-template-columns: 27rem 1fr 27rem;
+    gap: 1.25rem 1.75rem;
+
+    &__square {
+        height: 18.75rem;
+        background-color: $lightGray;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        grid-area: square;
+
+        &:nth-child(2) {
+            grid-area: square_2;
+        }
+        &:nth-child(4) {
+            grid-area: square_4;
+        }
+        &:nth-child(5) {
+            grid-area: square_5;
+        }
+
+        &:nth-child(1)::before,
+        &:nth-child(2)::before {
+            content: "";
+            width: 25px;
+            height: 25px;
+            background-color: $lightGray;
+            position: absolute;
+            top: calc(50% - 12.5px);
+            right: -12.5px;
+            transform: rotate(45deg);
+        }
+        &:nth-child(4)::before,
+        &:nth-child(5)::before {
+            content: "";
+            width: 25px;
+            height: 25px;
+            background-color: $lightGray;
+            position: absolute;
+            top: calc(50% - 12.5px);
+            left: -12.5px;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__main {
+        grid-area: main;
+        display: flex;
+        align-items: center;
+    }
+
+    &__circle {
+        width: 26.1875rem;
+        height: 26.1875rem;
+        border-radius: 50%;
+        background-color: $lightGray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            text-align: center;
+            max-width: 75%;
+            margin-top: 1.9375rem;
+            font-size: 0.875rem;
+            line-height: 1.64;
+            letter-spacing: 0.015em;
+            color: $darkGray;
+        }
+    }
+
+    &__mainPicture {
+        width: 16.625rem;
+        height: 10.625rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__picture {
+        height: 11.9375rem;
+        max-width: 20.125rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__country {
+        width: 4.6875rem;
+        position: absolute;
+        bottom: 1.75rem;
+        right: 2rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.cpo {
+    margin-top: 9.375rem;
+
+    &__title {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.37;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 55%;
+
+        &_green {
+            color: $firstGreen;
+        }
+    }
+
+    &__desc {
+        font-size: 1.125rem;
+        line-height: 1.67;
+        text-align: center;
+        margin: 2.375rem auto 0;
+        max-width: 25%;
+        display: block;
+
+        &_green {
+            color: $firstGreen;
+            text-decoration: underline;
+        }
+    }
+
+    &__top {
+        margin-top: 8.8125rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.billboard {
+    width: calc((100% - 1.375rem) / 2);
+    height: 13.75rem;
+    border-radius: 12px;
+    border: 1px solid $firstGreen;
+    padding-top: 3.1875rem;
+
+    &__title {
+        color: $firstGreen;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.37;
+        text-align: center;
+    }
+
+    &__text {
+        display: block;
+        font-size: 1.125rem;
+        line-height: 1.67;
+        text-align: center;
+        max-width: 50%;
+        margin: 0.625rem auto 0;
+    }
+}
+
+.finance {
+    margin-top: 6.8125rem;
+
+    &__title {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.37;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 45%;
+
+        &_green {
+            color: $firstGreen;
+        }
+    }
+
+    &__info {
+        margin-top: 6.8125rem;
+        margin-bottom: 15.4375rem;
+        height: 40.625rem;
+        background: $lightGray;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__picture {
+        width: 46.625rem;
+        height: 32.875rem;
+
+        img {
+            height: 100%;
+            object-fit: center;
+        }
+    }
+}
