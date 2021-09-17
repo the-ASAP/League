@@ -24,6 +24,10 @@
   justify-content: space-between;
 }
 
+.meeting__more {
+  display: none;
+}
+
 .meeting__all {
   padding: 0.5313rem 1.5rem;
   color: var(--dark-gray);
@@ -119,6 +123,7 @@
   border-radius: 0.75rem;
   background: var(--light-gray);
   padding: 1.875rem;
+  transition: all 0.3s ease-in;
 }
 
 .card__icon {
@@ -153,8 +158,21 @@
   color: var(--dark-gray);
 }
 
+.card:hover {
+  background-color: var(--main-green);
+}
+
+.card:hover .card__subtitle {
+  color: #fff;
+  border-color: #fff;
+}
+
+.card:hover .card__text {
+  color: #fff;
+}
+
 .card:hover .card__icon path {
-  fill: var(--dark-gray);
+  fill: #fff;
 }
 
 .carouselSocial {

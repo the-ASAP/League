@@ -33,17 +33,16 @@
 }
 
 .intro__title {
-  font-style: normal;
   font-weight: 500;
-  font-size: 2.625rem;
-  line-height: 1.19;
-  color: #4f4f4f;
+  font-size: 3.5625rem;
+  line-height: 1.23;
+  color: var(--dark-gray);
 }
 
 .association {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 2.8125rem;
+  padding-bottom: 1.5625rem;
   border-bottom: 1px solid #bdbdbd;
   margin-top: 3.125rem;
 }
@@ -58,13 +57,14 @@
   font-size: 1rem;
   line-height: 1.44;
   color: var(--mid-gray);
-  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  transition: all 0.3s ease-in;
   margin-bottom: 0.9375rem;
 }
 
 .association__button:hover {
   background-color: var(--main-green);
   color: #fff;
+  border-color: var(--main-green);
 }
 
 .title {
@@ -97,11 +97,12 @@
   line-height: 1.44;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
 }
 
 .results__button:hover {
   background-color: var(--light-gray);
+  border-color: var(--light-gray);
 }
 
 .results__info {

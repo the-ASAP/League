@@ -30,10 +30,11 @@
         line-height: 1.44;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        transition: background-color 0.3s ease-in;
+        transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
 
         &:hover {
             background-color: $lightGray;
+            border-color: $lightGray;
         }
     }
 

@@ -172,6 +172,7 @@
   font-weight: 400;
   font-size: 2rem;
   line-height: 1.37;
+  max-width: 80%;
 }
 
 .post__info span {
@@ -189,6 +190,7 @@
   font-size: 1.125rem;
   line-height: 1.67;
   color: #2b2b2b;
+  max-width: 60%;
 }
 
 .post__button {

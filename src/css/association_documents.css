@@ -33,17 +33,16 @@
 }
 
 .intro__title {
-  font-style: normal;
   font-weight: 500;
-  font-size: 2.625rem;
-  line-height: 1.19;
-  color: #4f4f4f;
+  font-size: 3.5625rem;
+  line-height: 1.23;
+  color: var(--dark-gray);
 }
 
 .association {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 2.8125rem;
+  padding-bottom: 1.5625rem;
   border-bottom: 1px solid #bdbdbd;
   margin-top: 3.125rem;
 }
@@ -58,13 +57,14 @@
   font-size: 1rem;
   line-height: 1.44;
   color: var(--mid-gray);
-  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  transition: all 0.3s ease-in;
   margin-bottom: 0.9375rem;
 }
 
 .association__button:hover {
   background-color: var(--main-green);
   color: #fff;
+  border-color: var(--main-green);
 }
 
 .title {
@@ -81,7 +81,7 @@
   display: flex;
   justify-content: space-between;
   width: 20.9375rem;
-  margin: 2.875rem auto 0;
+  margin: 2.25rem auto 0;
 }
 
 .documentsPage__button {
@@ -103,7 +103,7 @@
 }
 
 .documentsPage__content {
-  margin-top: 2.3125rem;
+  margin-top: 2.25rem;
   margin-bottom: 5.9375rem;
   display: flex;
   flex-wrap: wrap;
@@ -115,8 +115,10 @@
   background: var(--light-gray);
   border-radius: 12px;
   padding: 1.875rem 2.5rem;
-  position: relative;
   margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .document__date {
@@ -135,17 +137,18 @@
 }
 
 .document__show {
-  display: block;
-  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.document__link {
   font-size: 1rem;
   line-height: 1.44;
   color: var(--main-green);
 }
 
 .document__info {
-  position: absolute;
-  bottom: 1.75rem;
-  right: 2rem;
   display: flex;
   align-items: center;
 }
@@ -171,6 +174,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease-in;
+}
+
+.document__download:hover {
+  background-color: var(--main-green);
+}
+
+.document__download:hover svg path {
+  fill: #fff;
+}
+
+.document__download:hover svg line {
+  stroke: #fff;
 }
 
 .document:nth-child(3n + 2) {

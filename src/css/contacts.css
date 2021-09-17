@@ -44,13 +44,14 @@
 
 .contacts__phone span,
 .contacts__email span {
+  display: block;
   font-size: 1.5rem;
   line-height: 1.42;
   color: var(--mid-gray);
 }
 
-.contacts__phone h2,
-.contacts__email h2 {
+.contacts__phone a,
+.contacts__email a {
   display: block;
   margin-top: 1.5625rem;
   font-size: 2rem;
