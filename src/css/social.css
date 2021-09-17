@@ -20,6 +20,7 @@
   border-radius: 0.75rem;
   background: var(--light-gray);
   padding: 1.875rem;
+  transition: all 0.3s ease-in;
 }
 
 .card__icon {
@@ -54,8 +55,21 @@
   color: var(--dark-gray);
 }
 
+.card:hover {
+  background-color: var(--main-green);
+}
+
+.card:hover .card__subtitle {
+  color: #fff;
+  border-color: #fff;
+}
+
+.card:hover .card__text {
+  color: #fff;
+}
+
 .card:hover .card__icon path {
-  fill: var(--dark-gray);
+  fill: #fff;
 }
 
 .carouselSocial {

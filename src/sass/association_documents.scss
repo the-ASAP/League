@@ -16,7 +16,7 @@
         display: flex;
         justify-content: space-between;
         width: 20.9375rem;
-        margin: 2.875rem auto 0;
+        margin: 2.25rem auto 0;
     }
 
     &__button {
@@ -38,7 +38,7 @@
     }
 
     &__content {
-        margin-top: 2.3125rem;
+        margin-top: 2.25rem;
         margin-bottom: 5.9375rem;
         display: flex;
         flex-wrap: wrap;
@@ -51,8 +51,10 @@
     background: $lightGray;
     border-radius: 12px;
     padding: 1.875rem 2.5rem;
-    position: relative;
     margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     &__date {
         display: block;
@@ -68,16 +70,16 @@
         color: $darkGray;
     }
     &__show {
-        display: block;
-        margin-top: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
         font-size: 1rem;
         line-height: 1.44;
         color: $firstGreen;
     }
     &__info {
-        position: absolute;
-        bottom: 1.75rem;
-        right: 2rem;
         display: flex;
         align-items: center;
     }
@@ -103,6 +105,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+            background-color: $firstGreen;
+
+            svg {
+                path {
+                    fill: #fff;
+                }
+                line {
+                    stroke: #fff;
+                }
+            }
+        }
     }
 
     &:nth-child(3n + 2) {
