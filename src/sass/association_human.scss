@@ -151,3 +151,46 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .human {
+        display: block;
+
+        &__picture {
+            width: 100%;
+            height: 90vw;
+            margin: 0;
+        }
+        &__info {
+            max-width: 100%;
+        }
+        &__name {
+            margin-top: 2.125rem;
+        }
+        &__position {
+            margin-top: 1rem;
+        }
+        &__text {
+            margin-top: 1rem;
+        }
+        &__textEmail {
+            margin-top: 1.25rem;
+        }
+        &__textPhone {
+            margin-top: 1.375rem;
+        }
+    }
+    .progress {
+        margin-top: 2rem;
+        padding: 1.75rem 1.75rem 3.125rem 1rem;
+
+        &__items {
+            display: block;
+            margin-top: 0;
+        }
+        &__item {
+            max-width: 100%;
+            margin-bottom: 2.5rem;
+        }
+    }
+}

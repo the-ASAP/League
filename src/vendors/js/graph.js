@@ -1,6 +1,5 @@
 const ctx = $("#Graph");
 const mobile = $(window).width() < 768;
-console.log(mobile);
 
 const randomDatapoints = (lenghtArr, min, max) => {
     let res = [];
@@ -84,10 +83,15 @@ const Graph = new Chart(ctx, {
             },
         },
         scales: {
-            xAxes: {
-                display: false,
-            },
-            yAxes: [{}],
+            xAxes: {},
+            yAxes: [
+                {
+                    display: false,
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                },
+            ],
         },
     },
 });
@@ -127,25 +131,15 @@ $("#input_6").change(function () {
     hiddenGraph(this, 5);
 });
 
-$(function () {
-    $("#date_range").datepicker({
-        range: "period", // режим - выбор периода
-        numberOfMonths: 1,
-        onSelect: function (dateText, inst, extensionRange) {
-            // extensionRange - объект расширения
-            $("[name=startDate]").val(extensionRange.startDateText);
-            $("[name=endDate]").val(extensionRange.endDateText);
+new Lightpick({
+    field: document.getElementById("datePicker"),
+    singleDate: false,
+    // minDate: moment().startOf("month").add(7, "day"),
+    // maxDate: moment().endOf("month").subtract(7, "day"),
+    locale: {
+        buttons: {
+            prev: ``,
+            next: ``,
         },
-    });
-
-    $("#date_range").datepicker("setDate", ["+4d", "+8d"]);
-
-    // // объект расширения (хранит состояние календаря)
-    var extensionRange = $("#date_range").datepicker("widget").data("datepickerExtensionRange");
-    if (extensionRange.startDateText) $("[name=startDate]").val(extensionRange.startDateText);
-    if (extensionRange.endDateText) $("[name=endDate]").val(extensionRange.endDateText);
+    },
 });
-
-// $('.customInput').click(() => {
-//     $('.ui-datepicker').css({'display': 'block !important'})
-// })

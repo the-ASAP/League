@@ -21,7 +21,7 @@
 
 .meeting__info {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .meeting__more {
@@ -631,6 +631,7 @@
   }
 
   .meeting__info {
+    justify-content: space-between;
     align-items: flex-end;
     margin-top: 5.3125rem;
   }

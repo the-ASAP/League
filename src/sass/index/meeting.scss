@@ -9,7 +9,7 @@
 
     &__info {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
 
     &__more {
@@ -98,6 +98,7 @@
         }
 
         &__info {
+            justify-content: space-between;
             align-items: flex-end;
             margin-top: 5.3125rem;
         }

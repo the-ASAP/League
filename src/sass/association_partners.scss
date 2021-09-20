@@ -86,3 +86,35 @@
         color: $firstGreen;
     }
 }
+
+@media (max-width: 768px) {
+    .title {
+        margin-top: 2.5rem;
+        padding: 0;
+        border: none;
+
+        h2 {
+            font-size: 1.5rem;
+            line-height: 1.42;
+        }
+    }
+
+    .partners__list {
+        margin-top: 2.25rem;
+        margin-bottom: 18.75rem;
+        display: block;
+    }
+
+    .partner {
+        width: 100%;
+        margin-bottom: 1.25rem;
+
+        &:nth-child(3n + 2) {
+            margin: 0 0 1.25rem;
+        }
+
+        &__details {
+            display: none;
+        }
+    }
+}
