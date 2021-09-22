@@ -973,7 +973,7 @@ input:-webkit-autofill:focus {
   }
 
   .wrapper_middle {
-    width: 100%;
+    max-width: 100%;
   }
 }
 

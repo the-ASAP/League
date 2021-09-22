@@ -184,3 +184,86 @@
     height: 31.25rem;
     border-radius: 12px;
 }
+
+@media (max-width: 768px) {
+    .contacts {
+        &__title {
+            padding-top: 5rem;
+
+            h1 {
+                font-size: 2.25rem;
+                line-height: 1.39;
+            }
+        }
+
+        &__info {
+            display: block;
+            margin-top: 3.375rem;
+            padding: 0;
+            border: none;
+        }
+
+        &__email,
+        &__phone {
+            width: 100%;
+        }
+        &__email {
+            margin-top: 2.8125rem;
+        }
+    }
+
+    .social {
+        display: block;
+        padding: 0;
+        margin-top: 4.25rem;
+        border: none;
+
+        &__block {
+            width: 100%;
+            padding: 0;
+
+            & + & {
+                margin-top: 5.25rem;
+            }
+        }
+
+        &__links {
+            margin: 0;
+            flex-wrap: wrap;
+        }
+        &__link {
+            margin-top: 1.375rem;
+        }
+    }
+    .form {
+        &__input {
+            margin: 0;
+        }
+        &__submit {
+            width: 100%;
+            margin-top: 1.375rem;
+        }
+    }
+    .departments {
+        margin-top: 5.25rem;
+        display: block;
+    }
+    .department {
+        width: 100%;
+
+        &__contacts {
+            display: block;
+        }
+        &__phone,
+        &__email {
+            width: 100%;
+        }
+        &__email {
+            margin-top: 1.25rem;
+        }
+
+        & + & {
+            margin-top: 3.25rem;
+        }
+    }
+}

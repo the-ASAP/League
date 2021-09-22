@@ -65,7 +65,9 @@
         border: 1px solid #c4c4c4;
         border-radius: 5px;
         padding: 0.5rem 1rem;
-        width: 15.25rem;
+        font-size: 1.125rem;
+        line-height: 1.67;
+        color: $darkGray;
     }
 
     &__canvas {

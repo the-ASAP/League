@@ -209,3 +209,90 @@
   height: 31.25rem;
   border-radius: 12px;
 }
+
+@media (max-width: 768px) {
+  .contacts__title {
+    padding-top: 5rem;
+  }
+
+  .contacts__title h1 {
+    font-size: 2.25rem;
+    line-height: 1.39;
+  }
+
+  .contacts__info {
+    display: block;
+    margin-top: 3.375rem;
+    padding: 0;
+    border: none;
+  }
+
+  .contacts__email,
+  .contacts__phone {
+    width: 100%;
+  }
+
+  .contacts__email {
+    margin-top: 2.8125rem;
+  }
+
+  .social {
+    display: block;
+    padding: 0;
+    margin-top: 4.25rem;
+    border: none;
+  }
+
+  .social__block {
+    width: 100%;
+    padding: 0;
+  }
+
+  .social__block + .social__block {
+    margin-top: 5.25rem;
+  }
+
+  .social__links {
+    margin: 0;
+    flex-wrap: wrap;
+  }
+
+  .social__link {
+    margin-top: 1.375rem;
+  }
+
+  .form__input {
+    margin: 0;
+  }
+
+  .form__submit {
+    width: 100%;
+    margin-top: 1.375rem;
+  }
+
+  .departments {
+    margin-top: 5.25rem;
+    display: block;
+  }
+
+  .department {
+    width: 100%;
+  }
+
+  .department__contacts {
+    display: block;
+  }
+
+  .department__phone,
+  .department__email {
+    width: 100%;
+  }
+
+  .department__email {
+    margin-top: 1.25rem;
+  }
+
+  .department + .department {
+    margin-top: 3.25rem;
+  }
+}
