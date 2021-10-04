@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Описание страницы для SEO и соцсетей" />
+        <meta name="keywords" content="ключевые, слова, через, запятую" />
+        <link rel="shortcut icon" type="image/png" href="img//favicon.ico" />
+        <title>Лига переработчиков макулатуры</title>
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
+        <link rel="stylesheet" href="css/analytics_materials.css" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        @import "header.html"
+        <main>
+            <div class="wrapper">
+                <div class="analytics__header">
+                    <h1>Аналитика рынка</h1>
+                    <div class="analytics__buttons">
+                        <button type="button" class="analytics__button">
+                            Аналитические материалы
+                        </button>
+                        <button type="button" class="analytics__button">
+                            Значение ценового индекса
+                        </button>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="news__content">
+                        <a href="/"class="news__more">
+                            <span>Подробнее о центре системных решений </span>
+                            <div class="company">
+                                <img src="img/icons/company.svg" alt="company svg" />
+                                <h3 class="company__title">ЦЕНТР СИСТЕМНЫХ РЕШЕНИЙ</h3>
+                            </div>
+                        </a>
+                        @import "post.html"
+                        <!--  -->
+                        @import "post.html"
+                        <!--  -->
+                        @import "post.html"
+                        <!--  -->
+                        @import "post.html"
+                        <!--  -->
+                        @import "post.html"
+                        <!--  -->
+                        @import "post.html"
+                        <!--  -->
+                        @import "post.html"
+                        <!--  -->
+                        @import "post.html"
+                        <!--  -->
+                    </div>
+                    <div class="pagination">
+                        <button type="button" class="pagination__button"></button>
+                        <button type="button" class="pagination__button">1</button>
+                        <button type="button" class="pagination__button">2</button>
+                        <button type="button" class="pagination__button">...</button>
+                        <button type="button" class="pagination__button">6</button>
+                        <button type="button" class="pagination__button"></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @import "footer.html"
+    </body>
+        <script src="vendors/js/jquery-3.5.1.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

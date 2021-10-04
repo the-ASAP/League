@@ -19,7 +19,8 @@
 
 .association {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    overflow: scroll;
     padding-bottom: 1.5625rem;
     border-bottom: 1px solid #bdbdbd;
     margin-top: 3.125rem;

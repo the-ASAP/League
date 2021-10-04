@@ -328,6 +328,10 @@
     &__info {
         display: flex;
         justify-content: space-between;
+
+        &-mobile {
+            display: none;
+        }
     }
 
     &__more {

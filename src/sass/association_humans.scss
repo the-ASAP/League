@@ -41,3 +41,36 @@
         max-width: 70%;
     }
 }
+
+@media (max-width: 768px) {
+    .team {
+        margin-top: 3.4375rem;
+        display: block;
+    }
+    .human {
+        width: 100%;
+        margin-bottom: 3.4375rem;
+
+        &:nth-child(3n + 2) {
+            margin: 0 0 3.4375rem;
+        }
+
+        &__picture {
+            max-height: 90vw;
+            object-fit: cover;
+        }
+
+        &__name {
+            margin-top: 1.5rem;
+            font-size: 1.5rem;
+            line-height: 1.42;
+            max-width: 100%;
+        }
+        &__position {
+            font-size: 1.125rem;
+            line-height: 1.67;
+            margin-top: 0.75rem;
+            max-width: 100%;
+        }
+    }
+}

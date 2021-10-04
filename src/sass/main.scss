@@ -98,13 +98,24 @@ span {
     position: relative;
     height: 100%;
 
-    @media (max-width: 83.75rem) {
+    @media (max-width: 768px) {
         width: 90%;
     }
 
     &_middle {
         margin: 0 auto;
         max-width: 65%;
+        position: relative;
+        height: 100%;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+
+    &_fullPhone {
+        margin: 0 auto;
+        max-width: 83.75rem;
         position: relative;
         height: 100%;
 

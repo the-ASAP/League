@@ -295,4 +295,8 @@
   .department + .department {
     margin-top: 3.25rem;
   }
+
+  .yandexMap {
+    margin-bottom: 0;
+  }
 }

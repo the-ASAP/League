@@ -155,3 +155,32 @@
     background-color: #ffc94d;
     border: 1px solid #ffc94d;
 }
+
+@media (max-width: 768px) {
+    .graph {
+        &__info {
+            display: block;
+        }
+        &__text {
+            max-width: 100%;
+        }
+
+        &__input {
+            width: 100%;
+
+            &__wrapper {
+                margin-top: 1.875rem;
+            }
+        }
+    }
+    .lightpick {
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+    .notes {
+        display: block;
+    }
+    .checkbox {
+        width: 100%;
+    }
+}

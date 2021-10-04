@@ -60,7 +60,6 @@
 
     position: relative;
     width: calc((100% - 40px) / 3);
-    height: 18.75rem;
     background-color: $lightGray;
     border-radius: 12px;
     margin-top: 1.25rem;
@@ -114,8 +113,26 @@
         line-height: 1.44;
         color: $firstGreen;
     }
+
+    &__info {
+        margin-top: 3.4375rem;
+    }
 }
 
+@media (max-width: 1200px) {
+    .partners {
+        &__list {
+            justify-content: space-between;
+        }
+    }
+    .partner {
+        width: calc((100% - 20px) / 2);
+
+        &:nth-child(3n + 2) {
+            margin: 1.25rem 0 0;
+        }
+    }
+}
 @media (max-width: 765px) {
     .title {
         margin-top: 2.5rem;
@@ -180,10 +197,6 @@
     .partner {
         width: 100%;
         margin-bottom: 1.25rem;
-
-        &:nth-child(3n + 2) {
-            margin: 0 0 1.25rem;
-        }
 
         &__details {
             display: none;

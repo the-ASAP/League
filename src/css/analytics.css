@@ -460,3 +460,34 @@
   background-color: #ffc94d;
   border: 1px solid #ffc94d;
 }
+
+@media (max-width: 768px) {
+  .graph__info {
+    display: block;
+  }
+
+  .graph__text {
+    max-width: 100%;
+  }
+
+  .graph__input {
+    width: 100%;
+  }
+
+  .graph__input__wrapper {
+    margin-top: 1.875rem;
+  }
+
+  .lightpick {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  .notes {
+    display: block;
+  }
+
+  .checkbox {
+    width: 100%;
+  }
+}

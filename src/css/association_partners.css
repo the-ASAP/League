@@ -325,7 +325,7 @@
 }
 
 .footerForm__inputText {
-  width: 17.3125rem;
+  width: 80%;
   height: 3rem;
   border: 1px solid var(--light-gray);
   border-right: none;
@@ -343,7 +343,7 @@
 }
 
 .footerForm__inputSubmit {
-  width: 3.9375rem;
+  width: 20%;
   height: 3rem;
   border: 1px solid var(--light-gray);
   border-left: none;
@@ -540,6 +540,13 @@ span {
   height: 100%;
 }
 
+.wrapper_fullPhone {
+  margin: 0 auto;
+  max-width: 83.75rem;
+  position: relative;
+  height: 100%;
+}
+
 a {
   font-family: Inter;
   color: #0400ff;
@@ -661,7 +668,7 @@ input:-webkit-autofill:focus {
 
 .association {
   display: flex;
-  flex-wrap: wrap;
+  overflow: scroll;
   padding-bottom: 1.5625rem;
   border-bottom: 1px solid #bdbdbd;
   margin-top: 3.125rem;
@@ -712,7 +719,6 @@ input:-webkit-autofill:focus {
 .partner {
   position: relative;
   width: calc((100% - 40px) / 3);
-  height: 18.75rem;
   background-color: var(--light-gray);
   border-radius: 12px;
   margin-bottom: 1.25rem;
@@ -771,6 +777,10 @@ input:-webkit-autofill:focus {
   color: var(--main-green);
 }
 
+.partner__info {
+  margin-top: 3.4375rem;
+}
+
 @media (max-width: 1600px) {
   html {
     font-size: 16px;
@@ -823,15 +833,39 @@ input:-webkit-autofill:focus {
   html {
     font-size: 12px;
   }
+
+  .partners__list {
+    justify-content: space-between;
+  }
+
+  .partner {
+    width: calc((100% - 20px) / 2);
+  }
+
+  .partner:nth-child(3n + 2) {
+    margin: 0 0 1.25rem;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   html {
-    font-size: 16px;
+    font-size: 11px;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  html {
+    font-size: 9px;
   }
 }
 
 @media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
   .header__container {
     margin-top: 2rem;
     width: 100%;
@@ -987,6 +1021,14 @@ input:-webkit-autofill:focus {
     height: 1.125rem;
   }
 
+  .wrapper {
+    width: 90%;
+  }
+
+  .wrapper_middle {
+    max-width: 100%;
+  }
+
   .intro {
     margin-top: 3.75rem;
   }
@@ -1040,11 +1082,7 @@ input:-webkit-autofill:focus {
 }
 
 @media (max-width: 83.75rem) {
-  .wrapper {
-    width: 90%;
-  }
-
-  .wrapper_middle {
+  .wrapper_fullPhone {
     max-width: 100%;
   }
 }

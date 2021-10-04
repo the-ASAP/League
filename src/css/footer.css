@@ -71,7 +71,7 @@
 }
 
 .footerForm__inputText {
-  width: 17.3125rem;
+  width: 80%;
   height: 3rem;
   border: 1px solid var(--light-gray);
   border-right: none;
@@ -89,7 +89,7 @@
 }
 
 .footerForm__inputSubmit {
-  width: 3.9375rem;
+  width: 20%;
   height: 3rem;
   border: 1px solid var(--light-gray);
   border-left: none;

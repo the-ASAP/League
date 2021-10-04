@@ -290,13 +290,7 @@
     }
 }
 
-@media (max-width: 768px) {
-    .intro {
-        margin-top: 3.75rem;
-    }
-    .return {
-        display: none;
-    }
+@media (max-width: 1100px) {
     .categories {
         margin-top: 2.5625rem;
         overflow-x: scroll;
@@ -309,6 +303,15 @@
             line-height: 1.64;
             margin-right: 1rem;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        margin-top: 3.75rem;
+    }
+    .return {
+        display: none;
     }
     .tags {
         margin-top: 1.25rem;
