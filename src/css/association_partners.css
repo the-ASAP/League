@@ -696,13 +696,15 @@ input:-webkit-autofill:focus {
 }
 
 .title {
-  padding: 1.875rem 0;
+  padding: 3.625rem 0 2.375rem;
   border-bottom: 1px solid #bdbdbd;
 }
 
 .title h2 {
-  font-weight: 400;
   text-align: center;
+  font-weight: 400;
+  font-size: 3.5625rem;
+  line-height: 1.23;
 }
 
 .partners__title {
@@ -1051,14 +1053,12 @@ input:-webkit-autofill:focus {
   }
 
   .title {
-    margin-top: 2.5rem;
-    padding: 0;
-    border: none;
+    padding: 1.375rem 0 1.625rem;
   }
 
   .title h2 {
-    font-size: 1.5rem;
-    line-height: 1.42;
+    font-size: 2rem;
+    line-height: 1.37;
   }
 
   .partners__list {

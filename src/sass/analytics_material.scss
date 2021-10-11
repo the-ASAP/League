@@ -18,13 +18,17 @@
         font-size: 2.625rem;
         line-height: 3.125rem;
 
-        color: #4f4f4f;
+        color: $darkGray;
     }
 }
 
 .return {
     display: flex;
     align-items: center;
+    position: absolute;
+    width: 83.75rem;
+    left: 50%;
+    transform: translateX(-50%);
 
     &__button {
         width: 3.125rem;
@@ -142,7 +146,6 @@
     margin-top: 3.75rem;
 
     ul {
-        margin-top: 2.5rem;
         list-style: none;
     }
     li {

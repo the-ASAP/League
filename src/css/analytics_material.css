@@ -141,12 +141,16 @@
   font-weight: 500;
   font-size: 2.625rem;
   line-height: 3.125rem;
-  color: #4f4f4f;
+  color: var(--dark-gray);
 }
 
 .return {
   display: flex;
   align-items: center;
+  position: absolute;
+  width: 83.75rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .return__button {
@@ -263,7 +267,6 @@
 }
 
 .content ul {
-  margin-top: 2.5rem;
   list-style: none;
 }
 

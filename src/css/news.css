@@ -347,10 +347,9 @@
 }
 
 .intro__title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2.625rem;
-  line-height: 1.19;
+  font-weight: 400;
+  font-size: 3.5625rem;
+  line-height: 1.23;
   color: var(--dark-gray);
 }
 
@@ -791,6 +790,11 @@
 
   .intro {
     margin-top: 3.75rem;
+  }
+
+  .intro__title {
+    font-size: 2rem;
+    line-height: 1.37;
   }
 
   .return {

@@ -1,0 +1,39 @@
+@import "root";
+
+.noPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6.9375rem;
+
+    &__four {
+        font-size: 24.4774rem;
+        color: $darkGray;
+    }
+
+    &__picture {
+        width: 22.625rem;
+    }
+
+    &__button {
+        display: block;
+        margin: 2.1875rem auto 0;
+        background: $firstGreen;
+        border-radius: 6px;
+        padding: 1rem 1.5rem;
+        font-size: 1.125rem;
+        line-height: 1.28;
+        letter-spacing: 0.015em;
+        color: #fff;
+    }
+}
+
+.sorry {
+    display: block;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    color: $darkGray;
+    max-width: 23rem;
+    margin: 2.1875rem auto;
+}
