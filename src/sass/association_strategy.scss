@@ -34,7 +34,6 @@
     }
 
     ul {
-        margin-top: 2.5rem;
         list-style: none;
     }
 
@@ -180,5 +179,36 @@
             font-size: 2rem;
             line-height: 1.37;
         }
+    }
+    .strategy {
+        &__picture {
+            margin: 1.875rem 0;
+        }
+    }
+    .content {
+        p {
+            max-width: 100%;
+        }
+    }
+    .video {
+        margin-top: 3.125rem;
+
+        p {
+            margin-top: 1.25rem;
+        }
+    }
+    .mindmap {
+        &__title {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            max-width: 100%;
+        }
+        &__presentation {
+            margin-top: 1.875rem;
+        }
+    }
+    .document {
+        margin-top: 3.125rem;
+        margin-bottom: 6.25rem;
     }
 }

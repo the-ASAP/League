@@ -98,7 +98,6 @@
 }
 
 .content ul {
-  margin-top: 2.5rem;
   list-style: none;
 }
 
@@ -264,5 +263,36 @@
   .title h2 {
     font-size: 2rem;
     line-height: 1.37;
+  }
+
+  .strategy__picture {
+    margin: 1.875rem 0;
+  }
+
+  .content p {
+    max-width: 100%;
+  }
+
+  .video {
+    margin-top: 3.125rem;
+  }
+
+  .video p {
+    margin-top: 1.25rem;
+  }
+
+  .mindmap__title {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .mindmap__presentation {
+    margin-top: 1.875rem;
+  }
+
+  .document {
+    margin-top: 3.125rem;
+    margin-bottom: 6.25rem;
   }
 }

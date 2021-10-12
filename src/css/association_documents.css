@@ -226,4 +226,38 @@
     font-size: 2rem;
     line-height: 1.37;
   }
+
+  .documentsPage__buttons {
+    margin-top: 1.25rem;
+    width: 100%;
+  }
+
+  .documentsPage__button {
+    width: calc((100% - 1.25rem) / 2);
+  }
+
+  .documentsPage__content {
+    display: block;
+    margin-top: 2.5rem;
+    margin-bottom: 6.25rem;
+  }
+
+  .documentsPage .document {
+    width: 100%;
+    height: auto;
+    padding: 1.25rem;
+  }
+
+  .documentsPage .document:nth-child(3n + 2) {
+    margin: 0 0 1.25rem;
+  }
+
+  .documentsPage .document__text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .documentsPage .document__show {
+    margin-top: 1.5rem;
+  }
 }

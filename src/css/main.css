@@ -145,6 +145,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__search,
@@ -540,11 +541,24 @@ span {
   height: 100%;
 }
 
+.wrapper_activity {
+  margin: 0 auto;
+  max-width: 55rem;
+  position: relative;
+  height: 100%;
+}
+
 .wrapper_fullPhone {
   margin: 0 auto;
   max-width: 83.75rem;
   position: relative;
   height: 100%;
+}
+
+.wrapper_event {
+  width: 41.25rem;
+  position: relative;
+  margin: 0 auto;
 }
 
 a {
@@ -670,6 +684,12 @@ input:-webkit-autofill:focus {
 @media (max-width: 1350px) {
   html {
     font-size: 13.5px;
+  }
+}
+
+@media (max-width: 1340px) {
+  .wrapper_fullPhone {
+    max-width: 100%;
   }
 }
 
@@ -872,11 +892,13 @@ input:-webkit-autofill:focus {
   .wrapper_middle {
     max-width: 100%;
   }
-}
 
-@media (max-width: 83.75rem) {
-  .wrapper_fullPhone {
+  .wrapper_activity {
     max-width: 100%;
+  }
+
+  .wrapper_event {
+    width: 90%;
   }
 }
 

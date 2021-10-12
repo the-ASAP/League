@@ -57,12 +57,6 @@
     }
 }
 
-.wrapper_event {
-    width: 41.25rem;
-    position: relative;
-    margin: 0 auto;
-}
-
 .center {
     background: $firstGreen;
     border-radius: 12px;
@@ -95,6 +89,10 @@
         font-size: 1.5rem;
         line-height: 1.42;
         color: $lightGray;
+    }
+
+    &_mobile {
+        display: none;
     }
 }
 
@@ -250,5 +248,81 @@
         line-height: 1.14;
         max-width: 23.6875rem;
         color: $midGray;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        margin-top: 3.125rem;
+    }
+    .center {
+        display: none;
+
+        &_mobile {
+            width: 100%;
+            background-color: $firstGreen;
+            border-radius: 12px;
+            padding: 1.875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            span {
+                font-weight: 400;
+                font-size: 1.5rem;
+                line-height: 1.42;
+                color: #f2f2f2;
+            }
+        }
+    }
+    .company {
+        display: flex;
+        margin-top: 7.1875rem;
+
+        img {
+            width: 3.75rem;
+            height: 3.75rem;
+        }
+
+        &__title {
+            margin-left: 0.3125rem;
+            max-width: 9.5625rem;
+            font-size: 1.125rem;
+            line-height: 1.19;
+            letter-spacing: -0.0938rem;
+
+            color: $lightGray;
+        }
+    }
+    .content {
+        margin-top: 2.3125rem;
+    }
+    .contacts {
+        margin-top: 3.875rem;
+        display: block;
+        padding: 3.125rem 1.25rem;
+
+        &__block {
+            width: 100%;
+            margin: 0;
+
+            & + & {
+                margin-top: 2.875rem;
+            }
+        }
+    }
+    .accordions {
+        margin-top: 2.375rem;
+    }
+    .accordion {
+        &__information {
+            a {
+                display: none;
+            }
+        }
+    }
+    .documents {
+        margin-top: 2.375rem;
+        margin-bottom: 6.25rem;
     }
 }

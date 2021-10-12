@@ -325,4 +325,55 @@
     font-size: 2rem;
     line-height: 1.37;
   }
+
+  .analytics__buttons {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  .analytics__button {
+    width: 100%;
+  }
+
+  .analytics__button + .analytics__button {
+    margin-top: 1rem;
+  }
+
+  .news__content {
+    margin-top: 3.4375rem;
+    margin-bottom: 6.25rem;
+  }
+
+  .news__more {
+    width: 100%;
+    height: 90vw;
+    margin-bottom: 3.375rem;
+  }
+
+  .post__wrapper {
+    height: 60vw;
+  }
+
+  .post:nth-child(2),
+  .post:nth-child(3) {
+    order: 0;
+    margin: 0;
+  }
+
+  .post + .post {
+    margin-top: 2.5rem;
+  }
+
+  .post__views {
+    display: none;
+  }
+
+  .post__title {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .pagination {
+    display: none;
+  }
 }

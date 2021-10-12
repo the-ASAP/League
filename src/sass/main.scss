@@ -113,14 +113,35 @@ span {
         }
     }
 
+    &_activity {
+        margin: 0 auto;
+        max-width: 55rem;
+        position: relative;
+        height: 100%;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+
     &_fullPhone {
         margin: 0 auto;
         max-width: 83.75rem;
         position: relative;
         height: 100%;
 
-        @media (max-width: 83.75rem) {
+        @media (max-width: 1340px) {
             max-width: 100%;
+        }
+    }
+
+    &_event {
+        width: 41.25rem;
+        position: relative;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            width: 90%;
         }
     }
 }

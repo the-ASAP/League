@@ -18,13 +18,17 @@
         font-size: 2.625rem;
         line-height: 3.125rem;
 
-        color: #4f4f4f;
+        color: $darkGray;
     }
 }
 
 .return {
     display: flex;
     align-items: center;
+    position: absolute;
+    width: 83.75rem;
+    left: 50%;
+    transform: translateX(-50%);
 
     &__button {
         width: 3.125rem;
@@ -59,27 +63,60 @@
     }
 }
 
-.wrapper_event {
-    width: 41.25rem;
-    position: relative;
-    margin: 0 auto;
-}
-
 .event {
     margin-top: 4.6875rem;
 
+    &__meta {
+        display: flex;
+    }
+    &__view {
+        display: none;
+        align-items: center;
+
+        svg {
+            margin-right: 0.3125rem;
+        }
+    }
+    &__date,
+    &__count {
+        font-family: $golosFont;
+        color: #bdbdbd;
+        margin-right: 2.0625rem;
+    }
+
+    &__tags {
+        margin-top: 1.25rem;
+    }
+    &__tag {
+        background: $firstGreen;
+        border-radius: 4px;
+        font-family: $golosFont;
+        font-size: 0.875rem;
+        line-height: 1.64;
+        color: #fff;
+        padding: 0.1875rem 0.75rem;
+        margin-right: 1.25rem;
+    }
+
     &__title {
-        margin-top: 2.5rem;
+        margin-top: 1.875rem;
         color: $darkGray;
         font-weight: 400;
-        font-size: 3.5625rem;
-        line-height: 1.23;
+        font-size: 2rem;
+        line-height: 1.44;
+    }
+
+    &__text {
+        display: block;
+        margin-top: 1.25rem;
+        max-width: 70%;
+        font-size: 1.125rem;
+        line-height: 1.67;
     }
 
     &__image {
-        width: 41.25rem;
-        height: 26.25rem;
-        margin: 3.625rem auto;
+        height: 24.25rem;
+        margin: 1.875rem auto 0;
         position: relative;
 
         img {
@@ -105,91 +142,30 @@
     }
 }
 
-.content {
-    margin-top: 3.75rem;
+.otherNews {
+    margin-top: 6.25rem;
+    padding-top: 3.5rem;
+    margin-bottom: 6.25rem;
 
-    ul {
-        margin-top: 2.5rem;
-        list-style: none;
-    }
-    li {
-        font-size: 1.125rem;
-        line-height: 1.44;
-        color: $darkGray;
-        padding-left: 1.5rem;
-        position: relative;
-
-        &::before {
-            content: "";
-            width: 9px;
-            height: 9px;
-            background-color: $firstGreen;
-            border-radius: 50%;
-            position: absolute;
-            top: calc(50% - 4.5px);
-            left: 0;
-        }
-    }
-    li + li {
-        margin-top: 0.75rem;
-    }
-
-    &__author,
-    &__source {
-        span {
-            font-size: 1rem;
-            line-height: 1.44;
-            letter-spacing: -0.015em;
-            color: $darkGray;
-            margin-right: 0.75rem;
-        }
-    }
-
-    &__source {
-        margin-top: 0.75rem;
-
-        &_ref {
-            font-family: $golosFont;
-            text-transform: uppercase;
-            font-weight: 500;
-            font-size: 1rem;
-            line-height: 1.44;
-            letter-spacing: -0.015em;
-
-            color: $firstGreen;
-        }
-    }
-
-    &__buttons {
-        margin-top: 2.75rem;
+    &__info {
         display: flex;
-        padding-bottom: 0.875rem;
-        border-bottom: 1px solid #bdbdbd;
+        justify-content: space-between;
+
+        &-mobile {
+            display: none;
+        }
     }
 
-    &__button {
-        background-color: #efefef;
-        border-radius: 5px;
-        font-size: 0.875rem;
-        font-weight: 500;
-        line-height: 1.36;
-        padding: 0.4063rem 1rem;
-        color: $darkGray;
-        margin-right: 0.75rem;
-        transition: background-color 0.3s ease-in, color 0.3s ease-in;
-
-        &:hover {
-            background-color: $firstGreen;
-            color: #fff;
-        }
+    &__more {
+        display: none;
     }
 }
 
-.carouselEvent {
+.carouselOther {
     margin-top: 2.5rem;
 
-    img {
-        border-radius: 15px;
+    .owl-stage-outer {
+        border-radius: 12px;
     }
 
     &__buttons {
@@ -239,51 +215,64 @@
     }
 }
 
-.documents {
-    margin-top: 2.875rem;
-    margin-bottom: 11.8125rem;
+.post {
+    width: 100%;
+}
 
-    &__title {
-        font-family: $golosFont;
-        font-weight: 500;
-        font-size: 1.625rem;
-        line-height: 1.15;
+.yandexMap {
+    width: 100%;
+    height: 28.125rem;
+    margin: 4.0625rem 0 11.5625rem;
+}
+
+.holding {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 1.25rem;
+
+    &__text {
+        display: block;
+        font-size: 1.125rem;
+        line-height: 1.67;
         color: $darkGray;
     }
 }
 
-.document {
-    width: 100%;
+.registration {
+    margin-top: 1.875rem;
+    background: $lightGray;
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
-    padding: 0.9375rem 1.25rem;
-    background: $lightGray;
-    border-radius: 8px;
-    margin-top: 1.8125rem;
+    align-items: center;
+    padding: 1.75rem;
 
-    & + & {
-        margin-top: 0.875rem;
+    &__text {
+        font-size: 1.125rem;
+        line-height: 1.67;
+        color: $darkGray;
+        margin-right: 3.875rem;
     }
 
-    &__info {
-        display: flex;
-
-        svg {
-            margin-right: 1.25rem;
-        }
-    }
-
-    &__title {
-        font-size: 0.875rem;
-        line-height: 1.14;
-        max-width: 23.6875rem;
-        color: $midGray;
+    &__button {
+        height: 3.5rem;
+        background: $firstGreen;
+        border-radius: 6px;
+        padding: 1rem 1.5rem;
+        color: #fff;
+        font-size: 1.125rem;
+        line-height: 1.28;
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
     }
 }
 
 @media (max-width: 768px) {
     .wrapper_event {
         width: 90%;
+    }
+    .return {
+        display: none;
     }
     .intro {
         margin-top: 2.625rem;
@@ -321,15 +310,6 @@
             right: 0;
         }
     }
-    .content {
-        margin: 0;
-
-        &__author {
-            span {
-                display: block;
-            }
-        }
-    }
     .otherNews {
         padding: 0;
         margin-top: 5rem;
@@ -358,19 +338,13 @@
             }
         }
     }
-    .hiden {
-        display: none;
-    }
-
-    .document {
-        &__title {
-            max-width: 65%;
-        }
-    }
-
     .carouselOther {
         &__buttons {
             margin: 0;
         }
+    }
+    .yandexMap {
+        margin-bottom: 0;
+        height: 90vw;
     }
 }

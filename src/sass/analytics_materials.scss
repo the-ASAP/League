@@ -176,4 +176,54 @@
             line-height: 1.37;
         }
     }
+    .analytics {
+        &__buttons {
+            display: block;
+            margin-top: 2rem;
+        }
+        &__button {
+            width: 100%;
+
+            & + & {
+                margin-top: 1rem;
+            }
+        }
+    }
+    .news {
+        &__content {
+            margin-top: 3.4375rem;
+            margin-bottom: 6.25rem;
+        }
+        &__more {
+            width: 100%;
+            height: 90vw;
+            margin-bottom: 3.375rem;
+        }
+    }
+
+    .post {
+        &__wrapper {
+            height: 60vw;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            order: 0;
+            margin: 0;
+        }
+
+        & + & {
+            margin-top: 2.5rem;
+        }
+        &__views {
+            display: none;
+        }
+        &__title {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+    .pagination {
+        display: none;
+    }
 }

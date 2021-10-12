@@ -1,13 +1,15 @@
 @import "root";
 
 .noPage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 6.9375rem;
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
 
     &__four {
-        font-size: 24.4774rem;
+        font-size: 23.4774rem;
         color: $darkGray;
     }
 
@@ -25,6 +27,7 @@
         line-height: 1.28;
         letter-spacing: 0.015em;
         color: #fff;
+        width: fit-content;
     }
 }
 
@@ -36,4 +39,26 @@
     color: $darkGray;
     max-width: 23rem;
     margin: 2.1875rem auto;
+}
+
+@media (max-width: 768px) {
+    .noPage {
+        margin-top: 40vw;
+
+        &__picture {
+            width: 8.625rem;
+        }
+        &__four {
+            font-size: 9rem;
+        }
+        &__button {
+            text-transform: uppercase;
+            letter-spacing: 0.015em;
+        }
+    }
+    .sorry {
+        margin: 2.125rem auto 0;
+        font-size: 1.125rem;
+        line-height: 1.67;
+    }
 }
