@@ -391,9 +391,9 @@
 
 .categories {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 3.125rem;
-  padding: 0 3.75rem 1.875rem;
+  padding: 0 0 1.875rem;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -406,6 +406,7 @@
   font-size: 1rem;
   line-height: 1.44;
   color: var(--mid-gray);
+  margin-right: 1.25rem;
 }
 
 .categories__button:hover {
