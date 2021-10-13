@@ -166,6 +166,21 @@
         }
     }
 
+    .analytics {
+        &__buttons {
+            display: block;
+            margin-top: 2rem;
+        }
+
+        &__button {
+            width: 100%;
+
+            & + & {
+                margin-top: 1rem;
+            }
+        }
+    }
+
     .graph {
         &__info {
             display: block;

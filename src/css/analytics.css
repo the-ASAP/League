@@ -470,6 +470,19 @@
     line-height: 1.37;
   }
 
+  .analytics__buttons {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  .analytics__button {
+    width: 100%;
+  }
+
+  .analytics__button + .analytics__button {
+    margin-top: 1rem;
+  }
+
   .graph__info {
     display: block;
   }

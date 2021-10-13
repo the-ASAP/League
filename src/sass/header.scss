@@ -1,4 +1,118 @@
 @import "root";
+.modal {
+    display: block;
+    position: fixed;
+    overflow: scroll;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: $firstGreen;
+    z-index: 10;
+    padding: 1.75rem 1rem;
+    transition: left 0.3s ease-in;
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 3.5625rem;
+        line-height: 1.23;
+        color: $lightGray;
+    }
+
+    &__search,
+    &__close {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 2px solid $lightGray;
+        margin-left: 0.75rem;
+    }
+
+    &__content {
+        margin-top: 2.8125rem;
+        padding-bottom: 3.625rem;
+        border-bottom: 1px solid $lightGray;
+    }
+
+    &__hiddenRefs {
+        margin-top: 1.125rem;
+        margin-left: 1rem;
+        overflow: hidden;
+        display: none;
+    }
+
+    &__ref {
+        display: block;
+        color: $lightGray;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        letter-spacing: -0.015em;
+        margin-top: 1.125rem;
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+
+    &__burger {
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 5px;
+            height: 1px;
+            position: absolute;
+            top: calc(50%);
+            background: $lightGray;
+            left: 139px;
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            content: "";
+            width: 5px;
+            height: 1px;
+            position: absolute;
+            top: calc(50%);
+            background: $lightGray;
+            left: 136px;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__contacts {
+        margin-top: 1.5rem;
+    }
+
+    &__contact {
+        display: block;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        letter-spacing: -0.015em;
+        color: $lightGray;
+
+        & + & {
+            margin-top: 1.125rem;
+        }
+    }
+}
+.active {
+    left: 0;
+}
+
+.activeAccordion {
+    opacity: 1;
+}
+
+.activeHiddenRefs {
+    display: block;
+}
+
 .header {
     &__container {
         margin-top: 2.1875rem;
@@ -6,6 +120,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: static;
     }
 
     &__search,
@@ -33,14 +148,47 @@
         text-transform: uppercase;
         color: $darkGray;
         opacity: 0.2;
+
+        &_active {
+            opacity: 1;
+        }
     }
 }
 
-.active {
-    opacity: 1;
+.associationModal {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 10;
+    background: $lightGray;
+    border-radius: 8px;
+    padding: 1.25rem 1.875rem;
+    display: none;
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    &__ref {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.44;
+        color: $midGray;
+        h & + & {
+            margin-top: 1rem;
+        }
+    }
+
+    &__active {
+        display: block;
+    }
 }
 
 .navbar {
+    position: relative;
     margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;

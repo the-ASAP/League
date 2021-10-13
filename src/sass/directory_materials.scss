@@ -63,14 +63,21 @@
     }
 }
 
+.wrapper_event {
+    width: 41.25rem;
+    position: relative;
+    margin: 0 auto;
+}
+
 .event {
     margin-top: 4.6875rem;
 
     &__meta {
-        display: flex;
-    }
-    &__view {
         display: none;
+    }
+
+    &__view {
+        display: flex;
         align-items: center;
 
         svg {
@@ -85,6 +92,7 @@
     }
 
     &__tags {
+        display: none;
         margin-top: 1.25rem;
     }
     &__tag {
@@ -99,24 +107,16 @@
     }
 
     &__title {
-        margin-top: 1.875rem;
         color: $darkGray;
         font-weight: 400;
-        font-size: 2rem;
+        font-size: 2;
         line-height: 1.44;
     }
 
-    &__text {
-        display: block;
-        margin-top: 1.25rem;
-        max-width: 70%;
-        font-size: 1.125rem;
-        line-height: 1.67;
-    }
-
     &__image {
-        height: 24.25rem;
-        margin: 1.875rem auto 0;
+        width: 41.25rem;
+        height: 26.25rem;
+        margin: 3.625rem auto;
         position: relative;
 
         img {
@@ -139,6 +139,224 @@
         position: absolute;
         top: 0;
         right: -4.375rem;
+    }
+}
+
+.content {
+    margin-top: 3.75rem;
+
+    ul {
+        list-style: none;
+    }
+    li {
+        font-size: 1.125rem;
+        line-height: 1.44;
+        color: $darkGray;
+        padding-left: 1.5rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            background-color: $firstGreen;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 4.5px);
+            left: 0;
+        }
+    }
+    li + li {
+        margin-top: 0.75rem;
+    }
+
+    &__author,
+    &__source {
+        margin-top: 3.9375rem;
+
+        span {
+            font-size: 1rem;
+            line-height: 1.44;
+            letter-spacing: -0.015em;
+
+            color: $darkGray;
+            margin-right: 0.75rem;
+        }
+    }
+
+    &__source {
+        margin-top: 0.75rem;
+
+        &_ref {
+            font-family: $golosFont;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.44;
+            letter-spacing: -0.015em;
+
+            color: $firstGreen;
+        }
+    }
+
+    &__buttons {
+        margin-top: 2.75rem;
+        display: flex;
+        padding-bottom: 0.875rem;
+        border-bottom: 1px solid #bdbdbd;
+
+        display: none;
+    }
+
+    &__button {
+        background-color: #efefef;
+        border-radius: 5px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.36;
+        padding: 0.4063rem 1rem;
+        color: $darkGray;
+        margin-right: 0.75rem;
+        transition: background-color 0.3s ease-in, color 0.3s ease-in;
+
+        &:hover {
+            background-color: $firstGreen;
+            color: #fff;
+        }
+    }
+}
+
+.carouselEvent {
+    margin-top: 2.5rem;
+
+    img {
+        border-radius: 15px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0.8125rem;
+    }
+
+    &__prev,
+    &__next {
+        width: 3.1875rem;
+        height: 3.1875rem;
+        border: 1px solid $firstGreen;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.875rem;
+        transition: background-color 0.3s ease-in;
+    }
+
+    &__prev:hover,
+    &__next:hover {
+        background-color: $firstGreen;
+        svg {
+            path {
+                fill: $lightGray;
+            }
+        }
+    }
+
+    &__next {
+        transform: rotate(180deg);
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__signature {
+        display: block;
+        font-family: $golosFont;
+        font-size: 0.875rem;
+        font-weight: 1.14;
+        color: $darkGray;
+        margin-top: 1.375rem;
+    }
+}
+
+.documents {
+    margin-top: 2.5rem;
+    padding: 2.875rem 0 0;
+    border-top: 1px solid #bdbdbd;
+
+    &__title {
+        font-family: $golosFont;
+        font-weight: 500;
+        font-size: 1.625rem;
+        line-height: 1.15;
+        color: $darkGray;
+    }
+}
+
+.document {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9375rem 1.25rem;
+    background: $lightGray;
+    border-radius: 8px;
+    margin-top: 1.8125rem;
+
+    & + & {
+        margin-top: 0.875rem;
+    }
+
+    &__info {
+        display: flex;
+
+        svg {
+            margin-right: 1.25rem;
+        }
+    }
+
+    &__title {
+        font-size: 0.875rem;
+        line-height: 1.14;
+        max-width: 23.6875rem;
+        color: $midGray;
+    }
+}
+
+.materials {
+    margin-top: 2.5rem;
+    padding: 1.5625rem;
+    background-color: $firstGreen;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        font-size: 1.5rem;
+        line-height: 1.42;
+        font-weight: 400;
+        color: $lightGray;
+        max-width: 15rem;
+    }
+}
+
+.company {
+    display: flex;
+
+    img {
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+
+    &__title {
+        margin-left: 0.3125rem;
+        max-width: 6.5625rem;
+        font-size: 1.125rem;
+        line-height: 1.19;
+        letter-spacing: -0.0938rem;
+
+        color: $lightGray;
     }
 }
 
@@ -225,153 +443,12 @@
     margin: 4.0625rem 0 11.5625rem;
 }
 
-.holding {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 1.25rem;
-
-    &__text {
-        display: block;
-        font-size: 1.125rem;
-        line-height: 1.67;
-        color: $darkGray;
-    }
-}
-
-.registration {
-    margin-top: 1.875rem;
-    background: $lightGray;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.75rem;
-
-    &__text {
-        font-size: 1.125rem;
-        line-height: 1.67;
-        color: $darkGray;
-        margin-right: 3.875rem;
-    }
-
-    &__button {
-        height: 3.5rem;
-        background: $firstGreen;
-        border-radius: 6px;
-        padding: 1rem 1.5rem;
-        color: #fff;
-        font-size: 1.125rem;
-        line-height: 1.28;
-        letter-spacing: 0.015em;
-        text-transform: uppercase;
-    }
-}
-
-.info {
-    display: block;
-    margin-top: 1.25rem;
-    font-size: 1.125rem;
-    max-width: 70%;
-    line-height: 1.67;
-    color: $darkGray;
-}
-
-.themes {
-    margin-top: 3.125rem;
-
-    &__title {
-        margin-top: 1.875rem;
-    }
-
-    &__items {
-        margin-top: 1.875rem;
-    }
-
-    ul {
-        list-style: none;
-    }
-    li {
-        font-size: 1.125rem;
-        line-height: 1.44;
-        color: $darkGray;
-        padding-left: 1.5rem;
-        position: relative;
-
-        &::before {
-            content: "";
-            width: 9px;
-            height: 9px;
-            background-color: $firstGreen;
-            border-radius: 50%;
-            position: absolute;
-            top: calc(50% - 4.5px);
-            left: 0;
-        }
-    }
-    li + li {
-        margin-top: 0.75rem;
-    }
-}
-
-.map {
-    margin-top: 3.125rem;
-
-    &__title {
-        font-weight: 400;
-    }
-}
-.yandexMap {
-    margin-top: 2.6875rem;
-}
-
-.speakers {
-    margin-top: 6.25rem;
-
-    &__content {
-        margin-top: 3.125rem;
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-.speaker {
-    width: 18.75rem;
-    margin-right: 2.15rem;
-
-    &__image {
-        margin: auto;
-        width: 12.5rem;
-        height: 12.5rem;
-        border-radius: 50%;
-        // border: 4px solid $firstGreen;
-    }
-    &__picture {
-        height: 100%;
-    }
-    &__name {
-        margin-top: 1.25rem;
-        text-align: center;
-    }
-    &__position {
-        display: block;
-        margin-top: 0.9375rem;
-        font-size: 1.125rem;
-        line-height: 1.67;
-        text-align: center;
-        color: $midGray;
-    }
-}
-
 @media (max-width: 768px) {
     .wrapper_event {
         width: 90%;
     }
     .return {
-        display: flex;
-        width: 100%;
-        position: static;
-        transform: translateX(0);
-        margin: 3.125rem 5% 2.3125rem;
+        display: none;
     }
     .intro {
         margin-top: 2.625rem;
@@ -386,19 +463,15 @@
 
         &__title {
             margin-top: 1.25rem;
-            font-weight: 400;
+            font-weight: 700;
             font-size: 1.5rem;
             line-height: 1.42;
         }
 
-        &__text {
-            display: none;
-        }
-
         &__image {
-            width: 100%;
+            width: 90%;
             height: auto;
-            margin: 0;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -412,81 +485,16 @@
             position: relative;
             right: 0;
         }
+    }
+    .content {
+        margin: 0;
 
-        &__meta {
-            display: none;
-        }
-
-        &__view {
-            display: flex;
-        }
-
-        &__tags {
-            display: none;
+        &__author {
+            span {
+                display: block;
+            }
         }
     }
-
-    .holding {
-        display: block;
-
-        &__column {
-            margin-top: 1.25rem;
-        }
-    }
-
-    .registration {
-        padding: 1.25rem 1.25rem 2.375rem;
-        display: block;
-
-        &__text {
-            display: block;
-            font-size: 1rem;
-            line-height: 1.5;
-            margin: 0;
-        }
-
-        &__button {
-            margin-top: 1.875rem;
-            padding: 0.5rem 1.5rem;
-            font-size: 0.875rem;
-            line-height: 1.64;
-            height: auto;
-        }
-    }
-
-    .info {
-        max-width: 100%;
-    }
-
-    .themes {
-        &__title {
-            font-size: 1.5rem;
-            line-height: 1.42;
-        }
-
-        li + li {
-            margin-top: 1.25rem;
-        }
-    }
-
-    .map {
-        &__title {
-            font-weight: 500;
-            font-size: 1.25rem;
-            line-height: 1.5;
-        }
-    }
-    .yandexMap {
-        margin-top: 1.25rem;
-    }
-    .speakers {
-        margin-top: 3.125rem;
-    }
-    .speaker {
-        margin: 0 0 1.875rem 0;
-        width: 100%;
-    }
-
     .otherNews {
         padding: 0;
         margin-top: 5rem;
@@ -518,9 +526,27 @@
     .hiden {
         display: none;
     }
+
+    .document {
+        &__title {
+            max-width: 65%;
+        }
+    }
+
     .carouselOther {
         &__buttons {
             margin: 0;
+        }
+    }
+
+    .materials {
+        span {
+            font-size: 1rem;
+        }
+    }
+    .company {
+        &__title {
+            font-size: 1rem;
         }
     }
     .yandexMap {

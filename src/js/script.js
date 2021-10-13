@@ -51,23 +51,44 @@ function freeScroll(item = "body") {
     $(item).attr("style", "");
 }
 
+function accordion(btn, content, activeClass, closeButton) {
+    $(btn).on("click", function () {
+        $(this).toggleClass(activeClass).parent().find(content).slideToggle();
+    });
+    $(closeButton).on("click", function () {
+        $(this).toggleClass(activeClass).parent().parent().find(content).slideToggle();
+    });
+}
+
+const createYouTubeEmbedLink = (btn, container) => {
+    $(btn).each((i, el) => {
+        let link = $(el).attr("data-src"),
+            linkStart = "https://www.youtube.com/embed/",
+            linkEnd = "?rel=0&showinfo=0&autoplay=1";
+        let newLink = linkStart + link.slice(link.indexOf("=") + 1, link.length) + linkEnd;
+        $(el).on("click", function () {
+            $(this)
+                .parent(container)
+                .empty()
+                .append(
+                    `<iframe class="video__frame" src="${newLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                );
+        });
+    });
+};
+
 $().ready(() => {
     contentFadeInOnReady();
-    bindModalListeners([]);
+    bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
+    accordion(".accordion__main", ".accordion__information", ".activeAccordion");
+    accordion(".modal__burger", ".modal__hiddenRefs", ".activeHiddenRefs");
+    accordion(
+        ".associationModal__button",
+        ".associationModal",
+        ".associationModal__active",
+        ".associationModal__close"
+    );
+    accordion(".tags__list", ".tags__items", "tags__active");
+    accordion(".publication__button", ".publication__items", "publication__active");
+    createYouTubeEmbedLink($(".video__button"), $(".video__image"));
 });
-
-// $(function () {
-//     $('input[name="daterange"]').daterangepicker(
-//         {
-//             opens: "left",
-//         },
-//         function (start, end, label) {
-//             console.log(
-//                 "A new date selection was made: " +
-//                     start.format("YYYY-MM-DD") +
-//                     " to " +
-//                     end.format("YYYY-MM-DD")
-//             );
-//         }
-//     );
-// });
