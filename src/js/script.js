@@ -55,8 +55,23 @@ function accordion(btn, content, activeClass, closeButton) {
     $(btn).on("click", function () {
         $(this).toggleClass(activeClass).parent().find(content).slideToggle();
     });
+}
+
+function burger(btn, content, activeClass, closeButton) {
+    $(btn).on("click", function () {
+        $(this).toggleClass(activeClass).parent().find(content).slideToggle();
+    });
     $(closeButton).on("click", function () {
         $(this).toggleClass(activeClass).parent().parent().find(content).slideToggle();
+    });
+    $(document).on("mousedown", function (e) {
+        if (
+            !$(content).is(e.target) &&
+            $(content).has(e.target).length === 0 &&
+            $(btn).hasClass(activeClass)
+        ) {
+            $(btn).toggleClass(activeClass).parent().find(content).slideToggle();
+        }
     });
 }
 
@@ -81,14 +96,14 @@ $().ready(() => {
     contentFadeInOnReady();
     bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
     accordion(".accordion__main", ".accordion__information", ".activeAccordion");
-    accordion(".modal__burger", ".modal__hiddenRefs", ".activeHiddenRefs");
-    accordion(
+    burger(".modal__burger", ".modal__hiddenRefs", ".activeHiddenRefs");
+    burger(
         ".associationModal__button",
         ".associationModal",
         ".associationModal__active",
         ".associationModal__close"
     );
-    accordion(".tags__list", ".tags__items", "tags__active");
-    accordion(".publication__button", ".publication__items", "publication__active");
+    burger(".tags__list", ".tags__items", "tags__active");
+    burger(".publication__button", ".publication__items", "publication__active");
     createYouTubeEmbedLink($(".video__button"), $(".video__image"));
 });

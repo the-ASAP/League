@@ -285,6 +285,36 @@ h .associationModal__ref + .associationModal__ref {
   display: none;
 }
 
+.breadcrumbs {
+  position: absolute;
+  top: 4.75rem;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__prev {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.36;
+  color: #bdbdbd;
+}
+
+.breadcrumbs__circle {
+  background: #636363;
+  width: 5px;
+  height: 5px;
+  margin: 0 0.625rem;
+  border-radius: 50%;
+}
+
+.breadcrumbs__point {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.36;
+  color: var(--dark-gray);
+}
+
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;
@@ -924,6 +954,10 @@ input:-webkit-autofill:focus {
 @media (max-width: 768px) {
   html {
     font-size: 16px;
+  }
+
+  .breadcrumbs {
+    display: none;
   }
 
   .header__container {
