@@ -36,8 +36,15 @@
   color: var(--light-gray);
 }
 
+.modal__buttons {
+  display: flex;
+}
+
 .modal__search,
 .modal__close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -49,6 +56,38 @@
   margin-top: 2.8125rem;
   padding-bottom: 3.625rem;
   border-bottom: 1px solid var(--light-gray);
+}
+
+.modal__select {
+  margin-top: 1.125rem;
+}
+
+.modal__burger {
+  position: relative;
+}
+
+.modal__burger::after {
+  content: "";
+  width: 5px;
+  height: 1px;
+  position: absolute;
+  top: calc(50%);
+  background: var(--light-gray);
+  left: 139px;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in;
+}
+
+.modal__burger::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  position: absolute;
+  top: calc(50%);
+  background: var(--light-gray);
+  left: 136px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in;
 }
 
 .modal__hiddenRefs {
@@ -69,32 +108,6 @@
 
 .modal__ref:first-child {
   margin: 0;
-}
-
-.modal__burger {
-  position: relative;
-}
-
-.modal__burger::after {
-  content: "";
-  width: 5px;
-  height: 1px;
-  position: absolute;
-  top: calc(50%);
-  background: var(--light-gray);
-  left: 139px;
-  transform: rotate(-45deg);
-}
-
-.modal__burger::before {
-  content: "";
-  width: 5px;
-  height: 1px;
-  position: absolute;
-  top: calc(50%);
-  background: var(--light-gray);
-  left: 136px;
-  transform: rotate(45deg);
 }
 
 .modal__contacts {
@@ -123,6 +136,14 @@
 
 .activeHiddenRefs {
   display: block;
+}
+
+.activeHiddenRefs::before {
+  transform: rotate(-45deg);
+}
+
+.activeHiddenRefs::after {
+  transform: rotate(45deg);
 }
 
 .header__container {

@@ -1,3 +1,5 @@
+@import "lightpick";
+
 .analytics {
     margin-top: 6.25rem;
 
@@ -13,7 +15,7 @@
 
 .graph {
     width: 65%;
-    height: 34.375rem;
+    height: 36.375rem;
     background-color: $lightGray;
     border-radius: 0.75rem;
 
@@ -29,12 +31,21 @@
         margin-left: 2.25rem;
     }
 
-    &__input__wrapper {
-        width: 100%;
+    &__button {
+        width: 18rem;
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.75rem 0 2rem 2.3125rem;
     }
 
-    &__input {
-        display: none;
+    &__content {
+        font-size: 1.125rem;
+        line-height: 1.67;
+        color: $darkGray;
     }
 
     &__canvas {
@@ -57,7 +68,7 @@
 
 .materials {
     width: 33%;
-    height: 34.375rem;
+    height: 36.375rem;
     margin-left: 1.375rem;
     background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
     border-radius: 0.75rem;
@@ -209,18 +220,6 @@
             height: auto;
         }
 
-        &__input__wrapper {
-            width: 100%;
-            padding: 0 1.0625rem;
-            margin-top: 1.875rem;
-        }
-
-        &__input {
-            width: 100%;
-            position: relative;
-            margin: 0;
-        }
-
         &__title {
             max-width: 100%;
             margin: 1.25rem 1.0625rem 0;
@@ -236,6 +235,25 @@
             color: $extraGray;
             margin: 1.25rem 1rem 0;
         }
+
+        &__button {
+            width: calc(100% - 2rem);
+            margin: auto;
+
+            &_wrapper {
+                margin-top: 1.875rem;
+            }
+        }
+
+        &__content {
+            font-size: 1rem;
+        }
+    }
+
+    .lightpick {
+        // TODO: исправить импортант
+        left: 50% !important;
+        transform: translateX(-50%);
     }
 
     .customInput {

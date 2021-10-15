@@ -179,6 +179,304 @@
   background-color: var(--hover-green);
 }
 
+:root {
+  --main-green: #39ad46;
+  --second-green: #27ae60;
+  --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
+  --dark-gray: #4f4f4f;
+  --mid-gray: #828282;
+  --light-gray: #f2f2f2;
+  --extra-gray: #333;
+  --golos-font: Golos;
+}
+
+.lightpick {
+  position: absolute;
+  z-index: 99999;
+  padding: 1rem 1rem 1.5rem;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  color: var(--dark-gray);
+  font-family: Inter;
+  line-height: 1.125em;
+}
+
+.lightpick--inlined {
+  position: relative;
+  display: inline-block;
+}
+
+.lightpick,
+.lightpick *,
+.lightpick::after,
+.lightpick::before {
+  box-sizing: border-box;
+}
+
+.lightpick.is-hidden {
+  display: none;
+}
+
+.lightpick__months {
+  display: grid;
+  background-color: #eee;
+  grid-template-columns: auto;
+  grid-gap: 1px;
+}
+
+.lightpick--2-columns .lightpick__months {
+  grid-template-columns: auto auto;
+}
+
+.lightpick--3-columns .lightpick__months {
+  grid-template-columns: auto auto auto;
+}
+
+.lightpick--4-columns .lightpick__months {
+  grid-template-columns: auto auto auto auto;
+}
+
+.lightpick--5-columns .lightpick__months {
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.lightpick__month {
+  background-color: #fff;
+}
+
+.lightpick__month-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lightpick__month-title {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.lightpick__month-title > .lightpick__select {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.lightpick__select:disabled {
+  color: #333;
+}
+
+.lightpick__select-months,
+.lightpick__select-years {
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--dark-gray);
+  text-transform: capitalize;
+}
+
+.lightpick__select-months option,
+.lightpick__select-years option {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.lightpick__select-months {
+  margin-right: 10px;
+}
+
+.lightpick__toolbar {
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.lightpick__previous-action,
+.lightpick__next-action,
+.lightpick__close-action {
+  display: flex;
+  margin-left: 6px;
+  width: 32px;
+  height: 32px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightpick__next-action {
+  transform: rotate(180deg);
+}
+
+.lightpick__previous-action,
+.lightpick__next-action {
+  position: relative;
+}
+
+.lightpick__previous-action::before,
+.lightpick__next-action::before {
+  content: "";
+  background: var(--dark-gray);
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 18px;
+  left: 10px;
+}
+
+.lightpick__previous-action::after,
+.lightpick__next-action::after {
+  content: "";
+  background: var(--dark-gray);
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 12px;
+  left: 10px;
+}
+
+.lightpick__previous-action:hover::before,
+.lightpick__previous-action:hover::after,
+.lightpick__next-action:hover::before,
+.lightpick__next-action:hover::after {
+  background: var(--main-green);
+}
+
+.lightpick__close-action {
+  font-size: 18px;
+}
+
+.lightpick__previous-action:active,
+.lightpick__next-action:active,
+.lightpick__close-action:active {
+  color: inherit;
+}
+
+.lightpick__days-of-the-week {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.lightpick__day-of-the-week {
+  display: flex;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  color: var(--dark-gray);
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.lightpick__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.lightpick__day {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  border: 1px solid var(--light-gray);
+  border-radius: 50%;
+}
+
+.lightpick__day.is-today {
+  border-color: var(--main-green);
+}
+
+.lightpick__day:not(.is-disabled):hover {
+  background-color: var(--main-green);
+  color: #fff;
+  cursor: pointer;
+}
+
+.lightpick__day.is-disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.lightpick__day.disabled-tooltip {
+  pointer-events: auto;
+}
+
+.lightpick__day.is-disabled.is-forward-selected {
+  opacity: 1;
+}
+
+.lightpick__day.is-disabled.is-forward-selected:not(.is-start-date) {
+  background-color: rgba(38, 139, 210, 0.1);
+  border-radius: 50%;
+  background-image: none;
+}
+
+.lightpick__day.is-previous-month,
+.lightpick__day.is-next-month {
+  opacity: 0.38;
+}
+
+.lightpick__day.lightpick__day.is-in-range:not(.is-disabled) {
+  opacity: 1;
+}
+
+.lightpick__day.is-in-range {
+  border-radius: 0;
+  background-color: rgba(57, 173, 70, 0.3);
+  border-radius: 50%;
+}
+
+.lightpick__day.is-in-range:hover {
+  background-color: var(--main-green);
+}
+
+.lightpick__day.is-start-date.is-in-range,
+.lightpick__day.is-end-date.is-in-range.is-flipped {
+  border-top-left-radius: 50%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 50%;
+  background-color: var(--main-green);
+  background-image: none;
+}
+
+.lightpick__day.is-end-date.is-in-range,
+.lightpick__day.is-start-date.is-in-range.is-flipped {
+  border-top-left-radius: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 0;
+  background-color: var(--main-green);
+  background-image: none;
+}
+
+.lightpick__day.is-start-date.is-end-date {
+  background-color: var(--main-green);
+}
+
+.lightpick__day.is-start-date,
+.lightpick__day.is-end-date,
+.lightpick__day.is-start-date:hover,
+.lightpick__day.is-end-date:hover {
+  background-color: var(--main-green);
+  color: #fff;
+  font-weight: bold;
+}
+
 .analytics {
   margin-top: 6.25rem;
 }
@@ -194,7 +492,7 @@
 
 .graph {
   width: 65%;
-  height: 34.375rem;
+  height: 36.375rem;
   background-color: var(--light-gray);
   border-radius: 0.75rem;
 }
@@ -211,12 +509,21 @@
   margin-left: 2.25rem;
 }
 
-.graph__input__wrapper {
-  width: 100%;
+.graph__button {
+  width: 18rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.75rem 0 2rem 2.3125rem;
 }
 
-.graph__input {
-  display: none;
+.graph__content {
+  font-size: 1.125rem;
+  line-height: 1.67;
+  color: var(--dark-gray);
 }
 
 .graph__canvas {
@@ -237,7 +544,7 @@
 
 .materials {
   width: 33%;
-  height: 34.375rem;
+  height: 36.375rem;
   margin-left: 1.375rem;
   background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
   border-radius: 0.75rem;
@@ -426,11 +733,11 @@
   color: var(--second-green);
 }
 
-.active .accordion__icon {
+.activeAccordion .accordion__icon {
   transform: rotate(45deg);
 }
 
-.active .accordion__icon path {
+.activeAccordion .accordion__icon path {
   fill: var(--second-green);
 }
 
@@ -605,6 +912,7 @@
   width: fit-content;
   padding-bottom: 0.25rem;
   border-bottom: 2px solid var(--main-green);
+  transition: all 0.3s ease-in;
 }
 
 .card__text {
@@ -616,6 +924,7 @@
   line-height: 1.44;
   letter-spacing: -0.015em;
   color: var(--dark-gray);
+  transition: all 0.3s ease-in;
 }
 
 .card:hover {
@@ -839,6 +1148,10 @@
   margin: 0 2%;
 }
 
+.breadcrumbs {
+  display: none;
+}
+
 .indexPage {
   margin-bottom: 6.25rem;
 }
@@ -1042,18 +1355,6 @@
     height: auto;
   }
 
-  .graph__input__wrapper {
-    width: 100%;
-    padding: 0 1.0625rem;
-    margin-top: 1.875rem;
-  }
-
-  .graph__input {
-    width: 100%;
-    position: relative;
-    margin: 0;
-  }
-
   .graph__title {
     max-width: 100%;
     margin: 1.25rem 1.0625rem 0;
@@ -1068,6 +1369,24 @@
     line-height: 1.5;
     color: var(--extra-gray);
     margin: 1.25rem 1rem 0;
+  }
+
+  .graph__button {
+    width: calc(100% - 2rem);
+    margin: auto;
+  }
+
+  .graph__button_wrapper {
+    margin-top: 1.875rem;
+  }
+
+  .graph__content {
+    font-size: 1rem;
+  }
+
+  .lightpick {
+    left: 50% !important;
+    transform: translateX(-50%);
   }
 
   .customInput {

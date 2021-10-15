@@ -57,20 +57,15 @@ function accordion(btn, content, activeClass, closeButton) {
     });
 }
 
-function burger(btn, content, activeClass, closeButton) {
-    $(btn).on("click", function () {
-        $(this).toggleClass(activeClass).parent().find(content).slideToggle();
-    });
-    $(closeButton).on("click", function () {
-        $(this).toggleClass(activeClass).parent().parent().find(content).slideToggle();
+function select(btn, content, activeClass, closeButton) {
+    $(btn || closeButton).on("click", function () {
+        $(btn).toggleClass(activeClass);
+        $(content).slideToggle();
     });
     $(document).on("mousedown", function (e) {
-        if (
-            !$(content).is(e.target) &&
-            $(content).has(e.target).length === 0 &&
-            $(btn).hasClass(activeClass)
-        ) {
-            $(btn).toggleClass(activeClass).parent().find(content).slideToggle();
+        if (!$(btn).is(e.target) && $(btn).hasClass(activeClass)) {
+            $(btn).toggleClass(activeClass);
+            $(content).slideToggle();
         }
     });
 }
@@ -95,15 +90,25 @@ const createYouTubeEmbedLink = (btn, container) => {
 $().ready(() => {
     contentFadeInOnReady();
     bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
-    accordion(".accordion__main", ".accordion__information", ".activeAccordion");
-    burger(".modal__burger", ".modal__hiddenRefs", ".activeHiddenRefs");
-    burger(
+    accordion(".accordion__main", ".accordion__information", "activeAccordion");
+    select(".modal__burger", ".modal__hiddenRefs", "activeHiddenRefs");
+    select(".footer__burger", ".footer__hiddenRefs", "footer__activeHiddenRefs");
+    select(
         ".associationModal__button",
         ".associationModal",
-        ".associationModal__active",
+        "associationModal__active",
         ".associationModal__close"
     );
-    burger(".tags__list", ".tags__items", "tags__active");
-    burger(".publication__button", ".publication__items", "publication__active");
+    select(".tags__list", ".tags__items", "tags__active");
+    select(".publication__button", ".publication__items", "publication__active");
     createYouTubeEmbedLink($(".video__button"), $(".video__image"));
+
+    ymaps.ready(() => {
+        const Map = new ymaps.Map("yandexMap", {
+            center: [55.76, 37.64],
+            zoom: 10,
+            controls: ["zoomControl"],
+        });
+        Map.behaviors.disable("scrollZoom");
+    });
 });

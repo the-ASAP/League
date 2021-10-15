@@ -337,6 +337,7 @@
   color: var(--dark-gray);
   letter-spacing: 0.015em;
   transition: all 0.3s ease-in;
+  text-align: center;
 }
 
 .analytics__button:hover {
@@ -367,10 +368,17 @@
   margin-top: 2.5rem;
 }
 
-.graph__input {
+.graph__button {
+  width: 18rem;
   border: 1px solid #c4c4c4;
   border-radius: 5px;
   padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.graph__content {
   font-size: 1.125rem;
   line-height: 1.67;
   color: var(--dark-gray);
@@ -491,12 +499,16 @@
     max-width: 100%;
   }
 
-  .graph__input {
+  .graph__button {
     width: 100%;
   }
 
-  .graph__input__wrapper {
+  .graph__button_wrapper {
     margin-top: 1.875rem;
+  }
+
+  .graph__content {
+    font-size: 1rem;
   }
 
   .lightpick {

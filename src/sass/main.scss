@@ -100,6 +100,17 @@ span {
         width: 90%;
     }
 
+    &_map {
+        margin: 0 auto;
+        max-width: 83.75rem;
+        position: relative;
+        height: 100%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
     &_middle {
         margin: 0 auto;
         max-width: 65%;

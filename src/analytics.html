@@ -25,10 +25,10 @@
                     <h2>Аналитика рынка</h2>
                 </div>
                 <div class="analytics__buttons">
-                    <button type="button" class="analytics__button">Аналитические материалы</button>
-                    <button type="button" class="analytics__button">
+                    <a href="/" type="button" class="analytics__button">Аналитические материалы</a>
+                    <a href="/" type="button" class="analytics__button">
                         Значение ценового индекса
-                    </button>
+                    </a>
                 </div>
                 <div class="graph">
                     <div class="graph__info">
@@ -36,13 +36,22 @@
                             Ценовой индекс на основные виды продукции целлюлозно-бумажной
                             промышленности России
                         </p>
-                        <div class="graph__input__wrapper">
-                            <input
-                                type="text"
-                                id="datePicker"
-                                class="graph__input"
-                                placeholder="Выберите даты"
-                            />
+                        <div class="graph__button_wrapper">
+                            <button type="button" class="graph__button" id="datePicker">
+                                <span class="graph__content">Выберите даты</span>
+                                <svg
+                                    width="1.125rem"
+                                    height="1.25rem"
+                                    viewBox="0 0 18 20"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M15.4167 19.1666H2.58333C1.57081 19.1666 0.75 18.3458 0.75 17.3333V4.49992C0.75 3.4874 1.57081 2.66659 2.58333 2.66659H4.41667V0.833252H6.25V2.66659H11.75V0.833252H13.5833V2.66659H15.4167C16.4292 2.66659 17.25 3.4874 17.25 4.49992V17.3333C17.25 18.3458 16.4292 19.1666 15.4167 19.1666ZM2.58333 8.16659V17.3333H15.4167V8.16659H2.58333ZM2.58333 4.49992V6.33325H15.4167V4.49992H2.58333ZM13.5833 15.4999H11.75V13.6666H13.5833V15.4999ZM9.91667 15.4999H8.08333V13.6666H9.91667V15.4999ZM6.25 15.4999H4.41667V13.6666H6.25V15.4999ZM13.5833 11.8333H11.75V9.99992H13.5833V11.8333ZM9.91667 11.8333H8.08333V9.99992H9.91667V11.8333ZM6.25 11.8333H4.41667V9.99992H6.25V11.8333Z"
+                                        fill="#27AE60"
+                                    />
+                                </svg>
+                            </button>
                         </div>
                     </div>
 
@@ -95,10 +104,8 @@
         @import "footer.html"
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 
         <!-- Datepicker -->
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
         <script src="https://unpkg.com/lightpick@latest/lightpick.js"></script>
         <!--  -->

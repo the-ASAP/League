@@ -31,6 +31,7 @@
         color: $midGray;
         width: 10rem;
         transition: all 0.3s ease-in;
+        text-align: center;
 
         &:hover {
             color: #fff;
@@ -49,14 +50,10 @@
 
 .document {
     width: calc((100% - 2.5rem) / 3);
-    height: 18.75rem;
     background: $lightGray;
     border-radius: 12px;
     padding: 1.875rem 2.5rem;
     margin-bottom: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
     &__date {
         display: block;
@@ -75,6 +72,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 3rem;
     }
     &__link {
         font-size: 1rem;

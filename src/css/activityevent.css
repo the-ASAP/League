@@ -188,6 +188,7 @@
 
 .event__meta {
   display: flex;
+  padding-top: 0.95rem;
 }
 
 .event__view {
@@ -348,6 +349,7 @@
 }
 
 .holding {
+  max-width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 1.25rem;
@@ -473,6 +475,7 @@
 
 .speaker__picture {
   height: 100%;
+  object-fit: cover;
 }
 
 .speaker__name {
@@ -592,6 +595,7 @@
 
   .holding {
     display: block;
+    max-width: 100%;
   }
 
   .holding__column {

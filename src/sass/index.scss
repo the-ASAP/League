@@ -9,6 +9,10 @@
 @import "positionsBlocks.scss";
 @import "datePicker";
 
+.breadcrumbs {
+    display: none;
+}
+
 .indexPage {
     margin-bottom: 6.25rem;
 }

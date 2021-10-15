@@ -102,10 +102,16 @@
         display: flex;
     }
 
+    &__select {
+        position: relative;
+        margin-right: 1.25rem;
+        width: 11.8125rem;
+    }
+
     &__list {
+        width: 100%;
         text-align: left;
         background: #efefef;
-        width: 11.8125rem;
         padding: 0.3125rem 0.875rem;
         border-radius: 4px;
         color: $darkGray;
@@ -115,7 +121,6 @@
         letter-spacing: 0.015em;
         position: relative;
         display: inline-flex;
-        margin-right: 1.25rem;
 
         &::before,
         &::after {
@@ -127,6 +132,7 @@
             top: calc(50% - 1px);
             right: 16px;
             border-radius: 1px;
+            transition: transform 0.3s ease-in;
         }
         &::before {
             right: 19px;
@@ -185,7 +191,7 @@
         position: absolute;
         top: 1.5rem;
         left: 0;
-        width: 11.8125rem;
+        width: 100%;
         background-color: #efefef;
         padding: 0 2rem 1rem 1rem;
         border-radius: 4px;
@@ -204,6 +210,13 @@
 
     &__active {
         display: block;
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
     }
 }
 
@@ -230,6 +243,7 @@
             top: calc(50% - 1px);
             right: 1rem;
             border-radius: 1px;
+            transition: transform 0.3s ease-in;
         }
         &::before {
             right: 1.1875rem;
@@ -264,6 +278,13 @@
 
     &__active {
         display: block;
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
     }
 }
 
@@ -403,6 +424,20 @@
             letter-spacing: 0.015em;
             color: $darkGray;
         }
+
+        &__select {
+            width: 100%;
+            margin: 0;
+        }
+        &__items {
+            top: 2.5rem;
+        }
+        &__item {
+            display: block;
+        }
+    }
+    .publication {
+        display: none;
     }
 
     .pagination {

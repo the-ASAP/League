@@ -42,6 +42,7 @@
   width: fit-content;
   padding-bottom: 0.25rem;
   border-bottom: 2px solid var(--main-green);
+  transition: all 0.3s ease-in;
 }
 
 .card__text {
@@ -53,6 +54,7 @@
   line-height: 1.44;
   letter-spacing: -0.015em;
   color: var(--dark-gray);
+  transition: all 0.3s ease-in;
 }
 
 .card:hover {

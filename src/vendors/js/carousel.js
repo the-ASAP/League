@@ -63,9 +63,7 @@ $().ready(() => {
             },
         },
     });
-});
 
-$().ready(() => {
     owlGallery(".carouselEvent", {
         dots: false,
         items: 1,
@@ -75,9 +73,7 @@ $().ready(() => {
         navContainer: ".carouselEvent__buttons",
         navClass: ["carouselEvent__prev", "carouselEvent__next"],
     });
-});
 
-$().ready(() => {
     owlGallery(".carouselOther", {
         dots: false,
         items: 1,

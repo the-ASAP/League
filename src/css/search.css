@@ -93,6 +93,7 @@
 
 .post {
   margin-top: 3.125rem;
+  width: fit-content;
   display: block;
 }
 

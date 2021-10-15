@@ -31,6 +31,7 @@
         color: $darkGray;
         letter-spacing: 0.015em;
         transition: all 0.3s ease-in;
+        text-align: center;
 
         &:hover {
             background-color: $firstGreen;
@@ -61,10 +62,17 @@
         margin-top: 2.5rem;
     }
 
-    &__input {
+    &__button {
+        width: 18rem;
         border: 1px solid #c4c4c4;
         border-radius: 5px;
         padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
         font-size: 1.125rem;
         line-height: 1.67;
         color: $darkGray;
@@ -189,12 +197,16 @@
             max-width: 100%;
         }
 
-        &__input {
+        &__button {
             width: 100%;
 
-            &__wrapper {
+            &_wrapper {
                 margin-top: 1.875rem;
             }
+        }
+
+        &__content {
+            font-size: 1rem;
         }
     }
 
@@ -203,6 +215,7 @@
         left: 50% !important;
         transform: translateX(-50%);
     }
+
     .notes {
         display: block;
     }

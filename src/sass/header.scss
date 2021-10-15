@@ -24,8 +24,15 @@
         color: $lightGray;
     }
 
+    &__buttons {
+        display: flex;
+    }
+
     &__search,
     &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
@@ -37,6 +44,38 @@
         margin-top: 2.8125rem;
         padding-bottom: 3.625rem;
         border-bottom: 1px solid $lightGray;
+    }
+
+    &__select {
+        margin-top: 1.125rem;
+    }
+
+    &__burger {
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 5px;
+            height: 1px;
+            position: absolute;
+            top: calc(50%);
+            background: $lightGray;
+            left: 139px;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease-in;
+        }
+
+        &::before {
+            content: "";
+            width: 5px;
+            height: 1px;
+            position: absolute;
+            top: calc(50%);
+            background: $lightGray;
+            left: 136px;
+            transform: rotate(45deg);
+            transition: transform 0.3s ease-in;
+        }
     }
 
     &__hiddenRefs {
@@ -56,32 +95,6 @@
 
         &:first-child {
             margin: 0;
-        }
-    }
-
-    &__burger {
-        position: relative;
-
-        &::after {
-            content: "";
-            width: 5px;
-            height: 1px;
-            position: absolute;
-            top: calc(50%);
-            background: $lightGray;
-            left: 139px;
-            transform: rotate(-45deg);
-        }
-
-        &::before {
-            content: "";
-            width: 5px;
-            height: 1px;
-            position: absolute;
-            top: calc(50%);
-            background: $lightGray;
-            left: 136px;
-            transform: rotate(45deg);
         }
     }
 
@@ -111,6 +124,13 @@
 
 .activeHiddenRefs {
     display: block;
+
+    &::before {
+        transform: rotate(-45deg);
+    }
+    &::after {
+        transform: rotate(45deg);
+    }
 }
 
 .header {

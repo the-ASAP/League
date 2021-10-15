@@ -131,7 +131,7 @@ $("#input_6").change(function () {
     hiddenGraph(this, 5);
 });
 
-new Lightpick({
+const picker = new Lightpick({
     field: document.getElementById("datePicker"),
     singleDate: false,
     // minDate: moment().startOf("month").add(7, "day"),
@@ -141,5 +141,11 @@ new Lightpick({
             prev: ``,
             next: ``,
         },
+    },
+    onClose: function () {
+        $(".graph__content").text(
+            `${this.getStartDate().format("L")} - ${this.getEndDate().format("L")}`
+        );
+        console.log(`${this.getStartDate().format("L")} - ${this.getEndDate().format("L")}`);
     },
 });

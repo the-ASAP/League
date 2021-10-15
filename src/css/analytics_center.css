@@ -111,6 +111,7 @@
   display: flex;
   justify-content: center;
   padding: 3.4375rem 0;
+  flex-wrap: wrap;
 }
 
 .contacts__block {
@@ -202,11 +203,11 @@
   color: var(--second-green);
 }
 
-.active .accordion__icon {
+.activeAccordion .accordion__icon {
   transform: rotate(45deg);
 }
 
-.active .accordion__icon path {
+.activeAccordion .accordion__icon path {
   fill: var(--second-green);
 }
 
