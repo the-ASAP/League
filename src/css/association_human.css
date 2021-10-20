@@ -792,7 +792,6 @@ input:-webkit-autofill:focus {
 }
 
 .intro__title {
-  font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: 2.625rem;
