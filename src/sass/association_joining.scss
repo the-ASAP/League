@@ -2,12 +2,14 @@
 @import "associationHeader";
 
 .title {
-    padding: 1.875rem 0;
+    padding: 3.625rem 0 2.375rem;
     border-bottom: 1px solid #bdbdbd;
 
     h2 {
-        font-weight: 400;
         text-align: center;
+        font-weight: 400;
+        font-size: 3.5625rem;
+        line-height: 1.23;
     }
 }
 
@@ -114,6 +116,10 @@
         top: 0;
         right: -4.375rem;
     }
+
+    &__select {
+        display: none;
+    }
 }
 
 .document {
@@ -181,5 +187,82 @@
             letter-spacing: -0.015em;
             color: $darkGray;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        padding: 1.375rem 0 1.625rem;
+
+        h2 {
+            font-size: 2rem;
+            line-height: 1.37;
+        }
+    }
+    .joining {
+        margin-top: 1.875rem;
+
+        &__picture {
+            img {
+                height: 60vw;
+            }
+        }
+        &__buttons {
+            display: none;
+        }
+        &__share {
+            position: relative;
+            left: calc(100% - 3.125rem);
+        }
+        &__category {
+            display: none;
+        }
+        &__sandwich {
+            margin-top: 1rem;
+            display: block;
+            color: $darkGray;
+            background: #efefef;
+            border-radius: 4px;
+            padding: 0.75rem 0.875rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+
+            span {
+                font-size: 1rem;
+                line-height: 1.44;
+                letter-spacing: 0.015em;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                width: 10px;
+                height: 2px;
+                background: #8f9bb3;
+                position: absolute;
+                // top: calc(50% - 2.5px);
+                right: 12px;
+            }
+            &::before {
+                transform: rotate(45deg);
+                right: 18px;
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .contacs {
+        display: block;
+
+        .email,
+        .phone {
+            width: 100%;
+        }
+    }
+    .phone {
+        margin-top: 1.875rem;
     }
 }

@@ -95,7 +95,6 @@
     max-width: 43.8125rem;
 
     ul {
-        margin-top: 2.5rem;
         list-style: none;
     }
     li {
@@ -242,4 +241,38 @@
     width: 100%;
     height: 31.25rem;
     border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .info {
+        display: block;
+        margin-top: 2.125rem;
+    }
+    .partner {
+        width: 100%;
+    }
+    .content {
+        h2 {
+            margin-top: 2.125rem;
+            font-size: 1.5rem;
+            line-height: 1.42;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.44;
+        }
+    }
+    .carouselEvent {
+        margin-top: 1.5625rem;
+    }
+    .documents {
+        margin-top: 3.125rem;
+    }
+    .map {
+        margin-top: 4.25rem;
+    }
+    .yandexMap {
+        margin-top: 2.125rem;
+        height: 90vw;
+    }
 }

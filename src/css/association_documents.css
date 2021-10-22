@@ -33,7 +33,7 @@
 }
 
 .intro__title {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 3.5625rem;
   line-height: 1.23;
   color: var(--dark-gray);
@@ -41,7 +41,7 @@
 
 .association {
   display: flex;
-  flex-wrap: wrap;
+  overflow: scroll;
   padding-bottom: 1.5625rem;
   border-bottom: 1px solid #bdbdbd;
   margin-top: 3.125rem;
@@ -59,6 +59,7 @@
   color: var(--mid-gray);
   transition: all 0.3s ease-in;
   margin-bottom: 0.9375rem;
+  white-space: nowrap;
 }
 
 .association__button:hover {
@@ -68,13 +69,15 @@
 }
 
 .title {
-  padding: 1.875rem 0;
+  padding: 3.625rem 0 2.375rem;
   border-bottom: 1px solid #bdbdbd;
 }
 
 .title h2 {
-  font-weight: 400;
   text-align: center;
+  font-weight: 400;
+  font-size: 3.5625rem;
+  line-height: 1.23;
 }
 
 .documentsPage__buttons {
@@ -94,6 +97,7 @@
   color: var(--mid-gray);
   width: 10rem;
   transition: all 0.3s ease-in;
+  text-align: center;
 }
 
 .documentsPage__button:hover {
@@ -111,14 +115,10 @@
 
 .document {
   width: calc((100% - 2.5rem) / 3);
-  height: 18.75rem;
   background: var(--light-gray);
   border-radius: 12px;
   padding: 1.875rem 2.5rem;
   margin-bottom: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .document__date {
@@ -140,6 +140,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .document__link {
@@ -191,4 +192,70 @@
 
 .document:nth-child(3n + 2) {
   margin: 0 1.25rem 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    margin-top: 3.75rem;
+  }
+
+  .intro__title {
+    font-size: 2.25rem;
+    line-height: 1.39;
+  }
+
+  .association {
+    margin-top: 1.9375rem;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    overflow-x: scroll;
+  }
+
+  .association__button {
+    font-size: 1.125rem;
+    line-height: 1.44;
+  }
+
+  .title {
+    padding: 1.375rem 0 1.625rem;
+  }
+
+  .title h2 {
+    font-size: 2rem;
+    line-height: 1.37;
+  }
+
+  .documentsPage__buttons {
+    margin-top: 1.25rem;
+    width: 100%;
+  }
+
+  .documentsPage__button {
+    width: calc((100% - 1.25rem) / 2);
+  }
+
+  .documentsPage__content {
+    display: block;
+    margin-top: 2.5rem;
+    margin-bottom: 6.25rem;
+  }
+
+  .documentsPage .document {
+    width: 100%;
+    height: auto;
+    padding: 1.25rem;
+  }
+
+  .documentsPage .document:nth-child(3n + 2) {
+    margin: 0 0 1.25rem;
+  }
+
+  .documentsPage .document__text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .documentsPage .document__show {
+    margin-top: 1.5rem;
+  }
 }

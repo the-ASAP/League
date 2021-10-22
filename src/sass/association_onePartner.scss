@@ -175,7 +175,59 @@
         max-width: 23.6875rem;
         color: $midGray;
     }
+}
 
-    &__download {
+.map {
+    margin-top: 6.25rem;
+
+    &__title {
+        line-height: 1.25;
+    }
+}
+
+.yandexMap {
+    margin-top: 3.75rem;
+    margin-bottom: 4.375rem;
+    width: 100%;
+    height: 31.25rem;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .info {
+        display: block;
+        margin-top: 2.125rem;
+    }
+    .partner {
+        width: 100%;
+    }
+    .content {
+        h2 {
+            margin-top: 2.125rem;
+            font-size: 1.5rem;
+            line-height: 1.42;
+        }
+        p {
+            max-width: 100%;
+            margin-top: 0.875rem;
+            font-size: 1rem;
+            line-height: 1.44;
+        }
+        ul {
+            margin-top: 2.9375rem;
+        }
+    }
+    .carouselEvent {
+        margin-top: 1.5625rem;
+    }
+    .documents {
+        margin-top: 3.125rem;
+    }
+    .map {
+        margin-top: 4.25rem;
+    }
+    .yandexMap {
+        margin-top: 2.125rem;
+        height: 90vw;
     }
 }

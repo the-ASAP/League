@@ -33,6 +33,7 @@
 .post {
   margin-bottom: 5.0625rem;
   width: 32%;
+  height: 32rem;
 }
 
 .post__wrapper {
@@ -146,6 +147,10 @@
 .return {
   display: flex;
   align-items: center;
+  position: absolute;
+  width: 83.75rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .return__button {
@@ -262,7 +267,6 @@
 }
 
 .content ul {
-  margin-top: 2.5rem;
   list-style: none;
 }
 
@@ -448,6 +452,10 @@
   justify-content: space-between;
 }
 
+.otherNews__info-mobile {
+  display: none;
+}
+
 .otherNews__more {
   display: none;
 }
@@ -519,6 +527,7 @@
   .post {
     width: 100%;
     margin-bottom: 0;
+    height: auto;
   }
 
   .post + .post {

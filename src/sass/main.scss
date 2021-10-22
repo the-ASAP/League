@@ -41,15 +41,14 @@ h1 {
 h2 {
     font-family: Inter;
     font-style: normal;
-    font-weight: 500;
-    font-size: 2.25rem;
-    line-height: 1.22;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.37;
     color: $darkGray;
 
-    @media (max-width: 48rem) {
-        font-weight: 500;
+    @media (max-width: 768px) {
+        font-weight: 400;
         font-size: 1.875rem;
-        line-height: 1.4375rem;
 
         color: $extraGray;
     }
@@ -57,10 +56,9 @@ h2 {
 
 h3 {
     font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.5rem;
-    line-height: 1;
+    line-height: 1.42;
 
     color: $darkGray;
 }
@@ -98,8 +96,19 @@ span {
     position: relative;
     height: 100%;
 
-    @media (max-width: 83.75rem) {
+    @media (max-width: 768px) {
         width: 90%;
+    }
+
+    &_map {
+        margin: 0 auto;
+        max-width: 83.75rem;
+        position: relative;
+        height: 100%;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     &_middle {
@@ -108,8 +117,40 @@ span {
         position: relative;
         height: 100%;
 
-        @media (max-width: 83.75rem) {
-            width: 100%;
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+
+    &_activity {
+        margin: 0 auto;
+        max-width: 55rem;
+        position: relative;
+        height: 100%;
+
+        @media (max-width: 768px) {
+            max-width: 90%;
+        }
+    }
+
+    &_fullPhone {
+        margin: 0 auto;
+        max-width: 83.75rem;
+        position: relative;
+        height: 100%;
+
+        @media (max-width: 1340px) {
+            max-width: 100%;
+        }
+    }
+
+    &_event {
+        width: 41.25rem;
+        position: relative;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            width: 90%;
         }
     }
 }
@@ -188,27 +229,27 @@ input {
 
 // Шаблон для модального окна
 // .modal Обязательный класс для всех модальных окон, для попапов используем класс .popup который экстендит(@extend) класс modal или описываем свой.
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    @extend %flexbox;
-    justify-content: center;
-    //Вложенное окно с контентом, необходимо задать фиксированные размерыж
-    &__box {
-        padding: 2rem 3rem;
-        box-sizing: border-box;
-        position: relative;
-        background-color: $bgc;
-        overflow: auto;
-        max-height: 100%;
-        max-width: 100%;
-    }
-    // Кнопка закрытия
-    &__close {
-        @extend %close-btn;
-    }
-}
+// .modal {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     overflow: hidden;
+//     @extend %flexbox;
+//     justify-content: center;
+//     //Вложенное окно с контентом, необходимо задать фиксированные размерыж
+//     &__box {
+//         padding: 2rem 3rem;
+//         box-sizing: border-box;
+//         position: relative;
+//         background-color: $bgc;
+//         overflow: auto;
+//         max-height: 100%;
+//         max-width: 100%;
+//     }
+//     // Кнопка закрытия
+//     &__close {
+//         @extend %close-btn;
+//     }
+// }

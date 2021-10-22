@@ -1,0 +1,329 @@
+@import "root";
+
+.intro {
+    margin-top: 4.3125rem;
+
+    &__info {
+        position: relative;
+        padding-bottom: 3.8125rem;
+        // border-bottom: 1px solid #bdbdbd;
+    }
+
+    &__title {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.625rem;
+        line-height: 3.125rem;
+
+        color: #4f4f4f;
+    }
+}
+
+.return {
+    display: flex;
+    align-items: center;
+
+    &__button {
+        width: 3.125rem;
+        height: 3.125rem;
+        border: 1px solid $firstGreen;
+        border-radius: 50%;
+        transition: all 0.2s ease-in;
+        margin-right: 1.25rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__button:hover {
+        background-color: $firstGreen;
+        border: 1px solid $firstGreen;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &__text {
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.36;
+        color: $midGray;
+    }
+}
+
+.center {
+    background: $firstGreen;
+    border-radius: 12px;
+    padding: 5.625rem 5.625rem 3rem;
+
+    &__info {
+        display: flex;
+
+        img {
+            width: 10.5rem;
+            height: 10.5rem;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
+
+        h3 {
+            max-width: 16rem;
+            font-weight: 500;
+            font-size: 2.9rem;
+            line-height: 1.19;
+            letter-spacing: -1.5px;
+            color: $lightGray;
+            text-transform: uppercase;
+        }
+    }
+
+    span {
+        margin-top: 5rem;
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.42;
+        color: $lightGray;
+    }
+
+    &_mobile {
+        display: none;
+    }
+}
+
+.content {
+    margin-top: 3.75rem;
+}
+
+.contacts {
+    margin-top: 2.5rem;
+    background-color: $lightGray;
+    display: flex;
+    justify-content: center;
+    padding: 3.4375rem 0;
+    flex-wrap: wrap;
+
+    &__block {
+        width: 14rem;
+        margin: 0 1.875rem;
+
+        svg {
+            display: block;
+        }
+    }
+
+    &__ref {
+        margin-top: 1.125rem;
+        font-size: 1.125rem;
+        line-height: 1.44;
+        text-decoration-line: underline;
+        color: $firstGreen;
+    }
+
+    span {
+        display: block;
+        margin-top: 1.125rem;
+        font-size: 1rem;
+        line-height: 1.44;
+        color: $darkGray;
+    }
+}
+
+.accordions {
+    margin-top: 8.5625rem;
+}
+
+.accordion__wrapper {
+    position: relative;
+
+    & + & {
+        margin-top: 1.25rem;
+    }
+}
+
+.accordion {
+    width: 100%;
+    overflow: hidden;
+    background-color: $lightGray;
+    border-radius: 12px;
+    padding: 0 2.3125rem 0 2.9375rem;
+
+    &__icon {
+        transition: transform 0.3s ease-in;
+        path {
+            transition: fill 0.3s ease-in;
+        }
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5.625rem;
+        cursor: pointer;
+    }
+
+    & + & {
+        margin-top: 1.25rem;
+    }
+
+    h3 {
+        font-weight: 500;
+        line-height: 1.25;
+    }
+
+    &__information {
+        max-width: 32.875rem;
+        display: none;
+
+        p {
+            color: $extraGray;
+        }
+
+        a {
+            margin-top: 0.875rem;
+            margin-bottom: 2.0625rem;
+
+            font-family: Inter;
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 1.44;
+
+            color: $secondGreen;
+        }
+    }
+}
+
+.activeAccordion {
+    .accordion__icon {
+        transform: rotate(45deg);
+
+        path {
+            fill: $secondGreen;
+        }
+    }
+}
+
+.documents {
+    margin-top: 3.125rem;
+    margin-bottom: 6.875rem;
+
+    &__title {
+        font-family: $golosFont;
+        font-weight: 500;
+        font-size: 1.625rem;
+        line-height: 1.15;
+
+        color: $darkGray;
+    }
+}
+
+.document {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9375rem 1.25rem;
+    background: $lightGray;
+    border-radius: 8px;
+    margin-top: 1.8125rem;
+
+    & + & {
+        margin-top: 0.875rem;
+    }
+
+    &__info {
+        display: flex;
+
+        svg {
+            margin-right: 1.25rem;
+        }
+    }
+
+    &__title {
+        font-size: 0.875rem;
+        line-height: 1.14;
+        max-width: 23.6875rem;
+        color: $midGray;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        margin-top: 3.125rem;
+    }
+    .center {
+        display: none;
+
+        &_mobile {
+            width: 100%;
+            background-color: $firstGreen;
+            border-radius: 12px;
+            padding: 1.875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            span {
+                font-weight: 400;
+                font-size: 1.5rem;
+                line-height: 1.42;
+                color: #f2f2f2;
+            }
+        }
+    }
+    .company {
+        display: flex;
+        margin-top: 7.1875rem;
+
+        img {
+            width: 3.75rem;
+            height: 3.75rem;
+        }
+
+        &__title {
+            margin-left: 0.3125rem;
+            max-width: 9.5625rem;
+            font-size: 1.125rem;
+            line-height: 1.19;
+            letter-spacing: -0.0938rem;
+
+            color: $lightGray;
+        }
+    }
+    .content {
+        margin-top: 2.3125rem;
+    }
+    .contacts {
+        margin-top: 3.875rem;
+        display: block;
+        padding: 3.125rem 1.25rem;
+
+        &__block {
+            width: 100%;
+            margin: 0;
+
+            & + & {
+                margin-top: 2.875rem;
+            }
+        }
+    }
+    .accordions {
+        margin-top: 2.375rem;
+    }
+    .accordion {
+        &__information {
+            a {
+                display: none;
+            }
+        }
+    }
+    .documents {
+        margin-top: 2.375rem;
+        margin-bottom: 6.25rem;
+    }
+}

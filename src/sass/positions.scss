@@ -6,8 +6,11 @@
         text-align: center;
         margin-top: 4.1875rem;
         font-weight: 400;
+        font-size: 3.5625rem;
+        line-height: 1.23;
     }
 }
+
 .positions {
     margin: 4.5625rem 0 21.625rem;
 }
@@ -15,8 +18,8 @@
 @media (max-width: 768px) {
     .positionsPage {
         &__title {
-            font-size: 2.25rem;
-            line-height: 1.28;
+            font-size: 2rem;
+            line-height: 1.37;
             margin: 4.1875rem auto 0;
         }
     }

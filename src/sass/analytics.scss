@@ -1,0 +1,225 @@
+@import "root";
+@import "lightpick";
+
+.title {
+    padding: 3.625rem 0 2.375rem;
+    border-bottom: 1px solid #bdbdbd;
+
+    h2 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 3.5625rem;
+        line-height: 1.23;
+    }
+}
+
+.analytics {
+    &__buttons {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        margin-right: 1.25rem;
+        border: 1px solid #bdbdbd;
+        border-radius: 6px;
+        padding: 1rem 1.5rem;
+        color: $darkGray;
+        font-size: 1.125rem;
+        line-height: 1.28;
+        color: $darkGray;
+        letter-spacing: 0.015em;
+        transition: all 0.3s ease-in;
+        text-align: center;
+
+        &:hover {
+            background-color: $firstGreen;
+            border-color: $firstGreen;
+            color: #fff;
+        }
+    }
+}
+
+.graph {
+    margin-top: 4rem;
+    padding: 2.5rem 2.5rem 5.375rem;
+    background-color: $lightGray;
+    border-radius: 0.75rem;
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        max-width: 33.25rem;
+    }
+
+    &__canvas__wrapper {
+        height: 23.125rem;
+        margin-top: 2.5rem;
+    }
+
+    &__button {
+        width: 18rem;
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        font-size: 1.125rem;
+        line-height: 1.67;
+        color: $darkGray;
+    }
+
+    &__canvas {
+        width: 100%;
+    }
+}
+
+.customInput {
+    width: 15.25rem;
+    height: 2.5rem;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    padding: 0.5625rem 0.9375rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notes {
+    margin-top: 2.5rem;
+    margin-bottom: 5.6875rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 50%;
+    margin-bottom: 1.25rem;
+}
+
+.customCheckbox + label {
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 0.875rem;
+    line-height: 1.36;
+    color: $extraGray;
+    cursor: pointer;
+}
+
+.customCheckbox + label::before {
+    content: "";
+    display: inline-flex;
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid #000;
+    border-radius: 0.1875rem;
+    margin-right: 0.75rem;
+    top: 0.1875rem;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.customCheckbox:checked + label::before {
+    background-color: #00e096;
+    border: 1px solid #00e096;
+    background-image: url("../img/icons/check.svg");
+}
+
+#input_2:checked + label::before {
+    background-color: #006fd6;
+    border: 1px solid #006fd6;
+}
+
+#input_3:checked + label::before {
+    background-color: #ff3d71;
+    border: 1px solid #ff3d71;
+}
+
+#input_4:checked + label::before {
+    background-color: #9b51e0;
+    border: 1px solid #9b51e0;
+}
+
+#input_5:checked + label::before {
+    background-color: #39ad46;
+    border: 1px solid #39ad46;
+}
+
+#input_6:checked + label::before {
+    background-color: #ffc94d;
+    border: 1px solid #ffc94d;
+}
+
+@media (max-width: 768px) {
+    .title {
+        padding: 1.375rem 0 1.625rem;
+
+        h2 {
+            font-size: 2rem;
+            line-height: 1.37;
+        }
+    }
+
+    .analytics {
+        &__buttons {
+            display: block;
+            margin-top: 2rem;
+        }
+
+        &__button {
+            width: 100%;
+
+            & + & {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .graph {
+        &__info {
+            display: block;
+        }
+        &__text {
+            max-width: 100%;
+        }
+
+        &__button {
+            width: 100%;
+
+            &_wrapper {
+                margin-top: 1.875rem;
+            }
+        }
+
+        &__content {
+            font-size: 1rem;
+        }
+    }
+
+    .lightpick {
+        // TODO: исправить импортант
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
+
+    .notes {
+        display: block;
+    }
+    .checkbox {
+        width: 100%;
+    }
+}

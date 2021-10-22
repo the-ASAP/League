@@ -21,7 +21,72 @@
 .footer {
   width: 100%;
   padding: 2.9375rem 4rem 0;
-  background-color: #39ad46;
+  background-color: var(--main-green);
+}
+
+.footer__select {
+  margin-top: 1.125rem;
+  display: none;
+}
+
+.footer__burger {
+  position: relative;
+}
+
+.footer__burger::after {
+  content: "";
+  width: 5px;
+  height: 1px;
+  position: absolute;
+  top: calc(50%);
+  background: var(--light-gray);
+  left: 139px;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in;
+}
+
+.footer__burger::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  position: absolute;
+  top: calc(50%);
+  background: var(--light-gray);
+  left: 136px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in;
+}
+
+.footer__hiddenRefs {
+  margin-top: 1.125rem;
+  margin-left: 1rem;
+  overflow: hidden;
+  display: none;
+}
+
+.footer__ref {
+  display: block;
+  color: var(--light-gray);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  margin-top: 1.125rem;
+}
+
+.footer__ref:first-child {
+  margin: 0;
+}
+
+.footer__activeHiddenRefs {
+  display: block;
+}
+
+.footer__activeHiddenRefs::before {
+  transform: rotate(-45deg);
+}
+
+.footer__activeHiddenRefs::after {
+  transform: rotate(45deg);
 }
 
 .footerInfo {
@@ -30,7 +95,7 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 3.5625rem;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .footerInfo__logo {
@@ -43,20 +108,18 @@
   font-family: Golos;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.44;
   letter-spacing: -0.015em;
-  color: #f2f2f2;
+  color: var(--light-gray);
 }
 
 .footerInfo__mainInfo {
-  font-family: Inter;
-  font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 1.15;
   letter-spacing: -0.015em;
-  color: #f2f2f2;
+  color: var(--light-gray);
 }
 
 .form__email {
@@ -65,41 +128,39 @@
 }
 
 .footerForm__title {
-  color: #f2f2f2;
-  font-family: Inter;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.44;
   letter-spacing: -0.015em;
-  color: #f2f2f2;
+  color: var(--light-gray);
 }
 
 .footerForm__inputText {
-  width: 17.3125rem;
+  width: 80%;
   height: 3rem;
-  border: 1px solid #f2f2f2;
+  border: 1px solid var(--light-gray);
   border-right: none;
   border-top-left-radius: 0.4375rem;
   border-bottom-left-radius: 0.4375rem;
   padding: 0.625rem;
-  color: #f2f2f2;
-  background-color: #39ad46;
+  color: var(--light-gray);
+  background-color: var(--main-green);
   opacity: 0.6;
 }
 
 .footerForm__inputText::placeholder {
-  color: #f2f2f2;
+  color: var(--light-gray);
   opacity: 0.6;
 }
 
 .footerForm__inputSubmit {
-  width: 3.9375rem;
+  width: 20%;
   height: 3rem;
-  border: 1px solid #f2f2f2;
+  border: 1px solid var(--light-gray);
   border-left: none;
   border-top-right-radius: 0.4375rem;
   border-bottom-right-radius: 0.4375rem;
-  background-color: #39ad46;
+  background-color: var(--main-green);
   background-image: url("../img/icons/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -113,7 +174,7 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 3.25rem;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .footerRefs__column {
@@ -121,24 +182,23 @@
 }
 
 .footerRefs__subtitle {
-  font-family: Inter;
-  font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.06;
-  color: #f2f2f2;
+  color: var(--light-gray);
   cursor: pointer;
 }
 
 .footerRefs__text {
   display: block;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
   font-size: 1rem;
   line-height: 1.1875rem;
   color: #f2f2f2;
   cursor: pointer;
+}
+
+.footerRefs__text + .footerRefs__text {
+  margin-top: 0.9375rem;
 }
 
 .footerRefs__subtitle + .footerRefs__text {
@@ -149,25 +209,19 @@
   margin-top: 3.25rem;
 }
 
-.footerRefs__text + .footerRefs__text {
-  margin-top: 0.9375rem;
-}
-
 .footerSocial {
   padding: 1.875rem 0 2.125rem;
   text-align: center;
   padding-bottom: 2.125rem;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .footerSocial__title {
-  font-family: Inter;
-  font-style: normal;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.44;
   letter-spacing: -0.015em;
-  color: #f2f2f2;
+  color: var(--light-gray);
 }
 
 .footerSocial__icons {
@@ -195,35 +249,54 @@
 
 .license__text {
   max-width: 21.125rem;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
   font-size: 1rem;
   line-height: 1.44;
   letter-spacing: -0.015em;
-  color: #f2f2f2;
+  color: var(--light-gray);
 }
 
 .license__logo p {
   font-family: Golos;
-  font-style: normal;
-  font-weight: normal;
   font-size: 1rem;
   line-height: 1.44;
   text-align: right;
   letter-spacing: -0.015em;
-  color: #f2f2f2;
+  color: var(--light-gray);
 }
 
 @media (max-width: 768px) {
   .footer {
-    margin-top: 7.5rem;
     padding: 3.125rem 1rem 0;
+  }
+
+  .footer__select {
+    display: block;
   }
 
   .footerInfo {
     display: block;
-    padding-bottom: 77px;
+    padding-bottom: 4.8125rem;
+  }
+
+  .footerInfo__mainInfo {
+    margin-top: 3.6875rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .footerInfo__mainInfo + .footerInfo__mainInfo {
+    margin-top: 1.125rem;
+  }
+
+  .footerInfo__title {
+    margin-left: 1.5625rem;
+    font-family: Golos;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.36;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
   }
 
   .footerRefs__column {
@@ -231,12 +304,8 @@
     margin-top: 1.1875rem;
   }
 
-  .footerInfo__mainInfo {
-    margin-top: 3.6875rem;
-  }
-
-  .footerInfo__mainInfo + .footerInfo__mainInfo {
-    margin-top: 1.125rem;
+  .footerRefs__column:nth-child(3) {
+    display: none;
   }
 
   .footerForm {
@@ -246,23 +315,6 @@
   .footerForm__inputText {
     width: 100%;
     padding: 1.25rem;
-  }
-
-  .footerInfo__title {
-    margin-left: 25px;
-    font-family: Golos;
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.36;
-    /* or 136% */
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-  }
-
-  .footerInfo__mainInfo {
-    font-weight: 400;
-    line-height: 1.5;
   }
 
   .footerForm__title {
@@ -290,9 +342,8 @@
   }
 
   .footerRefs__subtitle {
-    font-family: Inter;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.5;
     letter-spacing: -0.015em;
   }
@@ -330,8 +381,8 @@
     width: 13.875rem;
     font-family: Golos;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.67;
   }
 
   .license__logo p {

@@ -31,6 +31,7 @@
         width: fit-content;
         padding-bottom: 0.25rem;
         border-bottom: 2px solid $firstGreen;
+        transition: all 0.3s ease-in;
     }
 
     &__text {
@@ -42,6 +43,7 @@
         line-height: 1.44;
         letter-spacing: -0.015em;
         color: $darkGray;
+        transition: all 0.3s ease-in;
     }
 
     &:hover {

@@ -1,0 +1,64 @@
+@import "root";
+
+.noPage {
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    &__four {
+        font-size: 23.4774rem;
+        color: $darkGray;
+    }
+
+    &__picture {
+        width: 22.625rem;
+    }
+
+    &__button {
+        display: block;
+        margin: 2.1875rem auto 0;
+        background: $firstGreen;
+        border-radius: 6px;
+        padding: 1rem 1.5rem;
+        font-size: 1.125rem;
+        line-height: 1.28;
+        letter-spacing: 0.015em;
+        color: #fff;
+        width: fit-content;
+    }
+}
+
+.sorry {
+    display: block;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    color: $darkGray;
+    max-width: 23rem;
+    margin: 2.1875rem auto;
+}
+
+@media (max-width: 768px) {
+    .noPage {
+        margin-top: 40vw;
+
+        &__picture {
+            width: 8.625rem;
+        }
+        &__four {
+            font-size: 9rem;
+        }
+        &__button {
+            text-transform: uppercase;
+            letter-spacing: 0.015em;
+        }
+    }
+    .sorry {
+        margin: 2.125rem auto 0;
+        font-size: 1.125rem;
+        line-height: 1.67;
+    }
+}

@@ -10,7 +10,7 @@
     }
 
     &__title {
-        font-weight: 500;
+        font-weight: 400;
         font-size: 3.5625rem;
         line-height: 1.23;
         color: $darkGray;
@@ -19,7 +19,8 @@
 
 .association {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    overflow: scroll;
     padding-bottom: 1.5625rem;
     border-bottom: 1px solid #bdbdbd;
     margin-top: 3.125rem;
@@ -36,11 +37,35 @@
         color: $midGray;
         transition: all 0.3s ease-in;
         margin-bottom: 0.9375rem;
+        white-space: nowrap;
 
         &:hover {
             background-color: $firstGreen;
             color: #fff;
             border-color: $firstGreen;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        margin-top: 3.75rem;
+
+        &__title {
+            font-size: 2.25rem;
+            line-height: 1.39;
+        }
+    }
+
+    .association {
+        margin-top: 1.9375rem;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        overflow-x: scroll;
+
+        &__button {
+            font-size: 1.125rem;
+            line-height: 1.44;
         }
     }
 }

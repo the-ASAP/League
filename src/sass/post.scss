@@ -3,6 +3,7 @@
 .post {
     margin-bottom: 5.0625rem;
     width: 32%;
+    height: 32rem;
 
     &__wrapper {
         width: 100%;
@@ -97,6 +98,7 @@
     .post {
         width: 100%;
         margin-bottom: 0;
+        height: auto;
 
         & + & {
             margin-top: 3.125rem;

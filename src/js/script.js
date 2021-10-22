@@ -51,23 +51,64 @@ function freeScroll(item = "body") {
     $(item).attr("style", "");
 }
 
+function accordion(btn, content, activeClass, closeButton) {
+    $(btn).on("click", function () {
+        $(this).toggleClass(activeClass).parent().find(content).slideToggle();
+    });
+}
+
+function select(btn, content, activeClass, closeButton) {
+    $(btn || closeButton).on("click", function () {
+        $(btn).toggleClass(activeClass);
+        $(content).slideToggle();
+    });
+    $(document).on("mousedown", function (e) {
+        if (!$(btn).is(e.target) && $(btn).hasClass(activeClass)) {
+            $(btn).toggleClass(activeClass);
+            $(content).slideToggle();
+        }
+    });
+}
+
+const createYouTubeEmbedLink = (btn, container) => {
+    $(btn).each((i, el) => {
+        let link = $(el).attr("data-src"),
+            linkStart = "https://www.youtube.com/embed/",
+            linkEnd = "?rel=0&showinfo=0&autoplay=1";
+        let newLink = linkStart + link.slice(link.indexOf("=") + 1, link.length) + linkEnd;
+        $(el).on("click", function () {
+            $(this)
+                .parent(container)
+                .empty()
+                .append(
+                    `<iframe class="video__frame" src="${newLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                );
+        });
+    });
+};
+
 $().ready(() => {
     contentFadeInOnReady();
-    bindModalListeners([]);
-});
+    bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
+    accordion(".accordion__main", ".accordion__information", "activeAccordion");
+    select(".modal__burger", ".modal__hiddenRefs", "activeHiddenRefs");
+    select(".footer__burger", ".footer__hiddenRefs", "footer__activeHiddenRefs");
+    select(
+        ".associationModal__button",
+        ".associationModal",
+        "associationModal__active",
+        ".associationModal__close"
+    );
+    select(".tags__list", ".tags__items", "tags__active");
+    select(".publication__button", ".publication__items", "publication__active");
+    createYouTubeEmbedLink($(".video__button"), $(".video__image"));
 
-// $(function () {
-//     $('input[name="daterange"]').daterangepicker(
-//         {
-//             opens: "left",
-//         },
-//         function (start, end, label) {
-//             console.log(
-//                 "A new date selection was made: " +
-//                     start.format("YYYY-MM-DD") +
-//                     " to " +
-//                     end.format("YYYY-MM-DD")
-//             );
-//         }
-//     );
-// });
+    ymaps.ready(() => {
+        const Map = new ymaps.Map("yandexMap", {
+            center: [55.76, 37.64],
+            zoom: 10,
+            controls: ["zoomControl"],
+        });
+        Map.behaviors.disable("scrollZoom");
+    });
+});

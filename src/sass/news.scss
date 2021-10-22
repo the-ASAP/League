@@ -17,10 +17,9 @@
     }
 
     &__title {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 2.625rem;
-        line-height: 1.19;
+        font-weight: 400;
+        font-size: 3.5625rem;
+        line-height: 1.23;
         color: $darkGray;
     }
 }
@@ -67,9 +66,9 @@
 
 .categories {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 3.125rem;
-    padding: 0 3.75rem 1.875rem;
+    padding: 0 0 1.875rem;
     border-bottom: 1px solid #e0e0e0;
 
     &__button {
@@ -81,6 +80,7 @@
         font-size: 1rem;
         line-height: 1.44;
         color: $midGray;
+        margin-right: 1.25rem;
     }
 
     &__button:hover {
@@ -93,13 +93,25 @@
 .tags {
     margin-top: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #bdbdbd;
     display: flex;
     justify-content: space-between;
 
-    &__list {
-        background: #efefef;
+    &__filter {
+        position: relative;
+        display: flex;
+    }
+
+    &__select {
+        position: relative;
+        margin-right: 1.25rem;
         width: 11.8125rem;
+    }
+
+    &__list {
+        width: 100%;
+        text-align: left;
+        background: #efefef;
         padding: 0.3125rem 0.875rem;
         border-radius: 4px;
         color: $darkGray;
@@ -109,7 +121,6 @@
         letter-spacing: 0.015em;
         position: relative;
         display: inline-flex;
-        margin-right: 1.25rem;
 
         &::before,
         &::after {
@@ -121,6 +132,7 @@
             top: calc(50% - 1px);
             right: 16px;
             border-radius: 1px;
+            transition: transform 0.3s ease-in;
         }
         &::before {
             right: 19px;
@@ -174,7 +186,44 @@
         }
     }
 
-    &__publication {
+    &__items {
+        list-style: none;
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        width: 100%;
+        background-color: #efefef;
+        padding: 0 2rem 1rem 1rem;
+        border-radius: 4px;
+        z-index: 10;
+        display: none;
+    }
+
+    &__item {
+        font-family: Inter;
+        font-size: 1rem;
+        line-height: 1.44;
+        letter-spacing: 0.015em;
+        color: $darkGray;
+        margin-top: 1rem;
+    }
+
+    &__active {
+        display: block;
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.publication {
+    position: relative;
+
+    &__button {
         background-color: #efefef;
         border-radius: 4px;
         padding: 0.3125rem 3rem 0.3125rem 1rem;
@@ -194,6 +243,7 @@
             top: calc(50% - 1px);
             right: 1rem;
             border-radius: 1px;
+            transition: transform 0.3s ease-in;
         }
         &::before {
             right: 1.1875rem;
@@ -201,6 +251,39 @@
         }
         &::after {
             transform: rotate(-45deg);
+        }
+    }
+
+    &__items {
+        list-style: none;
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        width: 100%;
+        background-color: #efefef;
+        padding: 0 2rem 1rem 1rem;
+        border-radius: 4px;
+        z-index: 10;
+        display: none;
+    }
+
+    &__item {
+        font-family: Inter;
+        font-size: 1rem;
+        line-height: 1.44;
+        letter-spacing: 0.015em;
+        color: $darkGray;
+        margin-top: 1rem;
+    }
+
+    &__active {
+        display: block;
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
         }
     }
 }
@@ -290,13 +373,7 @@
     }
 }
 
-@media (max-width: 768px) {
-    .intro {
-        margin-top: 3.75rem;
-    }
-    .return {
-        display: none;
-    }
+@media (max-width: 1100px) {
     .categories {
         margin-top: 2.5625rem;
         overflow-x: scroll;
@@ -309,6 +386,20 @@
             line-height: 1.64;
             margin-right: 1rem;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        margin-top: 3.75rem;
+
+        &__title {
+            font-size: 2rem;
+            line-height: 1.37;
+        }
+    }
+    .return {
+        display: none;
     }
     .tags {
         margin-top: 1.25rem;
@@ -333,6 +424,20 @@
             letter-spacing: 0.015em;
             color: $darkGray;
         }
+
+        &__select {
+            width: 100%;
+            margin: 0;
+        }
+        &__items {
+            top: 2.5rem;
+        }
+        &__item {
+            display: block;
+        }
+    }
+    .publication {
+        display: none;
     }
 
     .pagination {

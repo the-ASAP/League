@@ -1,0 +1,119 @@
+@import "mixins";
+
+.return {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 83.75rem;
+    top: 3.125rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__button {
+        width: 3.125rem;
+        height: 3.125rem;
+        border: 1px solid $firstGreen;
+        border-radius: 50%;
+        transition: all 0.2s ease-in;
+        margin-right: 1.25rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__button:hover {
+        background-color: $firstGreen;
+        border: 1px solid $firstGreen;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &__text {
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.36;
+        color: $midGray;
+    }
+}
+
+.search {
+    &__content {
+        margin-bottom: 9.0625rem;
+    }
+
+    &__form {
+        padding-top: 11.875rem;
+        width: fit-content;
+        position: relative;
+    }
+
+    &__input {
+        padding: 0.9375rem 0;
+        width: 48.3125rem;
+        border-bottom: 1px solid $firstGreen;
+        font-family: Inter;
+        font-size: 1.5rem;
+        line-height: 1.42;
+        color: $darkGray;
+        position: relative;
+
+        &::placeholder {
+            font-family: Inter;
+            font-size: 1.5rem;
+            line-height: 1.42;
+            color: $midGray;
+        }
+    }
+
+    &__reset {
+        position: absolute;
+        bottom: 1.4375rem;
+        right: 0;
+    }
+}
+
+.post {
+    margin-top: 3.125rem;
+    width: fit-content;
+    display: block;
+
+    &__title {
+        font-size: 1.5rem;
+        line-height: 1.42;
+    }
+
+    &__text {
+        display: block;
+        margin-top: 0.9375rem;
+        font-size: 1.125rem;
+        line-height: 1.67;
+        color: $darkGray;
+        max-width: 28rem;
+    }
+
+    & + & {
+        margin-top: 4.6875rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .return {
+        display: none;
+    }
+
+    .search {
+        &__input {
+            width: 100%;
+        }
+        &__form {
+            width: 100%;
+            padding-top: 3.4375rem;
+        }
+    }
+}
