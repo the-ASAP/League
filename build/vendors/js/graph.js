@@ -15,6 +15,37 @@ const randomDatapoints = (lenghtArr, min, max) => {
 // const datapoints = [0, 20, 60, 120, 180, 125];
 // const labels = ['21.02', '22.02', '23.02', '24.02', '25.02', '26.02',],
 
+// {
+//     graph1: [
+//         {
+//             datapoint: "21.02",
+//             label: "0",
+//         },
+//         {
+//             datapoint: "21.02",
+//             label: "0",
+//         },
+//         {
+//             datapoint: "21.02",
+//             label: "0",
+//         },
+//     ],
+//     graph2: [
+//         {
+//             datapoint: "21.02",
+//             label: "0",
+//         },
+//         {
+//             datapoint: "21.02",
+//             label: "0",
+//         },
+//         {
+//             datapoint: "21.02",
+//             label: "0",
+//         },
+//     ],
+// },
+
 const data = {
     labels: ["21.02", "22.02", "23.02", "24.02", "25.02", "26.02"],
     datasets: [
