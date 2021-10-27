@@ -58,7 +58,8 @@ function accordion(btn, content, activeClass, closeButton) {
 }
 
 function select(btn, content, activeClass, closeButton) {
-    $(btn || closeButton).on("click", function () {
+    $(btn || closeButton).on("click", function (e) {
+        e.preventDefault();
         $(btn).toggleClass(activeClass);
         $(content).slideToggle();
     });
