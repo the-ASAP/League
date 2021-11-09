@@ -103,13 +103,4 @@ $().ready(() => {
     select(".tags__list", ".tags__items", "tags__active");
     select(".publication__button", ".publication__items", "publication__active");
     createYouTubeEmbedLink($(".video__button"), $(".video__image"));
-
-    ymaps.ready(() => {
-        const Map = new ymaps.Map("yandexMap", {
-            center: [55.76, 37.64],
-            zoom: 10,
-            controls: ["zoomControl"],
-        });
-        Map.behaviors.disable("scrollZoom");
-    });
 });

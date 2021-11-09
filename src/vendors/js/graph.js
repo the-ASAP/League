@@ -115,14 +115,12 @@ const Graph = new Chart(ctx, {
         },
         scales: {
             xAxes: {},
-            yAxes: [
-                {
-                    display: false,
-                    ticks: {
-                        beginAtZero: true,
-                    },
+            yAxes: {
+                display: false,
+                ticks: {
+                    beginAtZero: true,
                 },
-            ],
+            },
         },
     },
 });
