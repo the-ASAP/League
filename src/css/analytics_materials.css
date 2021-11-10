@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;
@@ -76,10 +78,20 @@
   margin-top: 1.5625rem;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 2.5rem;
+}
+
+.post__title a {
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.56;
   color: var(--dark-gray);
+  -webkit-line-clamp: 3;
+  /* Число отображаемых строк */
+  display: -webkit-box;
+  /* Включаем флексбоксы */
+  -webkit-box-orient: vertical;
+  /* Вертикальная ориентация */
+  overflow: hidden;
 }
 
 .post__views {
