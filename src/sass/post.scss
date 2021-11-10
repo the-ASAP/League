@@ -49,15 +49,21 @@
 
     &__title {
         margin-top: 1.5625rem;
-
         border-bottom: 1px solid #e0e0e0;
         padding-bottom: 2.5rem;
-        font-weight: 600;
-        font-size: 1.125rem;
-        line-height: 1.56;
 
-        color: $darkGray;
+        a {
+            font-weight: 600;
+            font-size: 1.125rem;
+            line-height: 1.56;
+            color: $darkGray;
+            -webkit-line-clamp: 3; /* Число отображаемых строк */
+            display: -webkit-box; /* Включаем флексбоксы */
+            -webkit-box-orient: vertical; /* Вертикальная ориентация */
+            overflow: hidden;
+        }
     }
+
     &__views {
         margin-top: 0.5rem;
         display: flex;
