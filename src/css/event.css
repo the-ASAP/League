@@ -367,6 +367,8 @@
 
 .carouselEvent img {
   border-radius: 15px;
+  height: 23.875rem;
+  object-fit: cover;
 }
 
 .carouselEvent__buttons {

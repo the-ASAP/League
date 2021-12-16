@@ -146,6 +146,7 @@
 .news__tags {
   margin-top: 2.0625rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .news__tag {
@@ -154,6 +155,7 @@
   color: var(--dark-gray);
   background-color: #efefef;
   margin-right: 1rem;
+  margin-bottom: 1rem;
   transition: color 0.3s ease-in background-color 0.3s ease-in;
   font-family: Inter;
   font-weight: 500;

@@ -71,6 +71,24 @@ function select(btn, content, activeClass, closeButton) {
     });
 }
 
+function hoverSelect(btn, content, activeClass, closeButton) {
+    $(btn).on("mouseenter", function (e) {
+        e.preventDefault();
+        $(btn).addClass(activeClass);
+        if ($(btn).hasClass(activeClass)) $(content).slideDown();
+    });
+    $(closeButton).on("click", function (e) {
+        $(btn).toggleClass(activeClass);
+        $(content).slideUp();
+    });
+    $(document).on("mousedown", function (e) {
+        if (!$(btn).is(e.target) && $(btn).hasClass(activeClass)) {
+            $(btn).toggleClass(activeClass);
+            $(content).slideUp();
+        }
+    });
+}
+
 const createYouTubeEmbedLink = (btn, container) => {
     $(btn).each((i, el) => {
         let link = $(el).attr("data-src"),
@@ -94,7 +112,7 @@ $().ready(() => {
     accordion(".accordion__main", ".accordion__information", "activeAccordion");
     select(".modal__burger", ".modal__hiddenRefs", "activeHiddenRefs");
     select(".footer__burger", ".footer__hiddenRefs", "footer__activeHiddenRefs");
-    select(
+    hoverSelect(
         ".associationModal__button",
         ".associationModal",
         "associationModal__active",
