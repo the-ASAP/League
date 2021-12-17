@@ -131,22 +131,28 @@ $().ready(() => {
         });
     }
 
-    const picker = new Lightpick({
-        field: document.getElementById("datePicker"),
-        singleDate: false,
-        // minDate: moment().startOf("month").add(7, "day"),
-        // maxDate: moment().endOf("month").subtract(7, "day"),
-        locale: {
-            buttons: {
-                prev: ``,
-                next: ``,
+    console.log(document.getElementById("123"));
+
+    if (document.getElementById("datePicker")) {
+        return new Lightpick({
+            field: document.getElementById("datePicker"),
+            singleDate: false,
+            // minDate: moment().startOf("month").add(7, "day"),
+            // maxDate: moment().endOf("month").subtract(7, "day"),
+            locale: {
+                buttons: {
+                    prev: ``,
+                    next: ``,
+                },
             },
-        },
-        onClose: function () {
-            $(".graph__content").text(
-                `${this.getStartDate().format("L")} - ${this.getEndDate().format("L")}`
-            );
-            console.log(`${this.getStartDate().format("L")} - ${this.getEndDate().format("L")}`);
-        },
-    });
+            onClose: function () {
+                $(".graph__content").text(
+                    `${this.getStartDate().format("L")} - ${this.getEndDate().format("L")}`
+                );
+                console.log(
+                    `${this.getStartDate().format("L")} - ${this.getEndDate().format("L")}`
+                );
+            },
+        });
+    }
 });

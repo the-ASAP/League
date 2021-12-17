@@ -445,6 +445,17 @@
     margin: 4.0625rem 0 11.5625rem;
 }
 
+.ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__icon_more {
+    background-image: url("../img/share_outline.svg") !important;
+}
+
+.ya-share2__container.ya-share2__container_color-scheme_blackwhite .ya-share2__badge {
+    background-color: $firstGreen !important;
+}
+.ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__badge_more {
+    background-color: $firstGreen !important;
+}
+
 @media (max-width: 768px) {
     .wrapper_event {
         width: 90%;
