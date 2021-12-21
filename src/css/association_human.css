@@ -121,7 +121,7 @@
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 139px;
   transform: rotate(-45deg);
@@ -133,7 +133,7 @@
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 136px;
   transform: rotate(45deg);
@@ -374,7 +374,7 @@ h .associationModal__ref + .associationModal__ref {
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 139px;
   transform: rotate(-45deg);
@@ -386,7 +386,7 @@ h .associationModal__ref + .associationModal__ref {
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 136px;
   transform: rotate(45deg);

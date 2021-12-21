@@ -121,7 +121,7 @@
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 139px;
   transform: rotate(-45deg);
@@ -133,7 +133,7 @@
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 136px;
   transform: rotate(45deg);
@@ -374,7 +374,7 @@ h .associationModal__ref + .associationModal__ref {
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 139px;
   transform: rotate(-45deg);
@@ -386,7 +386,7 @@ h .associationModal__ref + .associationModal__ref {
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 136px;
   transform: rotate(45deg);
@@ -864,7 +864,7 @@ input:-webkit-autofill:focus {
   margin-bottom: 2.5rem;
 }
 
-.human:nth-child(3n + 2) {
+.human:nth-child(3n+2) {
   margin: 0 1.25rem 2.5rem;
 }
 
@@ -1197,7 +1197,7 @@ input:-webkit-autofill:focus {
     margin-bottom: 3.4375rem;
   }
 
-  .human:nth-child(3n + 2) {
+  .human:nth-child(3n+2) {
     margin: 0 0 3.4375rem;
   }
 

@@ -81,6 +81,9 @@
   border-radius: 12px;
   margin-right: 4.6875rem;
   padding: 1.625rem 0 2.1875rem;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
 }
 
 .partner__picture {
@@ -88,6 +91,9 @@
   max-width: 15rem;
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: calc(50% - 7.5rem);
+  left: calc(50% - 7.5rem);
 }
 
 .partner__logo {

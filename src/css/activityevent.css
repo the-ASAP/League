@@ -131,7 +131,7 @@
   margin-right: 0.375rem;
 }
 
-.post:nth-child(3n + 2) {
+.post:nth-child(3n+2) {
   margin: 0 2%;
 }
 
@@ -503,7 +503,7 @@
 }
 
 @media (max-width: 768px) {
-  .post:nth-child(3n + 2) {
+  .post:nth-child(3n+2) {
     margin: 0;
   }
 

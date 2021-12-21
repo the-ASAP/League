@@ -121,7 +121,7 @@
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 139px;
   transform: rotate(-45deg);
@@ -133,7 +133,7 @@
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 136px;
   transform: rotate(45deg);
@@ -374,7 +374,7 @@ h .associationModal__ref + .associationModal__ref {
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 139px;
   transform: rotate(-45deg);
@@ -386,7 +386,7 @@ h .associationModal__ref + .associationModal__ref {
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 136px;
   transform: rotate(45deg);
@@ -876,7 +876,7 @@ input:-webkit-autofill:focus {
   padding: 1.625rem 2.4375rem 1.75rem;
 }
 
-.partner:nth-child(3n + 2) {
+.partner:nth-child(3n+2) {
   margin: 0 1.25rem 1.25rem;
 }
 
@@ -996,7 +996,7 @@ input:-webkit-autofill:focus {
     width: calc((100% - 20px) / 2);
   }
 
-  .partner:nth-child(3n + 2) {
+  .partner:nth-child(3n+2) {
     margin: 0 0 1.25rem;
   }
 }
@@ -1254,7 +1254,7 @@ input:-webkit-autofill:focus {
     margin-bottom: 1.25rem;
   }
 
-  .partner:nth-child(3n + 2) {
+  .partner:nth-child(3n+2) {
     margin: 0 0 1.25rem;
   }
 

@@ -2,7 +2,7 @@
 var gulp = require('gulp'),
     concatCss = require('gulp-concat-css'),
     cleanCss = require('gulp-clean-css'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')(require('sass')),
     concat = require('gulp-concat'),
     uglyfly = require('gulp-uglyfly'),
     imagemin = require('gulp-imagemin'),

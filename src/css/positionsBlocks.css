@@ -53,7 +53,7 @@
   fill: #fff;
 }
 
-.position:nth-child(3n + 2) {
+.position:nth-child(3n+2) {
   margin: 0 2%;
 }
 
@@ -68,7 +68,7 @@
     height: 14.375rem;
   }
 
-  .position:nth-child(3n + 2) {
+  .position:nth-child(3n+2) {
     margin: 0 0 1.25rem 0;
   }
 

@@ -18,6 +18,10 @@
         margin-top: 3.125rem;
     }
 
+    &__category {
+        margin-top: 2rem;
+    }
+
     &__buttons {
         display: flex;
         justify-content: space-between;
@@ -46,8 +50,8 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 3.125rem;
-        margin-bottom: 14.375rem;
+
+        margin-bottom: 7.5rem;
     }
 
     &__sandwich {
@@ -80,6 +84,14 @@
         color: $firstGreen;
     }
 
+    &__title {
+        font-family: Inter;
+        font-size: 1.2rem;
+        line-height: 1.44;
+        color: $darkGray;
+        font-weight: 500;
+    }
+
     &__text {
         max-width: 19.0625rem;
         font-family: Inter;
@@ -88,6 +100,7 @@
         letter-spacing: -0.015em;
         color: $darkGray;
         display: block;
+        margin-top: 1rem;
     }
 
     &__header {
@@ -189,8 +202,12 @@
 
         &__list {
             margin-top: 1.25rem;
-            margin-bottom: 18.75rem;
             display: block;
+            margin-top: 3.125rem;
+
+            &:last-child {
+                margin-bottom: 18.75rem;
+            }
         }
     }
 

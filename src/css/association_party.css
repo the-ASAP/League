@@ -121,7 +121,7 @@
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 139px;
   transform: rotate(-45deg);
@@ -133,7 +133,7 @@
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 136px;
   transform: rotate(45deg);
@@ -374,7 +374,7 @@ h .associationModal__ref + .associationModal__ref {
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 139px;
   transform: rotate(-45deg);
@@ -386,7 +386,7 @@ h .associationModal__ref + .associationModal__ref {
   width: 5px;
   height: 1px;
   position: absolute;
-  top: calc(50%);
+  top: 50%;
   background: var(--light-gray);
   left: 136px;
   transform: rotate(45deg);
@@ -857,6 +857,10 @@ input:-webkit-autofill:focus {
   margin-top: 3.125rem;
 }
 
+.partners__category {
+  margin-top: 2rem;
+}
+
 .partners__buttons {
   display: flex;
   justify-content: space-between;
@@ -885,8 +889,7 @@ input:-webkit-autofill:focus {
 .partners__list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 3.125rem;
-  margin-bottom: 14.375rem;
+  margin-bottom: 7.5rem;
 }
 
 .partners__sandwich {
@@ -905,7 +908,7 @@ input:-webkit-autofill:focus {
   padding: 1.625rem 2.4375rem 1.75rem;
 }
 
-.partner:nth-child(3n + 2) {
+.partner:nth-child(3n+2) {
   margin: 1.25rem 1.25rem 0;
 }
 
@@ -918,6 +921,14 @@ input:-webkit-autofill:focus {
   color: var(--main-green);
 }
 
+.partner__title {
+  font-family: Inter;
+  font-size: 1.2rem;
+  line-height: 1.44;
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
 .partner__text {
   max-width: 19.0625rem;
   font-family: Inter;
@@ -926,6 +937,7 @@ input:-webkit-autofill:focus {
   letter-spacing: -0.015em;
   color: var(--dark-gray);
   display: block;
+  margin-top: 1rem;
 }
 
 .partner__header {
@@ -1025,7 +1037,7 @@ input:-webkit-autofill:focus {
     width: calc((100% - 20px) / 2);
   }
 
-  .partner:nth-child(3n + 2) {
+  .partner:nth-child(3n+2) {
     margin: 1.25rem 0 0;
   }
 }
@@ -1316,8 +1328,12 @@ input:-webkit-autofill:focus {
 
   .partners__list {
     margin-top: 1.25rem;
-    margin-bottom: 18.75rem;
     display: block;
+    margin-top: 3.125rem;
+  }
+
+  .partners__list:last-child {
+    margin-bottom: 18.75rem;
   }
 
   .partner {

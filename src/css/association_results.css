@@ -180,7 +180,7 @@
 .members {
   margin-top: 4.8125rem;
   display: grid;
-  grid-template-areas: "square main square_4" "square_2 main square_5";
+  grid-template-areas: "square main square_4" "square_2 main square_5";
   grid-template-columns: 27rem 1fr 27rem;
   gap: 1.25rem 1.75rem;
 }

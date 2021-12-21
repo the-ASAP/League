@@ -190,7 +190,7 @@
   stroke: #fff;
 }
 
-.document:nth-child(3n + 2) {
+.document:nth-child(3n+2) {
   margin: 0 1.25rem 1.25rem;
 }
 
@@ -246,7 +246,7 @@
     padding: 1.25rem;
   }
 
-  .documentsPage .document:nth-child(3n + 2) {
+  .documentsPage .document:nth-child(3n+2) {
     margin: 0 0 1.25rem;
   }
 
