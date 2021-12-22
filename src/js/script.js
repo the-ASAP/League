@@ -88,6 +88,7 @@ const createYouTubeEmbedLink = (btn, container) => {
     });
 };
 
+
 $().ready(() => {
     contentFadeInOnReady();
     bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
@@ -103,4 +104,15 @@ $().ready(() => {
     select(".tags__list", ".tags__items", "tags__active");
     select(".publication__button", ".publication__items", "publication__active");
     createYouTubeEmbedLink($(".video__button"), $(".video__image"));
+
+
+    $(document).on('click', '.tags__button', function() {
+        $(this).remove()
+    })
+    $('.tags__item').on('click', function() {
+        const text = $(this).text()
+
+        const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
+        $(".tags__filter").append(component)
+    })
 });
