@@ -115,4 +115,16 @@ $().ready(() => {
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
     })
+
+    $(".header__button").on('click', function(e) {
+        if($(this).hasClass('header__button_active')) {
+            e.preventDefault()
+        }
+        else {
+            $(".header__button").each((index, item) => {
+                $(item).removeClass('header__button_active')
+            })
+            $(this).addClass('header__button_active')
+        }
+    })
 });

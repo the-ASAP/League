@@ -303,6 +303,10 @@
   margin-top: 0.75rem;
 }
 
+.content img {
+  border-radius: 12px;
+}
+
 .content__author,
 .content__source {
   margin-top: 3.9375rem;
