@@ -5,7 +5,7 @@
   --second-green: #27ae60;
   --hover-green: #58ca65;
   --dark-green: #1e7d5b;
-  --dark-gray: #4f4f4f;
+  --dark-gray: darken(#4f4f4f, 10%);
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
   --extra-gray: #333;
@@ -23,7 +23,7 @@
   --second-green: #27ae60;
   --hover-green: #58ca65;
   --dark-green: #1e7d5b;
-  --dark-gray: #4f4f4f;
+  --dark-gray: darken(#4f4f4f, 10%);
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
   --extra-gray: #333;
