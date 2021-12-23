@@ -5,7 +5,7 @@
   --second-green: #27ae60;
   --hover-green: #58ca65;
   --dark-green: #1e7d5b;
-  --dark-gray: darken(#4f4f4f, 10%);
+  --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
   --extra-gray: #333;
@@ -23,7 +23,7 @@
   --second-green: #27ae60;
   --hover-green: #58ca65;
   --dark-green: #1e7d5b;
-  --dark-gray: darken(#4f4f4f, 10%);
+  --dark-gray: #4f4f4f;
   --mid-gray: #828282;
   --light-gray: #f2f2f2;
   --extra-gray: #333;
@@ -417,6 +417,17 @@
   line-height: 1.14;
   max-width: 23.6875rem;
   color: var(--mid-gray);
+}
+
+.ya-share2__container_size_m .ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__link_more.ya-share2__link_more-button-type_short {
+  background: var(--main-green) !important;
+  border: none !important;
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  align-items: center !important;
 }
 
 .ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__icon_more {

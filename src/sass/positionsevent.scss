@@ -284,6 +284,19 @@
     }
 }
 
+.ya-share2__container_size_m
+    .ya-share2__item_more.ya-share2__item_has-pretty-view
+    .ya-share2__link_more.ya-share2__link_more-button-type_short {
+    background: $firstGreen !important;
+    border: none !important;
+    width: 2.25rem !important ;
+    height: 2.25rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    align-items: center !important;
+}
+
 .ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__icon_more {
     background-image: url("../img/share_outline.svg") !important;
 }
