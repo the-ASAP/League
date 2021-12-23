@@ -37,7 +37,6 @@
 }
 
 .post__image {
-  object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   width: 100%;
@@ -46,6 +45,12 @@
   top: 0;
   left: 0;
   cursor: pointer;
+}
+
+.post__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .post__buttons {
@@ -92,6 +97,7 @@
   -webkit-box-orient: vertical;
   /* Вертикальная ориентация */
   overflow: hidden;
+  height: 5rem;
 }
 
 .post__views {
@@ -140,6 +146,7 @@
 .news__tags {
   margin-top: 2.0625rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .news__tag {
@@ -148,6 +155,7 @@
   color: var(--dark-gray);
   background-color: #efefef;
   margin-right: 1rem;
+  margin-bottom: 1rem;
   transition: color 0.3s ease-in background-color 0.3s ease-in;
   font-family: Inter;
   font-weight: 500;
@@ -1019,7 +1027,6 @@
 }
 
 .post__image {
-  object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   width: 100%;
@@ -1028,6 +1035,12 @@
   top: 0;
   left: 0;
   cursor: pointer;
+}
+
+.post__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .post__buttons {
@@ -1074,6 +1087,7 @@
   -webkit-box-orient: vertical;
   /* Вертикальная ориентация */
   overflow: hidden;
+  height: 5rem;
 }
 
 .post__views {

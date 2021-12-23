@@ -233,6 +233,8 @@
 
     img {
         border-radius: 15px;
+        height: 23.875rem;
+        object-fit: cover;
     }
 
     &__buttons {
@@ -402,6 +404,30 @@
 
 .post {
     width: 100%;
+}
+
+.ya-share2__container_size_m
+    .ya-share2__item_more.ya-share2__item_has-pretty-view
+    .ya-share2__link_more.ya-share2__link_more-button-type_short {
+    background: #fff !important;
+    border: none !important;
+    width: 2.25rem !important ;
+    height: 2.25rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    align-items: center !important;
+}
+
+.ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__icon_more {
+    background-image: url("../img/share_outline.svg") !important;
+}
+
+.ya-share2__container.ya-share2__container_color-scheme_blackwhite .ya-share2__badge {
+    background-color: $firstGreen !important;
+}
+.ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__badge_more {
+    background-color: $firstGreen !important;
 }
 
 @media (max-width: 768px) {

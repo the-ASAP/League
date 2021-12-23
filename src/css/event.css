@@ -43,7 +43,6 @@
 }
 
 .post__image {
-  object-fit: cover;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   width: 100%;
@@ -52,6 +51,12 @@
   top: 0;
   left: 0;
   cursor: pointer;
+}
+
+.post__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .post__buttons {
@@ -98,6 +103,7 @@
   -webkit-box-orient: vertical;
   /* Вертикальная ориентация */
   overflow: hidden;
+  height: 5rem;
 }
 
 .post__views {
@@ -365,6 +371,8 @@
 
 .carouselEvent img {
   border-radius: 15px;
+  height: 23.875rem;
+  object-fit: cover;
 }
 
 .carouselEvent__buttons {
@@ -531,6 +539,31 @@
 
 .post {
   width: 100%;
+}
+
+.ya-share2__container_size_m
+.ya-share2__item_more.ya-share2__item_has-pretty-view
+.ya-share2__link_more.ya-share2__link_more-button-type_short {
+  background: #fff !important;
+  border: none !important;
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  align-items: center !important;
+}
+
+.ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__icon_more {
+  background-image: url("../img/share_outline.svg") !important;
+}
+
+.ya-share2__container.ya-share2__container_color-scheme_blackwhite .ya-share2__badge {
+  background-color: var(--main-green) !important;
+}
+
+.ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__badge_more {
+  background-color: var(--main-green) !important;
 }
 
 @media (max-width: 768px) {
