@@ -30,6 +30,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
 
     &__button {
         width: 3.125rem;
@@ -208,7 +209,8 @@
         color: $darkGray;
         padding-top: 1rem;
         width: 100%;
-        display: flex;
+        display: block;
+        text-align: left;
     }
 
     &__active {

@@ -336,6 +336,30 @@ h .associationModal__ref + .associationModal__ref {
   color: var(--dark-gray);
 }
 
+.bx-breadcrumb {
+  z-index: 1;
+}
+
+.bx-breadcrumb i {
+  background: #636363;
+  width: 5px;
+  height: 5px;
+  margin: 0 0.625rem;
+  border-radius: 50%;
+}
+
+.bx-breadcrumb-item {
+  margin: 0;
+}
+
+.bx-breadcrumb-item span {
+  margin: 0;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.36;
+  color: var(--dark-gray);
+}
+
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;

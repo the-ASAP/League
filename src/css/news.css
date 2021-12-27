@@ -379,6 +379,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 
 .return__button {
@@ -558,7 +559,8 @@
   color: var(--dark-gray);
   padding-top: 1rem;
   width: 100%;
-  display: flex;
+  display: block;
+  text-align: left;
 }
 
 .tags__active {
