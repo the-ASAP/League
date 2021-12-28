@@ -186,6 +186,10 @@
   opacity: 1;
 }
 
+.header__button a {
+  color: var(--dark-gray);
+}
+
 .associationModal {
   position: absolute;
   top: 4rem;

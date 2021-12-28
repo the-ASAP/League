@@ -134,15 +134,11 @@ $().ready(() => {
         $(".tags__filter").append(component)
     })
 
-    $(".header__button").on('click', function(e) {
-        if($(this).hasClass('header__button_active')) {
-            e.preventDefault()
-        }
-        else {
-            $(".header__button").each((index, item) => {
-                $(item).removeClass('header__button_active')
-            })
-            $(this).addClass('header__button_active')
-        }
+    let en = window.location.pathname.substring(0,3)
+
+    if(en === '/en') $('.header__button').each((index, item) => $(item).toggleClass('header__button_active'))
+
+    $('.header__button').on('click', function(e) {
+        if($(this).hasClass("header__button_active")) e.preventDefault()
     })
 });
