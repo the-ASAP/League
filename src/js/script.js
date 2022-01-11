@@ -107,6 +107,7 @@ const createYouTubeEmbedLink = (btn, container) => {
 };
 
 
+
 $().ready(() => {
     contentFadeInOnReady();
     bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
@@ -124,21 +125,50 @@ $().ready(() => {
     createYouTubeEmbedLink($(".video__button"), $(".video__image"));
 
 
-    $(document).on('click', '.tags__button', function() {
-        $(this).remove()
-    })
-    $('.tags__item').on('click', function() {
-        const text = $(this).text()
+    let tagsArr = []
+    tagsArr = new URLSearchParams(window.location.search).get('tag').split(',');
+    if(tagsArr.length) {
+        tagsArr.forEach(tag => {
+            const component = `<button type="button" class="tags__button" onclick="">${tag}</button>`
+            $(".tags__filter").append(component)
+        })
+    }
 
+    $(document).on('click', '.tags__button', function() {
+        const text = $(this).text()
+        const deleteIndex = tagsArr.indexOf(text)
+        if(deleteIndex > -1) tagsArr.splice(deleteIndex, 1)
+        $(this).remove()
+
+        $.ajax({
+            url: `/?tag=${tagsArr.join(',')}`,
+            context: document.body
+        }).done(function() {
+            console.log('done')
+        });
+    })
+
+    $('.tags__item').on('click', function(e) {
+        const text = $(this).text()
+        tagsArr.push(text)
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
+
+        $.ajax({
+            url: `/?tag=${tagsArr.join(',')}`,
+            context: document.body
+        }).done(function() {
+            console.log('done')
+        });
     })
 
     let en = window.location.pathname.substring(0,3)
-
     if(en === '/en') $('.header__button').each((index, item) => $(item).toggleClass('header__button_active'))
 
     $('.header__button').on('click', function(e) {
         if($(this).hasClass("header__button_active")) e.preventDefault()
+    })
+    $('.header__button a').on('click', function(e) {
+        if($(this).parent().hasClass("header__button_active")) e.preventDefault()
     })
 });
