@@ -126,13 +126,17 @@ $().ready(() => {
 
 
     let tagsArr = []
-    tagsArr = new URLSearchParams(window.location.search).get('tag').split(',');
-    if(tagsArr.length) {
-        tagsArr.forEach(tag => {
-            const component = `<button type="button" class="tags__button" onclick="">${tag}</button>`
-            $(".tags__filter").append(component)
-        })
+    
+    if(window.location.search) {
+        tagsArr = new URLSearchParams(window.location.search).get('tag').split(',');
+        if(tagsArr.length) {
+            tagsArr.forEach(tag => {
+                const component = `<button type="button" class="tags__button" onclick="">${tag}</button>`
+                $(".tags__filter").append(component)
+            })
+        }
     }
+
 
     $(document).on('click', '.tags__button', function() {
         const text = $(this).text()
@@ -170,5 +174,9 @@ $().ready(() => {
     })
     $('.header__button a').on('click', function(e) {
         if($(this).parent().hasClass("header__button_active")) e.preventDefault()
+    })
+
+    $('.otherNews__more').on('click', function() {
+        window.location.href = '/news'
     })
 });

@@ -141,6 +141,10 @@
   margin: 0 2%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .intro {
   margin-top: 4.3125rem;
 }
@@ -228,10 +232,6 @@
   margin-right: 2.0625rem;
 }
 
-.event__tags {
-  margin-top: 1.25rem;
-}
-
 .event__tag {
   background: #27ae60;
   border-radius: 4px;
@@ -241,6 +241,7 @@
   color: #fff;
   padding: 0.1875rem 0.75rem;
   margin-right: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .event__title {

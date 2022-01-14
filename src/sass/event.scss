@@ -1,6 +1,10 @@
 @import "mixins";
 @import "post";
 
+body {
+    overflow-x: hidden;
+}
+
 .intro {
     margin-top: 4.3125rem;
 
@@ -92,7 +96,7 @@
     }
 
     &__tags {
-        margin-top: 1.25rem;
+
     }
     &__tag {
         background: #27ae60;
@@ -103,6 +107,7 @@
         color: #fff;
         padding: 0.1875rem 0.75rem;
         margin-right: 1.25rem;
+        margin-top: 1.25rem;
     }
 
     &__title {

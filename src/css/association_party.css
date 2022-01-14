@@ -1369,6 +1369,19 @@ input:-webkit-autofill:focus {
     margin-bottom: 1.25rem;
   }
 
+  .partner__header {
+    display: block;
+  }
+
+  .partner__ref {
+    margin-top: 2rem;
+    display: block;
+  }
+
+  .partner__info {
+    margin-top: 2rem;
+  }
+
   .partner__details {
     display: none;
   }

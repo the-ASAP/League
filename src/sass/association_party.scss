@@ -127,6 +127,7 @@
         font-size: 1.125rem;
         line-height: 1.44;
         color: $firstGreen;
+
     }
 
     &__info {
@@ -214,6 +215,17 @@
     .partner {
         width: 100%;
         margin-bottom: 1.25rem;
+
+        &__header {
+            display: block;
+        }
+        &__ref {
+            margin-top: 2rem;
+            display: block;
+        }
+        &__info {
+            margin-top: 2rem;
+        }
 
         &__details {
             display: none;
