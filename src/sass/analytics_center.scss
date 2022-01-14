@@ -316,15 +316,22 @@
         margin-top: 2.375rem;
     }
     .accordion {
-        h3 {
-            font-weight: 500;
-            line-height: 1.25;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 15rem;
-        }
+
+        &__main {
+            height: 4.5rem;
+            h3 {
+                font-weight: 500;
+                line-height: 1.25;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 15rem;
+                font-size: 1.1rem;
+            }
+        }   
+        
         &__information {
+            padding-bottom: 2rem;
             a {
                 display: none;
             }
