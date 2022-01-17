@@ -128,8 +128,8 @@ $().ready(() => {
     let tagsArr = []
     
     if(window.location.search) {
-        tagsArr = new URLSearchParams(window.location.search).get('tag')
-        if(tagsArr) tagsArr.split(',')
+        let params = new URLSearchParams(window.location.search).get('tag')
+        if(params) tagsArr = params.split(',')
         if(tagsArr.length) {
             tagsArr.forEach(tag => {
                 const component = `<button type="button" class="tags__button" onclick="">${tag}</button>`
@@ -148,8 +148,89 @@ $().ready(() => {
         $.ajax({
             url: `/?tag=${tagsArr.join(',')}`,
             context: document.body
-        }).done(function() {
-            console.log('done')
+        }).done(function(res) {
+            const $res = $(res)
+            
+            const findRes = $('.news__content').html($(res).find($('.news__content')).html())
+            console.log(findRes)
+
+            owlGallery(".carouselSocial", {
+                dots: false,
+                autoWidth: false,
+                items: 1,
+                margin: 16,
+                loop: true,
+                nav: true,
+                navContainer: ".carouselSocial__buttons",
+                navClass: ["carouselSocial__prev", "carouselSocial__next"],
+                responsive: {
+                    1240: {
+                        items: 3,
+                        margin: 20,
+                        autoWidth: false,
+                    },
+                    768: {
+                        margin: 20,
+                        autoWidth: false,
+                        items: 2,
+                    },
+                },
+            });
+        
+            owlGallery(".carouselMeeting", {
+                dots: false,
+                autoWidth: false,
+                items: 1,
+                margin: 5,
+                loop: true,
+                nav: true,
+                navContainer: ".carouselMeeting__buttons",
+                navClass: ["carouselMeeting__prev", "carouselMeeting__next"],
+                responsive: {
+                    1240: {
+                        items: 3,
+                        margin: 20,
+                        autoWidth: false,
+                    },
+                    768: {
+                        margin: 20,
+                        autoWidth: false,
+                        items: 2,
+                    },
+                },
+            });
+        
+            owlGallery(".carouselEvent", {
+                dots: false,
+                items: 1,
+                loop: true,
+                nav: true,
+                margin: 10,
+                navContainer: ".carouselEvent__buttons",
+                navClass: ["carouselEvent__prev", "carouselEvent__next"],
+            });
+        
+            owlGallery(".carouselOther", {
+                dots: false,
+                items: 1,
+                loop: true,
+                nav: true,
+                margin: 10,
+                navContainer: ".carouselOther__buttons",
+                navClass: ["carouselOther__prev", "carouselOther__next"],
+                responsive: {
+                    1240: {
+                        items: 3,
+                        margin: 20,
+                        autoWidth: false,
+                    },
+                    768: {
+                        items: 2,
+                        margin: 20,
+                        autoWidth: false,
+                    },
+                },
+            });
         });
     })
 
@@ -158,12 +239,15 @@ $().ready(() => {
         tagsArr.push(text)
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
+
+        const tagsParam = tagsArr.join(',')
+        console.log(tagsParam)
         
         $.ajax({
             url: `/news/`,
             type: 'get',
             data: {
-                tag: tagsArr.join(',')
+                tag: tagsParam
             }
         }).done(function(res) {
             const $res = $(res)
