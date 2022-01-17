@@ -157,12 +157,13 @@ $().ready(() => {
         tagsArr.push(text)
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
-
+        
+        // console.log(`/news/?tag=${tagsArr.join(',')}`)
         $.ajax({
-            url: `/?tag=${tagsArr.join(',')}`,
-            context: document.body
-        }).done(function() {
-            console.log('done')
+            url: `/news/?tag=${tagsArr.join(',')}`,
+        }).success(function(res) {
+            $(document.body).empty()
+            $(document.body).append(res)
         });
     })
 
