@@ -159,9 +159,12 @@ $().ready(() => {
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
         
-        // console.log(`/news/?tag=${tagsArr.join(',')}`)
         $.ajax({
-            url: `http://liga.asap-lp.ru//news/?tag=${tagsArr.join(',')}`,
+            url: `/news/`,
+            type: 'get',
+            data: {
+                tag: tagsArr.join(',')
+            }
         }).done(function(res) {
             const $res = $(res)
             
