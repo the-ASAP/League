@@ -137,7 +137,7 @@ $().ready(() => {
             })
         }
     }
-
+    const tagsParam = tagsArr.join(',')
 
     $(document).on('click', '.tags__button', function() {
         const text = $(this).text()
@@ -146,13 +146,17 @@ $().ready(() => {
         $(this).remove()
 
         $.ajax({
-            url: `/?tag=${tagsArr.join(',')}`,
-            context: document.body
+            url: `/news/`,
+            type: 'get',
+            data: {
+                tag: tagsParam
+            }
         }).done(function(res) {
             const $res = $(res)
             
             const findRes = $('.news__content').html($(res).find($('.news__content')).html())
-            console.log(findRes)
+            console.log(tagsParam)
+            console.log($(res).find($('.news__content')))
 
             owlGallery(".carouselSocial", {
                 dots: false,
@@ -239,9 +243,6 @@ $().ready(() => {
         tagsArr.push(text)
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
-
-        const tagsParam = tagsArr.join(',')
-        console.log(tagsParam)
         
         $.ajax({
             url: `/news/`,
@@ -253,7 +254,8 @@ $().ready(() => {
             const $res = $(res)
             
             const findRes = $('.news__content').html($(res).find($('.news__content')).html())
-            console.log(findRes)
+            console.log(tagsParam)
+            console.log($(res).find($('.news__content')))
 
             owlGallery(".carouselSocial", {
                 dots: false,
