@@ -161,10 +161,13 @@ $().ready(() => {
         
         // console.log(`/news/?tag=${tagsArr.join(',')}`)
         $.ajax({
-            url: `/news/?tag=${tagsArr.join(',')}`,
+            url: `http://liga.asap-lp.ru//news/?tag=${tagsArr.join(',')}`,
         }).done(function(res) {
             const $res = $(res)
-            $('.news').html($(res).find($('.news')).html())
+            
+            const findRes = $('.news__content').html($(res).find($('.news__content')).html())
+            console.log(findRes)
+
             owlGallery(".carouselSocial", {
                 dots: false,
                 autoWidth: false,
