@@ -243,22 +243,6 @@ $().ready(() => {
                 },
             });
         });
-
-        function ajaxMainFunction() {
-            $.ajax({
-              data: $(ajaxFormSelector).serialize(),
-            }).done(function (response) {
-              var $response = $(response);
-              $(ajaxContainerSelector).fadeOut(fadeSpeed);
-              setTimeout(function () {
-                $(ajaxContainerSelector)
-                  .html($response.find(ajaxContainerSelector).html())
-                  .fadeIn(fadeSpeed);
-                ajaxCount();
-                regForPrice(".objectCard__price");
-              }, fadeSpeed);
-            });
-          }
     })
 
     let en = window.location.pathname.substring(0,3)
