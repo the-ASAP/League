@@ -128,7 +128,8 @@ $().ready(() => {
     let tagsArr = []
     
     if(window.location.search) {
-        tagsArr = new URLSearchParams(window.location.search).get('tag').split(',');
+        tagsArr = new URLSearchParams(window.location.search).get('tag')
+        if(tagsArr) tagsArr.split(',')
         if(tagsArr.length) {
             tagsArr.forEach(tag => {
                 const component = `<button type="button" class="tags__button" onclick="">${tag}</button>`
@@ -162,7 +163,8 @@ $().ready(() => {
         $.ajax({
             url: `/news/?tag=${tagsArr.join(',')}`,
         }).done(function(res) {
-            $(document.body).html(res)
+            const $res = $(res)
+            $('.news').html($(res).find($('.news')).html())
             owlGallery(".carouselSocial", {
                 dots: false,
                 autoWidth: false,
@@ -241,6 +243,22 @@ $().ready(() => {
                 },
             });
         });
+
+        function ajaxMainFunction() {
+            $.ajax({
+              data: $(ajaxFormSelector).serialize(),
+            }).done(function (response) {
+              var $response = $(response);
+              $(ajaxContainerSelector).fadeOut(fadeSpeed);
+              setTimeout(function () {
+                $(ajaxContainerSelector)
+                  .html($response.find(ajaxContainerSelector).html())
+                  .fadeIn(fadeSpeed);
+                ajaxCount();
+                regForPrice(".objectCard__price");
+              }, fadeSpeed);
+            });
+          }
     })
 
     let en = window.location.pathname.substring(0,3)
