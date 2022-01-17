@@ -137,14 +137,14 @@ $().ready(() => {
             })
         }
     }
-    const tagsParam = tagsArr.join(',')
+    
 
     $(document).on('click', '.tags__button', function() {
         const text = $(this).text()
         const deleteIndex = tagsArr.indexOf(text)
         if(deleteIndex > -1) tagsArr.splice(deleteIndex, 1)
         $(this).remove()
-
+        const tagsParam = tagsArr.join(',')
         $.ajax({
             url: `/news/`,
             type: 'get',
@@ -243,7 +243,7 @@ $().ready(() => {
         tagsArr.push(text)
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
-        
+        const tagsParam = tagsArr.join(',')
         $.ajax({
             url: `/news/`,
             type: 'get',
