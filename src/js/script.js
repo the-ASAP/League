@@ -144,7 +144,7 @@ $().ready(() => {
         const deleteIndex = tagsArr.indexOf(text)
         if(deleteIndex > -1) tagsArr.splice(deleteIndex, 1)
         $(this).remove()
-        const tagsParam = tagsArr.join(',')
+        const tagsParam = tagsArr.join(',').trim()
         $.ajax({
             url: `/news/`,
             type: 'get',
@@ -243,7 +243,7 @@ $().ready(() => {
         tagsArr.push(text)
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
-        const tagsParam = tagsArr.join(',')
+        const tagsParam = tagsArr.join(',').trim()
         $.ajax({
             url: `/news/`,
             type: 'get',
