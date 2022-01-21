@@ -106,7 +106,85 @@ const createYouTubeEmbedLink = (btn, container) => {
     });
 };
 
+const refreshCarousel = () => {
+    owlGallery(".carouselSocial", {
+        dots: false,
+        autoWidth: false,
+        items: 1,
+        margin: 16,
+        loop: true,
+        nav: true,
+        navContainer: ".carouselSocial__buttons",
+        navClass: ["carouselSocial__prev", "carouselSocial__next"],
+        responsive: {
+            1240: {
+                items: 3,
+                margin: 20,
+                autoWidth: false,
+            },
+            768: {
+                margin: 20,
+                autoWidth: false,
+                items: 2,
+            },
+        },
+    });
 
+    owlGallery(".carouselMeeting", {
+        dots: false,
+        autoWidth: false,
+        items: 1,
+        margin: 5,
+        loop: true,
+        nav: true,
+        navContainer: ".carouselMeeting__buttons",
+        navClass: ["carouselMeeting__prev", "carouselMeeting__next"],
+        responsive: {
+            1240: {
+                items: 3,
+                margin: 20,
+                autoWidth: false,
+            },
+            768: {
+                margin: 20,
+                autoWidth: false,
+                items: 2,
+            },
+        },
+    });
+
+    owlGallery(".carouselEvent", {
+        dots: false,
+        items: 1,
+        loop: true,
+        nav: true,
+        margin: 10,
+        navContainer: ".carouselEvent__buttons",
+        navClass: ["carouselEvent__prev", "carouselEvent__next"],
+    });
+
+    owlGallery(".carouselOther", {
+        dots: false,
+        items: 1,
+        loop: true,
+        nav: true,
+        margin: 10,
+        navContainer: ".carouselOther__buttons",
+        navClass: ["carouselOther__prev", "carouselOther__next"],
+        responsive: {
+            1240: {
+                items: 3,
+                margin: 20,
+                autoWidth: false,
+            },
+            768: {
+                items: 2,
+                margin: 20,
+                autoWidth: false,
+            },
+        },
+    });
+}
 
 $().ready(() => {
     contentFadeInOnReady();
@@ -137,203 +215,44 @@ $().ready(() => {
             })
         }
     }
-    
 
     $(document).on('click', '.tags__button', function() {
         const text = $(this).text()
         const deleteIndex = tagsArr.indexOf(text)
         if(deleteIndex > -1) tagsArr.splice(deleteIndex, 1)
         $(this).remove()
-        const tagsParam = tagsArr.join(',').trim()
         $.ajax({
             url: `/news/`,
             type: 'get',
             data: {
-                tag: tagsParam
+                tag: tagsArr
             }
         }).done(function(res) {
-            const $res = $(res)
-            
-            const findRes = $('.news__content').html($(res).find($('.news__content')).html())
-            console.log(tagsParam)
+            $('.news__content').html($(res).find($('.news__content')).html())
+            console.log(res)
+            console.log(tagsArr)
             console.log($(res).find($('.news__content')))
-
-            owlGallery(".carouselSocial", {
-                dots: false,
-                autoWidth: false,
-                items: 1,
-                margin: 16,
-                loop: true,
-                nav: true,
-                navContainer: ".carouselSocial__buttons",
-                navClass: ["carouselSocial__prev", "carouselSocial__next"],
-                responsive: {
-                    1240: {
-                        items: 3,
-                        margin: 20,
-                        autoWidth: false,
-                    },
-                    768: {
-                        margin: 20,
-                        autoWidth: false,
-                        items: 2,
-                    },
-                },
-            });
-        
-            owlGallery(".carouselMeeting", {
-                dots: false,
-                autoWidth: false,
-                items: 1,
-                margin: 5,
-                loop: true,
-                nav: true,
-                navContainer: ".carouselMeeting__buttons",
-                navClass: ["carouselMeeting__prev", "carouselMeeting__next"],
-                responsive: {
-                    1240: {
-                        items: 3,
-                        margin: 20,
-                        autoWidth: false,
-                    },
-                    768: {
-                        margin: 20,
-                        autoWidth: false,
-                        items: 2,
-                    },
-                },
-            });
-        
-            owlGallery(".carouselEvent", {
-                dots: false,
-                items: 1,
-                loop: true,
-                nav: true,
-                margin: 10,
-                navContainer: ".carouselEvent__buttons",
-                navClass: ["carouselEvent__prev", "carouselEvent__next"],
-            });
-        
-            owlGallery(".carouselOther", {
-                dots: false,
-                items: 1,
-                loop: true,
-                nav: true,
-                margin: 10,
-                navContainer: ".carouselOther__buttons",
-                navClass: ["carouselOther__prev", "carouselOther__next"],
-                responsive: {
-                    1240: {
-                        items: 3,
-                        margin: 20,
-                        autoWidth: false,
-                    },
-                    768: {
-                        items: 2,
-                        margin: 20,
-                        autoWidth: false,
-                    },
-                },
-            });
+            refreshCarousel()
         });
     })
 
     $('.tags__item').on('click', function(e) {
-        const text = $(this).text()
+        const text = $(this).data('tag')
         tagsArr.push(text)
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
-        const tagsParam = tagsArr.join(',').trim()
         $.ajax({
             url: `/news/`,
             type: 'get',
             data: {
-                tag: tagsParam
+                tag: tagsArr
             }
         }).done(function(res) {
-            const $res = $(res)
-            
-            const findRes = $('.news__content').html($(res).find($('.news__content')).html())
-            console.log(tagsParam)
+            $('.news__content').html($(res).find($('.news__content')).html())
+            console.log(res)
+            console.log(tagsArr)
             console.log($(res).find($('.news__content')))
-
-            owlGallery(".carouselSocial", {
-                dots: false,
-                autoWidth: false,
-                items: 1,
-                margin: 16,
-                loop: true,
-                nav: true,
-                navContainer: ".carouselSocial__buttons",
-                navClass: ["carouselSocial__prev", "carouselSocial__next"],
-                responsive: {
-                    1240: {
-                        items: 3,
-                        margin: 20,
-                        autoWidth: false,
-                    },
-                    768: {
-                        margin: 20,
-                        autoWidth: false,
-                        items: 2,
-                    },
-                },
-            });
-        
-            owlGallery(".carouselMeeting", {
-                dots: false,
-                autoWidth: false,
-                items: 1,
-                margin: 5,
-                loop: true,
-                nav: true,
-                navContainer: ".carouselMeeting__buttons",
-                navClass: ["carouselMeeting__prev", "carouselMeeting__next"],
-                responsive: {
-                    1240: {
-                        items: 3,
-                        margin: 20,
-                        autoWidth: false,
-                    },
-                    768: {
-                        margin: 20,
-                        autoWidth: false,
-                        items: 2,
-                    },
-                },
-            });
-        
-            owlGallery(".carouselEvent", {
-                dots: false,
-                items: 1,
-                loop: true,
-                nav: true,
-                margin: 10,
-                navContainer: ".carouselEvent__buttons",
-                navClass: ["carouselEvent__prev", "carouselEvent__next"],
-            });
-        
-            owlGallery(".carouselOther", {
-                dots: false,
-                items: 1,
-                loop: true,
-                nav: true,
-                margin: 10,
-                navContainer: ".carouselOther__buttons",
-                navClass: ["carouselOther__prev", "carouselOther__next"],
-                responsive: {
-                    1240: {
-                        items: 3,
-                        margin: 20,
-                        autoWidth: false,
-                    },
-                    768: {
-                        items: 2,
-                        margin: 20,
-                        autoWidth: false,
-                    },
-                },
-            });
+            refreshCarousel()
         });
     })
 
@@ -349,5 +268,11 @@ $().ready(() => {
 
     $('.otherNews__more').on('click', function() {
         window.location.href = '/news'
+    })
+
+    $('.pagination__button').first().on('click', function(e) {
+        e.preventDefault()
+        console.log($(this).attr('href'))
+        console.log($(this).attr('onclick'))
     })
 });
