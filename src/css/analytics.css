@@ -401,9 +401,10 @@
 
 .notes {
   margin-top: 2.5rem;
-  margin-bottom: 5.6875rem;
+  padding-bottom: 3.75rem;
   display: flex;
   flex-wrap: wrap;
+  border-bottom: 1px solid #BDBDBD;
 }
 
 .checkbox {
@@ -466,6 +467,38 @@
 #input_6:checked + label::before {
   background-color: #ffc94d;
   border: 1px solid #ffc94d;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download {
+  height: 3.5rem;
+  width: 12.0625rem;
+  margin-top: 1.6875rem;
+  margin-bottom: 6.25rem;
+  background-color: #39ad46;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in;
+}
+
+.download:hover {
+  background-color: var(--hover-green);
+}
+
+.download__text {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  margin-right: 0.625rem;
 }
 
 @media (max-width: 768px) {

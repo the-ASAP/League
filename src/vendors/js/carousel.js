@@ -5,7 +5,8 @@ const owlGallery = (selector, params) => {
     if (params == undefined) params = "";
     const owl = $(selector);
     owl.each((i, el) => {
-        $(el)
+        $(document)
+            .find(el)
             .addClass("owl-carousel owl-theme owl-loaded owl-drag")
             .owlCarousel(
                 Object.assign(params, {

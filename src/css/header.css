@@ -266,6 +266,7 @@ h .associationModal__ref + .associationModal__ref {
   left: 0;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .breadcrumbs__prev {
@@ -309,9 +310,15 @@ h .associationModal__ref + .associationModal__ref {
 .bx-breadcrumb-item span {
   margin: 0;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
   line-height: 1.36;
   color: var(--dark-gray);
+  font-family: Inter !important;
+}
+
+.breadcrumbs__circle {
+  width: 0.25rem !important;
+  height: 0.25rem !important;
 }
 
 @media (max-width: 768px) {

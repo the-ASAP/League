@@ -106,87 +106,7 @@ const createYouTubeEmbedLink = (btn, container) => {
     });
 };
 
-const refreshCarousel = () => {
-    owlGallery(".carouselSocial", {
-        dots: false,
-        autoWidth: false,
-        items: 1,
-        margin: 16,
-        loop: true,
-        nav: true,
-        navContainer: ".carouselSocial__buttons",
-        navClass: ["carouselSocial__prev", "carouselSocial__next"],
-        responsive: {
-            1240: {
-                items: 3,
-                margin: 20,
-                autoWidth: false,
-            },
-            768: {
-                margin: 20,
-                autoWidth: false,
-                items: 2,
-            },
-        },
-    });
-
-    owlGallery(".carouselMeeting", {
-        dots: false,
-        autoWidth: false,
-        items: 1,
-        margin: 5,
-        loop: true,
-        nav: true,
-        navContainer: ".carouselMeeting__buttons",
-        navClass: ["carouselMeeting__prev", "carouselMeeting__next"],
-        responsive: {
-            1240: {
-                items: 3,
-                margin: 20,
-                autoWidth: false,
-            },
-            768: {
-                margin: 20,
-                autoWidth: false,
-                items: 2,
-            },
-        },
-    });
-
-    owlGallery(".carouselEvent", {
-        dots: false,
-        items: 1,
-        loop: true,
-        nav: true,
-        margin: 10,
-        navContainer: ".carouselEvent__buttons",
-        navClass: ["carouselEvent__prev", "carouselEvent__next"],
-    });
-
-    owlGallery(".carouselOther", {
-        dots: false,
-        items: 1,
-        loop: true,
-        nav: true,
-        margin: 10,
-        navContainer: ".carouselOther__buttons",
-        navClass: ["carouselOther__prev", "carouselOther__next"],
-        responsive: {
-            1240: {
-                items: 3,
-                margin: 20,
-                autoWidth: false,
-            },
-            768: {
-                items: 2,
-                margin: 20,
-                autoWidth: false,
-            },
-        },
-    });
-}
-
-$().ready(() => {
+const refreshScript = () => {
     contentFadeInOnReady();
     bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
     accordion(".accordion__main", ".accordion__information", "activeAccordion");
@@ -201,7 +121,52 @@ $().ready(() => {
     select(".tags__list", ".tags__items", "tags__active");
     select(".publication__button", ".publication__items", "publication__active");
     createYouTubeEmbedLink($(".video__button"), $(".video__image"));
+    refreshSCarousel()
 
+    let en = window.location.pathname.substring(0,3)
+    if(en === '/en') $('.header__button').each((index, item) => $(item).toggleClass('header__button_active'))
+
+    $('.header__button').on('click', function(e) {
+        if($(this).hasClass("header__button_active")) e.preventDefault()
+    })
+    $('.header__button a').on('click', function(e) {
+        if($(this).parent().hasClass("header__button_active")) e.preventDefault()
+    })
+
+    $('.otherNews__more').on('click', function() {
+        window.location.href = '/news'
+    })
+
+
+    // {
+    //     PAGEN_1: 2
+    //  bxajaxid: 78376259d03e6438c84b77344bec69dc
+    // }
+    
+    $('.pagination__button a').each((index, item) => {
+        $(item).removeAttr('onclick')
+    })
+
+    $(document).on('click', '.pagination__button a', function(e) {
+        e.preventDefault()
+        const PAGEN_1 = $(this).attr('href').slice(-1)
+        $.ajax({
+            url: `/news/`,
+            type: 'get',
+            data: {
+                PAGEN_1,
+                bxajaxid: "78376259d03e6438c84b77344bec69dc"
+            }
+        }).done(function(res) {
+            const content = $(res).find('.news__content').html()
+            const pagination = $(res).find('pagination').html()
+            $('.news__content').html(content)
+            $('.pagination').html(pagination)
+            $('.pagination__button a').each((_, item) => {
+                $(item).removeAttr('onclick')
+            })
+        })
+    })
 
     let tagsArr = []
     
@@ -228,11 +193,8 @@ $().ready(() => {
                 tag: tagsArr
             }
         }).done(function(res) {
-            $('.news__content').html($(res).find($('.news__content')).html())
-            console.log(res)
-            console.log(tagsArr)
-            console.log($(res).find($('.news__content')))
-            refreshCarousel()
+            const content = $(res).find('.news__content').html()
+            $('.news__content').html(content)
         });
     })
 
@@ -248,31 +210,88 @@ $().ready(() => {
                 tag: tagsArr
             }
         }).done(function(res) {
-            $('.news__content').html($(res).find($('.news__content')).html())
-            console.log(res)
-            console.log(tagsArr)
-            console.log($(res).find($('.news__content')))
-            refreshCarousel()
+            const content = $(res).find('.news__content').html()
+            $('.news__content').html(content)
         });
     })
+}
+const refreshSCarousel = () => {
+    owlGallery(".carouselSocial", {
+        dots: false,
+        autoWidth: false,
+        items: 1,
+        margin: 16,
+        loop: true,
+        nav: true,
+        navContainer: ".carouselSocial__buttons",
+        navClass: ["carouselSocial__prev", "carouselSocial__next"],
+        responsive: {
+            1240: {
+                items: 3,
+                margin: 20,
+                autoWidth: false,
+            },
+            768: {
+                margin: 20,
+                autoWidth: false,
+                items: 2,
+            },
+        },
+    });
+    owlGallery(".carouselMeeting", {
+        dots: false,
+        autoWidth: false,
+        items: 1,
+        margin: 5,
+        loop: true,
+        nav: true,
+        navContainer: ".carouselMeeting__buttons",
+        navClass: ["carouselMeeting__prev", "carouselMeeting__next"],
+        responsive: {
+            1240: {
+                items: 3,
+                margin: 20,
+                autoWidth: false,
+            },
+            768: {
+                margin: 20,
+                autoWidth: false,
+                items: 2,
+            },
+        },
+    });
+    owlGallery(".carouselEvent", {
+        dots: false,
+        items: 1,
+        loop: true,
+        nav: true,
+        margin: 10,
+        navContainer: ".carouselEvent__buttons",
+        navClass: ["carouselEvent__prev", "carouselEvent__next"],
+    });
+    owlGallery(".carouselOther", {
+        dots: false,
+        items: 1,
+        loop: true,
+        nav: true,
+        margin: 10,
+        navContainer: ".carouselOther__buttons",
+        navClass: ["carouselOther__prev", "carouselOther__next"],
+        responsive: {
+            1240: {
+                items: 3,
+                margin: 20,
+                autoWidth: false,
+            },
+            768: {
+                items: 2,
+                margin: 20,
+                autoWidth: false,
+            },
+        },
+    });
+}
 
-    let en = window.location.pathname.substring(0,3)
-    if(en === '/en') $('.header__button').each((index, item) => $(item).toggleClass('header__button_active'))
-
-    $('.header__button').on('click', function(e) {
-        if($(this).hasClass("header__button_active")) e.preventDefault()
-    })
-    $('.header__button a').on('click', function(e) {
-        if($(this).parent().hasClass("header__button_active")) e.preventDefault()
-    })
-
-    $('.otherNews__more').on('click', function() {
-        window.location.href = '/news'
-    })
-
-    $('.pagination__button').first().on('click', function(e) {
-        e.preventDefault()
-        console.log($(this).attr('href'))
-        console.log($(this).attr('onclick'))
-    })
+$().ready(() => {
+    refreshScript()
 });
