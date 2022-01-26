@@ -197,7 +197,62 @@
     }
 }
 
+.documents {
+    margin-top: 2.875rem;
+    margin-bottom: 6.25rem;
+
+    &__title {
+        font-family: $golosFont;
+        font-weight: 500;
+        font-size: 1.625rem;
+        line-height: 1.15;
+
+        color: $darkGray;
+    }
+}
+
+.document {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.9375rem 1.25rem;
+    background: $lightGray;
+    border-radius: 8px;
+    margin-top: 1.8125rem;
+
+    & + & {
+        margin-top: 0.875rem;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 1.25rem;
+        }
+    }
+
+    &__title {
+        font-size: 0.875rem;
+        line-height: 1.14;
+        max-width: 23.6875rem;
+        color: $midGray;
+    }
+
+    &__download {
+    }
+}
+
 @media (max-width: 768px) {
+
+
+    .document {
+        &__title {
+            max-width: 65%;
+        }
+    }
+
     .title {
         padding: 1.375rem 0 1.625rem;
 

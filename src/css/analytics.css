@@ -501,7 +501,54 @@
   margin-right: 0.625rem;
 }
 
+.documents {
+  margin-top: 2.875rem;
+  margin-bottom: 6.25rem;
+}
+
+.documents__title {
+  font-family: var(--golos-font);
+  font-weight: 500;
+  font-size: 1.625rem;
+  line-height: 1.15;
+  color: var(--dark-gray);
+}
+
+.document {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9375rem 1.25rem;
+  background: var(--light-gray);
+  border-radius: 8px;
+  margin-top: 1.8125rem;
+}
+
+.document + .document {
+  margin-top: 0.875rem;
+}
+
+.document__info {
+  display: flex;
+  align-items: center;
+}
+
+.document__info svg {
+  margin-right: 1.25rem;
+}
+
+.document__title {
+  font-size: 0.875rem;
+  line-height: 1.14;
+  max-width: 23.6875rem;
+  color: var(--mid-gray);
+}
+
 @media (max-width: 768px) {
+  .document__title {
+    max-width: 65%;
+  }
+
   .title {
     padding: 1.375rem 0 1.625rem;
   }
