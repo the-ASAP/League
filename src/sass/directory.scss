@@ -122,7 +122,7 @@
         left: 0;
         width: 100%;
         background-color: #efefef;
-        padding: 0 2rem 1rem 1rem;
+        padding: 1rem 2rem 1rem 1rem;
         border-radius: 4px;
         z-index: 10;
         display: none;
@@ -134,7 +134,10 @@
         line-height: 1.44;
         letter-spacing: 0.015em;
         color: $darkGray;
-        margin-top: 1rem;
+        padding-top: 1rem;
+        width: 100%;
+        display: block;
+        text-align: left;
     }
 
     &__active {

@@ -1,3 +1,46 @@
+const createSortButton = (text, id) => {
+    return `<button type="button" id="${id}" class="publication__item">${text}</button>`
+}
+
+const sortButtonsData = [
+    {
+        id: 'sortButton-1',
+        title: 'Последние',
+        data: {
+            sort: 'created_date',
+            method: 'desc'
+        }
+    },
+    {   
+        id: 'sortButton-2',
+        title: 'Популярные',
+        data: {
+            sort: 'show_counter',
+            method: 'desc'
+        }
+    },
+    {   
+        id: 'sortButton-3',
+        title: 'Лучшие',
+        data: {
+            sort: 'property_STATUS',
+            method: 'desc'
+        }
+    },
+    {   
+        id: 'sortButton-4',
+        title: 'Старые',
+        data: {
+            sort: 'created_date',
+            method: 'asc'
+        }
+    },
+]
+
+let defaultSort = sortButtonsData[0].sort
+let defaultMethod = sortButtonsData[0].method
+let tagsArr = []
+
 // удаляем прелодер при загрузке страницы
 const contentFadeInOnReady = () => {
     $(".preloader").fadeOut(150, () => {
@@ -136,12 +179,39 @@ const refreshScript = () => {
     $('.otherNews__more').on('click', function() {
         window.location.href = '/news'
     })
+    
+    $('.navbar__item').first().on('click', function(e) {
+        e.preventDefault()
+    })
 
+    $('.publication__items').empty()
+    sortButtonsData.map(item => $('.publication__items').append(createSortButton(item.title, item.id)))
+    $(document).on('click', '.publication__item', function(e) {
+        e.preventDefault()
+        const buttonId = $(this).attr('id')
+        const { title, data } = sortButtonsData.find(item => item.id === buttonId)
+        defaultSort = data.sort
+        defaultMethod = data.method
+        $('.publication__button').text(title)
+        $('.publication__button').text(data.title)
+        downloadContent({tag: tagsArr, sort: defaultSort, defaultMethod})
+    })
 
-    // {
-    //     PAGEN_1: 2
-    //  bxajaxid: 78376259d03e6438c84b77344bec69dc
-    // }
+    const downloadContent = (data) => {
+        $.ajax({
+            url: window.location.pathname,
+            type: 'get',
+            data: data
+        }).done(function(res) {
+            const content = $(res).find('.news__content').html()
+            const pagination = $(res).find('.pagination').html()
+            $('.news__content').html(content)
+            $('.pagination').html(pagination)
+            $('.pagination__button a').each((_, item) => {
+                $(item).removeAttr('onclick')
+            })
+        })
+    }
     
     $('.pagination__button a').each((index, item) => {
         $(item).removeAttr('onclick')
@@ -150,25 +220,11 @@ const refreshScript = () => {
     $(document).on('click', '.pagination__button a', function(e) {
         e.preventDefault()
         const PAGEN_1 = $(this).attr('href').slice(-1)
-        $.ajax({
-            url: `/news/`,
-            type: 'get',
-            data: {
-                PAGEN_1,
-                bxajaxid: "78376259d03e6438c84b77344bec69dc"
-            }
-        }).done(function(res) {
-            const content = $(res).find('.news__content').html()
-            const pagination = $(res).find('pagination').html()
-            $('.news__content').html(content)
-            $('.pagination').html(pagination)
-            $('.pagination__button a').each((_, item) => {
-                $(item).removeAttr('onclick')
-            })
+        downloadContent({
+            PAGEN_1,
+            bxajaxid: "78376259d03e6438c84b77344bec69dc"
         })
     })
-
-    let tagsArr = []
     
     if(window.location.search) {
         let params = new URLSearchParams(window.location.search).get('tag')
@@ -186,16 +242,7 @@ const refreshScript = () => {
         const deleteIndex = tagsArr.indexOf(text)
         if(deleteIndex > -1) tagsArr.splice(deleteIndex, 1)
         $(this).remove()
-        $.ajax({
-            url: `/news/`,
-            type: 'get',
-            data: {
-                tag: tagsArr
-            }
-        }).done(function(res) {
-            const content = $(res).find('.news__content').html()
-            $('.news__content').html(content)
-        });
+        downloadContent({tag: tagsArr, sort: defaultSort, defaultMethod})
     })
 
     $('.tags__item').on('click', function(e) {
@@ -203,16 +250,7 @@ const refreshScript = () => {
         tagsArr.push(text)
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
-        $.ajax({
-            url: `/news/`,
-            type: 'get',
-            data: {
-                tag: tagsArr
-            }
-        }).done(function(res) {
-            const content = $(res).find('.news__content').html()
-            $('.news__content').html(content)
-        });
+        downloadContent({tag: tagsArr, sort: defaultSort, defaultMethod})
     })
 }
 const refreshSCarousel = () => {

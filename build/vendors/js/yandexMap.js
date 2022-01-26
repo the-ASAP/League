@@ -22,19 +22,22 @@ function createHint(maps, address, object, coorArr, link) {
 
   
 ymaps.ready(() => {
-    const Map = new ymaps.Map("yandexMap", {
+    const elementExistence = $('#yandexMap').length > 0
+    if(elementExistence) {
+      const Map = new ymaps.Map("yandexMap", {
         center: [55.76, 37.64],
         zoom: 10,
         controls: ["zoomControl"],
-    });
-    Map.behaviors.disable("scrollZoom");
+      });
+      Map.behaviors.disable("scrollZoom");
 
-    Map.geoObjects.add(
-        createHint(
-            ymaps,
-          'Москва',
-          'Тут будет туса!',
-          [55.76, 37.64]
-        )
-      );
+      Map.geoObjects.add(
+          createHint(
+              ymaps,
+            'Москва',
+            'Тут будет туса!',
+            [55.76, 37.64]
+          )
+        );
+    }
 });

@@ -488,7 +488,10 @@
   line-height: 1.44;
   letter-spacing: 0.015em;
   color: var(--dark-gray);
-  margin-top: 1rem;
+  padding-top: 1rem;
+  width: 100%;
+  display: block;
+  text-align: left;
 }
 
 .tags__active {

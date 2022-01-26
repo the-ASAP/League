@@ -35,11 +35,14 @@
   background-color: var(--light-gray);
   margin-bottom: 1.25rem;
   transition: all 0.2s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
 }
 
 .position__text {
   max-width: 13.125rem;
-  margin-top: 4.625rem;
   margin-left: 2.4375rem;
   line-height: 1.25;
   color: var(--dark-gray);
