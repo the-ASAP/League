@@ -563,6 +563,7 @@
   letter-spacing: 0.015em;
   color: var(--dark-gray);
   margin-top: 1rem;
+  display: block;
 }
 
 .publication__active {

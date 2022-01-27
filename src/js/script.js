@@ -184,8 +184,8 @@ const refreshScript = () => {
         e.preventDefault()
     })
 
-    $('.publication__items').empty()
-    sortButtonsData.map(item => $('.publication__items').append(createSortButton(item.title, item.id)))
+    // $('.publication__items').empty()
+    // sortButtonsData.map(item => $('.publication__items').append(createSortButton(item.title, item.id)))
     $(document).on('click', '.publication__item', function(e) {
         e.preventDefault()
         const buttonId = $(this).attr('id')
@@ -193,7 +193,6 @@ const refreshScript = () => {
         defaultSort = data.sort
         defaultMethod = data.method
         $('.publication__button').text(title)
-        $('.publication__button').text(data.title)
         downloadContent({tag: tagsArr, sort: defaultSort, defaultMethod})
     })
 
