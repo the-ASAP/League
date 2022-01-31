@@ -189,10 +189,11 @@ const refreshScript = () => {
     $(document).on('click', '.publication__item', function(e) {
         e.preventDefault()
         const buttonId = $(this).attr('id')
-        const { title, data } = sortButtonsData.find(item => item.id === buttonId)
+        const { data } = sortButtonsData.find(item => item.id === buttonId)
         defaultSort = data.sort
         defaultMethod = data.method
-        $('.publication__button').text(title)
+        const text = $(this).text().trim()
+        $('.publication__button').text(text)
         downloadContent({tag: tagsArr, sort: defaultSort, defaultMethod})
     })
 
@@ -332,3 +333,8 @@ const refreshSCarousel = () => {
 $().ready(() => {
     refreshScript()
 });
+
+
+
+
+
