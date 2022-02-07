@@ -186,7 +186,7 @@
     z-index: 10;
     background: $lightGray;
     border-radius: 8px;
-    padding: 1.25rem 1.875rem;
+    padding: 1.25rem 0;
     display: none;
 
     &__close {
@@ -197,12 +197,12 @@
 
     &__ref {
         display: block;
-        margin-top: 1rem;
+        padding: 1rem 1.875rem 0;
         font-size: 1rem;
         line-height: 1.44;
         color: $midGray;
-        h & + & {
-            margin-top: 1rem;
+        & + & {
+            padding-top: 1rem;
         }
     }
 

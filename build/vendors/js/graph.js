@@ -1,55 +1,42 @@
-$().ready(() => {
+function createGraph(arrLabels, arrData) {
     const ctx = $("#Graph");
     const mobile = $(window).width() < 768;
-    const randomDatapoints = (lenghtArr, min, max) => {
-        let res = [];
-
-        for (let i = 0; i < lenghtArr; i++) {
-            let point = Math.round(min - 0.5 + Math.random() * (max - min + 1));
-            res.push(point);
-        }
-
-        return res;
-    };
-
-    // const datapoints = [0, 20, 60, 120, 180, 125];
-    // const labels = ['21.02', '22.02', '23.02', '24.02', '25.02', '26.02',],
 
     const data = {
-        labels: ["21.02", "22.02", "23.02", "24.02", "25.02", "26.02"],
+        labels: arrLabels,
         datasets: [
             {
-                data: randomDatapoints(6, 0, 225),
+                data: arrData[0],
                 borderColor: "#00e096",
                 fill: false,
                 tension: 0.4,
             },
             {
-                data: randomDatapoints(6, 0, 225),
+                data: arrData[1],
                 borderColor: "#006fd6",
                 fill: false,
                 tension: 0.4,
             },
             {
-                data: randomDatapoints(6, 0, 225),
+                data: arrData[2],
                 borderColor: "#ff3d71",
                 fill: false,
                 tension: 0.4,
             },
             {
-                data: randomDatapoints(6, 0, 225),
+                data: arrData[3],
                 borderColor: "#9b51e0",
                 fill: false,
                 tension: 0.4,
             },
             {
-                data: randomDatapoints(6, 0, 225),
+                data: arrData[4],
                 borderColor: "#39ad46",
                 fill: false,
                 tension: 0.4,
             },
             {
-                data: randomDatapoints(6, 0, 225),
+                data: arrData[5],
                 borderColor: "#ffc94d",
                 fill: false,
                 tension: 0.4,
@@ -131,8 +118,6 @@ $().ready(() => {
         });
     }
 
-    console.log(document.getElementById("123"));
-
     if (document.getElementById("datePicker")) {
         return new Lightpick({
             field: document.getElementById("datePicker"),
@@ -155,4 +140,8 @@ $().ready(() => {
             },
         });
     }
+}
+
+$().ready(() => {
+    createGraph(arrLabels, arrData)
 });
