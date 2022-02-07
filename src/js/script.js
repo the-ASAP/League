@@ -334,7 +334,3 @@ $().ready(() => {
     refreshScript()
 });
 
-
-
-
-
