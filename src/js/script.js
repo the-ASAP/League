@@ -38,7 +38,7 @@ const sortButtonsData = [
 ]
 
 let defaultSort = sortButtonsData[0].sort
-let defaultMethod = sortButtonsData[0].method
+let method = sortButtonsData[0].method
 let tagsArr = []
 
 // удаляем прелодер при загрузке страницы
@@ -107,7 +107,7 @@ function select(btn, content, activeClass, closeButton) {
         $(content).slideToggle();
     });
     $(document).on("mousedown", function (e) {
-        if (!$(btn).is(e.target) && $(btn).hasClass(activeClass)) {
+        if (!$(btn).is(e.target) && $(btn).hasClass(activeClass) && !$(content).is(e.target)) {
             $(btn).toggleClass(activeClass);
             $(content).slideToggle();
         }
@@ -191,10 +191,10 @@ const refreshScript = () => {
         const buttonId = $(this).attr('id')
         const { data } = sortButtonsData.find(item => item.id === buttonId)
         defaultSort = data.sort
-        defaultMethod = data.method
+        method = data.method
         const text = $(this).text().trim()
         $('.publication__button').text(text)
-        downloadContent({tag: tagsArr, sort: defaultSort, defaultMethod})
+        downloadContent({tag: tagsArr, sort: defaultSort, method})
     })
 
     const downloadContent = (data) => {
@@ -225,7 +225,7 @@ const refreshScript = () => {
             bxajaxid: "78376259d03e6438c84b77344bec69dc",
             tag: tagsArr, 
             sort: defaultSort, 
-            defaultMethod
+            method
         })
     })
     
@@ -245,7 +245,7 @@ const refreshScript = () => {
         const deleteIndex = tagsArr.indexOf(text)
         if(deleteIndex > -1) tagsArr.splice(deleteIndex, 1)
         $(this).remove()
-        downloadContent({tag: tagsArr, sort: defaultSort, defaultMethod})
+        downloadContent({tag: tagsArr, sort: defaultSort, method})
     })
 
     $('.tags__item').on('click', function(e) {
@@ -253,7 +253,7 @@ const refreshScript = () => {
         tagsArr.push(text)
         const component = `<button type="button" class="tags__button" onclick="">${text}</button>`
         $(".tags__filter").append(component)
-        downloadContent({tag: tagsArr, sort: defaultSort, defaultMethod})
+        downloadContent({tag: tagsArr, sort: defaultSort, method})
     })
 }
 const refreshSCarousel = () => {
