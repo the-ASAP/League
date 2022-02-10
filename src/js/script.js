@@ -222,7 +222,10 @@ const refreshScript = () => {
         const PAGEN_1 = $(this).attr('href').slice(-1)
         downloadContent({
             PAGEN_1,
-            bxajaxid: "78376259d03e6438c84b77344bec69dc"
+            bxajaxid: "78376259d03e6438c84b77344bec69dc",
+            tag: tagsArr, 
+            sort: defaultSort, 
+            defaultMethod
         })
     })
     
