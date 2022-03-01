@@ -386,6 +386,10 @@
 .nav__listitemdrop a{
     padding: 1rem 1rem 0;
 }
+.associationModal__ref:hover{
+    color: #434343;
+    transition: color .3s ease-in-out;
+}
 @media (max-width: 768px) {
     .breadcrumbs {
         display: none;
