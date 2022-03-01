@@ -345,7 +345,7 @@
 
 .nav__listitem:not(:last-child):after {
   content: "";
-  background-image: url(http://liga.asap-lp.ru/local/templates/leaugue/assets/img/icons/border.svg);
+  background-color: #BDBDBD;
   width: 1px;
   height: 50%;
   position: absolute;
