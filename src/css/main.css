@@ -371,6 +371,89 @@
   height: 0.25rem !important;
 }
 
+.nav__list {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.nav__listitem {
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.1rem 1rem;
+  cursor: pointer;
+  font-family: Inter;
+  font-size: 1rem;
+  line-height: 1.44;
+  text-align: center;
+}
+
+.nav__listitem:not(:last-child):after {
+  content: "";
+  background-image: url(http://liga.asap-lp.ru/local/templates/leaugue/assets/img/icons/border.svg);
+  width: 1px;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  right: 0;
+}
+
+.nav__listitem::before {
+  content: "";
+  width: 0;
+  height: 0.3rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  left: 1rem;
+  bottom: 0.8rem;
+  transition: width 200ms ease-in;
+}
+
+.nav__listitem:hover::before,
+.nav__listitem:focus::before {
+  width: 80%;
+}
+
+.nav__listitem:hover ul,
+.nav__listitem:focus ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav__listitemdrop {
+  position: absolute;
+  width: 100%;
+  top: 3rem;
+  padding: 0 0 1.25rem 0;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-in-out;
+  text-align: left;
+  z-index: 2;
+}
+
+.nav__listitemdrop a {
+  list-style: none;
+  padding: 1rem 1.875 rem 0;
+  border-radius: 2px;
+  transition: background-color 200ms ease-in-out;
+}
+
+.associationModal__ref {
+  font-size: 0.8rem;
+}
+
+.nav__listitemdrop a {
+  padding: 1rem 1rem 0;
+}
+
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;
