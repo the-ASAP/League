@@ -11,7 +11,7 @@ const sortButtonsData = [
             method: 'desc'
         }
     },
-    {   
+    {
         id: 'sortButton-2',
         title: 'Популярные',
         data: {
@@ -19,7 +19,7 @@ const sortButtonsData = [
             method: 'desc'
         }
     },
-    {   
+    {
         id: 'sortButton-3',
         title: 'Лучшие',
         data: {
@@ -27,7 +27,7 @@ const sortButtonsData = [
             method: 'desc'
         }
     },
-    {   
+    {
         id: 'sortButton-4',
         title: 'Старые',
         data: {
@@ -125,7 +125,7 @@ function hoverSelect(btn, content, activeClass, closeButton) {
         $(content).slideUp();
     });
     $(document).on("mousedown", function (e) {
-        if (!$(btn).is(e.target) && $(btn).hasClass(activeClass)) {
+        if (!$(btn).is(e.target) && !$(content).is(e.target) && $(btn).hasClass(activeClass)) {
             $(btn).toggleClass(activeClass);
             $(content).slideUp();
         }
@@ -165,6 +165,10 @@ const refreshScript = () => {
     select(".publication__button", ".publication__items", "publication__active");
     createYouTubeEmbedLink($(".video__button"), $(".video__image"));
     refreshSCarousel()
+    $('.associationModal__ref').on('click', function(e) {
+        e.preventDefault()
+        // console.log(this)
+    })
 
     let en = window.location.pathname.substring(0,3)
     if(en === '/en') $('.header__button').each((index, item) => $(item).toggleClass('header__button_active'))
@@ -179,7 +183,7 @@ const refreshScript = () => {
     $('.otherNews__more').on('click', function() {
         window.location.href = '/news'
     })
-    
+
     $('.navbar__item').first().on('click', function(e) {
         e.preventDefault()
     })
@@ -197,6 +201,10 @@ const refreshScript = () => {
         downloadContent({tag: tagsArr, sort: defaultSort, method})
     })
 
+    $(document).on('click', function(e) {
+        console.log(e.target)
+    })
+
     const downloadContent = (data) => {
         $.ajax({
             url: window.location.pathname,
@@ -212,23 +220,23 @@ const refreshScript = () => {
             })
         })
     }
-    
+
     $('.pagination__button a').each((index, item) => {
+        console.log(new URLSearchParams($(item).attr('href')).get('PAGEN_1'))
         $(item).removeAttr('onclick')
     })
 
     $(document).on('click', '.pagination__button a', function(e) {
         e.preventDefault()
-        const PAGEN_1 = $(this).attr('href').slice(-1)
         downloadContent({
-            PAGEN_1,
+            PAGEN_1: new URLSearchParams($(this).attr('href')).get('PAGEN_1'),
             bxajaxid: "78376259d03e6438c84b77344bec69dc",
-            tag: tagsArr, 
-            sort: defaultSort, 
+            tag: tagsArr,
+            sort: defaultSort,
             method
         })
     })
-    
+
     if(window.location.search) {
         let params = new URLSearchParams(window.location.search).get('tag')
         if(params) tagsArr = params.split(',')
@@ -336,4 +344,3 @@ const refreshSCarousel = () => {
 $().ready(() => {
     refreshScript()
 });
-
