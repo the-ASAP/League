@@ -92,6 +92,8 @@
         line-height: 1.44;
         letter-spacing: -0.015em;
         color: $lightGray;
+        display: flex;
+        align-items: center;
     }
 
     &__mainInfo {

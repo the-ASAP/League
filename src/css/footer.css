@@ -112,6 +112,8 @@
   line-height: 1.44;
   letter-spacing: -0.015em;
   color: var(--light-gray);
+  display: flex;
+  align-items: center;
 }
 
 .footerInfo__mainInfo {
