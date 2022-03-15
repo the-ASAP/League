@@ -312,7 +312,7 @@
 
 .breadcrumbs {
   position: absolute;
-  top: 10.75rem;
+  top: 106%;
   left: 0;
   display: flex;
   align-items: center;
@@ -391,6 +391,7 @@
   font-size: 1rem;
   line-height: 1.44;
   text-align: center;
+  color: var(--dark-gray);
 }
 
 .nav__listitem:not(:last-child):after {
@@ -983,6 +984,10 @@ input:-webkit-autofill:focus {
 @media (max-width: 768px) {
   html {
     font-size: 16px;
+  }
+
+  .nav__list {
+    overflow-x: scroll;
   }
 
   .breadcrumbs {

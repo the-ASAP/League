@@ -250,7 +250,7 @@
 
 .breadcrumbs {
     position: absolute;
-    top: 10.75rem;
+    top: 106%;
     left: 0;
     display: flex;
     align-items: center;
@@ -313,7 +313,7 @@
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;   
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .nav__listitem {
@@ -328,6 +328,7 @@
     font-size: 1rem;
     line-height: 1.44;
     text-align: center;
+    color: $darkGray;
 }
 .nav__listitem:not(:last-child):after{
     content: "";
@@ -391,6 +392,10 @@
     transition: color .3s ease-in-out;
 }
 @media (max-width: 768px) {
+    .nav__list {
+        overflow-x: scroll;
+    }
+
     .breadcrumbs {
         display: none;
     }
