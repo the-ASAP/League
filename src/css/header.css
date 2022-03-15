@@ -190,6 +190,11 @@
   color: var(--dark-gray);
 }
 
+.header__logo {
+  order: -1;
+  margin-right: 47rem;
+}
+
 .associationModal {
   position: absolute;
   top: 4rem;

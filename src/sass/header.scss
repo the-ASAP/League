@@ -177,6 +177,11 @@
             color: $darkGray;
         }
     }
+
+    &__logo {
+        order: -1;
+        margin-right: 47rem;
+    }
 }
 
 .associationModal {
