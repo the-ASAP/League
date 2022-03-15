@@ -312,7 +312,7 @@
 
 .breadcrumbs {
   position: absolute;
-  top: 10.75rem;
+  top: 106%;
   left: 0;
   display: flex;
   align-items: center;
@@ -1129,6 +1129,10 @@ input:-webkit-autofill:focus {
 @media (max-width: 768px) {
   html {
     font-size: 16px;
+  }
+
+  .nav__list {
+    overflow-x: scroll;
   }
 
   .breadcrumbs {
