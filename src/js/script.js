@@ -165,10 +165,10 @@ const refreshScript = () => {
     select(".publication__button", ".publication__items", "publication__active");
     createYouTubeEmbedLink($(".video__button"), $(".video__image"));
     refreshSCarousel()
-    $('.associationModal__ref').on('click', function(e) {
-        e.preventDefault()
-        // console.log(this)
-    })
+    // $('.associationModal__ref').on('click', function(e) {
+    //     e.preventDefault()
+    //     // console.log(this)
+    // })
 
     if (window.location.pathname.substring(0, 3) === '/en') {
         $('.header__button').each((index, item) => $(item).removeClass('header__button_active'))
@@ -206,10 +206,6 @@ const refreshScript = () => {
         const text = $(this).text().trim()
         $('.publication__button').text(text)
         downloadContent({tag: tagsArr, sort: defaultSort, method})
-    })
-
-    $(document).on('click', function(e) {
-        console.log(e.target)
     })
 
     const downloadContent = (data) => {

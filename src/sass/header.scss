@@ -328,6 +328,7 @@
     font-size: 1rem;
     line-height: 1.44;
     text-align: center;
+    color: $darkGray;
 }
 .nav__listitem:not(:last-child):after{
     content: "";
