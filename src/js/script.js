@@ -106,7 +106,7 @@ function select(btn, content, activeClass, closeButton) {
         $(btn).toggleClass(activeClass);
         $(content).slideToggle();
     });
-    $(document).on("mousedown", function (e) {
+    $(document).on("click", function (e) {
         if (!$(btn).is(e.target) && $(btn).hasClass(activeClass) && !$(content).is(e.target)) {
             $(btn).toggleClass(activeClass);
             $(content).slideToggle();
