@@ -382,12 +382,12 @@
 
 .nav__listitemdrop a {
     list-style: none;
-    padding: 1rem 1.875 rem 0;
+    padding: 1rem 1.875rem 0;
     border-radius: 2px;
     transition: background-color 200ms ease-in-out;
 }
 .associationModal__ref{
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 .nav__listitemdrop a{
     padding: 1rem 1rem 0;
@@ -398,7 +398,8 @@
 }
 @media (max-width: 768px) {
     .nav__list {
-        overflow-x: scroll;
+        // overflow-x: scroll;
+        display: none;
     }
 
     .breadcrumbs {
@@ -412,6 +413,7 @@
 
     .header__logo {
         order: -1;
+        margin: 0;
 
         img {
             width: 9.9375rem;
