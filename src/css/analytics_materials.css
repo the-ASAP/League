@@ -186,12 +186,13 @@
 .news__more {
   width: 32%;
   height: 32rem;
-  background-color: var(--main-green);
+  background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
   border-radius: 12px;
   padding: 1.875rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .news__more span {
@@ -199,6 +200,16 @@
   font-size: 1.5rem;
   line-height: 1.42;
   color: #f2f2f2;
+}
+
+.news__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .pagination {
