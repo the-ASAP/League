@@ -1047,6 +1047,7 @@ input:-webkit-autofill:focus {
   mix-blend-mode: darken;
   object-fit: contain;
   width: auto;
+  max-width: 15rem;
 }
 
 .partner__ref {
