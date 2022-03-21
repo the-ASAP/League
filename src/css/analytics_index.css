@@ -312,6 +312,11 @@ body {
 
 .content img {
   border-radius: 12px;
+  object-fit: contain;
+}
+
+.content img + img {
+  margin-top: 1rem;
 }
 
 .content__author,

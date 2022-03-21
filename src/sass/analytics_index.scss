@@ -177,6 +177,11 @@ body {
 
     img {
         border-radius: 12px;
+        object-fit: contain;
+    }
+
+    img + img {
+        margin-top: 1rem;
     }
 
     &__author,
