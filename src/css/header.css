@@ -447,6 +447,22 @@
     display: none;
   }
 
+  .header__language_modal {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    color: #fff;
+  }
+
+  .header__language_modal .header__button {
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  .header__language_modal .header__button_active {
+    opacity: 1;
+  }
+
   .header__menu_mobile {
     display: block;
     margin-left: 0.625rem;

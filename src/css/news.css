@@ -1002,25 +1002,4 @@
   .news__button_mobile:hover {
     background-color: var(--hover-green);
   }
-
-  .post:not(:first-child) .post__wrapper {
-    height: auto;
-  }
-
-  .post:not(:first-child) .post__image {
-    display: none;
-  }
-
-  .post:not(:first-child) .post__category {
-    margin: 0;
-    margin-right: 0.9375rem;
-    padding: 0.1875rem 0.75rem;
-    font-size: var(--golos-font);
-    font-size: 0.875rem;
-    line-height: 1.64;
-  }
-
-  .post:not(:first-child) .post__title {
-    margin-top: 0.5rem;
-  }
 }

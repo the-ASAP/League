@@ -427,6 +427,21 @@
 
     .header__language {
         display: none;
+
+        &_modal {
+            display: block;
+            position: absolute;
+            right: 1rem;
+            color: #fff;
+
+            & .header__button {
+                color: #fff;
+                opacity: 0.5;
+            }
+            & .header__button_active {
+                opacity: 1;
+            }
+        }
     }
 
     .header__menu_mobile {
