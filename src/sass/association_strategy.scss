@@ -29,7 +29,6 @@
 
 .content {
     p {
-        max-width: 87%;
         line-height: 1.67;
     }
 
@@ -225,6 +224,10 @@
     .video {
         margin-top: 3.125rem;
 
+        &_image {
+            height: 14rem;
+        }
+
         p {
             margin-top: 1.25rem;
         }
@@ -237,6 +240,10 @@
         }
         &__presentation {
             margin-top: 1.875rem;
+        }
+
+        li {
+            list-style: none;
         }
     }
     .document {

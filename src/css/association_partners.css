@@ -112,8 +112,23 @@
   margin-top: 1.125rem;
 }
 
+.modal__ref {
+  display: block;
+  color: var(--light-gray);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  margin-top: 1.125rem;
+}
+
+.modal__ref:first-child {
+  margin: 0;
+}
+
 .modal__burger {
   position: relative;
+  width: 50%;
+  display: flex;
 }
 
 .modal__burger::after {
@@ -147,19 +162,6 @@
   display: none;
 }
 
-.modal__ref {
-  display: block;
-  color: var(--light-gray);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  letter-spacing: -0.015em;
-  margin-top: 1.125rem;
-}
-
-.modal__ref:first-child {
-  margin: 0;
-}
-
 .modal__contacts {
   margin-top: 1.5rem;
 }
@@ -185,7 +187,7 @@
 }
 
 .activeHiddenRefs {
-  display: block;
+  display: flex;
 }
 
 .activeHiddenRefs::before {
@@ -914,6 +916,29 @@ input:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.upButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--main-green);
+  transform: rotate(180deg);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.upButton svg {
+  transform: scale(1.5);
+}
+
+.upButton_active {
+  opacity: 1;
+  visibility: visible;
+}
+
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;
@@ -1033,6 +1058,8 @@ input:-webkit-autofill:focus {
 .partner__header {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
 }
 
 .partner__picture {
@@ -1048,6 +1075,7 @@ input:-webkit-autofill:focus {
   object-fit: contain;
   width: auto;
   max-width: 15rem;
+  max-height: 7rem;
 }
 
 .partner__ref {
@@ -1055,6 +1083,8 @@ input:-webkit-autofill:focus {
   font-size: 1.125rem;
   line-height: 1.44;
   color: var(--main-green);
+  display: block;
+  margin-top: 1rem;
 }
 
 .partner__info {
@@ -1160,9 +1190,18 @@ input:-webkit-autofill:focus {
     display: none;
   }
 
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+  }
+
   .header__container {
-    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     width: 100%;
+    margin-top: 0;
   }
 
   .header__logo {
@@ -1409,9 +1448,5 @@ input:-webkit-autofill:focus {
 
   .partner:nth-child(3n+2) {
     margin: 0 0 1.25rem;
-  }
-
-  .partner__details {
-    display: none;
   }
 }

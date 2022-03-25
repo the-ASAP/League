@@ -770,6 +770,10 @@
 }
 
 @media (max-width: 768px) {
+  .meeting {
+    margin-top: 6rem;
+  }
+
   .meeting__all {
     display: none;
   }

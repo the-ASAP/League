@@ -50,8 +50,24 @@
         margin-top: 1.125rem;
     }
 
+
+    &__ref {
+        display: block;
+        color: $lightGray;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        letter-spacing: -0.015em;
+        margin-top: 1.125rem;
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+
     &__burger {
         position: relative;
+        width: 50%;
+        display: flex;
 
         &::after {
             content: "";
@@ -85,19 +101,6 @@
         display: none;
     }
 
-    &__ref {
-        display: block;
-        color: $lightGray;
-        font-size: 1.25rem;
-        line-height: 1.5;
-        letter-spacing: -0.015em;
-        margin-top: 1.125rem;
-
-        &:first-child {
-            margin: 0;
-        }
-    }
-
     &__contacts {
         margin-top: 1.5rem;
     }
@@ -123,7 +126,7 @@
 }
 
 .activeHiddenRefs {
-    display: block;
+    display: flex;
 
     &::before {
         transform: rotate(-45deg);
@@ -406,9 +409,18 @@
         display: none;
     }
 
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #fff;
+    }
+
     .header__container {
-        margin-top: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         width: 100%;
+        margin-top: 0;
     }
 
     .header__logo {

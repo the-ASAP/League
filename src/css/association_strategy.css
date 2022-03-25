@@ -93,7 +93,6 @@
 }
 
 .content p {
-  max-width: 87%;
   line-height: 1.67;
 }
 
@@ -309,6 +308,10 @@
     margin-top: 3.125rem;
   }
 
+  .video_image {
+    height: 14rem;
+  }
+
   .video p {
     margin-top: 1.25rem;
   }
@@ -321,6 +324,10 @@
 
   .mindmap__presentation {
     margin-top: 1.875rem;
+  }
+
+  .mindmap li {
+    list-style: none;
   }
 
   .document {

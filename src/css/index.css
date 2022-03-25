@@ -1539,6 +1539,10 @@
     line-height: 1.86;
   }
 
+  .meeting {
+    margin-top: 6rem;
+  }
+
   .meeting__all {
     display: none;
   }

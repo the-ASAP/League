@@ -225,7 +225,6 @@ const refreshScript = () => {
     }
 
     $('.pagination__button a').each((index, item) => {
-        console.log(new URLSearchParams($(item).attr('href')).get('PAGEN_1'))
         $(item).removeAttr('onclick')
     })
 
@@ -346,4 +345,41 @@ const refreshSCarousel = () => {
 
 $().ready(() => {
     refreshScript()
+
+    const UpButton = `
+        <button type="button" class="upButton">
+            <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.5303 5.53022L10.4696 4.46956L6.74994 8.18923L6.74994 -0.000113696L5.24994 -0.000113762L5.24994 8.18923L1.53027 4.46956L0.469614 5.53022L5.99994 11.0605L11.5303 5.53022Z"
+                    fill="white"
+                />
+            </svg>
+        </button>
+    `
+    $('body').append(UpButton)
+
+    $('.upButton').on('click', function () {
+        $('body,html').animate({ scrollTop: 0 }, 300);
+    })
+
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > document.documentElement.clientHeight) {
+            if (!$('.upButton').hasClass('upButton_active')) {
+                $('.upButton').addClass('upButton_active')
+            }
+        }
+        else {
+            if ($('.upButton').hasClass('upButton_active')) {
+                $('.upButton').removeClass('upButton_active')
+            }
+        }
+    })
 });

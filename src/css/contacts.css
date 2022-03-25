@@ -138,16 +138,25 @@
 }
 
 .departments {
+  width: 50%;
+}
+
+.container {
   margin-top: 3.75rem;
+  margin-bottom: 4.375rem;
   display: flex;
-  justify-content: space-between;
+  position: relative;
 }
 
 .department {
-  width: calc((100% - 1.25rem) / 2);
+  width: calc(100% - 1.25rem);
   background: var(--light-gray);
   border-radius: 12px;
   padding: 1.875rem;
+}
+
+.department + .department {
+  margin-top: 1.25rem;
 }
 
 .department__title {
@@ -204,10 +213,9 @@
 }
 
 .yandexMap {
-  margin-top: 3.75rem;
-  margin-bottom: 4.375rem;
-  height: 31.25rem;
+  height: 33.5rem;
   border-radius: 12px;
+  width: 50%;
 }
 
 @media (max-width: 768px) {

@@ -253,3 +253,26 @@ input {
 //         @extend %close-btn;
 //     }
 // }
+
+.upButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: $firstGreen;
+    transform: rotate(180deg);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    svg {
+        transform: scale(1.5);
+    }
+
+    &_active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -64,6 +64,8 @@
     &__header {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
     }
 
     &__picture {
@@ -79,6 +81,7 @@
         object-fit: contain;
         width: auto;
         max-width: 15rem;
+        max-height: 7rem;
     }
 
     &__ref {
@@ -86,6 +89,8 @@
         font-size: 1.125rem;
         line-height: 1.44;
         color: $firstGreen;
+        display: block;
+        margin-top: 1rem;
     }
 
     &__info {
@@ -130,10 +135,6 @@
 
         &:nth-child(3n + 2) {
             margin: 0 0 1.25rem;
-        }
-
-        &__details {
-            display: none;
         }
     }
 }

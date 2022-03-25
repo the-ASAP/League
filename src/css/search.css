@@ -59,6 +59,7 @@
 
 .search__content {
   margin-bottom: 9.0625rem;
+  padding-top: 10rem;
 }
 
 .search__form {
@@ -88,7 +89,41 @@
 .search__reset {
   position: absolute;
   bottom: 1.4375rem;
-  right: 0;
+  right: 1rem;
+}
+
+.search-page form {
+  width: fit-content;
+  position: relative;
+}
+
+font {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--dark-gray);
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+hr a {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--main-green);
+}
+
+small {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+br {
+  display: none;
 }
 
 .post {
