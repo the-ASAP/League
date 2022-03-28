@@ -93,7 +93,7 @@
 
 .post__title a {
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 1.3rem;
   line-height: 1.56;
   color: var(--dark-gray);
   -webkit-line-clamp: 3;
@@ -103,7 +103,7 @@
   -webkit-box-orient: vertical;
   /* Вертикальная ориентация */
   overflow: hidden;
-  height: 5rem;
+  height: 6rem;
 }
 
 .post__views {
