@@ -142,8 +142,8 @@
 }
 
 .container {
-  margin-top: 3.75rem;
-  margin-bottom: 4.375rem;
+  margin-top: 3.75rem !important;
+  margin-bottom: 4.375rem !important;
   display: flex;
   position: relative;
 }
