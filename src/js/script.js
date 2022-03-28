@@ -241,7 +241,14 @@ const refreshScript = () => {
 
     if(window.location.search) {
         let params = new URLSearchParams(window.location.search).get('tag')
-        if(params) tagsArr = params.split(',')
+        if (params) tagsArr = params.split(',')
+
+        if (tagsArr.length === 1) {
+            tagsArr.forEach(tag => {
+                $(".tags__list").html(tag)
+            })
+        }
+
         if(tagsArr.length) {
             tagsArr.forEach(tag => {
                 const component = `<button type="button" class="tags__button" onclick="">${tag}</button>`
@@ -382,4 +389,11 @@ $().ready(() => {
             }
         }
     })
+
+    $('.tags__item').on('click', function () {
+        const queryTag = $(this).attr('data-tag')
+        window.location.href = `http://liga.asap-lp.ru/association/association_joining.php?tag=${queryTag}`
+    })
+
+
 });
