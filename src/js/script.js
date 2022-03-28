@@ -274,6 +274,9 @@ const refreshScript = () => {
     })
 }
 const refreshSCarousel = () => {
+
+
+
     owlGallery(".carouselSocial", {
         dots: false,
         autoWidth: false,
