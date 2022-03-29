@@ -1320,7 +1320,7 @@ input:-webkit-autofill:focus {
   display: none;
 }
 
-.tags__item {
+.tags__oneItem {
   font-family: Inter;
   font-size: 1rem;
   line-height: 1.44;
@@ -1786,7 +1786,7 @@ input:-webkit-autofill:focus {
     top: 2.5rem;
   }
 
-  .tags__item {
+  .tags__oneItem {
     display: block;
   }
 }

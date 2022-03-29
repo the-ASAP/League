@@ -393,7 +393,7 @@ $().ready(() => {
         }
     })
 
-    $('.tags__item').on('click', function () {
+    $('.tags__oneItem').on('click', function () {
         const queryTag = $(this).attr('data-tag')
         window.location.href = `http://liga.asap-lp.ru/association/association_joining.php?tag=${queryTag}`
     })

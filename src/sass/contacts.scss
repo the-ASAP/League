@@ -254,6 +254,7 @@
     .departments {
         margin-top: 5.25rem;
         display: block;
+        width: 100%;
     }
     .department {
         width: 100%;
@@ -270,11 +271,18 @@
         }
 
         & + & {
-            margin-top: 3.25rem;
+            margin-top: 1.25rem;
         }
     }
     .yandexMap {
         margin-bottom: 0;
         height: 90vw;
+        width: 100%;
+        margin-top: 2.25rem;
+    }
+
+    .container {
+        max-width: 90%;
+        display: block;
     }
 }

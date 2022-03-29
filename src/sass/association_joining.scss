@@ -314,7 +314,7 @@
         display: none;
     }
 
-    &__item {
+    &__oneItem {
         font-family: Inter;
         font-size: 1rem;
         line-height: 1.44;
@@ -446,7 +446,7 @@
         &__items {
             top: 2.5rem;
         }
-        &__item {
+        &__oneItem {
             display: block;
         }
     }
