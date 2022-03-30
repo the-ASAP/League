@@ -249,7 +249,6 @@
 .event__text {
   display: block;
   margin-top: 1.25rem;
-  max-width: 70%;
   font-size: 1.125rem;
   line-height: 1.67;
 }
