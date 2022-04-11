@@ -362,6 +362,10 @@
   color: #fff;
 }
 
+.content img {
+  object-fit: contain;
+}
+
 .carouselEvent {
   margin-top: 2.5rem;
 }
