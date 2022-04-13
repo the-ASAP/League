@@ -63,9 +63,20 @@
 }
 
 .center {
-  background: var(--main-green);
+  background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
   border-radius: 12px;
   padding: 5.625rem 5.625rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.center__picture {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  left: 0;
+  top: -46%;
 }
 
 .center__info {

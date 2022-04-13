@@ -58,13 +58,24 @@
 }
 
 .center {
-    background: $firstGreen;
+    // background: $firstGreen;
+    background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
     border-radius: 12px;
     padding: 5.625rem 5.625rem 3rem;
+    position: relative;
+    overflow: hidden;
+
+    &__picture {
+        position: absolute;
+        z-index: -1;
+        object-fit: cover;
+        width: 100%;
+        left: 0;
+        top: -46%;
+    }
 
     &__info {
         display: flex;
-
         img {
             width: 10.5rem;
             height: 10.5rem;
@@ -328,8 +339,8 @@
                 width: 15rem;
                 font-size: 1.1rem;
             }
-        }   
-        
+        }
+
         &__information {
             padding-bottom: 2rem;
             a {
