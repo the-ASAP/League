@@ -353,6 +353,63 @@
   align-items: center;
 }
 
+.carouselEvent {
+  margin-top: 2.5rem;
+}
+
+.carouselEvent img {
+  border-radius: 15px;
+  height: 23.875rem;
+  object-fit: cover;
+}
+
+.carouselEvent__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.8125rem;
+}
+
+.carouselEvent__prev,
+.carouselEvent__next {
+  width: 3.1875rem;
+  height: 3.1875rem;
+  border: 1px solid var(--main-green);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.875rem;
+  transition: background-color 0.3s ease-in;
+}
+
+.carouselEvent__prev:hover,
+.carouselEvent__next:hover {
+  background-color: var(--main-green);
+}
+
+.carouselEvent__prev:hover svg path,
+.carouselEvent__next:hover svg path {
+  fill: var(--light-gray);
+}
+
+.carouselEvent__next {
+  transform: rotate(180deg);
+}
+
+.carouselEvent__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carouselEvent__signature {
+  display: block;
+  font-family: var(--golos-font);
+  font-size: 0.875rem;
+  font-weight: 1.14;
+  color: var(--dark-gray);
+  margin-top: 1.375rem;
+}
+
 @media (max-width: 768px) {
   .intro {
     margin-top: 3.75rem;
