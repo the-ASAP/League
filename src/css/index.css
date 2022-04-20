@@ -1822,8 +1822,4 @@
   .accordion__information {
     padding-bottom: 2rem;
   }
-
-  .accordion__information a {
-    display: none;
-  }
 }

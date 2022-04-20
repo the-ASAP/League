@@ -313,6 +313,7 @@ body {
 .content img {
   border-radius: 12px;
   object-fit: contain;
+  height: 100%;
 }
 
 .content img + img {
