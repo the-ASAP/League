@@ -110,6 +110,11 @@
 
 .center_mobile {
   display: none;
+  background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
+  border-radius: 12px;
+  padding: 5.625rem 5.625rem 3rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .content {
@@ -275,7 +280,6 @@
 
   .center_mobile {
     width: 100%;
-    background-color: var(--main-green);
     border-radius: 12px;
     padding: 1.875rem;
     display: flex;
@@ -288,6 +292,10 @@
     font-size: 1.5rem;
     line-height: 1.42;
     color: #f2f2f2;
+  }
+
+  .center__picture {
+    top: -30%;
   }
 
   .company {
