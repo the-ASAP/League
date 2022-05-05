@@ -1,385 +1,385 @@
-@import "mixins";
+@import 'mixins';
 
 .footer {
-    width: 100%;
-    padding: 2.9375rem 4rem 0;
-    background-color: $firstGreen;
+  width: 100%;
+  padding: 2.9375rem 4rem 0;
+  background-color: $firstGreen;
 
-    &__select {
-        margin-top: 1.125rem;
-        display: none;
+  &__select {
+    margin-top: 1.125rem;
+    display: none;
+  }
+
+  &__burger {
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 5px;
+      height: 1px;
+      position: absolute;
+      top: calc(50%);
+      background: $lightGray;
+      left: 139px;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease-in;
     }
 
-    &__burger {
-        position: relative;
-
-        &::after {
-            content: "";
-            width: 5px;
-            height: 1px;
-            position: absolute;
-            top: calc(50%);
-            background: $lightGray;
-            left: 139px;
-            transform: rotate(-45deg);
-            transition: transform 0.3s ease-in;
-        }
-
-        &::before {
-            content: "";
-            width: 5px;
-            height: 1px;
-            position: absolute;
-            top: calc(50%);
-            background: $lightGray;
-            left: 136px;
-            transform: rotate(45deg);
-            transition: transform 0.3s ease-in;
-        }
+    &::before {
+      content: '';
+      width: 5px;
+      height: 1px;
+      position: absolute;
+      top: calc(50%);
+      background: $lightGray;
+      left: 136px;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in;
     }
+  }
 
-    &__hiddenRefs {
-        margin-top: 1.125rem;
-        margin-left: 1rem;
-        overflow: hidden;
-        display: none;
+  &__hiddenRefs {
+    margin-top: 1.125rem;
+    margin-left: 1rem;
+    overflow: hidden;
+    display: none;
+  }
+
+  &__ref {
+    display: block;
+    color: $lightGray;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+    margin-top: 1.125rem;
+
+    &:first-child {
+      margin: 0;
     }
+  }
 
-    &__ref {
-        display: block;
-        color: $lightGray;
-        font-size: 1.25rem;
-        line-height: 1.5;
-        letter-spacing: -0.015em;
-        margin-top: 1.125rem;
+  &__activeHiddenRefs {
+    display: block;
 
-        &:first-child {
-            margin: 0;
-        }
+    &::before {
+      transform: rotate(-45deg);
     }
-
-    &__activeHiddenRefs {
-        display: block;
-
-        &::before {
-            transform: rotate(-45deg);
-        }
-        &::after {
-            transform: rotate(45deg);
-        }
+    &::after {
+      transform: rotate(45deg);
     }
+  }
 }
 
 .footerInfo {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3.5625rem;
+  border-bottom: 1px solid $lightGray;
+
+  &__logo {
     display: flex;
-    justify-content: space-between;
+  }
+
+  &__title {
+    margin-left: 1.25rem;
+    max-width: 9.1875rem;
+    font-family: Golos;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: -0.015em;
+    color: $lightGray;
+    display: flex;
     align-items: center;
-    padding-bottom: 3.5625rem;
-    border-bottom: 1px solid $lightGray;
+  }
 
-    &__logo {
-        display: flex;
-    }
-
-    &__title {
-        margin-left: 1.25rem;
-        max-width: 9.1875rem;
-        font-family: Golos;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1rem;
-        line-height: 1.44;
-        letter-spacing: -0.015em;
-        color: $lightGray;
-        display: flex;
-        align-items: center;
-    }
-
-    &__mainInfo {
-        font-weight: 500;
-        font-size: 1.25rem;
-        line-height: 1.15;
-        letter-spacing: -0.015em;
-        color: $lightGray;
-    }
+  &__mainInfo {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: $lightGray;
+  }
 }
 
 .form {
-    &__email {
-        display: flex;
-        margin-top: 0.9375rem;
-    }
+  &__email {
+    display: flex;
+    margin-top: 0.9375rem;
+  }
 }
 
 .footerForm {
-    &__title {
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.44;
-        letter-spacing: -0.015em;
-        color: $lightGray;
-    }
+  &__title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: -0.015em;
+    color: $lightGray;
+  }
 
-    &__inputText {
-        width: 80%;
-        height: 3rem;
-        border: 1px solid $lightGray;
-        border-right: none;
-        border-top-left-radius: 0.4375rem;
-        border-bottom-left-radius: 0.4375rem;
-        padding: 0.625rem;
-        color: $lightGray;
-        background-color: $firstGreen;
-        opacity: 0.6;
+  &__inputText {
+    width: 80%;
+    height: 3rem;
+    border: 1px solid $lightGray;
+    border-right: none;
+    border-top-left-radius: 0.4375rem;
+    border-bottom-left-radius: 0.4375rem;
+    padding: 0.625rem;
+    color: $lightGray;
+    background-color: $firstGreen;
+    opacity: 0.6;
 
-        &::placeholder {
-            color: $lightGray;
-            opacity: 0.6;
-        }
+    &::placeholder {
+      color: $lightGray;
+      opacity: 0.6;
     }
+  }
 
-    &__inputSubmit {
-        width: 20%;
-        height: 3rem;
-        border: 1px solid $lightGray;
-        border-left: none;
-        border-top-right-radius: 0.4375rem;
-        border-bottom-right-radius: 0.4375rem;
-        background-color: $firstGreen;
-        background-image: url("../img/icons/arrow.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        font-size: 0;
-        cursor: pointer;
-        opacity: 0.6;
-    }
+  &__inputSubmit {
+    width: 20%;
+    height: 3rem;
+    border: 1px solid $lightGray;
+    border-left: none;
+    border-top-right-radius: 0.4375rem;
+    border-bottom-right-radius: 0.4375rem;
+    background-color: $firstGreen;
+    background-image: url('../img/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    cursor: pointer;
+    opacity: 0.6;
+  }
 }
 
 .footerRefs {
-    margin-top: 2.1875rem;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 3.25rem;
-    border-bottom: 1px solid $lightGray;
+  margin-top: 2.1875rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3.25rem;
+  border-bottom: 1px solid $lightGray;
 
-    &__column {
-        width: 20%;
-    }
+  &__column {
+    width: 20%;
+  }
 
-    &__subtitle {
-        font-weight: 500;
-        font-size: 1.125rem;
-        line-height: 1.06;
-        color: $lightGray;
-        cursor: pointer;
-    }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.06;
+    color: $lightGray;
+    cursor: pointer;
+  }
 
-    &__text {
-        display: block;
-        font-size: 1rem;
-        line-height: 1.1875rem;
-        color: #f2f2f2;
-        cursor: pointer;
+  &__text {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    color: #f2f2f2;
+    cursor: pointer;
 
-        & + & {
-            margin-top: 0.9375rem;
-        }
+    & + & {
+      margin-top: 0.9375rem;
     }
+  }
 
-    &__subtitle + &__text {
-        margin-top: 1.4375rem;
-    }
-    &__text + &__subtitle {
-        margin-top: 3.25rem;
-    }
+  &__subtitle + &__text {
+    margin-top: 1.4375rem;
+  }
+  &__text + &__subtitle {
+    margin-top: 3.25rem;
+  }
 }
 
 .footerSocial {
-    padding: 1.875rem 0 2.125rem;
-    text-align: center;
-    padding-bottom: 2.125rem;
-    border-bottom: 1px solid $lightGray;
+  padding: 1.875rem 0 2.125rem;
+  text-align: center;
+  padding-bottom: 2.125rem;
+  border-bottom: 1px solid $lightGray;
 
-    &__title {
-        font-weight: 500;
-        font-size: 1rem;
-        line-height: 1.44;
-        letter-spacing: -0.015em;
-        color: $lightGray;
+  &__title {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: -0.015em;
+    color: $lightGray;
+  }
+
+  &__icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2.0625rem auto 0;
+
+    svg {
+      cursor: pointer;
     }
+  }
 
-    &__icons {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin: 2.0625rem auto 0;
-
-        svg {
-            cursor: pointer;
-        }
-    }
-
-    &__icon {
-        margin: 0 0.5938rem;
-    }
+  &__icon {
+    margin: 0 0.5938rem;
+  }
 }
 
 .license {
-    margin-top: 1.375rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 2.125rem;
+  margin-top: 1.375rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.125rem;
 
-    &__text {
-        max-width: 21.125rem;
-        font-size: 1rem;
-        line-height: 1.44;
-        letter-spacing: -0.015em;
-        color: $lightGray;
-    }
+  &__text {
+    max-width: 21.125rem;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: -0.015em;
+    color: $lightGray;
+  }
 
-    &__logo {
-        p {
-            font-family: Golos;
-            font-size: 1rem;
-            line-height: 1.44;
-            text-align: right;
-            letter-spacing: -0.015em;
-            color: $lightGray;
-        }
+  &__logo {
+    p {
+      font-family: Golos;
+      font-size: 1rem;
+      line-height: 1.44;
+      text-align: right;
+      letter-spacing: -0.015em;
+      color: $lightGray;
     }
+  }
 }
 
 @media (max-width: 768px) {
-    .footer {
-        padding: 3.125rem 1rem 0;
+  .footer {
+    padding: 3.125rem 1rem 0;
 
-        &__select {
-            display: block;
-        }
+    &__select {
+      display: block;
     }
-    .footerInfo {
-        display: block;
-        padding-bottom: 4.8125rem;
+  }
+  .footerInfo {
+    display: block;
+    padding-bottom: 4.8125rem;
 
-        &__mainInfo {
-            margin-top: 3.6875rem;
-            font-weight: 400;
-            line-height: 1.5;
+    &__mainInfo {
+      margin-top: 3.6875rem;
+      font-weight: 400;
+      line-height: 1.5;
 
-            & + & {
-                margin-top: 1.125rem;
-            }
-        }
-
-        &__title {
-            margin-left: 1.5625rem;
-            font-family: Golos;
-            font-weight: 500;
-            font-size: 0.875rem;
-            line-height: 1.36;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-        }
+      & + & {
+        margin-top: 1.125rem;
+      }
     }
 
-    .footerRefs__column {
-        width: 100%;
-        margin-top: 1.1875rem;
+    &__title {
+      margin-left: 1.5625rem;
+      font-family: Golos;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.36;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+    }
+  }
 
-        &:nth-child(3) {
-            display: none;
-        }
+  .footerRefs__column {
+    width: 100%;
+    margin-top: 1.1875rem;
+
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+
+  .footerForm {
+    margin-top: 3rem;
+
+    &__inputText {
+      width: 100%;
+      padding: 1.25rem;
     }
 
-    .footerForm {
-        margin-top: 3rem;
+    &__title {
+      font-family: Golos;
+      font-weight: 400;
+      line-height: 1.44;
+    }
+  }
 
-        &__inputText {
-            width: 100%;
-            padding: 1.25rem;
-        }
+  .footerRefs {
+    display: block;
+    margin-top: 2.3125rem;
+    padding-bottom: 2.625rem;
 
-        &__title {
-            font-family: Golos;
-            font-weight: 400;
-            line-height: 1.44;
-        }
+    &__text {
+      display: none;
     }
 
-    .footerRefs {
-        display: block;
-        margin-top: 2.3125rem;
-        padding-bottom: 2.625rem;
-
-        &__text {
-            display: none;
-        }
-
-        &__subtitle + &__text {
-            margin-top: 0;
-        }
-
-        &__text + &__subtitle {
-            margin-top: 1.1875rem;
-        }
-
-        &__subtitle {
-            font-weight: 400;
-            font-size: 1.25rem;
-            line-height: 1.5;
-            letter-spacing: -0.015em;
-        }
+    &__subtitle + &__text {
+      margin-top: 0;
     }
 
-    .footerSocial {
-        padding: 2.8125rem 0 2.5rem;
-        text-align: left;
-
-        &__title {
-            font-family: Golos;
-            font-weight: 500;
-            font-size: 1rem;
-            line-height: 1.44;
-            letter-spacing: -0.015em;
-            text-transform: uppercase;
-        }
-
-        &__icons {
-            width: 19.875rem;
-            display: block;
-            margin: 2.625rem 0 0;
-        }
-
-        &__icon {
-            margin: 0 1.1875rem 1.5rem 0;
-        }
+    &__text + &__subtitle {
+      margin-top: 1.1875rem;
     }
 
-    .license {
-        margin-top: 1.875rem;
-        padding-bottom: 2.625rem;
-
-        &__text {
-            width: 13.875rem;
-            font-family: Golos;
-            font-weight: 400;
-            font-size: 0.75rem;
-            line-height: 1.67;
-        }
-
-        &__logo {
-            p {
-                font-size: 0.625rem;
-                margin-bottom: 0.5625rem;
-            }
-            svg {
-                width: 5rem;
-                height: 1.125rem;
-            }
-        }
+    &__subtitle {
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      letter-spacing: -0.015em;
     }
+  }
+
+  .footerSocial {
+    padding: 2.8125rem 0 2.5rem;
+    text-align: left;
+
+    &__title {
+      font-family: Golos;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.44;
+      letter-spacing: -0.015em;
+      text-transform: uppercase;
+    }
+
+    &__icons {
+      width: 19.875rem;
+      display: block;
+      margin: 2.625rem 0 0;
+    }
+
+    &__icon {
+      margin: 0 1.1875rem 1.5rem 0;
+    }
+  }
+
+  .license {
+    margin-top: 1.875rem;
+    padding-bottom: 2.625rem;
+
+    &__text {
+      width: 13.875rem;
+      font-family: Golos;
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 1.67;
+    }
+
+    &__logo {
+      p {
+        font-size: 0.625rem;
+        margin-bottom: 0.5625rem;
+      }
+      svg {
+        width: 5rem;
+        height: 1.125rem;
+      }
+    }
+  }
 }

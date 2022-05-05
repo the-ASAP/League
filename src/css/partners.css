@@ -28,7 +28,7 @@
 .modal__close::after,
 .modal__close::before {
   transition: background-color 0.3s;
-  content: "";
+  content: '';
   width: 100%;
   height: 1px;
   background-color: #000000;
@@ -84,7 +84,7 @@
 .modal__close::after,
 .modal__close::before {
   transition: background-color 0.3s;
-  content: "";
+  content: '';
   width: 100%;
   height: 1px;
   background-color: #000000;
@@ -188,7 +188,7 @@
 }
 
 .navbar__item:after {
-  content: "";
+  content: '';
   background-image: url(../img/icons/border.svg);
   width: 1px;
   height: 20px;
@@ -229,7 +229,7 @@
 .modal__close::after,
 .modal__close::before {
   transition: background-color 0.3s;
-  content: "";
+  content: '';
   width: 100%;
   height: 1px;
   background-color: #000000;
@@ -339,7 +339,7 @@
   border-top-right-radius: 0.4375rem;
   border-bottom-right-radius: 0.4375rem;
   background-color: #39ad46;
-  background-image: url("../img/icons/arrow.svg");
+  background-image: url('../img/icons/arrow.svg');
   background-repeat: no-repeat;
   background-position: center;
   font-size: 0;
@@ -455,8 +455,8 @@
 }
 
 @font-face {
-  font-family: "Golos";
-  src: url("../fonts/Golos-Text_Regular.woff2") format("woff2");
+  font-family: 'Golos';
+  src: url('../fonts/Golos-Text_Regular.woff2') format('woff2');
 }
 
 html {
@@ -575,7 +575,7 @@ blockquote {
 }
 
 blockquote::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;

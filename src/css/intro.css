@@ -48,7 +48,7 @@
   margin-top: 3.375rem;
   width: 15.5rem;
   height: 3.5625rem;
-  background-color: #39AD46;
+  background-color: #39ad46;
   border-radius: 0.375rem;
   color: #f2f2f2;
   font-family: Inter;
@@ -95,7 +95,7 @@
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.625rem;
-  color: #27AE60;
+  color: #27ae60;
 }
 
 .desc__text {
@@ -104,14 +104,19 @@
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.1875rem;
-  color: #4F4F4F;
+  color: #4f4f4f;
   margin-top: 0.5625rem;
 }
 
 @media (max-width: 768px) {
   .intro__image {
     margin-top: 1.875rem;
-    background: linear-gradient(180deg, rgba(34, 43, 69, 0.96) -18.88%, rgba(57, 173, 70, 0) 128.72%), url("../img/forest_mobile.png");
+    background: linear-gradient(
+        180deg,
+        rgba(34, 43, 69, 0.96) -18.88%,
+        rgba(57, 173, 70, 0) 128.72%
+      ),
+      url('../img/forest_mobile.png');
     background-size: 100%;
     background: cover;
     width: 100%;
@@ -136,7 +141,7 @@
     font-size: 42px;
     line-height: 1.14;
     height: 100%;
-    color: #F2F2F2;
+    color: #f2f2f2;
   }
 
   .intro__infoBlock {

@@ -1,89 +1,89 @@
-@import "media";
-@import "mixins";
-@import "root";
-@import "header";
-@import "footer";
+@import 'media';
+@import 'mixins';
+@import 'root';
+@import 'header';
+@import 'footer';
 
 @font-face {
-    font-family: "Golos";
-    src: url("../fonts/Golos-Text_Regular.woff2") format("woff2");
+  font-family: 'Golos';
+  src: url('../fonts/Golos-Text_Regular.woff2') format('woff2');
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: $font; // FF MAIN
-    cursor: default;
-    color: $gen;
+  font-family: $font; // FF MAIN
+  cursor: default;
+  color: $gen;
 }
 
 section {
-    position: relative;
+  position: relative;
 }
 
 h1 {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-    color: $darkGray;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  color: $darkGray;
 }
 
 h2 {
-    font-family: Inter;
-    font-style: normal;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.37;
+  color: $darkGray;
+
+  @media (max-width: 768px) {
     font-weight: 400;
-    font-size: 2rem;
-    line-height: 1.37;
-    color: $darkGray;
+    font-size: 1.875rem;
 
-    @media (max-width: 768px) {
-        font-weight: 400;
-        font-size: 1.875rem;
-
-        color: $extraGray;
-    }
+    color: $extraGray;
+  }
 }
 
 h3 {
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 1.42;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.42;
 
-    color: $darkGray;
+  color: $darkGray;
 }
 
 h4 {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.125rem;
-    line-height: 2.22;
-    letter-spacing: 0.02em;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 2.22;
+  letter-spacing: 0.02em;
 
-    color: $darkGray;
+  color: $darkGray;
 }
 
 p {
-    font-family: Inter;
-    font-size: 1.125rem;
-    line-height: 1.44;
+  font-family: Inter;
+  font-size: 1.125rem;
+  line-height: 1.44;
 
-    color: $darkGray;
+  color: $darkGray;
 }
 
 span {
-    font-family: Inter;
+  font-family: Inter;
 }
 
 // ul {
@@ -91,140 +91,140 @@ span {
 // }
 
 .wrapper {
+  margin: 0 auto;
+  max-width: 83.75rem;
+  position: relative;
+  height: 100%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
+  &_map {
     margin: 0 auto;
     max-width: 83.75rem;
     position: relative;
     height: 100%;
 
     @media (max-width: 768px) {
-        width: 90%;
+      width: 100%;
     }
+  }
 
-    &_map {
-        margin: 0 auto;
-        max-width: 83.75rem;
-        position: relative;
-        height: 100%;
+  &_middle {
+    margin: 0 auto;
+    max-width: 65%;
+    position: relative;
+    height: 100%;
 
-        @media (max-width: 768px) {
-            width: 100%;
-        }
+    @media (max-width: 768px) {
+      max-width: 100%;
     }
+  }
 
-    &_middle {
-        margin: 0 auto;
-        max-width: 65%;
-        position: relative;
-        height: 100%;
+  &_activity {
+    margin: 0 auto;
+    max-width: 55rem;
+    position: relative;
+    height: 100%;
 
-        @media (max-width: 768px) {
-            max-width: 100%;
-        }
+    @media (max-width: 768px) {
+      max-width: 90%;
     }
+  }
 
-    &_activity {
-        margin: 0 auto;
-        max-width: 55rem;
-        position: relative;
-        height: 100%;
+  &_fullPhone {
+    margin: 0 auto;
+    max-width: 83.75rem;
+    position: relative;
+    height: 100%;
 
-        @media (max-width: 768px) {
-            max-width: 90%;
-        }
+    @media (max-width: 1340px) {
+      max-width: 100%;
     }
+  }
 
-    &_fullPhone {
-        margin: 0 auto;
-        max-width: 83.75rem;
-        position: relative;
-        height: 100%;
+  &_event {
+    width: 41.25rem;
+    position: relative;
+    margin: 0 auto;
 
-        @media (max-width: 1340px) {
-            max-width: 100%;
-        }
+    @media (max-width: 768px) {
+      width: 90%;
     }
-
-    &_event {
-        width: 41.25rem;
-        position: relative;
-        margin: 0 auto;
-
-        @media (max-width: 768px) {
-            width: 90%;
-        }
-    }
+  }
 }
 
 a {
-    font-family: Inter;
-    color: $accent;
-    display: inline-block;
-    text-decoration: none;
+  font-family: Inter;
+  color: $accent;
+  display: inline-block;
+  text-decoration: none;
 }
 
 svg {
-    min-height: 1rem;
-    // height: 1rem;
+  min-height: 1rem;
+  // height: 1rem;
 }
 
 textarea,
 button,
 input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font-family: Inter;
-    border: none;
-    background: none;
-    outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: Inter;
+  border: none;
+  background: none;
+  outline: none;
 
-    &[disabled] {
-        cursor: default;
-        opacity: 0.7;
-    }
+  &[disabled] {
+    cursor: default;
+    opacity: 0.7;
+  }
 }
 
 span {
-    font-family: Inter;
+  font-family: Inter;
 }
 
 blockquote {
-    font-family: Inter;
-    font-size: 1.125rem;
-    line-height: 1.44;
-    color: $firstGreen;
-    position: relative;
-    padding-left: 1.875rem;
+  font-family: Inter;
+  font-size: 1.125rem;
+  line-height: 1.44;
+  color: $firstGreen;
+  position: relative;
+  padding-left: 1.875rem;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 2px;
-        height: 100%;
-        background-color: $firstGreen;
-        border-radius: 1px;
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: $firstGreen;
+    border-radius: 1px;
+  }
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 // убирает цвет автокомплита у инпута
 input {
-    &:-webkit-autofill,
-    &:-webkit-autofill:hover,
-    &:-webkit-autofill:focus {
-        font-size: 1rem;
-        -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-        transition: background-color 5000s ease-in-out 0s;
-    }
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    font-size: 1rem;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 }
 
 // Шаблон для модального окна
@@ -255,24 +255,24 @@ input {
 // }
 
 .upButton {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    background-color: $firstGreen;
-    transform: rotate(180deg);
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: $firstGreen;
+  transform: rotate(180deg);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
 
-    svg {
-        transform: scale(1.5);
-    }
+  svg {
+    transform: scale(1.5);
+  }
 
-    &_active {
-        opacity: 1;
-        visibility: visible;
-    }
+  &_active {
+    opacity: 1;
+    visibility: visible;
+  }
 }

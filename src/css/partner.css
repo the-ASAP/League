@@ -128,7 +128,7 @@
 }
 
 .content li::before {
-  content: "";
+  content: '';
   width: 9px;
   height: 9px;
   background-color: var(--main-green);
