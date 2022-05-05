@@ -2,6 +2,8 @@ const createSortButton = (text, id) => {
     return `<button type="button" id="${id}" class="publication__item">${text}</button>`
 }
 
+//fjrnjrn
+
 const sortButtonsData = [
     {
         id: 'sortButton-1',
