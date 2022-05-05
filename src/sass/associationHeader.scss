@@ -1,71 +1,71 @@
-@import "root";
+@import 'root';
 
 .intro {
-    margin-top: 4.3125rem;
+  margin-top: 4.3125rem;
 
-    &__info {
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
+  &__info {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
 
-    &__title {
-        font-weight: 400;
-        font-size: 3.5625rem;
-        line-height: 1.23;
-        color: $darkGray;
-    }
+  &__title {
+    font-weight: 400;
+    font-size: 3.5625rem;
+    line-height: 1.23;
+    color: $darkGray;
+  }
 }
 
 .association {
-    display: flex;
-    // flex-wrap: wrap;
-    overflow: scroll;
-    padding-bottom: 1.5625rem;
-    border-bottom: 1px solid #bdbdbd;
-    margin-top: 3.125rem;
+  display: flex;
+  // flex-wrap: wrap;
+  overflow: scroll;
+  padding-bottom: 1.5625rem;
+  border-bottom: 1px solid #bdbdbd;
+  margin-top: 3.125rem;
 
-    &__button {
-        height: 3.4375rem;
-        border-radius: 5px;
-        border: 1px solid #bdbdbd;
-        padding: 0.5625rem 2rem;
-        margin-right: 0.9375rem;
-        font-family: $golosFont;
-        font-size: 1rem;
-        line-height: 1.44;
-        color: $midGray;
-        transition: all 0.3s ease-in;
-        margin-bottom: 0.9375rem;
-        white-space: nowrap;
+  &__button {
+    height: 3.4375rem;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+    padding: 0.5625rem 2rem;
+    margin-right: 0.9375rem;
+    font-family: $jostFont;
+    font-size: 1rem;
+    line-height: 1.44;
+    color: $midGray;
+    transition: all 0.3s ease-in;
+    margin-bottom: 0.9375rem;
+    white-space: nowrap;
 
-        &:hover {
-            background-color: $firstGreen;
-            color: #fff;
-            border-color: $firstGreen;
-        }
+    &:hover {
+      background-color: $firstGreen;
+      color: #fff;
+      border-color: $firstGreen;
     }
+  }
 }
 
 @media (max-width: 768px) {
-    .intro {
-        margin-top: 3.75rem;
+  .intro {
+    margin-top: 3.75rem;
 
-        &__title {
-            font-size: 2.25rem;
-            line-height: 1.39;
-        }
+    &__title {
+      font-size: 2.25rem;
+      line-height: 1.39;
     }
+  }
 
-    .association {
-        margin-top: 1.9375rem;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        overflow-x: scroll;
+  .association {
+    margin-top: 1.9375rem;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    overflow-x: scroll;
 
-        &__button {
-            font-size: 1.125rem;
-            line-height: 1.44;
-        }
+    &__button {
+      font-size: 1.125rem;
+      line-height: 1.44;
     }
+  }
 }

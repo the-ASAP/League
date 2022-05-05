@@ -10,6 +10,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 :root {
@@ -22,6 +23,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 .post {
@@ -68,7 +70,7 @@
   background-color: var(--second-green);
   padding: 0.1875rem 0.75rem;
   border-radius: 4px;
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   color: #fff;
   font-size: 0.875rem;
   line-height: 1.64;
@@ -112,7 +114,7 @@
 }
 
 .post__number {
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-size: 1rem;
   line-height: 1.44;
   letter-spacing: -1.5%;
@@ -122,7 +124,7 @@
 }
 
 .post__date {
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-size: 1rem;
   line-height: 1.44;
   letter-spacing: -1.5%;

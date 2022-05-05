@@ -80,7 +80,7 @@
     }
     &__date,
     &__count {
-        font-family: $golosFont;
+        font-family: $jostFont;
         color: #bdbdbd;
         margin-right: 2.0625rem;
     }
@@ -91,7 +91,7 @@
     &__tag {
         background: $firstGreen;
         border-radius: 4px;
-        font-family: $golosFont;
+        font-family: $jostFont;
         font-size: 0.875rem;
         line-height: 1.64;
         color: #fff;
@@ -207,7 +207,7 @@
     }
     &__signature {
         display: block;
-        font-family: $golosFont;
+        font-family: $jostFont;
         font-size: 0.875rem;
         font-weight: 1.14;
         color: $darkGray;

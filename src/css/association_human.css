@@ -10,6 +10,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 /*Кнопка меню*/
@@ -28,6 +29,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 /*Кнопка меню*/
@@ -46,6 +48,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 :root {
@@ -58,6 +61,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 .modal {
@@ -477,6 +481,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 /*Кнопка меню*/
@@ -736,6 +741,11 @@
 @font-face {
   font-family: "Golos";
   src: url("../fonts/Golos-Text_Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("../fonts/Jost-Regular.woff2") format("woff2");
 }
 
 html {

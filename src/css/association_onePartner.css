@@ -10,6 +10,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 /*Кнопка меню*/
@@ -154,7 +155,7 @@
 }
 
 .documents__title {
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-weight: 500;
   font-size: 1.625rem;
   line-height: 1.15;
@@ -185,7 +186,7 @@
 }
 
 .document__title {
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-size: 0.875rem;
   line-height: 1.14;
   max-width: 23.6875rem;

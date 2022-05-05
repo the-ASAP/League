@@ -8,6 +8,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 .intro {
@@ -41,7 +42,7 @@
   border: 1px solid #bdbdbd;
   padding: 0.5625rem 2rem;
   margin-right: 0.9375rem;
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-size: 1rem;
   line-height: 1.44;
   color: var(--mid-gray);

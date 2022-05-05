@@ -10,6 +10,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 /*Кнопка меню*/
@@ -28,6 +29,7 @@
   --light-gray: #f2f2f2;
   --extra-gray: #333;
   --golos-font: Golos;
+  --jost-font: Jost;
 }
 
 .post {
@@ -74,7 +76,7 @@
   background-color: var(--second-green);
   padding: 0.1875rem 0.75rem;
   border-radius: 4px;
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   color: #fff;
   font-size: 0.875rem;
   line-height: 1.64;
@@ -118,7 +120,7 @@
 }
 
 .post__number {
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-size: 1rem;
   line-height: 1.44;
   letter-spacing: -1.5%;
@@ -128,7 +130,7 @@
 }
 
 .post__date {
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-size: 1rem;
   line-height: 1.44;
   letter-spacing: -1.5%;
@@ -303,7 +305,7 @@ body {
 
 .event__date,
 .event__count {
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   color: #bdbdbd;
   margin-right: 2.0625rem;
 }
@@ -311,7 +313,7 @@ body {
 .event__tag {
   background: #27ae60;
   border-radius: 4px;
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-size: 0.875rem;
   line-height: 1.64;
   color: #fff;
@@ -409,7 +411,7 @@ body {
 }
 
 .content__source_ref {
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1rem;
@@ -492,7 +494,7 @@ body {
 
 .carouselEvent__signature {
   display: block;
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-size: 0.875rem;
   font-weight: 1.14;
   color: var(--dark-gray);
@@ -504,7 +506,7 @@ body {
 }
 
 .documents__title {
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-weight: 500;
   font-size: 1.625rem;
   line-height: 1.15;
@@ -607,7 +609,7 @@ body {
 
 .carouselOther__signature {
   display: block;
-  font-family: var(--golos-font);
+  font-family: var(--jost-font);
   font-size: 0.875rem;
   font-weight: 1.14;
   color: var(--dark-gray);
