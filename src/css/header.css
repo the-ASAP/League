@@ -345,7 +345,6 @@
   width: 100%;
   padding: 1.1rem 1rem;
   cursor: pointer;
-  font-family: Inter;
   font-size: 1rem;
   line-height: 1.44;
   text-align: center;
@@ -354,7 +353,7 @@
 
 .nav__listitem:not(:last-child):after {
   content: "";
-  background-color: #BDBDBD;
+  background-color: #bdbdbd;
   width: 1px;
   height: 50%;
   position: absolute;
