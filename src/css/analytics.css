@@ -32,7 +32,7 @@
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   color: var(--dark-gray);
-  font-family: Inter;
+  font-family: var(--jost-font);
   line-height: 1.125em;
 }
 
@@ -418,7 +418,7 @@
 }
 
 .customCheckbox + label {
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-weight: bold;
   font-size: 0.875rem;
   line-height: 1.36;

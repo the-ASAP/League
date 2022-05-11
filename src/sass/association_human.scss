@@ -1,195 +1,195 @@
 @import "main";
 
 .intro {
-    margin-top: 4.6875rem;
+  margin-top: 4.6875rem;
 
-    &__info {
-        position: relative;
-    }
+  &__info {
+    position: relative;
+  }
 
-    &__title {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 2.625rem;
-        line-height: 3.125rem;
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.625rem;
+    line-height: 3.125rem;
 
-        color: $darkGray;
-    }
+    color: $darkGray;
+  }
 }
 
 .return {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $firstGreen;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+    margin-right: 1.25rem;
+
     display: flex;
+    justify-content: center;
     align-items: center;
+  }
 
-    &__button {
-        width: 50px;
-        height: 50px;
-        border: 1px solid $firstGreen;
-        border-radius: 50%;
-        transition: all 0.2s ease-in;
-        margin-right: 1.25rem;
+  &__button:hover {
+    background-color: $firstGreen;
+    border: 1px solid $firstGreen;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    svg {
+      path {
+        fill: #fff;
+      }
     }
+  }
 
-    &__button:hover {
-        background-color: $firstGreen;
-        border: 1px solid $firstGreen;
+  &__text {
+    font-family: $jostFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
 
-        svg {
-            path {
-                fill: #fff;
-            }
-        }
-    }
-
-    &__text {
-        font-family: Inter;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 0.875rem;
-        line-height: 1.1875rem;
-
-        color: $midGray;
-    }
+    color: $midGray;
+  }
 }
 
 .human {
-    display: flex;
-    margin-top: 3.125rem;
+  display: flex;
+  margin-top: 3.125rem;
 
-    &__name {
-        font-size: 2rem;
-        line-height: 1.37;
-        font-weight: 400;
-    }
+  &__name {
+    font-size: 2rem;
+    line-height: 1.37;
+    font-weight: 400;
+  }
 
-    &__picture {
-        width: 26.875rem;
-        height: 31.1875rem;
-        object-fit: cover;
-        border-radius: 12px;
-        margin-right: 4.75rem;
-    }
+  &__picture {
+    width: 26.875rem;
+    height: 31.1875rem;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 4.75rem;
+  }
 
-    &__info {
-        max-width: 29.5rem;
-        margin-top: 0.3125rem;
-    }
+  &__info {
+    max-width: 29.5rem;
+    margin-top: 0.3125rem;
+  }
 
-    &__position {
-        margin-top: 1.25rem;
-        font-size: 1.125rem;
-        line-height: 1.67;
-        font-weight: 400;
-    }
+  &__position {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    font-weight: 400;
+  }
 
-    &__text {
-        margin-top: 1.25rem;
-        line-height: 1.67;
-    }
+  &__text {
+    margin-top: 1.25rem;
+    line-height: 1.67;
+  }
 
-    &__textPhone {
-        margin-top: 2.1875rem;
-        line-height: 1.67;
-    }
+  &__textPhone {
+    margin-top: 2.1875rem;
+    line-height: 1.67;
+  }
 
-    &__textEmail {
-        margin-top: 2.5rem;
-        line-height: 1.67;
-    }
+  &__textEmail {
+    margin-top: 2.5rem;
+    line-height: 1.67;
+  }
 
-    &__phone,
-    &__email {
-        margin-top: 0.5625rem;
-        color: $firstGreen;
-        font-size: 1.125rem;
-        line-height: 1.67;
-    }
+  &__phone,
+  &__email {
+    margin-top: 0.5625rem;
+    color: $firstGreen;
+    font-size: 1.125rem;
+    line-height: 1.67;
+  }
 }
 
 .progress {
-    margin-top: 3.75rem;
-    padding: 2.5rem 2.875rem 2.875rem;
-    background-color: $lightGray;
-    border-radius: 8px;
-    margin-bottom: 5rem;
+  margin-top: 3.75rem;
+  padding: 2.5rem 2.875rem 2.875rem;
+  background-color: $lightGray;
+  border-radius: 8px;
+  margin-bottom: 5rem;
 
-    &__title {
-        line-height: 1.25;
+  &__title {
+    line-height: 1.25;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+
+  &__item {
+    list-style: none;
+    max-width: 43%;
+    padding-left: 1.5rem;
+    position: relative;
+    font-family: $jostFont;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    margin-bottom: 1.25rem;
+
+    &::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: $firstGreen;
+      position: absolute;
+      left: 0;
+      top: 8px;
     }
-
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 2.5rem;
-    }
-
-    &__item {
-        list-style: none;
-        max-width: 43%;
-        padding-left: 1.5rem;
-        position: relative;
-        font-family: Inter;
-        font-size: 1.125rem;
-        line-height: 1.67;
-        margin-bottom: 1.25rem;
-
-        &::before {
-            content: "";
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background-color: $firstGreen;
-            position: absolute;
-            left: 0;
-            top: 8px;
-        }
-    }
+  }
 }
 
 @media (max-width: 768px) {
-    .human {
-        display: block;
+  .human {
+    display: block;
 
-        &__picture {
-            width: 100%;
-            height: 90vw;
-            margin: 0;
-        }
-        &__info {
-            max-width: 100%;
-        }
-        &__name {
-            margin-top: 2.125rem;
-        }
-        &__position {
-            margin-top: 1rem;
-        }
-        &__text {
-            margin-top: 1rem;
-        }
-        &__textEmail {
-            margin-top: 1.25rem;
-        }
-        &__textPhone {
-            margin-top: 1.375rem;
-        }
+    &__picture {
+      width: 100%;
+      height: 90vw;
+      margin: 0;
     }
-    .progress {
-        margin-top: 2rem;
-        padding: 1.75rem 1.75rem 3.125rem 1rem;
+    &__info {
+      max-width: 100%;
+    }
+    &__name {
+      margin-top: 2.125rem;
+    }
+    &__position {
+      margin-top: 1rem;
+    }
+    &__text {
+      margin-top: 1rem;
+    }
+    &__textEmail {
+      margin-top: 1.25rem;
+    }
+    &__textPhone {
+      margin-top: 1.375rem;
+    }
+  }
+  .progress {
+    margin-top: 2rem;
+    padding: 1.75rem 1.75rem 3.125rem 1rem;
 
-        &__items {
-            display: block;
-            margin-top: 0;
-        }
-        &__item {
-            max-width: 100%;
-            margin-bottom: 2.5rem;
-        }
+    &__items {
+      display: block;
+      margin-top: 0;
     }
+    &__item {
+      max-width: 100%;
+      margin-bottom: 2.5rem;
+    }
+  }
 }

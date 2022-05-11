@@ -21,7 +21,7 @@
 }
 
 .intro__title {
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-style: normal;
   font-weight: 500;
   font-size: 2.625rem;
@@ -56,7 +56,7 @@
 }
 
 .return__text {
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.36;
@@ -213,7 +213,7 @@
 .accordion__information a {
   margin-top: 0.875rem;
   margin-bottom: 2.0625rem;
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.44;

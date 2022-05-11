@@ -176,7 +176,7 @@
 .header__button {
   height: 1.4375rem;
   border: none;
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-size: 1rem;
   line-height: 1.44;
   letter-spacing: -0.015em;
@@ -247,7 +247,7 @@
   justify-content: center;
   height: 1.25rem;
   width: 100%;
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-size: 1rem;
   line-height: 1.44;
   text-align: center;
@@ -321,7 +321,7 @@
   font-size: 0.875rem !important;
   line-height: 1.36;
   color: var(--dark-gray);
-  font-family: Inter !important;
+  font-family: var(--jost-font) !important;
 }
 
 .breadcrumbs__circle {
@@ -345,7 +345,7 @@
   width: 100%;
   padding: 1.1rem 1rem;
   cursor: pointer;
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-size: 1rem;
   line-height: 1.44;
   text-align: center;
@@ -354,7 +354,7 @@
 
 .nav__listitem:not(:last-child):after {
   content: "";
-  background-color: #BDBDBD;
+  background-color: #bdbdbd;
   width: 1px;
   height: 50%;
   position: absolute;

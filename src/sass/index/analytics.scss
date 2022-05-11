@@ -1,304 +1,304 @@
 @import "lightpick";
 
 .analytics {
-    margin-top: 6.25rem;
+  margin-top: 6.25rem;
 
-    &__info {
-        width: 100%;
-        display: flex;
-        margin-top: 2.875rem;
-        flex-wrap: wrap;
-        position: relative;
-        justify-content: space-between;
-    }
+  &__info {
+    width: 100%;
+    display: flex;
+    margin-top: 2.875rem;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+  }
 }
 
 .graph {
-    width: 65%;
-    height: 36.375rem;
-    background-color: $lightGray;
-    border-radius: 0.75rem;
+  width: 65%;
+  height: 36.375rem;
+  background-color: $lightGray;
+  border-radius: 0.75rem;
 
-    &__text {
-        max-width: 33.25rem;
-        margin: 1.75rem 0 0 2.3125rem;
-    }
+  &__text {
+    max-width: 33.25rem;
+    margin: 1.75rem 0 0 2.3125rem;
+  }
 
-    &__canvas__wrapper {
-        width: 48.4375rem;
-        height: 23.125rem;
-        margin-top: 1rem;
-        margin-left: 2.25rem;
-    }
+  &__canvas__wrapper {
+    width: 48.4375rem;
+    height: 23.125rem;
+    margin-top: 1rem;
+    margin-left: 2.25rem;
+  }
 
-    &__button {
-        width: 18rem;
-        border: 1px solid #c4c4c4;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 1.75rem 0 2rem 2.3125rem;
-    }
+  &__button {
+    width: 18rem;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.75rem 0 2rem 2.3125rem;
+  }
 
-    &__content {
-        font-size: 1.125rem;
-        line-height: 1.67;
-        color: $darkGray;
-    }
+  &__content {
+    font-size: 1.125rem;
+    line-height: 1.67;
+    color: $darkGray;
+  }
 
-    &__canvas {
-        width: 100%;
-    }
+  &__canvas {
+    width: 100%;
+  }
 }
 
 .customInput {
-    width: 15.25rem;
-    height: 2.5rem;
-    border: 1px solid #c4c4c4;
-    border-radius: 5px;
-    margin: 1rem 0 0 2.25rem;
-    padding: 0.5625rem 0.9375rem;
-    cursor: pointer;
+  width: 15.25rem;
+  height: 2.5rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  margin: 1rem 0 0 2.25rem;
+  padding: 0.5625rem 0.9375rem;
+  cursor: pointer;
 
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .materials {
-    width: 33%;
-    height: 36.375rem;
-    margin-left: 1.375rem;
-    background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
+  width: 33%;
+  height: 36.375rem;
+  margin-left: 1.375rem;
+  background: linear-gradient(0deg, rgba(34, 43, 69, 0.96) -14.52%, rgba(57, 173, 70, 0) 198.45%);
+  border-radius: 0.75rem;
+  position: relative;
+
+  &__picture,
+  &__picture_mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 0.75rem;
-    position: relative;
+    opacity: 0.5;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-    &__picture,
-    &__picture_mobile {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 0.75rem;
-        opacity: 0.5;
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+  &__picture_mobile {
+    display: none;
+  }
 
-    &__picture_mobile {
-        display: none;
-    }
+  &__info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.625rem 2.75rem 3.5rem;
+  }
 
-    &__info {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 2.625rem 2.75rem 3.5rem;
-    }
-
-    &__title {
-        max-width: 17rem;
-        color: $lightGray;
-    }
+  &__title {
+    max-width: 17rem;
+    color: $lightGray;
+  }
 }
 
 .company {
-    display: flex;
+  display: flex;
 
-    img {
-        width: 3.75rem;
-        height: 3.75rem;
-    }
+  img {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
 
-    &__title {
-        margin-left: 0.3125rem;
-        max-width: 9.5625rem;
-        font-size: 1.125rem;
-        line-height: 1.19;
-        letter-spacing: -0.0938rem;
+  &__title {
+    margin-left: 0.3125rem;
+    max-width: 9.5625rem;
+    font-size: 1.125rem;
+    line-height: 1.19;
+    letter-spacing: -0.0938rem;
 
-        color: $lightGray;
-    }
+    color: $lightGray;
+  }
 }
 
 .notes {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .checkbox {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .checkbox + .checkbox {
-    margin-top: 0.875rem;
+  margin-top: 0.875rem;
 }
 
 .customCheckbox + label {
-    font-family: Inter;
-    font-weight: 500;
-    font-size: 1.125rem;
-    line-height: 1.44;
+  font-family: $jostFont;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.44;
 
-    color: $extraGray;
-    cursor: pointer;
+  color: $extraGray;
+  cursor: pointer;
 }
 
 .customCheckbox + label::before {
-    content: "";
-    display: inline-flex;
-    position: relative;
-    width: 1.25rem;
-    height: 1.25rem;
-    border: 1px solid #000;
-    border-radius: 0.1875rem;
-    margin-right: 0.75rem;
-    top: 0.1875rem;
+  content: "";
+  display: inline-flex;
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #000;
+  border-radius: 0.1875rem;
+  margin-right: 0.75rem;
+  top: 0.1875rem;
 
-    background-repeat: no-repeat;
-    background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .customCheckbox:checked + label::before {
-    background-color: #00e096;
-    border: 1px solid #00e096;
-    background-image: url("../img/icons/check.svg");
+  background-color: #00e096;
+  border: 1px solid #00e096;
+  background-image: url("../img/icons/check.svg");
 }
 
 #input_2:checked + label::before {
-    background-color: #006fd6;
-    border: 1px solid #006fd6;
+  background-color: #006fd6;
+  border: 1px solid #006fd6;
 }
 
 #input_3:checked + label::before {
-    background-color: #ff3d71;
-    border: 1px solid #ff3d71;
+  background-color: #ff3d71;
+  border: 1px solid #ff3d71;
 }
 
 #input_4:checked + label::before {
-    background-color: #9b51e0;
-    border: 1px solid #9b51e0;
+  background-color: #9b51e0;
+  border: 1px solid #9b51e0;
 }
 
 #input_5:checked + label::before {
-    background-color: #39ad46;
-    border: 1px solid #39ad46;
+  background-color: #39ad46;
+  border: 1px solid #39ad46;
 }
 
 #input_6:checked + label::before {
-    background-color: #ffc94d;
-    border: 1px solid #ffc94d;
+  background-color: #ffc94d;
+  border: 1px solid #ffc94d;
 }
 
 @media (max-width: 768px) {
-    .analytics {
-        margin-top: 6.9375rem;
+  .analytics {
+    margin-top: 6.9375rem;
 
-        &__info {
-            flex-direction: column;
-        }
+    &__info {
+      flex-direction: column;
+    }
+  }
+
+  .graph {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1.25rem;
+
+    &__canvas__wrapper {
+      margin-left: 0;
+      padding: 0 1.0625rem;
+      width: 100%;
     }
 
-    .graph {
-        width: 100%;
-        height: auto;
-        padding-bottom: 1.25rem;
-
-        &__canvas__wrapper {
-            margin-left: 0;
-            padding: 0 1.0625rem;
-            width: 100%;
-        }
-
-        &__canvas {
-            width: 100%;
-            height: auto;
-        }
-
-        &__title {
-            max-width: 100%;
-            margin: 1.25rem 1.0625rem 0;
-            font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.5;
-            color: $extraGray;
-        }
-
-        &__text {
-            font-size: 1rem;
-            line-height: 1.5;
-            color: $extraGray;
-            margin: 1.25rem 1rem 0;
-        }
-
-        &__button {
-            width: calc(100% - 2rem);
-            margin: auto;
-
-            &_wrapper {
-                margin-top: 1.875rem;
-            }
-        }
-
-        &__content {
-            font-size: 1rem;
-        }
+    &__canvas {
+      width: 100%;
+      height: auto;
     }
 
-    .lightpick {
-        // TODO: исправить импортант
-        left: 50% !important;
-        transform: translateX(-50%);
+    &__title {
+      max-width: 100%;
+      margin: 1.25rem 1.0625rem 0;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: $extraGray;
     }
 
-    .customInput {
-        margin: 0;
-        width: 100%;
-    }
-    .customCheckbox + label {
-        font-size: 0.875rem;
-        line-height: 1.64;
-        display: flex;
-    }
-    .customCheckbox + label::before {
-        flex-shrink: 0;
+    &__text {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: $extraGray;
+      margin: 1.25rem 1rem 0;
     }
 
-    .checkbox + .checkbox {
-        margin-top: 1.5rem;
+    &__button {
+      width: calc(100% - 2rem);
+      margin: auto;
+
+      &_wrapper {
+        margin-top: 1.875rem;
+      }
     }
 
-    .materials {
-        order: 1;
-        width: 100%;
-        height: 14.375rem;
-        margin: 3.4375rem 0 0;
+    &__content {
+      font-size: 1rem;
+    }
+  }
 
-        &__picture {
-            display: none;
-        }
+  .lightpick {
+    // TODO: исправить импортант
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
 
-        &__picture_mobile {
-            display: block;
-        }
+  .customInput {
+    margin: 0;
+    width: 100%;
+  }
+  .customCheckbox + label {
+    font-size: 0.875rem;
+    line-height: 1.64;
+    display: flex;
+  }
+  .customCheckbox + label::before {
+    flex-shrink: 0;
+  }
 
-        &__info {
-            padding: 1.25rem 1.5625rem 1.5rem;
-        }
+  .checkbox + .checkbox {
+    margin-top: 1.5rem;
+  }
 
-        &__title {
-            max-width: 11.0625rem;
-            font-size: 1.25rem;
-            line-height: 1.3;
-        }
+  .materials {
+    order: 1;
+    width: 100%;
+    height: 14.375rem;
+    margin: 3.4375rem 0 0;
+
+    &__picture {
+      display: none;
     }
 
-    .notes {
-        margin-top: 3.125rem;
+    &__picture_mobile {
+      display: block;
     }
+
+    &__info {
+      padding: 1.25rem 1.5625rem 1.5rem;
+    }
+
+    &__title {
+      max-width: 11.0625rem;
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+  }
+
+  .notes {
+    margin-top: 3.125rem;
+  }
 }

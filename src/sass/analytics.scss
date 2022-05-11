@@ -1,5 +1,5 @@
-@import 'root';
-@import 'lightpick';
+@import "root";
+@import "lightpick";
 
 .title {
   padding: 3.625rem 0 2.375rem;
@@ -111,7 +111,7 @@
 }
 
 .customCheckbox + label {
-  font-family: Inter;
+  font-family: $jostFont;
   font-weight: bold;
   font-size: 0.875rem;
   line-height: 1.36;
@@ -120,7 +120,7 @@
 }
 
 .customCheckbox + label::before {
-  content: '';
+  content: "";
   display: inline-flex;
   position: relative;
   width: 1.25rem;
@@ -137,7 +137,7 @@
 .customCheckbox:checked + label::before {
   background-color: #00e096;
   border: 1px solid #00e096;
-  background-image: url('../img/icons/check.svg');
+  background-image: url("../img/icons/check.svg");
 }
 
 #input_2:checked + label::before {

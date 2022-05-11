@@ -51,7 +51,7 @@
 }
 
 .return__text {
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.36;
@@ -73,7 +73,7 @@
   padding: 0.9375rem 0;
   width: 48.3125rem;
   border-bottom: 1px solid var(--main-green);
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-size: 1.5rem;
   line-height: 1.42;
   color: var(--dark-gray);
@@ -81,7 +81,7 @@
 }
 
 .search__input::placeholder {
-  font-family: Inter;
+  font-family: var(--jost-font);
   font-size: 1.5rem;
   line-height: 1.42;
   color: var(--mid-gray);

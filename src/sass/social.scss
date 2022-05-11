@@ -1,4 +1,4 @@
-@import 'root';
+@import "root";
 
 .social {
   margin-top: 6.25rem;
@@ -23,7 +23,7 @@
   &__subtitle {
     margin-top: 1.5rem;
     display: block;
-    font-family: Inter;
+    font-family: $jostFont;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1.44;
@@ -120,7 +120,7 @@
 
   .card__text {
     display: block;
-    font-family: Inter;
+    font-family: $jostFont;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.43;

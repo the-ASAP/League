@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'post';
+@import "mixins";
+@import "post";
 
 .intro {
   margin-top: 4.3125rem;
@@ -12,7 +12,7 @@
   }
 
   &__title {
-    font-family: Inter;
+    font-family: $jostFont;
     font-style: normal;
     font-weight: 500;
     font-size: 2.625rem;
@@ -55,7 +55,7 @@
   }
 
   &__text {
-    font-family: Inter;
+    font-family: $jostFont;
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.36;
@@ -156,7 +156,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       width: 9px;
       height: 9px;
       background-color: $firstGreen;
@@ -447,7 +447,7 @@
 }
 
 .ya-share2__item_more.ya-share2__item_has-pretty-view .ya-share2__icon_more {
-  background-image: url('../img/share_outline.svg') !important;
+  background-image: url("../img/share_outline.svg") !important;
 }
 
 .ya-share2__container.ya-share2__container_color-scheme_blackwhite .ya-share2__badge {
@@ -526,7 +526,7 @@
       align-items: center;
 
       span {
-        font-family: Inter;
+        font-family: $jostFont;
         font-size: 1rem;
         line-height: 1.44;
         letter-spacing: 0.015em;

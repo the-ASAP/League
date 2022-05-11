@@ -2,139 +2,139 @@
 @import "associationHeader";
 
 .title {
-    padding: 3.625rem 0 2.375rem;
-    border-bottom: 1px solid #bdbdbd;
+  padding: 3.625rem 0 2.375rem;
+  border-bottom: 1px solid #bdbdbd;
 
-    h2 {
-        text-align: center;
-        font-weight: 400;
-        font-size: 3.5625rem;
-        line-height: 1.23;
-    }
+  h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 3.5625rem;
+    line-height: 1.23;
+  }
 }
 
 .partners {
-    &__title {
-        margin-top: 3.125rem;
-    }
+  &__title {
+    margin-top: 3.125rem;
+  }
 }
 
 .partners__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 2.6875rem;
-    margin-bottom: 10.3125rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2.6875rem;
+  margin-bottom: 10.3125rem;
 }
 
 .partner {
-    &:nth-child(3n + 2) {
-        margin: 0 1.25rem 1.25rem;
-    }
+  &:nth-child(3n + 2) {
+    margin: 0 1.25rem 1.25rem;
+  }
 
-    position: relative;
-    width: calc((100% - 40px) / 3);
-    background-color: $lightGray;
-    border-radius: 12px;
-    margin-bottom: 1.25rem;
+  position: relative;
+  width: calc((100% - 40px) / 3);
+  background-color: $lightGray;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.625rem 2.4375rem 1.75rem;
+
+  &__details {
+    margin-top: 1.25rem;
+    font-family: $jostFont;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: -0.015em;
+    color: $firstGreen;
+  }
+
+  &__text {
+    max-width: 19.0625rem;
+    font-family: $jostFont;
+    font-size: 1rem;
+    line-height: 1.44;
+    letter-spacing: -0.015em;
+    color: $darkGray;
+    display: block;
+  }
+
+  &__header {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    padding: 1.625rem 2.4375rem 1.75rem;
+    flex-direction: column;
+    height: 100%;
+  }
 
-    &__details {
-        margin-top: 1.25rem;
-        font-family: Inter;
-        font-size: 1rem;
-        line-height: 1.44;
-        letter-spacing: -0.015em;
-        color: $firstGreen;
-    }
+  &__picture {
+    max-width: 8.75rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &__text {
-        max-width: 19.0625rem;
-        font-family: Inter;
-        font-size: 1rem;
-        line-height: 1.44;
-        letter-spacing: -0.015em;
-        color: $darkGray;
-        display: block;
-    }
+  &__logo {
+    mix-blend-mode: darken;
+    object-fit: contain;
+    width: auto;
+    max-width: 15rem;
+    max-height: 7rem;
+  }
 
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        height: 100%;
-    }
+  &__ref {
+    font-family: $jostFont;
+    font-size: 1.125rem;
+    line-height: 1.44;
+    color: $firstGreen;
+    display: block;
+    margin-top: 1rem;
+  }
 
-    &__picture {
-        max-width: 8.75rem;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__logo {
-        mix-blend-mode: darken;
-        object-fit: contain;
-        width: auto;
-        max-width: 15rem;
-        max-height: 7rem;
-    }
-
-    &__ref {
-        font-family: Inter;
-        font-size: 1.125rem;
-        line-height: 1.44;
-        color: $firstGreen;
-        display: block;
-        margin-top: 1rem;
-    }
-
-    &__info {
-        margin-top: 3.4375rem;
-    }
+  &__info {
+    margin-top: 3.4375rem;
+  }
 }
 
 @media (max-width: 1200px) {
-    .partners {
-        &__list {
-            justify-content: space-between;
-        }
+  .partners {
+    &__list {
+      justify-content: space-between;
     }
-    .partner {
-        width: calc((100% - 20px) / 2);
+  }
+  .partner {
+    width: calc((100% - 20px) / 2);
 
-        &:nth-child(3n + 2) {
-            margin: 0 0 1.25rem;
-        }
+    &:nth-child(3n + 2) {
+      margin: 0 0 1.25rem;
     }
+  }
 }
 
 @media (max-width: 768px) {
-    .title {
-        padding: 1.375rem 0 1.625rem;
+  .title {
+    padding: 1.375rem 0 1.625rem;
 
-        h2 {
-            font-size: 2rem;
-            line-height: 1.37;
-        }
+    h2 {
+      font-size: 2rem;
+      line-height: 1.37;
     }
+  }
 
-    .partners__list {
-        margin-top: 2.25rem;
-        margin-bottom: 18.75rem;
-        display: block;
+  .partners__list {
+    margin-top: 2.25rem;
+    margin-bottom: 18.75rem;
+    display: block;
+  }
+
+  .partner {
+    width: 100%;
+    margin-bottom: 1.25rem;
+
+    &:nth-child(3n + 2) {
+      margin: 0 0 1.25rem;
     }
-
-    .partner {
-        width: 100%;
-        margin-bottom: 1.25rem;
-
-        &:nth-child(3n + 2) {
-            margin: 0 0 1.25rem;
-        }
-    }
+  }
 }

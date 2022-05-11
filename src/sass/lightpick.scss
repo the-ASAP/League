@@ -1,282 +1,282 @@
 @import "root";
 
 .lightpick {
-    position: absolute;
-    z-index: 99999;
-    padding: 1rem 1rem 1.5rem;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-    color: $darkGray;
-    font-family: Inter;
-    line-height: 1.125em;
+  position: absolute;
+  z-index: 99999;
+  padding: 1rem 1rem 1.5rem;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  color: $darkGray;
+  font-family: $jostFont;
+  line-height: 1.125em;
 }
 
 .lightpick--inlined {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .lightpick,
 .lightpick *,
 .lightpick::after,
 .lightpick::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .lightpick.is-hidden {
-    display: none;
+  display: none;
 }
 
 .lightpick__months {
-    display: grid;
-    background-color: #eee;
-    grid-template-columns: auto;
-    grid-gap: 1px;
+  display: grid;
+  background-color: #eee;
+  grid-template-columns: auto;
+  grid-gap: 1px;
 }
 
 .lightpick--2-columns .lightpick__months {
-    grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
 }
 
 .lightpick--3-columns .lightpick__months {
-    grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 .lightpick--4-columns .lightpick__months {
-    grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
 }
 
 .lightpick--5-columns .lightpick__months {
-    grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
 }
 
 .lightpick__month {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .lightpick__month-title-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .lightpick__month-title {
-    font-size: 1.5rem;
-    line-height: 1.25;
+  font-size: 1.5rem;
+  line-height: 1.25;
 }
 
 .lightpick__month-title > .lightpick__select {
-    border: none;
-    background-color: transparent;
-    outline: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    font-size: 1.5rem;
-    line-height: 1.25;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 1.5rem;
+  line-height: 1.25;
 }
 
 .lightpick__select:disabled {
-    color: #333;
+  color: #333;
 }
 
 .lightpick__select-months,
 .lightpick__select-years {
-    font-size: 24px;
-    line-height: 1.25;
-    color: $darkGray;
-    text-transform: capitalize;
+  font-size: 24px;
+  line-height: 1.25;
+  color: $darkGray;
+  text-transform: capitalize;
 
-    option {
-        text-align: center;
-        text-transform: capitalize;
-    }
+  option {
+    text-align: center;
+    text-transform: capitalize;
+  }
 }
 .lightpick__select-months {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .lightpick__toolbar {
-    display: flex;
-    text-align: right;
-    justify-content: flex-end;
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
 }
 
 .lightpick__previous-action,
 .lightpick__next-action,
 .lightpick__close-action {
-    display: flex;
-    margin-left: 6px;
-    width: 32px;
-    height: 32px;
-    outline: none;
-    border: none;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  margin-left: 6px;
+  width: 32px;
+  height: 32px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 .lightpick__next-action {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .lightpick__previous-action,
 .lightpick__next-action {
-    position: relative;
+  position: relative;
 
-    &::before {
-        content: "";
-        background: $darkGray;
-        width: 10px;
-        height: 2px;
-        position: absolute;
-        transform: rotate(45deg);
-        top: 18px;
-        left: 10px;
-    }
+  &::before {
+    content: "";
+    background: $darkGray;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 18px;
+    left: 10px;
+  }
+  &::after {
+    content: "";
+    background: $darkGray;
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 12px;
+    left: 10px;
+  }
+
+  &:hover {
+    &::before,
     &::after {
-        content: "";
-        background: $darkGray;
-        width: 10px;
-        height: 2px;
-        position: absolute;
-        transform: rotate(-45deg);
-        top: 12px;
-        left: 10px;
+      background: $firstGreen;
     }
-
-    &:hover {
-        &::before,
-        &::after {
-            background: $firstGreen;
-        }
-    }
+  }
 }
 
 .lightpick__close-action {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .lightpick__previous-action:active,
 .lightpick__next-action:active,
 .lightpick__close-action:active {
-    color: inherit;
+  color: inherit;
 }
 
 .lightpick__days-of-the-week {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
 .lightpick__day-of-the-week {
-    display: flex;
-    font-size: 12px;
-    line-height: 15px;
-    font-weight: 600;
-    color: $darkGray;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
+  display: flex;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  color: $darkGray;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
 }
 
 .lightpick__days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 12px;
-    margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-top: 32px;
 }
 
 .lightpick__day {
-    display: flex;
-    width: 40px;
-    height: 40px;
-    font-size: 13px;
-    justify-content: center;
-    align-items: center;
-    cursor: default;
-    border: 1px solid $lightGray;
-    border-radius: 50%;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  border: 1px solid $lightGray;
+  border-radius: 50%;
 }
 
 .lightpick__day.is-today {
-    border-color: $firstGreen;
+  border-color: $firstGreen;
 }
 
 .lightpick__day:not(.is-disabled):hover {
-    background-color: $firstGreen;
-    color: #fff;
-    cursor: pointer;
+  background-color: $firstGreen;
+  color: #fff;
+  cursor: pointer;
 }
 
 .lightpick__day.is-disabled {
-    opacity: 0.38;
-    pointer-events: none;
+  opacity: 0.38;
+  pointer-events: none;
 }
 
 .lightpick__day.disabled-tooltip {
-    pointer-events: auto;
+  pointer-events: auto;
 }
 
 .lightpick__day.is-disabled.is-forward-selected {
-    opacity: 1;
+  opacity: 1;
 }
 .lightpick__day.is-disabled.is-forward-selected:not(.is-start-date) {
-    background-color: rgba(38, 139, 210, 0.1);
-    border-radius: 50%;
-    background-image: none;
+  background-color: rgba(38, 139, 210, 0.1);
+  border-radius: 50%;
+  background-image: none;
 }
 
 .lightpick__day.is-previous-month,
 .lightpick__day.is-next-month {
-    opacity: 0.38;
+  opacity: 0.38;
 }
 
 .lightpick__day.lightpick__day.is-in-range:not(.is-disabled) {
-    opacity: 1;
+  opacity: 1;
 }
 
 .lightpick__day.is-in-range {
-    border-radius: 0;
-    background-color: rgba(57, 173, 70, 0.3);
-    border-radius: 50%;
+  border-radius: 0;
+  background-color: rgba(57, 173, 70, 0.3);
+  border-radius: 50%;
 }
 
 .lightpick__day.is-in-range:hover {
-    background-color: $firstGreen;
+  background-color: $firstGreen;
 }
 
 .lightpick__day.is-start-date.is-in-range,
 .lightpick__day.is-end-date.is-in-range.is-flipped {
-    border-top-left-radius: 50%;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 50%;
-    background-color: $firstGreen;
-    background-image: none;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 50%;
+  background-color: $firstGreen;
+  background-image: none;
 }
 
 .lightpick__day.is-end-date.is-in-range,
 .lightpick__day.is-start-date.is-in-range.is-flipped {
-    border-top-left-radius: 0;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 0;
-    background-color: $firstGreen;
-    background-image: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 0;
+  background-color: $firstGreen;
+  background-image: none;
 }
 
 .lightpick__day.is-start-date.is-end-date {
-    background-color: $firstGreen;
+  background-color: $firstGreen;
 }
 
 .lightpick__day.is-start-date,
 .lightpick__day.is-end-date,
 .lightpick__day.is-start-date:hover,
 .lightpick__day.is-end-date:hover {
-    background-color: $firstGreen;
-    color: #fff;
-    font-weight: bold;
+  background-color: $firstGreen;
+  color: #fff;
+  font-weight: bold;
 }
 
 // .lightpick__tooltip {
