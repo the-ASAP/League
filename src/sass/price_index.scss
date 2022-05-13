@@ -115,7 +115,7 @@
   @include flexible("flex-start", "center");
 
   .last_week {
-    padding-right: 15px;
+    padding-right: 0.9375rem;
     border-right: 1px solid #9b9a9a;
     &__price {
       color: #74737c;
@@ -137,5 +137,49 @@
       font-size: 0.875rem;
       color: #4f4f4f;
     }
+  }
+}
+
+.feedback {
+  width: 100%;
+  padding: 1.875rem 1.0625rem 1.875rem 1.875rem;
+  background-color: #fff;
+  border: 1px solid #39ad46;
+  border-radius: 0.625rem;
+  @include flexible("space-between", "center");
+}
+
+.feedback__heading {
+  &__title {
+    font-size: 1.5rem;
+    color: rgba(37, 37, 37, 1);
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    color: rgba(37, 37, 37, 1);
+  }
+}
+
+.feedback__form {
+  @include flexible("flex-start", "center");
+
+  &__input {
+    width: 20.4375rem;
+    height: 2.5rem;
+    padding: 0px 0.875rem;
+    border: 1px solid #4f4f4f;
+    border-radius: 6px;
+  }
+
+  &__button {
+    height: 2.5rem;
+    width: 8.75rem;
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.125rem;
+    background-color: #379b42;
+    margin-left: 5px;
+    border-radius: 6px;
   }
 }
