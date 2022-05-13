@@ -759,7 +759,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: var(--jost-font);
   cursor: default;
   color: #000000;
 }
@@ -805,14 +805,9 @@ h4 {
 }
 
 p {
-  font-family: var(--jost-font);
   font-size: 1.125rem;
   line-height: 1.44;
   color: var(--dark-gray);
-}
-
-span {
-  font-family: var(--jost-font);
 }
 
 .wrapper {
@@ -884,10 +879,6 @@ button[disabled],
 input[disabled] {
   cursor: default;
   opacity: 0.7;
-}
-
-span {
-  font-family: var(--jost-font);
 }
 
 blockquote {

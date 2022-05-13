@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  font-family: $font; // FF MAIN
+  font-family: $jostFont; // FF MAIN
   cursor: default;
   color: $gen;
 }
@@ -80,16 +80,16 @@ h4 {
 }
 
 p {
-  font-family: $jostFont;
+  // font-family: $jostFont;
   font-size: 1.125rem;
   line-height: 1.44;
 
   color: $darkGray;
 }
 
-span {
-  font-family: $jostFont;
-}
+// span {
+//   font-family: $jostFont;
+// }
 
 // ul {
 //    list-style: none;
@@ -187,10 +187,6 @@ input {
     cursor: default;
     opacity: 0.7;
   }
-}
-
-span {
-  font-family: $jostFont;
 }
 
 blockquote {

@@ -1,0 +1,32 @@
+@import "root";
+@import "mixins";
+
+.sidebar {
+  flex: 0 0 18.25rem;
+  margin-right: 6.25rem;
+}
+
+.sidebar__nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    height: 3.9375rem;
+    @include flexible("flex-start", "center");
+    border-bottom: 1px solid rgba(134, 129, 129, 1);
+    background-color: rgba(244, 244, 244, 1);
+    padding-left: 3px;
+
+    &__active {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    a {
+      font-family: "Open Sans";
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #000;
+    }
+  }
+}

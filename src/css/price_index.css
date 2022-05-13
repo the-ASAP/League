@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+:root {
+  --main-green: #39ad46;
+  --second-green: #27ae60;
+  --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
+  --dark-gray: #4f4f4f;
+  --mid-gray: #828282;
+  --light-gray: #f2f2f2;
+  --extra-gray: #333;
+  --golos-font: Golos;
+  --jost-font: Jost;
+}
+
+:root {
+  --main-green: #39ad46;
+  --second-green: #27ae60;
+  --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
+  --dark-gray: #4f4f4f;
+  --mid-gray: #828282;
+  --light-gray: #f2f2f2;
+  --extra-gray: #333;
+  --golos-font: Golos;
+  --jost-font: Jost;
+}
+
+:root {
+  --main-green: #39ad46;
+  --second-green: #27ae60;
+  --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
+  --dark-gray: #4f4f4f;
+  --mid-gray: #828282;
+  --light-gray: #f2f2f2;
+  --extra-gray: #333;
+  --golos-font: Golos;
+  --jost-font: Jost;
+}
+
+/*Кнопка меню*/
+
+/*В разметке обязательно должна иметь внутренний span */
+
+/*<button class="burger"><span></span></button>*/
+
+.sidebar {
+  flex: 0 0 18.25rem;
+  margin-right: 6.25rem;
+}
+
+.sidebar__nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar__nav__list__item {
+  height: 3.9375rem;
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+  border-bottom: 1px solid #868181;
+  background-color: #f4f4f4;
+  padding-left: 3px;
+}
+
+.sidebar__nav__list__item__active {
+  background-color: white;
+}
+
+.sidebar__nav__list__item a {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.breadcrumbs {
+  display: none;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.price-index {
+  padding-top: 2.5rem;
+  font-family: "Open Sans";
+}
+
+.price-index__container {
+  display: flex;
+}
+
+.price-index__title {
+  font-family: "Open Sans";
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.dynamics {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+}
+
+.dynamics__title {
+  font-size: 1.125rem;
+  color: #000;
+  margin-right: 1.875rem;
+  line-height: 49px;
+}
+
+.dynamics__title span {
+  font-weight: 600;
+}
+
+.dynamics__warning {
+  color: #868181;
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "flex-end";
+}
+
+.dynamics__warning span {
+  margin-left: 7px;
+}
+
+.cards__row {
+  margin-bottom: 2.5rem;
+}
+
+.cards__row__title {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.cards__list {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  flex: 0 1 342px;
+  padding: 1.25rem 1.0625rem 1.0625rem 1.0625rem;
+  border: 1px solid #868181;
+  border-radius: 5px;
+}
+
+.card:not(:last-child) {
+  margin-right: 20px;
+}
+
+.card__title {
+  flex: 1 1 auto;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+.card__row {
+  display: flex;
+  justify-content: "space-between";
+  align-items: "flex-end";
+}
+
+.card__price__small {
+  font-style: 1.25rem;
+  color: #9b9a9a;
+  font-weight: 600;
+}
+
+.card__price__large {
+  font-style: 1.5rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.card__direction {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+}
+
+.card__direction__percent {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.card__direction__percent__green {
+  color: #0e7421;
+}
+
+.card__direction__percent__red {
+  color: #f03107;
+}
+
+.card__download_link {
+  display: flex;
+  justify-content: "flex-end";
+  align-items: "center";
+  margin-top: 20px;
+}
+
+.card__download_link a {
+  color: #0f568a;
+  text-decoration: underline;
+}
+
+.history__heading {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+}
