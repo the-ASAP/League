@@ -2,8 +2,8 @@
 @import "mixins";
 
 .sidebar {
-  flex: 0 0 18.25rem;
-  margin-right: 6.25rem;
+  flex: 0 0 14.0625rem;
+  padding-top: 2.5rem;
 }
 
 .sidebar__nav__list {
@@ -12,21 +12,27 @@
   padding: 0;
 
   &__item {
-    height: 3.9375rem;
     @include flexible("flex-start", "center");
-    border-bottom: 1px solid rgba(134, 129, 129, 1);
-    background-color: rgba(244, 244, 244, 1);
-    padding-left: 3px;
-
-    &__active {
-      background-color: rgba(255, 255, 255, 1);
-    }
+    margin-bottom: 24px;
+    padding: 0px 0px 0px 0.9375rem;
 
     a {
-      font-family: "Open Sans";
-      font-weight: 600;
-      font-size: 1.5rem;
-      color: #000;
+      transition: color 0.3s ease-in;
+      font-size: 1.125rem;
+      color: rgba(62, 63, 62, 1);
+    }
+
+    &:hover {
+      a {
+        color: rgba(88, 202, 101, 1);
+      }
+    }
+
+    &__active {
+      a {
+        color: rgba(55, 155, 66, 1);
+        font-weight: 600;
+      }
     }
   }
 }
