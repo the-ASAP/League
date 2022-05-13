@@ -111,7 +111,7 @@
   font-size: 1.125rem;
   color: #000;
   margin-right: 1.875rem;
-  line-height: 49px;
+  line-height: 3.0625rem;
 }
 
 .dynamics__title span {
@@ -157,7 +157,7 @@
 }
 
 .card:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .card__title {
@@ -211,7 +211,7 @@
   display: flex;
   justify-content: "flex-end";
   align-items: "center";
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .card__download_link a {
@@ -223,4 +223,19 @@
   display: flex;
   justify-content: "flex-start";
   align-items: "center";
+  margin-bottom: 2.6875rem;
+}
+
+.history__heading__title {
+  color: #000;
+  font-weight: 600;
+  font-size: 2.25rem;
+  margin-right: 3.625rem;
+  font-family: "Open Sans";
+}
+
+.history__heading a {
+  color: #f03107;
+  position: relative;
+  bottom: -5px;
 }

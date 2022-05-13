@@ -32,7 +32,7 @@
     font-size: 1.125rem;
     color: #000;
     margin-right: 1.875rem;
-    line-height: 49px;
+    line-height: 3.0625rem;
 
     span {
       font-weight: 600;
@@ -79,7 +79,7 @@
   border-radius: 5px;
 
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
 
   &__title {
@@ -131,7 +131,7 @@
 
 .card__download_link {
   @include flexible("flex-end", "center");
-  margin-top: 20px;
+  margin-top: 1.25rem;
 
   a {
     color: rgba(15, 86, 138, 1);
@@ -141,4 +141,19 @@
 
 .history__heading {
   @include flexible("flex-start", "center");
+  margin-bottom: 2.6875rem;
+
+  &__title {
+    color: #000;
+    font-weight: 600;
+    font-size: 2.25rem;
+    margin-right: 3.625rem;
+    font-family: "Open Sans";
+  }
+
+  a {
+    color: rgba(240, 49, 7, 1);
+    position: relative;
+    bottom: -5px;
+  }
 }
