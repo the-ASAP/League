@@ -54,7 +54,9 @@
   }
 
   &__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 20.9375rem);
+    grid-gap: 1.5625rem;
   }
 }
 
@@ -63,27 +65,21 @@
   flex-direction: column;
   background-color: #fff;
   list-style-type: none;
-  flex: 0 1 20.9375rem;
   padding: 1.1875rem 1.1875rem 1.375rem 1.125rem;
   border-radius: 0.625rem;
-
-  &:not(:last-child) {
-    margin-right: 1.4375rem;
-  }
 }
 
 .card__heading {
   flex: 1 0 auto;
   @include flexible("space-between", "flex-start");
   margin-bottom: 2.6875rem;
-
-  &__title {
-    color: #000;
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-    max-width: 70%;
-  }
+}
+.card__title {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  max-width: 70%;
 }
 
 .card__trend {
@@ -147,9 +143,7 @@
   border: 1px solid #39ad46;
   border-radius: 0.625rem;
   @include flexible("space-between", "center");
-}
 
-.feedback__heading {
   &__title {
     font-size: 1.5rem;
     color: rgba(37, 37, 37, 1);
