@@ -96,9 +96,3 @@ const config = {
 };
 
 const myChart = new Chart(ctx, config);
-
-document.querySelector(".product__checkbox").addEventListener("click", () => {
-  console.log(document.querySelector("#checkbox__1").checked);
-});
-
-console.log(document.querySelector("#checkbox__1").checked);

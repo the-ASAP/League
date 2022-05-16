@@ -118,13 +118,20 @@
 
 .chart__download_btn {
   background-color: rgba(55, 155, 66, 1);
-  color: rgba(255, 255, 255, 1);
-  width: 9.1875rem;
-  height: 1.8125rem;
+  min-width: 9.1875rem;
+  min-height: 1.8125rem;
+  padding: 5px 1.5rem;
   font-size: 1rem;
   border-radius: 6px;
   align-self: flex-end;
   margin-top: 1.875rem;
+  @include flexible("center", "center");
+
+  p {
+    color: rgba(255, 255, 255, 1);
+    font-size: 1rem;
+    margin-right: 5px;
+  }
 }
 
 .weekly-index {
