@@ -169,6 +169,11 @@
   align-items: "center";
 }
 
+.card__trend svg {
+  top: -2px;
+  margin-right: 4px;
+}
+
 .card__trend__percent {
   font-size: 1.125rem;
   font-weight: 500;
@@ -184,6 +189,14 @@
 
 .card__trend__down {
   background-color: #ffcfcf;
+}
+
+.card__trend__down svg {
+  transform: rotateX(180deg);
+}
+
+.card__trend__down svg path {
+  fill: #dd0d0d;
 }
 
 .card__trend__down .card__trend__percent {
@@ -270,4 +283,105 @@
   background-color: #379b42;
   margin-left: 5px;
   border-radius: 6px;
+}
+
+.chart {
+  padding: 1.8125rem 2.125rem 2.125rem 2.125rem;
+  background-color: white;
+  border-radius: 0.625rem;
+}
+
+.controller__group {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+  margin-bottom: 1.8125rem;
+}
+
+.controller__title {
+  font-size: 1.125rem;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.controller__product_type {
+  margin-right: 11.25rem;
+}
+
+.tab__group {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+}
+
+.controller__tab {
+  padding: 5px 15px;
+  border: 1px solid #828282;
+  border-radius: 1.625rem;
+}
+
+.controller__tab:not(:last-child) {
+  margin-right: 0.625rem;
+}
+
+.controller__tab__active {
+  border: 1px solid #379b42;
+  color: #379b42;
+  font-weight: 500;
+  background-color: #ecf9ee;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 69px;
+}
+
+.product__checkboxes {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+  margin-bottom: 30px;
+}
+
+.checkbox__wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.checkbox__fake {
+  display: flex;
+  justify-content: "center";
+  align-items: "center";
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 0.5625rem;
+  transition: all 0.3s ease-in;
+}
+
+.checkbox__text {
+  color: #252525;
+  font-size: 0.875rem;
+}
+
+.checkbox__input:checked + .checkbox__fake {
+  border: 1px solid transparent;
+}
+
+.checkbox__input__1:checked + .checkbox__fake {
+  background-color: #9a57dd;
+}
+
+.checkbox__input__2:checked + .checkbox__fake {
+  background-color: #1172d3;
+}
+
+.checkbox__input__3:checked + .checkbox__fake {
+  background-color: #fec859;
 }

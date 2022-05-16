@@ -14,6 +14,7 @@
 .price-index {
   &__container {
     display: flex;
+    // width: 100%;
   }
 
   &__title {
@@ -87,6 +88,11 @@
   border-radius: 1.75rem;
   @include flexible("center", "center");
 
+  svg {
+    top: -2px;
+    margin-right: 4px;
+  }
+
   &__percent {
     font-size: 1.125rem;
     font-weight: 500;
@@ -101,6 +107,14 @@
 
   &__down {
     background-color: #ffcfcf;
+
+    svg {
+      transform: rotateX(180deg);
+      path {
+        fill: rgba(221, 13, 13, 1);
+      }
+    }
+
     .card__trend__percent {
       color: rgba(221, 13, 13, 1);
     }
@@ -176,4 +190,99 @@
     margin-left: 5px;
     border-radius: 6px;
   }
+}
+
+.chart {
+  padding: 1.8125rem 2.125rem 2.125rem 2.125rem;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0.625rem;
+}
+
+.controller {
+  &__group {
+    @include flexible("flex-start", "center");
+    margin-bottom: 1.8125rem;
+  }
+
+  &__title {
+    font-size: 1.125rem;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.625rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.controller__product_type {
+  margin-right: 11.25rem;
+}
+
+.tab__group {
+  @include flexible("flex-start", "center");
+}
+
+.controller__tab {
+  padding: 5px 15px;
+  border: 1px solid #828282;
+  border-radius: 1.625rem;
+
+  &:not(:last-child) {
+    margin-right: 0.625rem;
+  }
+
+  &__active {
+    border: 1px solid rgba(55, 155, 66, 1);
+    color: rgba(55, 155, 66, 1);
+    font-weight: 500;
+    background-color: #ecf9ee;
+  }
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 69px;
+}
+
+.product__checkboxes {
+  @include flexible("flex-start", "center");
+  margin-bottom: 30px;
+}
+
+.checkbox__wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.checkbox__fake {
+  @include flexible("center", "center");
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 0.5625rem;
+  transition: all 0.3s ease-in;
+}
+
+.checkbox__text {
+  color: rgba(37, 37, 37, 1);
+  font-size: 0.875rem;
+}
+
+.checkbox__input:checked + .checkbox__fake {
+  border: 1px solid transparent;
+}
+.checkbox__input__1:checked + .checkbox__fake {
+  background-color: rgba(154, 87, 221, 1);
+}
+.checkbox__input__2:checked + .checkbox__fake {
+  background-color: rgba(17, 114, 211, 1);
+}
+.checkbox__input__3:checked + .checkbox__fake {
+  background-color: rgba(254, 200, 89, 1);
+}
+
+@media (max-width: 768px) {
 }

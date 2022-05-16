@@ -9,8 +9,8 @@
     <link rel="shortcut icon" type="image/png" href="img/icons/favicon.ico" />
     <title>League</title>
 
-    <link rel="stylesheet" href="css/main.css?t=1652514468131" type="text/css" />
-    <link rel="stylesheet" href="css/price_index.css?t=1652514468131" type="text/css" />
+    <link rel="stylesheet" href="css/main.css?t=1652699232124" type="text/css" />
+    <link rel="stylesheet" href="css/price_index.css?t=1652699232124" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -224,6 +224,106 @@
           <div class="content">
             <h1 class="price-index__title">Ценовой индекс на основные виды ЦБП РФ</h1>
 
+            <div class="chart">
+              <div class="controller">
+                <div class="controller__group">
+                  <div class="controller__product_type">
+                    <p class="controller__title">Вид продукции</p>
+                    <div class="tab__group">
+                      <button class="controller__tab controller__tab__active">Макулатура</button>
+                      <button class="controller__tab">Гофропродукция</button>
+                      <button class="controller__tab">Тарные картоны</button>
+                    </div>
+                  </div>
+                  <div class="controller__period">
+                    <p class="controller__title">Период</p>
+                    <div class="tab__group">
+                      <button class="controller__tab controller__tab__active">Месяц</button>
+                      <button class="controller__tab">Полгода</button>
+                      <button class="controller__tab">Год</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product__checkboxes">
+                <label class="checkbox__wrapper" for="checkbox__1">
+                  <input
+                    class="checkbox__input checkbox__input__1"
+                    type="checkbox"
+                    id="checkbox__1"
+                  />
+                  <span class="checkbox__fake">
+                    <svg
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 3.5L5 8L11 1"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <span class="checkbox__text">МС-5Б</span>
+                </label>
+
+                <label class="checkbox__wrapper" for="checkbox__2">
+                  <input
+                    class="checkbox__input checkbox__input__2"
+                    type="checkbox"
+                    id="checkbox__2"
+                  />
+                  <span class="checkbox__fake">
+                    <svg
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 3.5L5 8L11 1"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <span class="checkbox__text">Целлюлозная Б1</span>
+                </label>
+
+                <label class="checkbox__wrapper" for="checkbox__3">
+                  <input
+                    class="checkbox__input checkbox__input__3"
+                    type="checkbox"
+                    id="checkbox__3"
+                  />
+                  <span class="checkbox__fake">
+                    <svg
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M1 3.5L5 8L11 1"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                  <span class="checkbox__text">Макулатурная Б1</span>
+                </label>
+              </div>
+              <canvas id="myChart"></canvas>
+            </div>
+
             <div class="weekly-index">
               <h3 class="weekly-index__title">Еженедельный индекс</h3>
               <span>31.01.22 – 06.02.22</span>
@@ -237,6 +337,18 @@
                     <div class="card__heading">
                       <h4 class="card__title">МС-5Б</h4>
                       <div class="card__trend card__trend__up">
+                        <svg
+                          width="16"
+                          height="14"
+                          viewBox="0 0 16 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                            fill="#0E7421"
+                          />
+                        </svg>
                         <p class="card__trend__percent">68%</p>
                       </div>
                     </div>
@@ -255,6 +367,18 @@
                     <div class="card__heading">
                       <h4 class="card__title">Целлюлозная Б1</h4>
                       <div class="card__trend card__trend__up">
+                        <svg
+                          width="16"
+                          height="14"
+                          viewBox="0 0 16 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                            fill="#0E7421"
+                          />
+                        </svg>
                         <p class="card__trend__percent">68%</p>
                       </div>
                     </div>
@@ -273,6 +397,18 @@
                     <div class="card__heading">
                       <h4 class="card__title">Б1 Макулатурная</h4>
                       <div class="card__trend card__trend__down">
+                        <svg
+                          width="16"
+                          height="14"
+                          viewBox="0 0 16 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                            fill="#0E7421"
+                          />
+                        </svg>
                         <p class="card__trend__percent">68%</p>
                       </div>
                     </div>
@@ -297,6 +433,18 @@
                     <div class="card__heading">
                       <h4 class="card__title">Гофрокартон Т23 клапан</h4>
                       <div class="card__trend card__trend__up">
+                        <svg
+                          width="16"
+                          height="14"
+                          viewBox="0 0 16 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                            fill="#0E7421"
+                          />
+                        </svg>
                         <p class="card__trend__percent">68%</p>
                       </div>
                     </div>
@@ -315,6 +463,18 @@
                     <div class="card__heading">
                       <h4 class="card__title">Гофрокартон Т23 товарный</h4>
                       <div class="card__trend card__trend__up">
+                        <svg
+                          width="16"
+                          height="14"
+                          viewBox="0 0 16 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                            fill="#0E7421"
+                          />
+                        </svg>
                         <p class="card__trend__percent">68%</p>
                       </div>
                     </div>
@@ -333,6 +493,18 @@
                     <div class="card__heading">
                       <h4 class="card__title">Крахмал</h4>
                       <div class="card__trend card__trend__up">
+                        <svg
+                          width="16"
+                          height="14"
+                          viewBox="0 0 16 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                            fill="#0E7421"
+                          />
+                        </svg>
                         <p class="card__trend__percent">68%</p>
                       </div>
                     </div>
@@ -357,6 +529,18 @@
                     <div class="card__heading">
                       <h4 class="card__title">Макулатурный картон</h4>
                       <div class="card__trend card__trend__up">
+                        <svg
+                          width="16"
+                          height="14"
+                          viewBox="0 0 16 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                            fill="#0E7421"
+                          />
+                        </svg>
                         <p class="card__trend__percent">68%</p>
                       </div>
                     </div>
@@ -375,6 +559,18 @@
                     <div class="card__heading">
                       <h4 class="card__title">Белёный картон</h4>
                       <div class="card__trend card__trend__up">
+                        <svg
+                          width="16"
+                          height="14"
+                          viewBox="0 0 16 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                            fill="#0E7421"
+                          />
+                        </svg>
                         <p class="card__trend__percent">68%</p>
                       </div>
                     </div>
@@ -393,6 +589,18 @@
                     <div class="card__heading">
                       <h4 class="card__title">Целлюлозный картон К1</h4>
                       <div class="card__trend card__trend__up">
+                        <svg
+                          width="16"
+                          height="14"
+                          viewBox="0 0 16 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                            fill="#0E7421"
+                          />
+                        </svg>
                         <p class="card__trend__percent">68%</p>
                       </div>
                     </div>
@@ -413,7 +621,7 @@
             <div class="feedback">
               <div class="feedback__heading">
                 <h3 class="feedback__title">Обновления индекса ЦБП</h3>
-                <p class="feedback__subtitle">Быть в курсе самой актуальной информации по цене</p>
+                <p class="feedback__subtitle">Будьте в курсе самой актуальной информации по цене</p>
               </div>
               <form class="feedback__form" action="#">
                 <input
@@ -663,5 +871,8 @@
 </footer>
 
   </body>
-  <script src="js/script.js?t=1652514468131"></script>
+  <script src="vendors/js/jquery-3.5.1.min.js?t=1652699232124"></script>
+  <script src="vendors/js/chart.min.js?t=1652699232124"></script>
+  <script src="js/chart.js?t=1652699232124"></script>
+  <script src="js/script.js?t=1652699232124"></script>
 </html>
