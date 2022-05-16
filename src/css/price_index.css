@@ -99,10 +99,124 @@
   color: #0f0e0e;
 }
 
+.chart {
+  padding: 1.8125rem 2.125rem 2.125rem 2.125rem;
+  background-color: white;
+  border-radius: 0.625rem;
+}
+
+.controller__group {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+  margin-bottom: 1.8125rem;
+}
+
+.controller__title {
+  font-size: 1.125rem;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.controller__product_type {
+  margin-right: 10rem;
+}
+
+.tab__group {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+}
+
+.controller__tab {
+  font-size: 0.875rem;
+  padding: 5px 0.9375rem;
+  border: 1px solid #828282;
+  border-radius: 1.625rem;
+}
+
+.controller__tab:not(:last-child) {
+  margin-right: 0.625rem;
+}
+
+.controller__tab__active {
+  border: 1px solid #379b42;
+  color: #379b42;
+  font-weight: 500;
+  background-color: #ecf9ee;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 69px;
+}
+
+.product__checkboxes {
+  display: flex;
+  justify-content: "flex-start";
+  align-items: "center";
+  margin-bottom: 1.875rem;
+}
+
+.checkbox__wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 1.875rem;
+}
+
+.checkbox__fake {
+  display: flex;
+  justify-content: "center";
+  align-items: "center";
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #828282;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 0.5625rem;
+  transition: all 0.3s ease-in;
+}
+
+.checkbox__text {
+  color: #252525;
+  font-size: 0.875rem;
+}
+
+.checkbox__input:checked + .checkbox__fake {
+  border: 1px solid transparent;
+}
+
+.checkbox__input__1:checked + .checkbox__fake {
+  background-color: #9a57dd;
+}
+
+.checkbox__input__2:checked + .checkbox__fake {
+  background-color: #1172d3;
+}
+
+.checkbox__input__3:checked + .checkbox__fake {
+  background-color: #fec859;
+}
+
+.chart__download_btn {
+  background-color: #379b42;
+  color: white;
+  width: 9.1875rem;
+  height: 1.8125rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  align-self: flex-end;
+  margin-top: 1.875rem;
+}
+
 .weekly-index {
   display: flex;
   justify-content: "flex-start";
   align-items: "center";
+  margin-bottom: 1.875rem;
 }
 
 .weekly-index__title {
@@ -143,6 +257,7 @@
   list-style-type: none;
   padding: 1.1875rem 1.1875rem 1.375rem 1.125rem;
   border-radius: 0.625rem;
+  box-shadow: 0px 0px 10px 1px rgba(108, 108, 108, 0.1);
 }
 
 .card__heading {
@@ -285,103 +400,121 @@
   border-radius: 6px;
 }
 
-.chart {
-  padding: 1.8125rem 2.125rem 2.125rem 2.125rem;
-  background-color: white;
-  border-radius: 0.625rem;
-}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
 
-.controller__group {
-  display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
-  margin-bottom: 1.8125rem;
-}
+  .price-index .wrapper {
+    width: 100%;
+  }
 
-.controller__title {
-  font-size: 1.125rem;
-  color: #000;
-  font-weight: 500;
-  line-height: 1.625rem;
-  margin-bottom: 1.25rem;
-}
+  .content {
+    padding: 1.25rem;
+    background-color: #fff;
+  }
 
-.controller__product_type {
-  margin-right: 11.25rem;
-}
+  .weekly-index {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.6875rem;
+  }
 
-.tab__group {
-  display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
-}
+  .weekly-index span {
+    bottom: 0;
+    order: -1;
+    font-size: 1rem;
+  }
 
-.controller__tab {
-  padding: 5px 15px;
-  border: 1px solid #828282;
-  border-radius: 1.625rem;
-}
+  .cards__list {
+    grid-gap: 0;
+    display: flex;
+    flex-direction: column;
+  }
 
-.controller__tab:not(:last-child) {
-  margin-right: 0.625rem;
-}
+  .cards__row__title {
+    margin-bottom: 6px;
+  }
 
-.controller__tab__active {
-  border: 1px solid #379b42;
-  color: #379b42;
-  font-weight: 500;
-  background-color: #ecf9ee;
-}
+  .card {
+    max-width: 21rem;
+    margin-bottom: 1.25rem;
+  }
 
-.chart {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 69px;
-}
+  .feedback {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.875rem 1.25rem;
+  }
 
-.product__checkboxes {
-  display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
-  margin-bottom: 30px;
-}
+  .feedback__title {
+    font-size: 1.125rem;
+  }
 
-.checkbox__wrapper {
-  display: flex;
-  align-items: center;
-  margin-right: 30px;
-}
+  .feedback__subtitle {
+    font-size: 0.875rem;
+  }
 
-.checkbox__fake {
-  display: flex;
-  justify-content: "center";
-  align-items: "center";
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 1px solid #828282;
-  border-radius: 4px;
-  position: relative;
-  margin-right: 0.5625rem;
-  transition: all 0.3s ease-in;
-}
+  .feedback__form {
+    margin-top: 0.6875rem;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
 
-.checkbox__text {
-  color: #252525;
-  font-size: 0.875rem;
-}
+  .feedback__form__input {
+    width: 100%;
+    margin-bottom: 7px;
+  }
 
-.checkbox__input:checked + .checkbox__fake {
-  border: 1px solid transparent;
-}
+  .chart {
+    padding: 0;
+  }
 
-.checkbox__input__1:checked + .checkbox__fake {
-  background-color: #9a57dd;
-}
+  .controller__title {
+    margin-bottom: 0.8125rem;
+  }
 
-.checkbox__input__2:checked + .checkbox__fake {
-  background-color: #1172d3;
-}
+  .controller__group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.checkbox__input__3:checked + .checkbox__fake {
-  background-color: #fec859;
+  .controller__product_type {
+    margin-right: 0;
+    margin-bottom: 1.875rem;
+  }
+
+  .tab__group {
+    flex-wrap: wrap;
+  }
+
+  .controller__tab {
+    margin-bottom: 0.75rem;
+  }
+
+  .product__checkboxes {
+    flex-wrap: wrap;
+    order: 2;
+    margin-top: 1.875rem;
+  }
+
+  .checkbox__wrapper {
+    margin-bottom: 1.0625rem;
+  }
+
+  .checkbox__fake {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .checkbox__fake svg {
+    width: 8px;
+    height: 7px;
+  }
+
+  .chart__download_btn {
+    order: 3;
+    margin-top: 0;
+  }
 }
