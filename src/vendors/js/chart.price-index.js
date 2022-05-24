@@ -1,3 +1,30 @@
+// табы для графика, временное решение
+const productTypeArr = document.querySelectorAll("#product-type-tab");
+const periodArr = document.querySelectorAll("#period-type-tab");
+
+for (let btn of productTypeArr) {
+  btn.addEventListener("click", (e) => toggleProductType(e));
+}
+
+function toggleProductType(e) {
+  for (let btn of productTypeArr) {
+    btn.classList.remove("controller__tab__active");
+  }
+  e.target.classList.add("controller__tab__active");
+}
+
+for (let btn of periodArr) {
+  btn.addEventListener("click", (e) => togglePeriodType(e));
+}
+
+function togglePeriodType(e) {
+  for (let btn of periodArr) {
+    btn.classList.remove("controller__tab__active");
+  }
+  e.target.classList.add("controller__tab__active");
+}
+
+// ------------------chart------------------------------
 const ctx = document.getElementById("myChart").getContext("2d");
 
 // gradient 1

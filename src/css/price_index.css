@@ -144,7 +144,6 @@
 .controller__tab__active {
   border: 1px solid #379b42;
   color: #379b42;
-  font-weight: 500;
   background-color: #ecf9ee;
 }
 
