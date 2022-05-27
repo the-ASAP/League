@@ -1,0 +1,276 @@
+@import "root";
+@import "sidebar";
+
+.breadcrumbs {
+  display: none;
+}
+
+.price-index-what {
+  &__container {
+    display: flex;
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+  padding: 1.8125rem 1.875rem;
+  color: rgba(37, 37, 37, 1);
+}
+
+.section {
+  padding: 0.8125rem 0;
+
+  &__title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: rgba(37, 37, 37, 1);
+  }
+
+  &__desc {
+    font-size: 1.25rem;
+    line-height: 1.8125rem;
+    color: rgba(37, 37, 37, 1);
+  }
+
+  &__desc .bold {
+    font-weight: 600;
+  }
+}
+
+.note {
+  display: block;
+  font-size: 1.25rem;
+  color: rgba(130, 130, 130, 1);
+  margin-top: 0.9375rem;
+}
+
+.what {
+  margin-bottom: 2.1875rem;
+}
+
+.profit {
+  margin-bottom: 3.125rem;
+  &__list {
+    margin-top: 2.0625rem;
+    display: grid;
+    grid-template-columns: repeat(4, 13.5rem);
+    grid-gap: 2.375rem;
+  }
+}
+
+.profit__item {
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    padding: 0px 1.875rem;
+    margin-bottom: 1.125rem;
+    height: 6.25rem;
+
+    img {
+      height: 100%;
+      max-width: 5.3125rem;
+    }
+  }
+
+  &__title {
+    max-width: 12.5rem;
+    color: rgba(37, 37, 37, 1);
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 1.125rem;
+  }
+
+  &__desc {
+    color: rgba(37, 37, 37, 1);
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+.formation {
+  margin-bottom: 3.125rem;
+  &__list {
+    margin-top: 2.0625rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 13.5rem);
+    grid-gap: 2.375rem;
+  }
+}
+
+.formation__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__img {
+    display: flex;
+    align-items: flex-end;
+    padding: 0px 1.875rem;
+    margin-bottom: 1.125rem;
+    height: 6.35rem;
+
+    img {
+      height: 100%;
+      max-width: 5.3125rem;
+    }
+  }
+
+  &__title {
+    max-width: 12.5rem;
+    color: rgba(37, 37, 37, 1);
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 1.125rem;
+  }
+
+  &__desc {
+    color: rgba(37, 37, 37, 1);
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 2.8125rem;
+    right: 0;
+
+    img {
+      height: 100%;
+      max-width: 3.125rem;
+    }
+  }
+}
+
+.formation__item:nth-child(4) {
+  .formation__item__arrow {
+    display: none;
+  }
+}
+
+.scheme {
+  width: 51.6875rem;
+  height: 46rem;
+  margin: 0 auto;
+  border: 1px solid aqua;
+  position: relative;
+
+  &__img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.scheme__member {
+  position: absolute;
+  border-bottom: 1px solid rgba(57, 173, 70, 1);
+  color: rgba(134, 129, 129, 1);
+
+  span {
+    display: block;
+  }
+}
+
+.member {
+  &_1 {
+    top: 60px;
+    left: 0;
+  }
+
+  &_2 {
+    top: 0;
+    right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    &__title {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
+  }
+
+  .profit {
+    margin-bottom: 2.1875rem;
+    &__list {
+      margin-top: 1.875rem;
+
+      grid-gap: 0;
+      display: flex;
+      flex-direction: column;
+      max-width: 23.4375rem;
+    }
+  }
+
+  .profit__item {
+    flex-direction: row;
+
+    &:not(:last-child) {
+      margin-bottom: 2.1875rem;
+    }
+
+    &__img {
+      padding: 0 0.9375rem 0 0;
+      height: 3.625rem;
+
+      img {
+        width: 3.4375rem;
+      }
+    }
+
+    &__title {
+      margin-bottom: 0.6875rem;
+    }
+  }
+
+  .formation__item:nth-child(4) {
+    .formation__item__arrow {
+      display: block;
+    }
+  }
+
+  .formation {
+    margin-bottom: 2.1875rem;
+    &__list {
+      margin-top: 1.875rem;
+
+      grid-gap: 0;
+      display: flex;
+      flex-direction: column;
+      max-width: 23.4375rem;
+    }
+  }
+
+  .formation__item {
+    flex-direction: row;
+
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+      padding-bottom: 4.375rem;
+    }
+
+    &__img {
+      padding: 0 0.9375rem 0 0;
+      height: 3.625rem;
+      img {
+        width: 3.4375rem;
+      }
+    }
+
+    &__title {
+      margin-bottom: 0.6875rem;
+    }
+
+    &__arrow {
+      top: 95%;
+      right: 50%;
+      transform: rotate(90deg) translateX(-50%);
+    }
+  }
+}
