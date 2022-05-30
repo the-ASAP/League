@@ -1,5 +1,6 @@
 @import "root";
 @import "sidebar";
+@import "feedbackForm";
 
 .breadcrumbs {
   display: none;
@@ -84,6 +85,7 @@
   display: flex;
   align-items: center;
   margin-right: 1.875rem;
+  cursor: pointer;
 }
 
 .checkbox__fake {
@@ -261,48 +263,6 @@
   }
 }
 
-.feedback {
-  width: 100%;
-  padding: 1.875rem 1.0625rem 1.875rem 1.875rem;
-  background-color: #fff;
-  border: 1px solid #39ad46;
-  border-radius: 0.625rem;
-  @include flexible("space-between", "center");
-
-  &__title {
-    font-size: 1.5rem;
-    color: rgba(37, 37, 37, 1);
-    font-weight: 600;
-  }
-
-  &__subtitle {
-    font-size: 1.125rem;
-    color: rgba(37, 37, 37, 1);
-  }
-}
-
-.feedback__form {
-  @include flexible("flex-start", "center");
-
-  &__input {
-    width: 20.4375rem;
-    height: 2.5rem;
-    padding: 0px 0.875rem;
-    border: 1px solid #4f4f4f;
-    border-radius: 6px;
-  }
-
-  &__button {
-    height: 2.5rem;
-    width: 8.75rem;
-    color: rgba(255, 255, 255, 1);
-    font-size: 1.125rem;
-    background-color: #379b42;
-    margin-left: 5px;
-    border-radius: 6px;
-  }
-}
-
 // -------------------------------------------------------------------
 @media (max-width: 768px) {
   .price-index {
@@ -343,32 +303,6 @@
   .card {
     max-width: 21rem;
     margin-bottom: 1.25rem;
-  }
-
-  .feedback {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.875rem 1.25rem;
-
-    &__title {
-      font-size: 1.125rem;
-    }
-
-    &__subtitle {
-      font-size: 0.875rem;
-    }
-  }
-
-  .feedback__form {
-    margin-top: 0.6875rem;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-
-    &__input {
-      width: 100%;
-      margin-bottom: 7px;
-    }
   }
 
   .chart {

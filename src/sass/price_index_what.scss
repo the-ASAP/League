@@ -1,5 +1,6 @@
 @import "root";
 @import "sidebar";
+@import "feedbackForm";
 
 .breadcrumbs {
   display: none;
@@ -18,9 +19,8 @@
 }
 
 .section {
-  padding: 0.8125rem 0;
-
-  &__title {
+  margin-bottom: 4.0625rem;
+  .title {
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 600;
@@ -28,13 +28,13 @@
     color: rgba(37, 37, 37, 1);
   }
 
-  &__desc {
+  .desc {
     font-size: 1.25rem;
     line-height: 1.8125rem;
     color: rgba(37, 37, 37, 1);
   }
 
-  &__desc .bold {
+  desc .bold {
     font-weight: 600;
   }
 }
@@ -46,12 +46,7 @@
   margin-top: 0.9375rem;
 }
 
-.what {
-  margin-bottom: 2.1875rem;
-}
-
 .profit {
-  margin-bottom: 3.125rem;
   &__list {
     margin-top: 2.0625rem;
     display: grid;
@@ -92,7 +87,6 @@
 }
 
 .formation {
-  margin-bottom: 3.125rem;
   &__list {
     margin-top: 2.0625rem;
 
@@ -153,15 +147,10 @@
   }
 }
 
-.members {
-  margin-bottom: 3.4375rem;
-}
-
 .scheme {
   width: 40.3125rem;
   height: 40rem;
-  margin: 4.6875rem auto 0 auto;
-  border: 1px solid aqua;
+  margin: 6.875rem auto 0 auto;
   position: relative;
 
   &__img {
@@ -253,6 +242,7 @@
 }
 
 .members__button {
+  cursor: pointer;
   display: block;
   margin: 2.5rem auto 0 auto;
   text-transform: uppercase;
@@ -266,9 +256,10 @@
 }
 
 .faq__head {
+  cursor: pointer;
   background-color: #f2f2f2;
   margin-top: 0.9375rem;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 0.75rem 1.875rem;
   position: relative;
 
@@ -279,7 +270,7 @@
     width: 1px;
     height: 1.3125rem;
     right: 2.5rem;
-    top: 1.625rem;
+    top: calc(50% - 0.6875rem);
     background-color: rgba(116, 115, 124, 1);
     transition: transform 0.3s ease-in, background-color 0.3s ease-in;
   }
@@ -290,7 +281,7 @@
 }
 
 .faq__head.accordion-header-active {
-  border-radius: 5px 5px 0 0;
+  border-radius: 8px 8px 0 0;
 
   &::before {
     transform: rotate(-45deg);
@@ -312,8 +303,41 @@
   color: rgba(37, 37, 37, 1);
   background-color: #f2f2f2;
   font-size: 1.25rem;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 8px 8px;
   padding: 0 1.875rem 0.9375rem;
+
+  &__paragraph {
+    margin-bottom: 12px;
+    color: rgba(37, 37, 37, 1);
+    font-size: 1.25rem;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      top: 0.5625rem;
+      left: 0;
+      background-color: #30ad63;
+      border-radius: 50%;
+    }
+  }
+}
+
+th,
+td {
+  border: 2px solid #f2f2f2;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 @media (max-width: 768px) {
@@ -326,14 +350,14 @@
   }
 
   .section {
-    &__title {
+    margin-bottom: 3.125rem;
+    .title {
       font-size: 1.75rem;
       line-height: 2rem;
     }
   }
 
   .profit {
-    margin-bottom: 2.1875rem;
     &__list {
       margin-top: 1.875rem;
 
@@ -372,7 +396,6 @@
   }
 
   .formation {
-    margin-bottom: 2.1875rem;
     &__list {
       margin-top: 1.875rem;
 
@@ -413,6 +436,7 @@
   .scheme {
     width: 100%;
     height: auto;
+    margin-top: 2.75rem;
 
     img {
       width: 100%;
@@ -496,15 +520,22 @@
 
   .faq__head {
     padding: 0.8125rem 0.875rem;
+    &:before,
+    &:after {
+      right: 1.25rem;
+    }
   }
 
   .faq__title {
     font-size: 1.1875rem;
     line-height: 1.5rem;
+  }
 
-    &:before,
-    &:after {
-      right: 1.25rem;
+  .faq__content {
+    padding: 0 0.8125rem 1.25rem 0.8125rem;
+
+    &__item {
+      margin-bottom: 0.875rem;
     }
   }
 }

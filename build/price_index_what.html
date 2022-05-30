@@ -9,8 +9,8 @@
     <link rel="shortcut icon" type="image/png" href="img/icons/favicon.ico" />
     <title>League</title>
 
-    <link rel="stylesheet" href="css/main.css?t=1653903185371" type="text/css" />
-    <link rel="stylesheet" href="css/price_index_what.css?t=1653903185371" type="text/css" />
+    <link rel="stylesheet" href="css/main.css?t=1653916065486" type="text/css" />
+    <link rel="stylesheet" href="css/price_index_what.css?t=1653916065486" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -226,19 +226,19 @@
 </div>
 
           <div class="content">
-            <div class="section what">
-              <h1 class="section__title">Что такое ценовой индекс на ЦБП*</h1>
-              <p class="section__desc">
+            <section class="section what">
+              <h1 class="title">Что такое ценовой индекс на ЦБП*</h1>
+              <p class="desc">
                 Это средневзвешанный показатель цены по рынку на отдельные виды целлюлозно-бумажной
                 продукции. Индекс фиксирует и отображает ценовую динамику по рынку каждую неделю, в
                 том числе в виде графиков с данными прошлых периодов.
                 <span class="note">*Целлюлозно-бумажная продукция</span>
               </p>
-            </div>
+            </section>
 
-            <div class="section profit">
-              <h2 class="section__title">Польза ценового индекса</h2>
-              <p class="section__desc">
+            <section class="section profit">
+              <h2 class="title">Польза ценового индекса</h2>
+              <p class="desc">
                 Используйте индекс как компас, инструмент для ориентиации куда двигается цена на
                 рынке.
               </p>
@@ -290,11 +290,11 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div class="section formation">
-              <h2 class="section__title">Как формируется индекс</h2>
-              <p class="section__desc">
+            <section class="section formation">
+              <h2 class="title">Как формируется индекс</h2>
+              <p class="desc">
                 Для формирования ценового индекса компании-участники передают данные о фактических
                 ценах реальных сделок в аналитический центр. Данные проходят проверку аналитиками,
                 если данные вызывают сомнения, например, не сходятся с данными предоствленными с
@@ -421,11 +421,11 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div class="section members">
-              <h2 class="section__title">Участники индекса</h2>
-              <p class="section__desc">
+            <section class="section members">
+              <h2 class="title">Участники индекса</h2>
+              <p class="desc">
                 Компаниями-участниками являются предприятия, заключившие договор с аналитическим
                 агентством: <span class="bold">переработчики макулатуры</span> и
                 <span class="bold">производители гофропродукции</span>. Таким образом для
@@ -452,21 +452,34 @@
                   <span class="member__desc">макулатуры</span>
                 </div>
               </div>
-              <button class="members__button">Стать участником индекса</button>
-            </div>
+              <button class="members__button" type="button">Стать участником индекса</button>
+            </section>
 
-            <div class="section faq">
-              <h2 class="section__title">Вопрос-ответ</h2>
+            <section class="section faq">
+              <h2 class="title">Вопрос-ответ</h2>
               <div id="accordion">
                 <div class="faq__head">
                   <h4 class="faq__title">Как определяется весовой коэфицент участников</h4>
                 </div>
                 <div>
                   <div class="faq__content">
-                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut
-                    neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc.
-                    Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur
-                    malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                    <!-- <table>
+                      <tr>
+                        <th>Переработчики макулатуры</th>
+                        <th>Производители гофропродукции</th>
+                        <th>Вес</th>
+                      </tr>
+                      <tr>
+                        <td>Реализация</td>
+                        <td>Закупка</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>До 50</td>
+                        <td>До 20</td>
+                        <td>1</td>
+                      </tr>
+                    </table> -->
                   </div>
                 </div>
                 <div class="faq__head">
@@ -474,16 +487,113 @@
                     Какие компании на рынке являются или могут стать участниками индекса
                   </h4>
                 </div>
-                <div>
-                  <div class="faq__content">
-                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus.
-                    Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit,
-                    faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus
-                    urna.
-                  </div>
+                <div class="faq__content">
+                  Участниками индекса могут быть только потребители макулатуры марки МС-5Б, а так же
+                  производители и потребители гофропродукции и тарных картонов
+                </div>
+
+                <div class="faq__head">
+                  <h4 class="faq__title">
+                    Тебования к данным принимаемым для расчёта ценового индекса
+                  </h4>
+                </div>
+                <div class="faq__content">
+                  <ul class="faq__content__list">
+                    <li class="faq__content__item">Франко-склад поставщика, инкотермс EXW</li>
+                    <li class="faq__content__item">
+                      Предоставляемые данные отражают средневзвешенную цену реализации за предыдущую
+                      неделю
+                    </li>
+                    <li class="faq__content__item">Все значения цен приводятся без НДС</li>
+                    <li class="faq__content__item">
+                      Условия оплаты деньгами, без ограничений (предоплата, постоплата, факторинг)
+                    </li>
+                    <li class="faq__content__item">
+                      Срок предоставления данных: с понедельника по 12:00 вторника каждой недели
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="faq__head">
+                  <h4 class="faq__title">Какие данные не принимаются</h4>
+                </div>
+                <div class="faq__content">
+                  <ul class="faq__content__list">
+                    <li class="faq__content__item">
+                      Напрямую зависящих от индекса (приравненных к нему) 
+                    </li>
+                    <li class="faq__content__item">
+                      Соответствующих прайс-листам или любые прочие цены, не являющиеся фактическими
+                      ценами реализации или закупки
+                    </li>
+                    <li class="faq__content__item">Сделок между аффилированными лицами</li>
+                    <li class="faq__content__item">Фьючерсных контрактов</li>
+                    <li class="faq__content__item">Бартерных и взаимозачетных сделок.</li>
+                  </ul>
+                </div>
+
+                <div class="faq__head">
+                  <h4 class="faq__title">Репрезентативность данных</h4>
+                </div>
+                <div class="faq__content">
+                  Индекс ЦСР может быть сформирован при условии, что участниками индекса является не
+                  менее 3 компаний. При этом ЦСР обеспечивает репрезентативность выборки компаний(
+                  более 50 % рынка), участвующих в индексе, в целях отображения достоверной картины
+                  рынка.
+                </div>
+
+                <div class="faq__head">
+                  <h4 class="faq__title">Достоверность и аудит индекса</h4>
+                </div>
+                <div class="faq__content">
+                  Методика индексов опубликована и прошла аудит. Аудитором методики индекса является
+                  Информационно-аналитический центр по вопросам внешнеторговой деятельности при
+                  Министерстве промышленности и торговли России.
+                </div>
+
+                <div class="faq__head">
+                  <h4 class="faq__title">Формирование и администрирование индекса</h4>
+                </div>
+                <div class="faq__content">
+                  <p class="faq__content__paragraph">
+                    Центр системных решений (ЦСР) является отраслевым аналитическим агентством в
+                    сфере целлюлозно-бумажной промышленности (ЦБП). На регулярной основе ЦСР
+                    публикует ценовые индексы на основные виды продукции ЦБП.
+                  </p>
+                  ЦСР занимается разработкой различных аналитических продуктов: маркетинговых
+                  исследований, составлением и разработкой баз данных по российскому рынку и пр.
+                  Клиентами ЦСР являются крупнейшие компании российской и мировой
+                  целлюлозно-бумажной промышленности.
+                </div>
+
+                <div class="faq__head">
+                  <h4 class="faq__title">Как защищаются данные</h4>
+                </div>
+                <div class="faq__content">
+                  Криптошифрование предполагает, что при вводе данных, они дублируются сразу на
+                  нескольких, независимых хранилищ данных и при взломе, данные останутся в
+                  сохранности и без изменений в любом случае. Вносить изменения в исторические
+                  данные невозможно, потому что каждое действие в системе отслеживается методов
+                  логирования.
                 </div>
               </div>
-            </div>
+            </section>
+
+            <div class="feedback">
+   <div class="feedback__heading">
+     <h3 class="feedback__title">Обновления индекса ЦБП</h3>
+     <p class="feedback__subtitle">Будьте в курсе самой актуальной информации по цене</p>
+   </div>
+   <form class="feedback__form" action="#">
+     <input
+       class="feedback__form__input"
+       type="email"
+       placeholder="Введите свой e-mail "
+       required
+     />
+     <button class="feedback__form__button" type="submit">Подписаться</button>
+   </form>
+ </div>
           </div>
         </div>
       </div>
@@ -722,8 +832,8 @@
 </footer>
 
   </body>
-  <script src="vendors/js/jquery-3.5.1.min.js?t=1653903185371"></script>
-  <script src="vendors/js/jquery-ui.js?t=1653903185371"></script>
-  <script src="vendors/js/jquery-accordion.js?t=1653903185371"></script>
-  <script src="js/script.js?t=1653903185371"></script>
+  <script src="vendors/js/jquery-3.5.1.min.js?t=1653916065486"></script>
+  <script src="vendors/js/jquery-ui.js?t=1653916065486"></script>
+  <script src="vendors/js/jquery-accordion.js?t=1653916065486"></script>
+  <script src="js/script.js?t=1653916065486"></script>
 </html>
