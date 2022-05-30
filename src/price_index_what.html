@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     @import "header.html"
@@ -84,7 +88,7 @@
                     <h5 class="profit__item__title">Прозрачность и надёжность</h5>
                     <p class="profit__item__desc">
                       Аудитором методики индекса является аналитический центр при Министерстве
-                      промышленности и торговли РФ
+                      промышленности и торговли РФ.
                     </p>
                   </div>
                 </div>
@@ -229,15 +233,58 @@
                 агентством: <span class="bold">переработчики макулатуры</span> и
                 <span class="bold">производители гофропродукции</span>. Таким образом для
                 формирования ценового индекса предоставляется как цена закупки, так и продажи по
-                одним и тем же сделкам, но от разных независимых источников.
+                одним и тем же сделкам, но от разных независимых источников
               </p>
               <div class="scheme">
-                <img class="scheme__img" src="./img/index-price/schema.png" alt="img" />
-                <div class="scheme__member member_1">Заготовители <span>макулатуры</span></div>
-                <div class="scheme__member member_2">Переработчики <span>макулатуры</span></div>
-                <div class="scheme__member member_3">Производители <span>гофропродукции</span></div>
-                <div class="scheme__member member_4">Покупатели <span>гофропродукции</span></div>
-                <div class="scheme__member member_5">Образователи <span>макулатуры</span></div>
+                <img class="scheme__img" src="./img/index-price/schema3.png" alt="img" />
+                <div class="scheme__member member_1">
+                  Заготовители <span class="member__desc">макулатуры</span>
+                </div>
+                <div class="scheme__member member_2">
+                  Переработчики <span class="member__desc">макулатуры</span>
+                </div>
+                <div class="scheme__member member_3">
+                  Производители <span class="member__desc">гофропродукции</span>
+                </div>
+                <div class="scheme__member member_4">
+                  Покупатели <span class="member__desc">гофропродукции</span>
+                </div>
+                <div class="scheme__member member_5">
+                  <span class="member__desc__5">Отходо</span>
+                  Образователи
+                  <span class="member__desc">макулатуры</span>
+                </div>
+              </div>
+              <button class="members__button">Стать участником индекса</button>
+            </div>
+
+            <div class="section faq">
+              <h2 class="section__title">Вопрос-ответ</h2>
+              <div id="accordion">
+                <div class="faq__head">
+                  <h4 class="faq__title">Как определяется весовой коэфицент участников</h4>
+                </div>
+                <div>
+                  <div class="faq__content">
+                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut
+                    neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc.
+                    Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur
+                    malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                  </div>
+                </div>
+                <div class="faq__head">
+                  <h4 class="faq__title">
+                    Какие компании на рынке являются или могут стать участниками индекса
+                  </h4>
+                </div>
+                <div>
+                  <div class="faq__content">
+                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus.
+                    Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit,
+                    faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus
+                    urna.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -247,5 +294,7 @@
     @import "footer.html"
   </body>
   <script src="vendors/js/jquery-3.5.1.min.js"></script>
+  <script src="vendors/js/jquery-ui.js"></script>
+  <script src="vendors/js/jquery-accordion.js"></script>
   <script src="js/script.js"></script>
 </html>
