@@ -1,0 +1,503 @@
+@import "root";
+@import "sidebar";
+@import "feedbackForm";
+
+.breadcrumbs {
+  display: none;
+}
+
+.price-index-use {
+  &__container {
+    display: flex;
+  }
+}
+
+.content {
+  flex: 1 1 auto;
+  padding: 1.375rem 2.5625rem 2.5625rem 6.75rem;
+  color: rgba(37, 37, 37, 1);
+  background-color: rgb(249, 249, 251);
+}
+
+.section {
+  margin-bottom: 4.0625rem;
+  .title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2.1875rem;
+    color: rgba(37, 37, 37, 1);
+  }
+}
+
+.stepper-main,
+.stepper-second {
+  .title {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.step__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.step {
+  position: relative;
+  padding-top: 3.75rem;
+  padding-right: 1.875rem;
+
+  &:not(:last-child) {
+    border-top: 1px solid $firstGreen;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -1.5625rem;
+    width: 3.1875rem;
+    height: 3.1875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $firstGreen;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 600;
+    color: rgba(37, 37, 37, 1);
+    margin-bottom: 0.75rem;
+  }
+
+  &__desc {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: rgba(37, 37, 37, 1);
+  }
+}
+
+.step__one {
+  &::before {
+    content: "01";
+  }
+}
+
+.step__two {
+  &::before {
+    content: "02";
+  }
+}
+
+.step__three {
+  &::before {
+    content: "03";
+  }
+}
+
+.step__four {
+  &::before {
+    content: "04";
+  }
+}
+
+.stepper-main__button {
+  margin: 40px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $firstGreen;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+
+  p {
+    color: #ffffff;
+    margin-right: 0.5625rem;
+    text-transform: uppercase;
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  img {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}
+
+.rule {
+  &__box {
+    display: flex;
+    align-items: start;
+  }
+
+  &__info {
+    padding: 1rem 1.625rem 1rem 1.25rem;
+    max-width: 24.375rem;
+    background-color: #ffffff;
+    border-radius: 0 1.25rem 0 1.25rem;
+    margin-right: 13px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info__title {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    margin-bottom: 4px;
+    color: $firstGreen;
+    font-weight: 600;
+  }
+
+  &__info__desc {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    color: #000;
+    font-weight: 500;
+  }
+
+  &__info__link {
+    margin-left: auto;
+    color: $firstGreen;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__image_large {
+    width: 38.3125rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__image_small {
+    display: none;
+  }
+}
+
+.example {
+  margin-bottom: 2.9375rem;
+
+  &__title {
+    color: #000;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 2.125rem;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__view {
+    margin-right: 1.5rem;
+    max-width: 25.4375rem;
+  }
+
+  &__img {
+    width: 25.4375rem;
+    margin-bottom: 1.375rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__note {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__note__item {
+    color: #000;
+    max-width: 45%;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    padding-left: 2.125rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.75rem;
+      height: 0.75rem;
+      left: 6px;
+      top: 3px;
+      border-radius: 50%;
+    }
+  }
+
+  &__note__item:nth-child(1)::before {
+    background-color: rgba(70, 116, 193, 1);
+  }
+  &__note__item:nth-child(2)::before {
+    background-color: rgba(235, 125, 60, 1);
+  }
+}
+
+.example__desc {
+  &__item {
+    background-color: #fff;
+    padding: 1rem 2.8125rem 1rem 1.875rem;
+    border-radius: 0 0 2.1875rem 0;
+  }
+
+  &__item.upper {
+    border-radius: 0 2.1875rem 0 0;
+    margin-bottom: 1.0625rem;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    color: #000;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+.delta {
+  margin-top: 3.375rem;
+  &__container {
+    max-width: 45.9375rem;
+    background-color: #fff;
+    padding: 2.125rem 1.9375rem;
+    border-radius: 0 0 1.875rem 0;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: rgba(37, 37, 37, 1);
+    margin-bottom: 0.9375rem;
+
+    span {
+      color: $firstGreen;
+    }
+  }
+
+  &__desc {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #000;
+    margin-bottom: 2.0625rem;
+  }
+
+  &__item {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #000;
+    padding-left: 1.3125rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.625rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $firstGreen;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 2.0625rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-index-use .wrapper {
+    width: 100%;
+  }
+
+  .content {
+    padding: 1.4375rem 1.125rem 4.125rem 1.125rem;
+    background-color: #fff;
+  }
+
+  .section {
+    margin-bottom: 3.125rem;
+    .title {
+      font-size: 1.75rem;
+      line-height: 2rem;
+    }
+  }
+
+  .stepper-main,
+  .stepper-second {
+    .title {
+      margin-bottom: 1.625rem;
+    }
+  }
+
+  .step__list {
+    flex-direction: column;
+    padding-left: 1.1875rem;
+    max-width: 28.125rem;
+  }
+
+  .step {
+    padding: 0 0 2.1875rem 1.875rem;
+
+    &:not(:last-child) {
+      border-top: none;
+      border-left: 1px solid $firstGreen;
+    }
+
+    &::before {
+      width: 2.375rem;
+      height: 2.375rem;
+      font-size: 1.125rem;
+      font-weight: 500;
+      top: 0;
+      left: -1.1875rem;
+    }
+
+    &__desc {
+      font-size: 1.25rem;
+      line-height: 1.8125rem;
+    }
+  }
+
+  .stepper-main__button {
+    display: none;
+  }
+
+  .rule {
+    &__box {
+      flex-direction: column;
+    }
+
+    &__info {
+      background-color: #f9f9fb;
+      margin-right: 0;
+      margin-bottom: 1.6875rem;
+    }
+
+    &__image_large {
+      display: none;
+    }
+
+    &__image_small {
+      display: block;
+      width: 100%;
+      max-width: 24.375rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .example {
+    margin-bottom: 2.375rem;
+
+    &__title {
+      font-size: 1.25rem;
+      line-height: 1.625rem;
+      margin-bottom: 1.6875rem;
+
+      span {
+        font-weight: 500;
+        display: block;
+      }
+    }
+
+    &__box {
+      flex-direction: column;
+    }
+
+    &__view {
+      margin-right: 0;
+      max-width: 500px;
+    }
+
+    &__img {
+      width: 100%;
+      margin-bottom: 0.75rem;
+      img {
+        width: 100%;
+      }
+    }
+
+    &__note {
+      margin-bottom: 1.75rem;
+      justify-content: space-around;
+    }
+
+    &__note__item {
+      max-width: 8.75rem;
+      line-height: 1.1875rem;
+      padding-left: 1.125rem;
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        left: 5px;
+      }
+    }
+  }
+
+  .example__desc {
+    &__item {
+      background-color: rgba(249, 249, 251, 1);
+      padding: 1.3125rem 1.1875rem;
+    }
+
+    &__item.upper {
+      margin-bottom: 1.6875rem;
+    }
+
+    &__title {
+      margin-bottom: 0.75rem;
+    }
+
+    &__text {
+      color: #000;
+      font-size: 18px;
+      line-height: 1.625rem;
+    }
+  }
+
+  .delta {
+    margin-top: 3.125rem;
+
+    &__container {
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+      line-height: 2rem;
+
+      span {
+        display: block;
+      }
+    }
+
+    &__desc {
+      margin-bottom: 1.0625rem;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 1.0625rem;
+    }
+  }
+}
