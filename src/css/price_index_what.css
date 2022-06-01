@@ -56,7 +56,7 @@
   padding: 0;
 }
 
-.sidebar__nav__list__item {
+.sidebar__nav__item {
   display: flex;
   justify-content: "flex-start";
   align-items: "center";
@@ -64,19 +64,19 @@
   padding: 0px 0px 0px 0.9375rem;
 }
 
-.sidebar__nav__list__item a {
+.sidebar__nav__item a {
   transition: color 0.3s ease-in;
   font-size: 1.125rem;
   color: #3e3f3e;
 }
 
-.sidebar__nav__list__item:hover a {
-  color: #58ca65;
-}
-
-.sidebar__nav__list__item__active a {
+.sidebar__nav__item a.active {
   color: #379b42;
   font-weight: 600;
+}
+
+.sidebar__nav__item:hover a {
+  color: #58ca65;
 }
 
 :root {

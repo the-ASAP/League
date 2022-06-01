@@ -6,10 +6,12 @@
   padding-top: 2.5rem;
 }
 
-.sidebar__nav__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.sidebar__nav {
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 
   &__item {
     @include flexible("flex-start", "center");
@@ -22,16 +24,14 @@
       color: rgba(62, 63, 62, 1);
     }
 
+    a.active {
+      color: rgba(55, 155, 66, 1);
+      font-weight: 600;
+    }
+
     &:hover {
       a {
         color: rgba(88, 202, 101, 1);
-      }
-    }
-
-    &__active {
-      a {
-        color: rgba(55, 155, 66, 1);
-        font-weight: 600;
       }
     }
   }
