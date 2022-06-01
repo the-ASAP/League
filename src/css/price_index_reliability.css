@@ -207,6 +207,7 @@ p {
 
 .verification__box {
   display: flex;
+  align-items: center;
 }
 
 .aside {
@@ -290,6 +291,7 @@ p {
     width: 100%;
     padding: 23px 0 23px 0;
     margin-right: 0;
+    margin-bottom: 1.625rem;
   }
 
   .schema__img {

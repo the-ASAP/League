@@ -56,6 +56,7 @@ p {
 
   &__box {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -112,12 +113,9 @@ p {
 
   .aside {
     width: 100%;
-
     padding: 23px 0 23px 0;
     margin-right: 0;
-
-    &__title {
-    }
+    margin-bottom: 1.625rem;
   }
 
   .schema {

@@ -314,6 +314,16 @@
   width: auto;
 }
 
+.scheme__title {
+  color: #252525;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  position: absolute;
+  top: 30%;
+  right: 30%;
+}
+
 .scheme__member {
   font-size: 1.25rem;
   line-height: 1.5625rem;
@@ -634,6 +644,11 @@ td {
     height: auto;
   }
 
+  .scheme__title {
+    font-size: 1rem;
+    line-height: 1.1rem;
+  }
+
   .scheme__member {
     font-size: 0.875rem;
     line-height: 1.125rem;
@@ -739,6 +754,11 @@ td {
 }
 
 @media (max-width: 380px) {
+  .scheme__title {
+    top: 27%;
+    right: 24%;
+  }
+
   .member_5::after {
     height: 3.3625rem;
     bottom: -3.4rem;
