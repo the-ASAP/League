@@ -151,7 +151,22 @@ const createYouTubeEmbedLink = (btn, container) => {
   });
 };
 
+//табы
+function toggleTabs(tabTrigger, tabContent) {
+  $(tabTrigger).click(function () {
+    var id = $(this).attr("data-tab"),
+      content = $(`${tabContent}[data-tab=${id}]`);
+
+    $(`${tabTrigger}.active`).removeClass("active");
+    $(this).addClass("active");
+
+    $(`${tabContent}.active`).removeClass("active");
+    content.addClass("active");
+  });
+}
+
 const refreshScript = () => {
+  toggleTabs(".tab-trigger", ".tab-content");
   contentFadeInOnReady();
   bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
   accordion(".accordion__main", ".accordion__information", "activeAccordion");
