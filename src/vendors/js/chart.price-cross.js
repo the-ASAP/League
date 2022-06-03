@@ -25,24 +25,26 @@ function togglePeriodType(e) {
 }
 
 // -----------------------моковые данные----------------------------------------------------
-const mockLabels = ["фев 21", "апр 21", "июнь 21", "авг 21", "окт 21", "дек 21"];
-const mockData = [
-  {
-    pointsArr: [30, 33, 35, 40, 37, 35],
-  },
-  {
-    pointsArr: [37, 39, 45, 42, 35, 30],
-  },
-  {
-    pointsArr: [27, 29, 25, 27, 25, 23],
-  },
-  {
-    pointsArr: [57, 59, 55, 58, 60, 62],
-  },
-  {
-    pointsArr: [12, 25, 37, 39, 45, 50],
-  },
-];
+const crossData = {
+  labels: ["фев 21", "апр 21", "июнь 21", "авг 21", "окт 21", "дек 21"],
+  data: [
+    {
+      pointsArr: [30, 33, 35, 40, 37, 35],
+    },
+    {
+      pointsArr: [37, 39, 45, 42, 35, 30],
+    },
+    {
+      pointsArr: [27, 29, 25, 27, 25, 23],
+    },
+    {
+      pointsArr: [57, 59, 55, 58, 60, 62],
+    },
+    {
+      pointsArr: [12, 25, 37, 39, 45, 50],
+    },
+  ],
+};
 
 // ------------------график для страницы price-index-cross ------------------------------
 function createGraphCross(arrLabels, arrData) {
@@ -188,9 +190,8 @@ function createGraphCross(arrLabels, arrData) {
     hiddenGraph(this, 4);
   });
 }
-
 // ----------------------------------------------------
 
 $().ready(() => {
-  createGraphCross(mockLabels, mockData);
+  createGraphCross(crossData.labels, crossData.data);
 });
