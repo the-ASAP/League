@@ -107,6 +107,12 @@
   }
 }
 
+.stepper-main {
+  .step__list > li {
+    width: 25%;
+  }
+}
+
 .stepper-main__button {
   margin: 2.5rem auto 0 auto;
   display: flex;
@@ -374,6 +380,12 @@
     &__desc {
       font-size: 1.25rem;
       line-height: 1.8125rem;
+    }
+  }
+
+  .stepper-main {
+    .step__list > li {
+      width: auto;
     }
   }
 
