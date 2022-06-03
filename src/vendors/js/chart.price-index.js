@@ -24,7 +24,7 @@ function togglePeriodType(e) {
   e.target.classList.add("active");
 }
 
-// ------------------chart------------------------------
+// ------------------chart price-index ------------------------------
 const ctx = document.getElementById("myChart").getContext("2d");
 
 // gradient 1
@@ -123,3 +123,4 @@ const config = {
 };
 
 const myChart = new Chart(ctx, config);
+// ----------------------------------------------------

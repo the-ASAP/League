@@ -147,3 +147,4 @@ function createGraph(arrLabels, arrData) {
 $().ready(() => {
     // createGraph(arrLabels, arrData)
 });
+
