@@ -63,7 +63,7 @@
     margin-right: 0.625rem;
   }
 
-  &__active {
+  &.active {
     border: 1px solid rgba(55, 155, 66, 1);
     color: rgba(55, 155, 66, 1);
     background-color: #ecf9ee;
@@ -97,6 +97,11 @@
   position: relative;
   margin-right: 0.5625rem;
   transition: all 0.3s ease-in;
+
+  svg {
+    width: 0.75rem;
+    height: 0.625rem;
+  }
 }
 
 .checkbox__text {

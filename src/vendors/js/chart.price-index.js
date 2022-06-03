@@ -1,6 +1,6 @@
 // табы для графика, временное решение
-const productTypeArr = document.querySelectorAll("#product-type-tab");
-const periodArr = document.querySelectorAll("#period-type-tab");
+const productTypeArr = document.querySelectorAll("#product-tab");
+const periodArr = document.querySelectorAll("#period-tab");
 
 for (let btn of productTypeArr) {
   btn.addEventListener("click", (e) => toggleProductType(e));
@@ -8,9 +8,9 @@ for (let btn of productTypeArr) {
 
 function toggleProductType(e) {
   for (let btn of productTypeArr) {
-    btn.classList.remove("controller__tab__active");
+    btn.classList.remove("active");
   }
-  e.target.classList.add("controller__tab__active");
+  e.target.classList.add("active");
 }
 
 for (let btn of periodArr) {
@@ -19,9 +19,9 @@ for (let btn of periodArr) {
 
 function togglePeriodType(e) {
   for (let btn of periodArr) {
-    btn.classList.remove("controller__tab__active");
+    btn.classList.remove("active");
   }
-  e.target.classList.add("controller__tab__active");
+  e.target.classList.add("active");
 }
 
 // ------------------chart------------------------------

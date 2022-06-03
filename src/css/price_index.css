@@ -219,7 +219,7 @@
   margin-right: 0.625rem;
 }
 
-.controller__tab__active {
+.controller__tab.active {
   border: 1px solid #379b42;
   color: #379b42;
   background-color: #ecf9ee;
@@ -256,6 +256,11 @@
   position: relative;
   margin-right: 0.5625rem;
   transition: all 0.3s ease-in;
+}
+
+.checkbox__fake svg {
+  width: 0.75rem;
+  height: 0.625rem;
 }
 
 .checkbox__text {
