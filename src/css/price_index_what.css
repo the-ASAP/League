@@ -429,11 +429,14 @@
   background-color: var(--hover-green);
 }
 
+.faq__item {
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
+
 .faq__head {
   cursor: pointer;
-  background-color: #f2f2f2;
   margin-top: 0.9375rem;
-  border-radius: 8px;
   padding: 0.75rem 1.875rem;
   position: relative;
 }
@@ -454,16 +457,12 @@
   transform: rotate(90deg);
 }
 
-.faq__head.accordion-header-active {
-  border-radius: 8px 8px 0 0;
-}
-
-.faq__head.accordion-header-active::before {
+.faq__active::before {
   transform: rotate(-45deg);
   background-color: #30ad63;
 }
 
-.faq__head.accordion-header-active::after {
+.faq__active::after {
   transform: rotate(45deg);
   background-color: #30ad63;
 }
@@ -476,10 +475,9 @@
 }
 
 .faq__content {
+  display: none;
   color: #252525;
-  background-color: #f2f2f2;
   font-size: 1.25rem;
-  border-radius: 0 0 8px 8px;
   padding: 0 1.875rem 0.9375rem;
 }
 
