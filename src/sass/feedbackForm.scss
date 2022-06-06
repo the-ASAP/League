@@ -40,6 +40,11 @@
     background-color: #379b42;
     margin-left: 5px;
     border-radius: 6px;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: $hoverGreen;
+    }
   }
 }
 

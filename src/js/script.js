@@ -170,6 +170,7 @@ const refreshScript = () => {
   contentFadeInOnReady();
   bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
   accordion(".accordion__main", ".accordion__information", "activeAccordion");
+  // accordion(".faq__head", ".faq__content", ".faq__active");
   select(".modal__burger", ".modal__hiddenRefs", "activeHiddenRefs");
   select(".footer__burger", ".footer__hiddenRefs", "footer__activeHiddenRefs");
   hoverSelect(

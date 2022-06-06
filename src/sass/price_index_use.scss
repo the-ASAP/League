@@ -121,6 +121,11 @@
   background-color: $firstGreen;
   padding: 1rem 1.5rem;
   border-radius: 6px;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    background-color: $hoverGreen;
+  }
 
   p {
     color: #ffffff;
@@ -384,6 +389,8 @@
   }
 
   .stepper-main {
+    margin-bottom: 1rem;
+
     .step__list > li {
       width: auto;
     }
@@ -471,10 +478,6 @@
     &__item {
       background-color: rgba(249, 249, 251, 1);
       padding: 1.3125rem 1.1875rem;
-    }
-
-    &__item.upper {
-      margin-bottom: 1.6875rem;
     }
 
     &__title {

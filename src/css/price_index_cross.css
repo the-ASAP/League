@@ -155,6 +155,11 @@
   background-color: #379b42;
   margin-left: 5px;
   border-radius: 6px;
+  transition: background-color 0.3s ease-in;
+}
+
+.feedback__form__button:hover {
+  background-color: var(--hover-green);
 }
 
 p {
@@ -576,7 +581,7 @@ p {
   }
 
   .content {
-    padding: 0.6875rem 1.125rem 4.125rem 1.125rem;
+    padding: 0.6875rem 1.125rem 3.4375rem 1.125rem;
     background-color: #fff;
   }
 

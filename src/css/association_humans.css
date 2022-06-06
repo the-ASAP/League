@@ -251,6 +251,10 @@
   margin-right: 47rem;
 }
 
+.header__logo img {
+  max-height: 3.75rem;
+}
+
 .associationModal {
   position: absolute;
   top: 4rem;
@@ -383,7 +387,7 @@
 }
 
 .nav__list {
-  margin-top: 1.5rem;
+  margin-top: 1.1rem;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #e0e0e0;

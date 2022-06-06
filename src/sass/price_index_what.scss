@@ -21,7 +21,7 @@
 
 .content {
   flex: 1 1 auto;
-  padding: 1.8125rem 1.875rem;
+  padding: 1.8125rem 1.875rem 4.0625rem 1.8125rem;
   color: rgba(37, 37, 37, 1);
 }
 
@@ -113,7 +113,7 @@
     align-items: flex-end;
     padding: 0px 1.875rem;
     margin-bottom: 1.125rem;
-    height: 6.35rem;
+    height: 5.35rem;
 
     img {
       height: 100%;
@@ -127,7 +127,7 @@
     font-size: 1.5rem;
     line-height: 1.875rem;
     font-weight: 600;
-    margin-bottom: 1.125rem;
+    margin-bottom: 0.9375rem;
   }
 
   &__desc {
@@ -270,6 +270,11 @@
   padding: 1rem 1.5rem;
   border-radius: 6px;
   background-color: $firstGreen;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    background-color: $hoverGreen;
+  }
 }
 
 .faq__head {
@@ -324,13 +329,18 @@
   padding: 0 1.875rem 0.9375rem;
 
   &__paragraph {
-    margin-bottom: 12px;
+    margin-bottom: 0.8125rem;
     color: rgba(37, 37, 37, 1);
     font-size: 1.25rem;
   }
 
+  &__paragraph.coefficient {
+    margin-bottom: 1.4375rem;
+  }
+
   &__list {
     list-style-type: none;
+    padding: 0;
   }
 
   &__item {
@@ -373,7 +383,7 @@ td {
   }
 
   .content {
-    padding: 1.875rem 1.3125rem;
+    padding: 1.875rem 1.3125rem 3.4375rem 1.3125rem;
   }
 
   .section {
@@ -564,11 +574,19 @@ td {
   }
 
   .faq__content {
-    padding: 0 0.8125rem 1.25rem 0.8125rem;
+    padding: 0 0.8125rem 1.0625rem 0.8125rem;
 
     &__item {
       margin-bottom: 0.875rem;
     }
+
+    &__paragraph.coefficient {
+      display: none;
+    }
+  }
+
+  table {
+    padding-top: 0.625rem;
   }
 
   th {
