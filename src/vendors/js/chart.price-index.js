@@ -143,6 +143,38 @@ function createGraphIndex(arrLabels, arrData) {
         legend: {
           display: false,
         },
+        tooltip: {
+          backgroundColor: "#000",
+          position: "average",
+          callbacks: {
+            title: function (tooltip) {
+              //расчёт изменения в процентах
+              const curIndex = tooltip[0].dataIndex;
+              let diffPercent = 0;
+              let dynamics = "";
+
+              if (curIndex > 0) {
+                const prevValue = tooltip[0].dataset.data[curIndex - 1];
+                const curValue = tooltip[0].dataset.data[curIndex];
+
+                if (prevValue > curValue) {
+                  diffPercent = (prevValue / 100) * (prevValue - curValue);
+                  dynamics = "🢃";
+                }
+
+                if (prevValue < curValue) {
+                  diffPercent = (curValue / 100) * (curValue - prevValue);
+                  dynamics = "🢁";
+                }
+              }
+
+              return `${tooltip[0].formattedValue} тыс ₽   ${dynamics}${diffPercent.toFixed(1)}% `;
+            },
+
+            label: (tool) => "",
+            body: (tool) => "",
+          },
+        },
       },
 
       scales: {
