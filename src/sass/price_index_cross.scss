@@ -89,6 +89,10 @@ p {
     font-size: 1.25rem;
     line-height: 1.875rem;
     text-align: center;
+
+    a {
+      color: $firstGreen;
+    }
   }
 
   &__note:nth-child(1) {
@@ -430,10 +434,6 @@ p {
 
     &__note {
       text-align: left;
-
-      span {
-        color: $firstGreen;
-      }
     }
   }
 

@@ -43,13 +43,13 @@ const priceIndexData = {
   ],
   data: [
     {
-      pointsArr: [20, 23, 28, 35, 40, 45, 47, 49, 52, 54, 50, 49],
+      pointsArr: [20, 23, 28, 35, 40, 45, 47, 49, 52, 54, 50, 49, 47],
     },
     {
-      pointsArr: [30, 33, 38, 42, 50, 53, 48, 42, 39, 44, 47, 57],
+      pointsArr: [30, 33, 38, 42, 50, 53, 48, 42, 39, 44, 47, 57, 59],
     },
     {
-      pointsArr: [35, 37, 40, 44, 48, 52, 55, 54, 58, 57, 55, 57],
+      pointsArr: [35, 37, 40, 44, 48, 52, 55, 54, 58, 57, 55, 57, 55],
     },
   ],
 };
@@ -82,13 +82,18 @@ function createGraphIndex(arrLabels, arrData) {
 
   // gradient 1
   const gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
-  gradient1.addColorStop(0, "rgba(254, 200, 89, 0.8)");
-  gradient1.addColorStop(1, "rgba(254, 200, 89, 0)");
+  gradient1.addColorStop(0, "rgba(107, 87, 221, 0.5)");
+  gradient1.addColorStop(1, "rgba(154, 87, 221, 0)");
 
   // gradient 2
   const gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
-  gradient2.addColorStop(0, "green");
-  gradient2.addColorStop(1, "black");
+  gradient2.addColorStop(0, "rgba(17, 114, 211, 0.5)");
+  gradient2.addColorStop(1, "rgba(17, 114, 211, 0)");
+
+  // gradient 3
+  const gradient3 = ctx.createLinearGradient(0, 0, 0, 400);
+  gradient3.addColorStop(0, "rgba(254, 200, 89, 0.8)");
+  gradient3.addColorStop(1, "rgba(254, 200, 89, 0)");
 
   const data = {
     labels: arrLabels,
@@ -98,8 +103,6 @@ function createGraphIndex(arrLabels, arrData) {
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
-        // fill: true,
-        // backgroundColor: gradient1,
         pointBorderColor: "#9A57DD",
         borderColor: "#9A57DD",
         pointBackgroundColor: "#fff",
@@ -111,8 +114,6 @@ function createGraphIndex(arrLabels, arrData) {
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
-        // fill: true,
-        // backgroundColor: gradient2,
         pointBorderColor: "#1172D3",
         borderColor: "#1172D3",
         pointBackgroundColor: "#fff",
@@ -123,8 +124,6 @@ function createGraphIndex(arrLabels, arrData) {
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
-        fill: true,
-        backgroundColor: gradient1,
         pointBorderColor: "#FEC859",
         borderColor: "#FEC859",
         pointBackgroundColor: "#fff",
@@ -182,14 +181,44 @@ function createGraphIndex(arrLabels, arrData) {
     }
   };
 
+  // чекбоксы проверка на градиент
+  function checkGradient() {
+    const idArr = [
+      { id: "#checkbox__1", ind: 0, gradient: [gradient1] },
+      { id: "#checkbox__2", ind: 1, gradient: [gradient2] },
+      { id: "#checkbox__3", ind: 2, gradient: [gradient3] },
+    ];
+    const checkedCount = [];
+
+    idArr.forEach((item) => {
+      document.querySelector(item.id).checked && checkedCount.push(item);
+    });
+
+    if (checkedCount.length === 1) {
+      const { ind, gradient } = checkedCount[0];
+
+      GraphIndex.data.datasets[ind].fill = true;
+      GraphIndex.data.datasets[ind].backgroundColor = gradient;
+      GraphIndex.update();
+    } else {
+      idArr.forEach((item) => {
+        GraphIndex.data.datasets[item.ind].fill = false;
+      });
+      GraphIndex.update();
+    }
+  }
+
   $("#checkbox__1").change(function () {
     hiddenGraph(this, 0);
+    checkGradient();
   });
   $("#checkbox__2").change(function () {
     hiddenGraph(this, 1);
+    checkGradient();
   });
   $("#checkbox__3").change(function () {
     hiddenGraph(this, 2);
+    checkGradient();
   });
 }
 

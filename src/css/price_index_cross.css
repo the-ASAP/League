@@ -248,6 +248,10 @@ p {
   text-align: center;
 }
 
+.cross__note a {
+  color: var(--main-green);
+}
+
 .cross__note:nth-child(1) {
   margin-bottom: 0.875rem;
 }
@@ -617,10 +621,6 @@ p {
 
   .cross__note {
     text-align: left;
-  }
-
-  .cross__note span {
-    color: var(--main-green);
   }
 
   .cross__grid {
