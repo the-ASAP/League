@@ -459,6 +459,28 @@
   color: #4f4f4f;
 }
 
+.tooltip {
+  background-color: #252525;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.tooltip__title {
+  color: #ffffff;
+}
+
+.tooltip__diff {
+  padding-left: 7px;
+}
+
+.tooltip__diff.up {
+  color: #16eb56;
+}
+
+.tooltip__diff.down {
+  color: red;
+}
+
 @media (max-width: 768px) {
   .sidebar {
     display: none;

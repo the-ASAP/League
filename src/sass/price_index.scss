@@ -379,3 +379,25 @@
     margin-top: 0;
   }
 }
+
+.tooltip {
+  background-color: #252525;
+  border-radius: 4px;
+  padding: 5px 10px;
+
+  &__title {
+    color: #ffffff;
+  }
+
+  &__diff {
+    padding-left: 7px;
+  }
+
+  &__diff.up {
+    color: rgb(22, 235, 86);
+  }
+
+  &__diff.down {
+    color: red;
+  }
+}
