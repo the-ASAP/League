@@ -146,7 +146,11 @@ function createGraphIndex(arrLabels, arrData) {
         tooltip: {
           backgroundColor: "#000",
           position: "average",
+          // bodyColor: "red",
+
           callbacks: {
+            // afterBody: (tool) => "",
+            label: (tool) => "",
             title: function (tooltip) {
               //расчёт изменения в процентах
               const curIndex = tooltip[0].dataIndex;
@@ -168,11 +172,8 @@ function createGraphIndex(arrLabels, arrData) {
                 }
               }
 
-              return `${tooltip[0].formattedValue} тыс ₽   ${dynamics}${diffPercent.toFixed(1)}% `;
+              return `${tooltip[0].formattedValue} тыс ₽   ${dynamics}${diffPercent.toFixed(1)}%`;
             },
-
-            label: (tool) => "",
-            body: (tool) => "",
           },
         },
       },
