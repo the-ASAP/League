@@ -187,7 +187,6 @@ function createGraphIndex(arrLabels, arrData) {
               let currentIndex = tooltipModel.dataPoints[0].dataIndex;
               let curValue = allValues[currentIndex];
               let diffPercent = "";
-              let dynamicsArrow = "";
               let dynamics = "";
               let tooltipText = "";
 
@@ -196,21 +195,17 @@ function createGraphIndex(arrLabels, arrData) {
 
                 if (prevValue > curValue) {
                   diffPercent = ((prevValue - curValue) * 100) / prevValue;
-                  dynamicsArrow = "🢃";
                   dynamics = "down";
                 }
 
                 if (prevValue < curValue) {
                   diffPercent = ((curValue - prevValue) * 100) / curValue;
-                  dynamicsArrow = "🢁";
                   dynamics = "up";
                 }
 
                 // Set Text
                 tooltipText = `<span class='tooltip__title'> ${curValue} ₽ 
-               <span class='tooltip__diff ${dynamics}'> ${dynamicsArrow}  ${diffPercent.toFixed(
-                  1
-                )}% 
+               <span class='tooltip__diff ${dynamics}'>  ${diffPercent.toFixed(1)}% 
                </span>
                 </span>`;
               } else if (currentIndex === 0) {

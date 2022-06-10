@@ -390,14 +390,16 @@
   }
 
   &__diff {
-    padding-left: 7px;
+    padding-left: 10px;
   }
 
   &__diff.up {
-    color: rgb(22, 235, 86);
+    color: #16eb56;
+    background: url("./../img/index-price/arrow_up.svg") no-repeat left;
   }
 
   &__diff.down {
-    color: red;
+    color: #ff0000;
+    background: url("./../img/index-price/arrow_down.svg") no-repeat left;
   }
 }

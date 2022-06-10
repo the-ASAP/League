@@ -470,15 +470,17 @@
 }
 
 .tooltip__diff {
-  padding-left: 7px;
+  padding-left: 10px;
 }
 
 .tooltip__diff.up {
   color: #16eb56;
+  background: url("./../img/index-price/arrow_up.svg") no-repeat left;
 }
 
 .tooltip__diff.down {
-  color: red;
+  color: #ff0000;
+  background: url("./../img/index-price/arrow_down.svg") no-repeat left;
 }
 
 @media (max-width: 768px) {
