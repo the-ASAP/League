@@ -43,13 +43,19 @@ const priceIndexData = {
   ],
   data: [
     {
-      pointsArr: [20, 23, 28, 35, 40, 45, 47, 49, 52, 54, 50, 49, 47],
+      pointsArr: [
+        20578, 23934, 28278, 35459, 40224, 45046, 47485, 49245, 52678, 54234, 50764, 49356, 47467,
+      ],
     },
     {
-      pointsArr: [30, 33, 38, 42, 50, 53, 48, 42, 39, 44, 47, 57, 59],
+      pointsArr: [
+        30946, 33385, 38935, 42956, 50395, 53835, 48935, 42926, 39935, 44568, 47935, 57853, 59457,
+      ],
     },
     {
-      pointsArr: [35, 37, 40, 44, 48, 52, 55, 54, 58, 57, 55, 57, 55],
+      pointsArr: [
+        35846, 37936, 40752, 44982, 48340, 52486, 55497, 54123, 58345, 57556, 55348, 57654, 55458,
+      ],
     },
   ],
 };
@@ -178,37 +184,40 @@ function createGraphIndex(arrLabels, arrData) {
             if (tooltipModel.body) {
               let innerHtml = "";
               let allValues = tooltipModel.dataPoints[0].dataset.data;
-              let curValue = tooltipModel.body[0].lines[0];
               let currentIndex = tooltipModel.dataPoints[0].dataIndex;
+              let curValue = allValues[currentIndex];
               let diffPercent = "";
               let dynamicsArrow = "";
               let dynamics = "";
+              let tooltipText = "";
 
               if (currentIndex > 0) {
                 const prevValue = allValues[currentIndex - 1];
 
                 if (prevValue > curValue) {
-                  // diffPercent = (prevValue / 100) * (prevValue - curValue);
                   diffPercent = ((prevValue - curValue) * 100) / prevValue;
                   dynamicsArrow = "🢃";
                   dynamics = "down";
                 }
 
                 if (prevValue < curValue) {
-                  // diffPercent = (curValue / 100) * (curValue - prevValue);
                   diffPercent = ((curValue - prevValue) * 100) / curValue;
                   dynamicsArrow = "🢁";
                   dynamics = "up";
                 }
+
+                // Set Text
+                tooltipText = `<span class='tooltip__title'> ${curValue} ₽ 
+               <span class='tooltip__diff ${dynamics}'> ${dynamicsArrow}  ${diffPercent.toFixed(
+                  1
+                )}% 
+               </span>
+                </span>`;
+              } else if (currentIndex === 0) {
+                tooltipText = `<span class='tooltip__title'> ${curValue} ₽ </span>`;
               }
 
-              // Set Text
-              const span = `<span class='tooltip__title'> ${curValue} тыс ₽ 
-              <span class='tooltip__diff ${dynamics}'> ${dynamicsArrow}  ${diffPercent.toFixed(1)}% 
-              </span>
-               </span>`;
-
-              innerHtml += span;
+              innerHtml += tooltipText;
 
               tooltipEl.innerHTML = innerHtml;
             }
@@ -234,11 +243,11 @@ function createGraphIndex(arrLabels, arrData) {
           grid: {
             borderWidth: 0,
           },
-          suggestedMin: 10,
-          suggestedMax: 70,
+          suggestedMin: 10000,
+          suggestedMax: 70000,
           ticks: {
             callback: function (value) {
-              return value + "k";
+              return value / 1000 + "k";
             },
           },
         },
