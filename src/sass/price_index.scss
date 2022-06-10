@@ -387,10 +387,12 @@
 
   &__title {
     color: #ffffff;
+    font-family: $jostFont;
   }
 
   &__diff {
     padding-left: 10px;
+    font-family: $jostFont;
   }
 
   &__diff.up {

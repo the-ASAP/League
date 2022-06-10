@@ -692,6 +692,7 @@ td {
     top: -2rem;
     right: 50%;
     transform: translateX(50%);
+    z-index: -1;
   }
 
   .member_2::after {
@@ -703,6 +704,7 @@ td {
   .member_3 {
     top: 47%;
     right: 24%;
+    z-index: -1;
   }
 
   .member_3::after {

@@ -516,6 +516,7 @@ td {
       top: -2rem;
       right: 50%;
       transform: translateX(50%);
+      z-index: -1;
 
       &::after {
         bottom: -2.5rem;
@@ -527,6 +528,7 @@ td {
     &_3 {
       top: 47%;
       right: 24%;
+      z-index: -1;
 
       &::after {
         bottom: -0.2rem;

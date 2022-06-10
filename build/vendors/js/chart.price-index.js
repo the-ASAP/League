@@ -242,7 +242,7 @@ function createGraphIndex(arrLabels, arrData) {
           suggestedMax: 70000,
           ticks: {
             callback: function (value) {
-              return value / 1000 + "k";
+              return value / 1000 + " K";
             },
           },
         },
@@ -256,6 +256,7 @@ function createGraphIndex(arrLabels, arrData) {
     },
   };
 
+  Chart.defaults.font.family = "Jost";
   const GraphIndex = new Chart(ctx, config);
   console.log(GraphIndex);
 

@@ -467,10 +467,12 @@
 
 .tooltip__title {
   color: #ffffff;
+  font-family: var(--jost-font);
 }
 
 .tooltip__diff {
   padding-left: 10px;
+  font-family: var(--jost-font);
 }
 
 .tooltip__diff.up {
