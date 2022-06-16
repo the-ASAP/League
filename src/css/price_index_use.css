@@ -172,7 +172,7 @@
 
 .content {
   flex: 1 1 auto;
-  padding: 1.375rem 2.5625rem 6.75rem 2.5625rem;
+  padding: 1.375rem 2.5625rem 6.5625rem 2.5625rem;
   color: #252525;
   background-color: #f9f9fb;
 }
@@ -316,7 +316,7 @@
   font-size: 1.25rem;
   line-height: 1.625rem;
   color: #000;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .rule__info__link {
