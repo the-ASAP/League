@@ -63,21 +63,11 @@ const priceIndexData = {
 const crossData = {
   labels: ["фев 21", "апр 21", "июнь 21", "авг 21", "окт 21", "дек 21"],
   data: [
-    {
-      pointsArr: [30, 33, 35, 40, 37, 35],
-    },
-    {
-      pointsArr: [37, 39, 45, 42, 35, 30],
-    },
-    {
-      pointsArr: [27, 29, 25, 27, 25, 23],
-    },
-    {
-      pointsArr: [57, 59, 55, 58, 60, 62],
-    },
-    {
-      pointsArr: [12, 25, 37, 39, 45, 50],
-    },
+    [30, 33, 35, 40, 37, 35],
+    [37, 39, 45, 42, 35, 30],
+    [27, 29, 25, 27, 25, 23],
+    [57, 59, 55, 58, 60, 62],
+    [12, 25, 37, 39, 45, 50],
   ],
 };
 
@@ -320,7 +310,7 @@ function createGraphCross(arrLabels, arrData) {
     labels: arrLabels,
     datasets: [
       {
-        data: arrData[0].pointsArr,
+        data: arrData[0],
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
@@ -331,7 +321,7 @@ function createGraphCross(arrLabels, arrData) {
       },
 
       {
-        data: arrData[1].pointsArr,
+        data: arrData[1],
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
@@ -341,7 +331,7 @@ function createGraphCross(arrLabels, arrData) {
         tension: 0.4,
       },
       {
-        data: arrData[2].pointsArr,
+        data: arrData[2],
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
@@ -351,7 +341,7 @@ function createGraphCross(arrLabels, arrData) {
         tension: 0.4,
       },
       {
-        data: arrData[3].pointsArr,
+        data: arrData[3],
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
@@ -361,7 +351,7 @@ function createGraphCross(arrLabels, arrData) {
         tension: 0.4,
       },
       {
-        data: arrData[4].pointsArr,
+        data: arrData[4],
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
