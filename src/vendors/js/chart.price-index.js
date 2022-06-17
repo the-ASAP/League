@@ -42,21 +42,9 @@ const priceIndexData = {
     "дек 21",
   ],
   data: [
-    {
-      pointsArr: [
-        20578, 23934, 28278, 35459, 40224, 45046, 47485, 49245, 52678, 54234, 50764, 49356, 47467,
-      ],
-    },
-    {
-      pointsArr: [
-        30946, 33385, 38935, 42956, 50395, 53835, 48935, 42926, 39935, 44568, 47935, 57853, 59457,
-      ],
-    },
-    {
-      pointsArr: [
-        35846, 37936, 40752, 44982, 48340, 52486, 55497, 54123, 58345, 57556, 55348, 57654, 55458,
-      ],
-    },
+    [20578, 23934, 28278, 35459, 40224, 45046, 47485, 49245, 52678, 54234, 50764, 49356, 47467],
+    [30946, 33385, 38935, 42956, 50395, 53835, 48935, 42926, 39935, 44568, 47935, 57853, 59457],
+    [35846, 37936, 40752, 44982, 48340, 52486, 55497, 54123, 58345, 57556, 55348, 57654, 55458],
   ],
 };
 
@@ -95,7 +83,7 @@ function createGraphIndex(arrLabels, arrData) {
     labels: arrLabels,
     datasets: [
       {
-        data: arrData[0].pointsArr,
+        data: arrData[0],
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
@@ -106,7 +94,7 @@ function createGraphIndex(arrLabels, arrData) {
       },
 
       {
-        data: arrData[1].pointsArr,
+        data: arrData[1],
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
@@ -116,7 +104,7 @@ function createGraphIndex(arrLabels, arrData) {
         tension: 0.4,
       },
       {
-        data: arrData[2].pointsArr,
+        data: arrData[2],
         radius: 6,
         hoverRadius: 10,
         pointBorderWidth: 2,
