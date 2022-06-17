@@ -11,19 +11,25 @@
 
 @font-face {
   font-family: "Jost";
-  src: url("../fonts/Jost-Regular.woff2") format("woff2");
+  src: url("../fonts/Jost-Regular.woff2") format("woff2"),
+    url("../fonts/Jost-Regular.woff") format("woff"), url("../fonts/Jost-Regular.ttf") format("ttf"),
+    url("../fonts/Jost-Regular.eot") format("eot");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Jost";
-  src: url("../fonts/Jost-Medium.woff2") format("woff2");
+  src: url("../fonts/Jost-Medium.woff2") format("woff2"),
+    url("../fonts/Jost-Medium.woff") format("woff"), url("../fonts/Jost-Medium.ttf") format("ttf"),
+    url("../fonts/Jost-Medium.eot") format("eot");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Jost";
-  src: url("../fonts/Jost-SemiBold.woff2") format("woff2");
+  src: url("../fonts/Jost-SemiBold.woff2") format("woff2"),
+    url("../fonts/Jost-SemiBold.woff") format("woff"),
+    url("../fonts/Jost-SemiBold.ttf") format("ttf"), url("../fonts/Jost-SemiBold.eot") format("eot");
   font-weight: 600;
 }
 
