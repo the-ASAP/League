@@ -62,13 +62,18 @@ const bindModalListeners = (modalArr) => {
     });
 
     jQModal.on("click", function (e) {
-      if ($(e.target).hasClass("modal")) {
+      if ($(e.target).hasClass("modal") || $(e.target).hasClass("modal__cover")) {
         $(this).removeClass("active");
         freeScroll();
       }
     });
 
     jQModal.find(".modal__close").on("click", function () {
+      jQModal.removeClass("active");
+      freeScroll();
+    });
+
+    jQModal.find(".modal__close__button").on("click", function () {
       jQModal.removeClass("active");
       freeScroll();
     });
@@ -168,7 +173,10 @@ function toggleTabs(tabTrigger, tabContent) {
 const refreshScript = () => {
   toggleTabs(".tab-trigger", ".tab-content");
   contentFadeInOnReady();
-  bindModalListeners([{ modal: $(".modal"), trigger: $(".header__menu_mobile") }]);
+  bindModalListeners([
+    { modal: $(".modal"), trigger: $(".header__menu_mobile") },
+    { modal: $(".index-modal"), trigger: $(".index-modal__button") },
+  ]);
   accordion(".accordion__main", ".accordion__information", "activeAccordion");
   accordion(".faq__head", ".faq__content", "faq__active");
   select(".modal__burger", ".modal__hiddenRefs", "activeHiddenRefs");
