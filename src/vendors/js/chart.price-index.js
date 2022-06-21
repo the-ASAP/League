@@ -11,12 +11,12 @@ for (let btn of periodArr) {
 }
 
 function toggleProductType(e) {
+  // console.log(e.target.id.slice(e.target.id.length - 1));
   $.ajax({
-    url: "/",
+    url: "http://liga.asap-lp.ru/analytics/",
     type: "post",
     data: { product: e.target.id },
   }).done(function (res) {
-    console.log("work");
     for (let btn of productTypeArr) {
       btn.classList.remove("active");
     }
@@ -26,7 +26,7 @@ function toggleProductType(e) {
 
 function togglePeriodType(e) {
   $.ajax({
-    url: "/",
+    url: "http://liga.asap-lp.ru/analytics/",
     type: "post",
     data: { period: e.target.id },
   }).done(function (res) {

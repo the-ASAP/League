@@ -13,27 +13,40 @@
       </svg>
     </button>
     <div class="index-modal__inner">
-      <form class="index-modal__form">
+      <form class="index-modal__form" id="index-modal__form">
         <h3 class="index__form__title">Заявка на участие в индексе</h3>
         <div class="index__form__item">
-          <input class="index__form__input" type="text" placeholder="Имя Фамилия" />
-          <p class="index__form__error"></p>
+          <input class="index__form__input" name="userName" type="text" placeholder="Имя Фамилия" />
         </div>
         <div class="index__form__item">
-          <input class="index__form__input" type="text" placeholder="Название компании" />
-          <p class="index__form__error"></p>
+          <input
+            class="index__form__input"
+            name="companyName"
+            type="text"
+            placeholder="Название компании"
+          />
         </div>
         <div class="index__form__item">
-          <input class="index__form__input" type="text" placeholder="Petrov@mail.ru" />
-          <p class="index__form__error"></p>
+          <input class="index__form__input" name="email" type="text" placeholder="Petrov@mail.ru" />
         </div>
         <div class="index__form__item">
-          <input class="index__form__input" type="text" placeholder="+7 (___) ___ – __–__" />
-          <p class="index__form__error"></p>
+          <input
+            class="index__form__input"
+            name="phone"
+            id="index__form__phone"
+            type="text"
+            placeholder="+7 (___) ___ – __–__"
+          />
         </div>
         <div class="index__form__checkboxes">
           <label class="checkbox__wrapper" for="checkbox__one">
-            <input class="checkbox__input" type="checkbox" id="checkbox__one" checked />
+            <input
+              class="checkbox__input"
+              name="processing"
+              type="checkbox"
+              id="checkbox__one"
+              checked
+            />
             <span class="checkbox__fake">
               <svg
                 width="12"
@@ -52,7 +65,13 @@
           </label>
 
           <label class="checkbox__wrapper" for="checkbox__two">
-            <input class="checkbox__input" type="checkbox" id="checkbox__two" checked />
+            <input
+              class="checkbox__input"
+              name="subscription"
+              type="checkbox"
+              id="checkbox__two"
+              checked
+            />
             <span class="checkbox__fake">
               <svg
                 width="12"
@@ -69,7 +88,7 @@
         </div>
         <button class="index__form__submit" type="submit">Отправить заявку</button>
       </form>
-      <div class="index-modal__success hide">
+      <div class="index-modal__success hide" id="success">
         <div class="success__title">Ваша заявка успешно отправлена.</div>
         <div class="success__subtitle">Сотрудник аналитического агентства свяжется с вами.</div>
       </div>
