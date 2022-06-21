@@ -1,31 +1,40 @@
 // табы для графика, временное решение
 const productTypeArr = document.querySelectorAll(".product-tab");
 const periodArr = document.querySelectorAll(".period-tab");
-let currentProduct = "product-tab-1";
-let currentPeriod = "period-tab-1";
 
 for (let btn of productTypeArr) {
   btn.addEventListener("click", (e) => toggleProductType(e));
-}
-
-function toggleProductType(e) {
-  currentProduct = e.target.id;
-  for (let btn of productTypeArr) {
-    btn.classList.remove("active");
-  }
-  e.target.classList.add("active");
 }
 
 for (let btn of periodArr) {
   btn.addEventListener("click", (e) => togglePeriodType(e));
 }
 
+function toggleProductType(e) {
+  $.ajax({
+    url: "/",
+    type: "post",
+    data: { product: e.target.id },
+  }).done(function (res) {
+    console.log("work");
+    for (let btn of productTypeArr) {
+      btn.classList.remove("active");
+    }
+    e.target.classList.add("active");
+  });
+}
+
 function togglePeriodType(e) {
-  currentPeriod = e.target.id;
-  for (let btn of periodArr) {
-    btn.classList.remove("active");
-  }
-  e.target.classList.add("active");
+  $.ajax({
+    url: "/",
+    type: "post",
+    data: { period: e.target.id },
+  }).done(function (res) {
+    for (let btn of periodArr) {
+      btn.classList.remove("active");
+    }
+    e.target.classList.add("active");
+  });
 }
 
 // -----------------------моковые данные----------------------------------------------------
