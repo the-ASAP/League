@@ -17,7 +17,7 @@
         <h3 class="index__form__title">Заявка на участие в индексе</h3>
         <div class="index__form__item">
           <input class="index__form__input" type="text" placeholder="Имя Фамилия" />
-          <p class="index__form__error">Обязательно к заполнению</p>
+          <p class="index__form__error"></p>
         </div>
         <div class="index__form__item">
           <input class="index__form__input" type="text" placeholder="Название компании" />
@@ -32,9 +32,47 @@
           <p class="index__form__error"></p>
         </div>
         <div class="index__form__checkboxes">
-          <input type="checkbox" />
+          <label class="checkbox__wrapper" for="checkbox__one">
+            <input class="checkbox__input" type="checkbox" id="checkbox__one" checked />
+            <span class="checkbox__fake">
+              <svg
+                width="12"
+                height="10"
+                viewBox="0 0 12 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 3.5L5 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="checkbox__text"
+              >Даю согласие на&nbsp;
+              <a class="checkbox__link" href="#">обработку персональных данных.</a></span
+            >
+          </label>
+
+          <label class="checkbox__wrapper" for="checkbox__two">
+            <input class="checkbox__input" type="checkbox" id="checkbox__two" checked />
+            <span class="checkbox__fake">
+              <svg
+                width="12"
+                height="10"
+                viewBox="0 0 12 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 3.5L5 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="checkbox__text">Хочу получать еженедельные данные по индексу.</span>
+          </label>
         </div>
+        <button class="index__form__submit" type="submit">Отправить заявку</button>
       </form>
+      <div class="index-modal__success hide">
+        <div class="success__title">Ваша заявка успешно отправлена.</div>
+        <div class="success__subtitle">Сотрудник аналитического агентства свяжется с вами.</div>
+      </div>
     </div>
   </div>
 </div>

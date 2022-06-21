@@ -1,12 +1,15 @@
 // табы для графика, временное решение
-const productTypeArr = document.querySelectorAll("#product-tab");
-const periodArr = document.querySelectorAll("#period-tab");
+const productTypeArr = document.querySelectorAll(".product-tab");
+const periodArr = document.querySelectorAll(".period-tab");
+let currentProduct = "product-tab-1";
+let currentPeriod = "period-tab-1";
 
 for (let btn of productTypeArr) {
   btn.addEventListener("click", (e) => toggleProductType(e));
 }
 
 function toggleProductType(e) {
+  currentProduct = e.target.id;
   for (let btn of productTypeArr) {
     btn.classList.remove("active");
   }
@@ -18,6 +21,7 @@ for (let btn of periodArr) {
 }
 
 function togglePeriodType(e) {
+  currentPeriod = e.target.id;
   for (let btn of periodArr) {
     btn.classList.remove("active");
   }

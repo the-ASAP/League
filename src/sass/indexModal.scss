@@ -28,8 +28,10 @@
 }
 
 .index-modal__content {
+  margin: 0 1rem;
+  padding: 0;
   position: relative;
-  width: 37.625rem;
+  flex-basis: 38.825rem;
   background-color: #fff;
   color: #000;
 }
@@ -42,6 +44,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.index-modal__form.hide {
+  display: none;
 }
 
 .index__form {
@@ -87,5 +93,135 @@
 
   &__checkboxes {
     margin-top: 0.625rem;
+    margin-bottom: 3.375rem;
+    align-self: flex-start;
+    width: 100%;
+  }
+}
+
+.checkbox {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__wrapper:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+
+  &__fake {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1rem;
+    flex: 0 0 1rem;
+    border: 1px solid #828282;
+    border-radius: 4px;
+    position: relative;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease-in;
+
+    svg {
+      width: 0.5rem;
+    }
+  }
+
+  &__text {
+    color: rgba(37, 37, 37, 1);
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+
+  &__link {
+    line-height: 1.125rem;
+    color: $firstGreen;
+    transition: color 0.3s ease-in;
+  }
+
+  &__link:hover {
+    color: $hoverGreen;
+  }
+}
+
+.checkbox__input:checked + .checkbox__fake {
+  border: 1px solid transparent;
+  background-color: $firstGreen;
+}
+
+.checkbox__wrapper.error {
+  .checkbox__fake {
+    border: 1px solid rgba(221, 13, 13, 1);
+  }
+
+  .checkbox__text,
+  .checkbox__link {
+    color: rgba(221, 13, 13, 1);
+  }
+}
+
+.index__form__submit {
+  padding: 0.625rem 1.5rem;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.125rem;
+  background-color: #379b42;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: $hoverGreen;
+  }
+}
+
+.index-modal__success {
+  padding: 5.1875rem 0.625rem 5.4375rem 0.625rem;
+  text-align: center;
+}
+
+.index-modal__success.hide {
+  display: none;
+}
+
+.success {
+  &__title {
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    font-weight: 600;
+    margin-bottom: 0.625rem;
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-modal__form {
+    padding: 2.9375rem 2rem;
+  }
+
+  .index__form {
+    &__title {
+      font-size: 1.25rem;
+      line-height: 1.375rem;
+      margin-bottom: 1.4375rem;
+    }
+  }
+
+  .checkbox__wrapper {
+    align-items: flex-start;
+  }
+
+  .index-modal__success {
+    padding: 2.9375rem 0.625rem 2.9375rem 0.625rem;
+    text-align: center;
+  }
+
+  .success {
+    &__title {
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+    }
   }
 }
