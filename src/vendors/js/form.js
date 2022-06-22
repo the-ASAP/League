@@ -10,6 +10,7 @@ $("#index-modal__form").validate({
   rules: {
     userName: {
       required: true,
+      pattern: "^[а-яА-Я_]*$",
     },
 
     companyName: {
@@ -37,6 +38,7 @@ $("#index-modal__form").validate({
   messages: {
     userName: {
       required: "Обязательно к заполнению",
+      pattern: "Некорректное имя",
     },
 
     companyName: {

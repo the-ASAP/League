@@ -776,6 +776,8 @@ html {
 }
 
 body {
+  height: 100%;
+  position: relative;
   font-family: var(--jost-font);
   cursor: default;
   color: #000000;
