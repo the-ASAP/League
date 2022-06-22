@@ -34,7 +34,9 @@
 
 .controller {
   &__group {
-    @include flexible("flex-start", "center");
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 1.3375rem;
   }
 
@@ -52,10 +54,13 @@
 }
 
 .tab__group {
-  @include flexible("flex-start", "center");
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .controller__tab {
+  color: #000;
   font-size: 0.875rem;
   padding: 5px 0.9375rem;
   border: 1px solid #828282;
@@ -79,7 +84,9 @@
 }
 
 .product__checkboxes {
-  @include flexible("flex-start", "center");
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -91,7 +98,9 @@
 }
 
 .checkbox__fake {
-  @include flexible("center", "center");
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1.5rem;
   height: 1.5rem;
   border: 1px solid #828282;
@@ -134,7 +143,9 @@
   align-self: flex-end;
   margin-top: 1.875rem;
   transition: background-color 0.3s ease-in;
-  @include flexible("center", "center");
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: $hoverGreen;
@@ -148,7 +159,9 @@
 }
 
 .weekly-index {
-  @include flexible("flex-start", "center");
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 0.8125rem;
 
   &__title {
@@ -214,7 +227,9 @@
 .card__trend {
   padding: 4px 12px;
   border-radius: 1.75rem;
-  @include flexible("center", "center");
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   svg {
     top: -2px;
@@ -250,7 +265,9 @@
 }
 
 .card__body {
-  @include flexible("flex-start", "center");
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   .last_week {
     padding-right: 0.9375rem;

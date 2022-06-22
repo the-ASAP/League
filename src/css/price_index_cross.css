@@ -58,8 +58,8 @@
 
 .sidebar__nav__item {
   display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 24px;
   padding: 0px 0px 0px 0.9375rem;
 }
@@ -118,8 +118,8 @@
   border: 1px solid #39ad46;
   border-radius: 0.625rem;
   display: flex;
-  justify-content: "space-between";
-  align-items: "center";
+  justify-content: space-between;
+  align-items: center;
 }
 
 .feedback__title {
@@ -135,8 +135,8 @@
 
 .feedback__form {
   display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .feedback__form__input {
@@ -476,8 +476,8 @@ p {
 
 .checkbox__fake {
   display: flex;
-  justify-content: "center";
-  align-items: "center";
+  justify-content: center;
+  align-items: center;
   flex: 0 0 1.5rem;
   height: 1.5rem;
   border: 1px solid #828282;
@@ -530,6 +530,7 @@ p {
 }
 
 .controller__tab {
+  color: #000;
   font-size: 0.875rem;
   padding: 5px 0.9375rem;
   border: 1px solid #828282;

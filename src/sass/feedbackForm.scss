@@ -7,7 +7,9 @@
   background-color: #fff;
   border: 1px solid #39ad46;
   border-radius: 0.625rem;
-  @include flexible("space-between", "center");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &__title {
     font-size: 1.5rem;
@@ -22,7 +24,9 @@
 }
 
 .feedback__form {
-  @include flexible("flex-start", "center");
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   &__input {
     width: 20.4375rem;

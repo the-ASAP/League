@@ -321,7 +321,9 @@ p {
 }
 
 .checkbox__fake {
-  @include flexible("center", "center");
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 0 0 1.5rem;
   height: 1.5rem;
   border: 1px solid #828282;
@@ -371,6 +373,7 @@ p {
 }
 
 .controller__tab {
+  color: #000;
   font-size: 0.875rem;
   padding: 5px 0.9375rem;
   border: 1px solid #828282;

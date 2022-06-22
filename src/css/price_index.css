@@ -58,8 +58,8 @@
 
 .sidebar__nav__item {
   display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 24px;
   padding: 0px 0px 0px 0.9375rem;
 }
@@ -118,8 +118,8 @@
   border: 1px solid #39ad46;
   border-radius: 0.625rem;
   display: flex;
-  justify-content: "space-between";
-  align-items: "center";
+  justify-content: space-between;
+  align-items: center;
 }
 
 .feedback__title {
@@ -135,8 +135,8 @@
 
 .feedback__form {
   display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .feedback__form__input {
@@ -192,8 +192,8 @@
 
 .controller__group {
   display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 1.3375rem;
 }
 
@@ -211,11 +211,12 @@
 
 .tab__group {
   display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .controller__tab {
+  color: #000;
   font-size: 0.875rem;
   padding: 5px 0.9375rem;
   border: 1px solid #828282;
@@ -240,8 +241,8 @@
 
 .product__checkboxes {
   display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -254,8 +255,8 @@
 
 .checkbox__fake {
   display: flex;
-  justify-content: "center";
-  align-items: "center";
+  justify-content: center;
+  align-items: center;
   width: 1.5rem;
   height: 1.5rem;
   border: 1px solid #828282;
@@ -302,8 +303,8 @@
   margin-top: 1.875rem;
   transition: background-color 0.3s ease-in;
   display: flex;
-  justify-content: "center";
-  align-items: "center";
+  justify-content: center;
+  align-items: center;
 }
 
 .chart__download_btn:hover {
@@ -318,8 +319,8 @@
 
 .weekly-index {
   display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 0.8125rem;
 }
 
@@ -385,8 +386,8 @@
   padding: 4px 12px;
   border-radius: 1.75rem;
   display: flex;
-  justify-content: "center";
-  align-items: "center";
+  justify-content: center;
+  align-items: center;
 }
 
 .card__trend svg {
@@ -425,8 +426,8 @@
 
 .card__body {
   display: flex;
-  justify-content: "flex-start";
-  align-items: "center";
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .card__body .last_week {
