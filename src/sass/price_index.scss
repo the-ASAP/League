@@ -198,7 +198,9 @@
 
 .card__heading {
   flex: 1 0 auto;
-  @include flexible("space-between", "flex-start");
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 2.6875rem;
 }
 .card__title {
