@@ -47,7 +47,7 @@
 
 .sidebar {
   flex: 0 0 14.0625rem;
-  padding-top: 2.5rem;
+  padding-top: 5.5rem;
 }
 
 .sidebar__nav__list {
@@ -166,10 +166,6 @@ p {
   color: #252525;
   font-size: 1.25rem;
   line-height: 1.8125rem;
-}
-
-.breadcrumbs {
-  display: none;
 }
 
 .price-index-reliability__container {

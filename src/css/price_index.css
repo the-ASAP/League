@@ -47,7 +47,7 @@
 
 .sidebar {
   flex: 0 0 14.0625rem;
-  padding-top: 2.5rem;
+  padding-top: 5.5rem;
 }
 
 .sidebar__nav__list {
@@ -160,10 +160,6 @@
 
 .feedback__form__button:hover {
   background-color: var(--hover-green);
-}
-
-.breadcrumbs {
-  display: none;
 }
 
 .content {
