@@ -137,6 +137,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+}
+
+.feedback__form label.error {
+  font-size: 0.875rem;
+  position: absolute;
+  top: -1.2rem;
+  left: 3px;
+  color: #dd0d0d;
 }
 
 .feedback__form__input {
@@ -145,6 +154,10 @@
   padding: 0px 0.875rem;
   border: 1px solid #4f4f4f;
   border-radius: 6px;
+}
+
+.feedback__form__input.error {
+  border: 1px solid #dd0d0d;
 }
 
 .feedback__form__button {
@@ -497,7 +510,7 @@
   }
 
   .feedback__form {
-    margin-top: 0.6875rem;
+    margin-top: 1rem;
     flex-direction: column;
     align-items: flex-end;
     width: 100%;

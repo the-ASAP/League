@@ -74,7 +74,7 @@
                     Рекомендуется пересмотреть цену, если индекс упал или повысился на 10 и более
                     процентов.
                   </p>
-                  <a class="rule__info__link" href="#">Подробнее ></a>
+                  <a class="rule__info__link" href="#delta">Подробнее ></a>
                 </div>
                 <div class="rule__image_large">
                   <img src="./img/index-price/main-chart-screen1.png" alt="img" />
@@ -185,7 +185,8 @@
 
             @import "feedbackForm.html"
 
-            <section class="delta">
+            <section class="delta" name="delta">
+              <a name="delta"></a>
               <div class="delta__container">
                 <h2 class="title"><span>Дельта в +/ 10%</span> – это рекомендация</h2>
                 <p class="delta__desc">
@@ -219,6 +220,8 @@
     @import "footer.html"
   </body>
   <script src="vendors/js/jquery-3.5.1.min.js"></script>
+  <script src="vendors/js/jquery.maskedinput.min.js"></script>
+  <script src="vendors/js/form.js"></script>
   <script src="vendors/js/sidebar.js"></script>
   <script src="js/script.js"></script>
 </html>

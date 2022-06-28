@@ -2,8 +2,15 @@
   <div class="feedback__heading">
     <h3 class="feedback__title">Подпишитесь на обновления индекса ЦБП</h3>
   </div>
-  <form class="feedback__form" action="#">
-    <input class="feedback__form__input" type="email" placeholder="Введите свой e-mail " required />
+  <form class="feedback__form" id="feedback__form" action="#">
+    <input
+      name="email"
+      class="feedback__form__input"
+      id="feedback__form__email"
+      type="text"
+      placeholder="Укажите e-mail для подписки"
+      required
+    />
     <button class="feedback__form__button" type="submit">Подписаться</button>
   </form>
 </div>

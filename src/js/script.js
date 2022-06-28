@@ -176,6 +176,7 @@ const refreshScript = () => {
   bindModalListeners([
     { modal: $(".modal"), trigger: $(".header__menu_mobile") },
     { modal: $(".index-modal"), trigger: $(".index-modal__button") },
+    { modal: $(".success-modal"), trigger: $(".success-modal__button") },
   ]);
   accordion(".accordion__main", ".accordion__information", "activeAccordion");
   accordion(".faq__head", ".faq__content", "faq__active");
