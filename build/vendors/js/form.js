@@ -1,5 +1,6 @@
-$("#index__form__phone").mask("+7(999) 999-99-99");
-// $("#feedback__form__email");
+if (document.querySelector("#index-modal__form")) {
+  $("#index__form__phone").mask("+7(999) 999-99-99");
+}
 
 const showSuccess = () => {
   $("#index-modal__form").addClass("hide");

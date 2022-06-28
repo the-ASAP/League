@@ -92,6 +92,63 @@
   --jost-font: Jost;
 }
 
+.success-modal {
+  top: 0;
+  background-color: rgba(30, 41, 34, 0.5);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.success-modal__close {
+  position: absolute;
+  padding: 7px;
+  top: 0.9375rem;
+  right: 0.9375rem;
+}
+
+.success-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.success-modal__content {
+  margin: 0 1rem;
+  padding: 0;
+  position: relative;
+  flex-basis: 38.825rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.success__message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  padding: 6.25rem 0.625rem;
+  text-align: center;
+}
+
+:root {
+  --main-green: #39ad46;
+  --second-green: #27ae60;
+  --hover-green: #58ca65;
+  --dark-green: #1e7d5b;
+  --dark-gray: #4f4f4f;
+  --mid-gray: #828282;
+  --light-gray: #f2f2f2;
+  --extra-gray: #333;
+  --golos-font: Golos;
+  --jost-font: Jost;
+}
+
 :root {
   --main-green: #39ad46;
   --second-green: #27ae60;
