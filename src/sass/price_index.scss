@@ -88,7 +88,7 @@
 .product__checkboxes {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
 }
 
@@ -103,8 +103,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1.5rem;
   height: 1.5rem;
+  flex-basis: 1.5rem;
   border: 1px solid #828282;
   border-radius: 4px;
   position: relative;
@@ -120,6 +120,7 @@
 .checkbox__text {
   color: rgba(37, 37, 37, 1);
   font-size: 0.875rem;
+  flex: 1 0 auto;
 }
 
 .checkbox__input:checked + .checkbox__fake {
@@ -386,7 +387,7 @@
   }
 
   .checkbox__fake {
-    width: 1rem;
+    flex-basis: 1rem;
     height: 1rem;
 
     svg {
