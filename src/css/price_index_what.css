@@ -47,7 +47,13 @@
 
 .sidebar {
   flex: 0 0 14.0625rem;
+  width: 14.0625rem;
   padding-top: 4.5rem;
+}
+
+.sidebar__nav {
+  position: sticky;
+  top: 14.75rem;
 }
 
 .sidebar__nav__list {
