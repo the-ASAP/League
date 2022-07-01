@@ -41,6 +41,7 @@
 .sidebar__nav {
   position: sticky;
   top: 14.75rem;
+  padding-bottom: 3rem;
 }
 
 .sidebar__nav__list {
