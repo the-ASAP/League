@@ -620,6 +620,32 @@ p {
   background-color: #ecf9ee;
 }
 
+.tooltip {
+  background-color: #252525;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.tooltip__title {
+  color: #ffffff;
+  font-family: var(--jost-font);
+}
+
+.tooltip__diff {
+  padding-left: 10px;
+  font-family: var(--jost-font);
+}
+
+.tooltip__diff.up {
+  color: #16eb56;
+  background: url("./../img/index-price/arrow_up.svg") no-repeat left;
+}
+
+.tooltip__diff.down {
+  color: #ff0000;
+  background: url("./../img/index-price/arrow_down.svg") no-repeat left;
+}
+
 @media (max-width: 768px) {
   .sidebar {
     display: none;

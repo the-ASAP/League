@@ -233,7 +233,7 @@ function createGraphIndex(arrLabels, arrData) {
           suggestedMax: 70000,
           ticks: {
             callback: function (value) {
-              return value / 1000 + " K";
+              return value / 1000 + " K ";
             },
           },
         },
@@ -375,20 +375,102 @@ function createGraphCross(arrLabels, arrData) {
         legend: {
           display: false,
         },
+        // tooltip: {
+        //   titleColor: "#40CE50",
+        //   backgroundColor: "#252525",
+        //   yAlign: "bottom",
+        //   padding: {
+        //     x: 10,
+        //     y: 5,
+        //   },
+        //   callbacks: {
+        //     title: function (tooltip) {
+        //       return `${tooltip[0].formattedValue}`;
+        //     },
+        //     label: (tool) => "",
+        //     body: (tool) => "",
+        //   },
+        // },
+
+        // custom tooltip--------------------------------
         tooltip: {
-          titleColor: "#40CE50",
-          backgroundColor: "#252525",
-          yAlign: "bottom",
-          padding: {
-            x: 10,
-            y: 5,
-          },
-          callbacks: {
-            title: function (tooltip) {
-              return `${tooltip[0].formattedValue}`;
-            },
-            label: (tool) => "",
-            body: (tool) => "",
+          // Disable the on-canvas tooltip
+          enabled: false,
+
+          external: function (context) {
+            // Tooltip Element
+            let tooltipEl = document.getElementById("chartjs-tooltip");
+
+            // Create element on first render
+            if (!tooltipEl) {
+              tooltipEl = document.createElement("div");
+              tooltipEl.id = "chartjs-tooltip";
+              tooltipEl.classList.add("tooltip");
+              document.body.appendChild(tooltipEl);
+            }
+
+            // Hide if no tooltip
+            const tooltipModel = context.tooltip;
+            if (tooltipModel.opacity === 0) {
+              tooltipEl.style.opacity = 0;
+              return;
+            }
+
+            // Set caret Position
+            tooltipEl.classList.remove("above", "below", "no-transform");
+            if (tooltipModel.yAlign) {
+              tooltipEl.classList.add(tooltipModel.yAlign);
+            } else {
+              tooltipEl.classList.add("no-transform");
+            }
+
+            if (tooltipModel.body) {
+              let innerHtml = "";
+              let allValues = tooltipModel.dataPoints[0].dataset.data;
+              let currentIndex = tooltipModel.dataPoints[0].dataIndex;
+              let curValue = allValues[currentIndex];
+              let diffPercent = "";
+              let dynamics = "";
+              let tooltipText = "";
+
+              if (currentIndex > 0) {
+                const prevValue = allValues[currentIndex - 1];
+
+                if (prevValue > curValue) {
+                  diffPercent = ((prevValue - curValue) * 100) / prevValue;
+                  dynamics = "down";
+                }
+
+                if (prevValue < curValue) {
+                  diffPercent = ((curValue - prevValue) * 100) / curValue;
+                  dynamics = "up";
+                }
+
+                // Set Text
+                tooltipText = `<span class='tooltip__title'> ${curValue} ₽ 
+               <span class='tooltip__diff ${dynamics}'>  ${diffPercent.toFixed(1)}% 
+               </span>
+                </span>`;
+              } else if (currentIndex === 0) {
+                tooltipText = `<span class='tooltip__title'> ${curValue} ₽ </span>`;
+              }
+
+              innerHtml += tooltipText;
+
+              tooltipEl.innerHTML = innerHtml;
+            }
+
+            const position = context.chart.canvas.getBoundingClientRect();
+            const bodyFont = Chart.helpers.toFont(tooltipModel.options.bodyFont);
+
+            // Display, position, and set styles for font
+            tooltipEl.style.opacity = 1;
+            tooltipEl.style.position = "absolute";
+            tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + "px";
+            tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + "px";
+            tooltipEl.style.font = bodyFont.string;
+            tooltipEl.style.padding = tooltipModel.padding + "px " + tooltipModel.padding + "px";
+            tooltipEl.style.pointerEvents = "none";
           },
         },
       },
@@ -402,7 +484,7 @@ function createGraphCross(arrLabels, arrData) {
           suggestedMax: 70,
           ticks: {
             callback: function (value) {
-              return value / 1000 + " K";
+              return value / 1000 + " K ";
             },
           },
         },
