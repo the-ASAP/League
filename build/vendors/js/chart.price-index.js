@@ -512,8 +512,8 @@ function createGraphCross(arrLabels, arrData) {
           grid: {
             borderWidth: 0,
           },
-          suggestedMin: 10,
-          suggestedMax: 70,
+          suggestedMin: 10000,
+          suggestedMax: 70000,
           ticks: {
             callback: function (value) {
               return value / 1000 + " K \u00A0\u00A0\u00A0\u00A0";
