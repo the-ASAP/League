@@ -286,12 +286,12 @@ function createGraphIndex(arrLabels, arrData) {
     checkGradient();
   });
 
-  const updateChartProduct = async (data, labels) => {
-    // обновление ....
-    GraphIndex.config.data.datasets[0].data = data;
-    GraphIndex.config.data.labels = labels;
-    GraphIndex.update();
-  };
+  // const updateChartProduct = async (data, labels) => {
+  //   // обновление ....
+  //   GraphIndex.config.data.datasets[0].data = data;
+  //   GraphIndex.config.data.labels = labels;
+  //   GraphIndex.update();
+  // };
 
   // табы для графика, временное решение
   const productTypeArr = document.querySelectorAll(".product-tab");
@@ -309,11 +309,30 @@ function createGraphIndex(arrLabels, arrData) {
     const productNum = e.target.getAttribute("data-product");
     const periodNum = document.querySelector(".period-tab.active").getAttribute("data-period");
 
+    $.ajax({
+      url: `http://liga.asap-lp.ru/analytics/index.php?tag=${productNum}&&dat=${periodNum}#st`,
+      type: "get",
+    }).done(function (res) {
+      console.log($(res).find("body"));
+      $("body").html();
+      // const updatedChart = $(res).find("#myChart");
+      // console.log(updatedChart);
+
+      // $(".content").html(updatedChart);
+
+      // const content = $(res).find(".news__content").html();
+      // const pagination = $(res).find(".pagination").html();
+      // $(".news__content").html(content);
+      // $(".pagination").html(pagination);
+      // $(".pagination__button a").each((_, item) => {
+      //   $(item).removeAttr("onclick");
+      // });
+    });
+
     for (let btn of productTypeArr) {
       btn.classList.remove("active");
     }
     e.target.classList.add("active");
-    updateChartProduct();
   }
 
   function togglePeriodType(e) {
@@ -324,7 +343,7 @@ function createGraphIndex(arrLabels, arrData) {
       btn.classList.remove("active");
     }
     e.target.classList.add("active");
-    updateChartProduct();
+    // updateChartProduct();
   }
   // ------------------------------------------------
 }
