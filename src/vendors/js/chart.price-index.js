@@ -217,7 +217,7 @@ function createGraphIndex(arrLabels, arrData) {
           suggestedMax: 70000,
           ticks: {
             callback: function (value) {
-              return value / 1000 + " K ";
+              return value / 1000 + " K \u00A0\u00A0\u00A0\u00A0";
             },
           },
         },
@@ -285,6 +285,9 @@ function createGraphIndex(arrLabels, arrData) {
     hiddenGraph(this, 2);
     checkGradient();
   });
+
+  // ========================================================================
+  // обновление графика
 
   // const updateChartProduct = async (data, labels) => {
   //   // обновление ....
@@ -420,22 +423,6 @@ function createGraphCross(arrLabels, arrData) {
         legend: {
           display: false,
         },
-        // tooltip: {
-        //   titleColor: "#40CE50",
-        //   backgroundColor: "#252525",
-        //   yAlign: "bottom",
-        //   padding: {
-        //     x: 10,
-        //     y: 5,
-        //   },
-        //   callbacks: {
-        //     title: function (tooltip) {
-        //       return `${tooltip[0].formattedValue}`;
-        //     },
-        //     label: (tool) => "",
-        //     body: (tool) => "",
-        //   },
-        // },
 
         // custom tooltip--------------------------------
         tooltip: {
@@ -529,7 +516,7 @@ function createGraphCross(arrLabels, arrData) {
           suggestedMax: 70,
           ticks: {
             callback: function (value) {
-              return value / 1000 + " K ";
+              return value / 1000 + " K \u00A0\u00A0\u00A0\u00A0";
             },
           },
         },
@@ -574,9 +561,9 @@ function createGraphCross(arrLabels, arrData) {
 
   const updateChartProduct = async () => {
     // получение данных ....
-    console.log(GraphCross.config.data.datasets[0].data);
-    console.log(GraphCross.config.data.labels);
-    GraphCross.update();
+    // console.log(GraphCross.config.data.datasets[0].data);
+    // console.log(GraphCross.config.data.labels);
+    // GraphCross.update();
   };
 
   // табы для графика, временное решение
