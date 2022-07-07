@@ -84,6 +84,8 @@ $("#feedback__form").validate({
     email: {
       required: true,
       email: true,
+      pattern:
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     },
   },
 
@@ -91,6 +93,7 @@ $("#feedback__form").validate({
     email: {
       required: "Обязательно к заполнению",
       email: "Некорректный email адрес ",
+      pattern: "Некорректный email адрес ",
     },
     processing: false,
     subscription: false,
@@ -101,6 +104,8 @@ $("#feedback__form").validate({
     const inputs = form.querySelectorAll(".feedback__form__input");
     [...inputs].forEach((el, i) => {
       data[el.name] = el.value;
+
+      console.log(el.value);
     });
 
     $.ajax({
