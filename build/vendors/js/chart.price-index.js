@@ -316,13 +316,18 @@ function createGraphIndex(arrLabels, arrData) {
       url: `http://liga.asap-lp.ru/analytics/index.php?tag=${productNum}&&dat=${periodNum}#st`,
       type: "get",
     }).done(function (res) {
-      console.log($(res).find("body"));
-      $("body").html();
-      // const updatedChart = $(res).find("#myChart");
-      // console.log(updatedChart);
-
+      // var parser = new DOMParser();
+      // var doc = parser.parseFromString(res, "text/html");
+      // var newBody = doc.querySelector("body");
+      // var newHead = doc.querySelector("head");
+      // var htmlPage = document.querySelector("html");
+      // htmlPage.removeChild(htmlPage.lastElementChild);
+      // htmlPage.append(newBody);
+      // var prevBody = document.querySelector("body")
+      // const updatedChart = $(res).find(".content");
+      // console.log(newBody);
       // $(".content").html(updatedChart);
-
+      // const body = document.querySelector(body)
       // const content = $(res).find(".news__content").html();
       // const pagination = $(res).find(".pagination").html();
       // $(".news__content").html(content);

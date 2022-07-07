@@ -328,17 +328,17 @@
 .breadcrumbs {
   position: absolute;
   top: 111%;
-  left: 0;
+  left: 0.8125rem !important;
   display: flex;
   align-items: center;
   z-index: 1;
 }
 
 .breadcrumbs__prev {
-  font-weight: 400;
+  font-weight: 400 !important;
   font-size: 0.875rem;
   line-height: 1.36;
-  color: var(--dark-gray);
+  color: var(--dark-gray) !important;
 }
 
 .breadcrumbs__circle {
@@ -350,10 +350,10 @@
 }
 
 .breadcrumbs__point {
-  font-weight: 400;
+  font-weight: 400 !important;
   font-size: 0.875rem;
   line-height: 1.36;
-  color: var(--dark-gray);
+  color: var(--dark-gray) !important;
 }
 
 .bx-breadcrumb {

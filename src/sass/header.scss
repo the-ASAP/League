@@ -262,16 +262,16 @@
 .breadcrumbs {
   position: absolute;
   top: 111%;
-  left: 0;
+  left: 0.8125rem !important;
   display: flex;
   align-items: center;
   z-index: 1;
 
   &__prev {
-    font-weight: 400;
+    font-weight: 400 !important;
     font-size: 0.875rem;
     line-height: 1.36;
-    color: $darkGray;
+    color: $darkGray !important;
   }
 
   &__circle {
@@ -283,10 +283,10 @@
   }
 
   &__point {
-    font-weight: 400;
+    font-weight: 400 !important;
     font-size: 0.875rem;
     line-height: 1.36;
-    color: $darkGray;
+    color: $darkGray !important;
   }
 }
 
