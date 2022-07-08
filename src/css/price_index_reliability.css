@@ -365,6 +365,10 @@ p {
     line-height: 2rem;
   }
 
+  .verification {
+    margin-bottom: 2rem;
+  }
+
   .verification__box {
     display: block;
   }

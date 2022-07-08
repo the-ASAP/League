@@ -712,7 +712,7 @@ p {
   .cross__box {
     border-radius: 0;
     padding: 0;
-    margin-bottom: 3.125rem;
+    margin-bottom: 2rem;
   }
 
   .cross__text {
@@ -797,7 +797,7 @@ p {
   }
 
   .box {
-    margin: 0 auto 4.5 auto;
+    margin: 0 auto 2rem auto;
     padding: 0;
     width: 100%;
     border-radius: 0;

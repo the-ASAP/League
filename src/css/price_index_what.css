@@ -484,6 +484,10 @@
   font-weight: 600;
 }
 
+.faq {
+  margin-bottom: 4.375rem;
+}
+
 .note {
   display: block;
   font-size: 1.25rem;
@@ -877,6 +881,10 @@ td {
   .section .title {
     font-size: 1.75rem;
     line-height: 2rem;
+  }
+
+  .faq {
+    margin-bottom: 2rem;
   }
 
   .profit__list {

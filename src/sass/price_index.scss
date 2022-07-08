@@ -331,6 +331,10 @@
       margin-bottom: 1rem;
     }
 
+    &__row:last-child {
+      margin-bottom: 1rem;
+    }
+
     &__list {
       grid-gap: 0;
       display: flex;
