@@ -319,10 +319,13 @@ function createGraphIndex(arrLabels, arrData) {
       // var parser = new DOMParser();
       // var doc = parser.parseFromString(res, "text/html");
       // var newBody = doc.querySelector("body");
-      // var newHead = doc.querySelector("head");
+      // // console.log(newBody);
+      // // var newHead = doc.querySelector("head");
       // var htmlPage = document.querySelector("html");
       // htmlPage.removeChild(htmlPage.lastElementChild);
       // htmlPage.append(newBody);
+      // console.log(htmlPage);
+      // GraphIndex.update();
       // var prevBody = document.querySelector("body")
       // const updatedChart = $(res).find(".content");
       // console.log(newBody);
