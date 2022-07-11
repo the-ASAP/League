@@ -287,16 +287,7 @@ function createGraphIndex(arrLabels, arrData) {
   });
 
   // ========================================================================
-  // обновление графика
-
-  // const updateChartProduct = async (data, labels) => {
-  //   // обновление ....
-  //   GraphIndex.config.data.datasets[0].data = data;
-  //   GraphIndex.config.data.labels = labels;
-  //   GraphIndex.update();
-  // };
-
-  // табы для графика, временное решение
+  // табы для графика
   const productTypeArr = document.querySelectorAll(".product-tab");
   const periodArr = document.querySelectorAll(".period-tab");
 
@@ -311,33 +302,19 @@ function createGraphIndex(arrLabels, arrData) {
   function toggleProductType(e) {
     const productNum = e.target.getAttribute("data-product");
     const periodNum = document.querySelector(".period-tab.active").getAttribute("data-period");
+    // console.log(productNum);
 
     $.ajax({
-      url: `http://liga.asap-lp.ru/analytics/index.php?tag=${productNum}&&dat=${periodNum}#st`,
+      url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
       type: "get",
     }).done(function (res) {
-      // var parser = new DOMParser();
-      // var doc = parser.parseFromString(res, "text/html");
-      // var newBody = doc.querySelector("body");
-      // // console.log(newBody);
-      // // var newHead = doc.querySelector("head");
-      // var htmlPage = document.querySelector("html");
-      // htmlPage.removeChild(htmlPage.lastElementChild);
-      // htmlPage.append(newBody);
-      // console.log(htmlPage);
-      // GraphIndex.update();
-      // var prevBody = document.querySelector("body")
-      // const updatedChart = $(res).find(".content");
-      // console.log(newBody);
-      // $(".content").html(updatedChart);
-      // const body = document.querySelector(body)
-      // const content = $(res).find(".news__content").html();
-      // const pagination = $(res).find(".pagination").html();
-      // $(".news__content").html(content);
-      // $(".pagination").html(pagination);
-      // $(".pagination__button a").each((_, item) => {
-      //   $(item).removeAttr("onclick");
-      // });
+      console.log(res);
+
+      GraphIndex.config.data.datasets[0].data = res.dataset[0];
+      GraphIndex.config.data.datasets[1].data = res.dataset[1];
+      GraphIndex.config.data.datasets[2].data = res.dataset[2];
+      GraphIndex.config.data.labels = res.labels;
+      GraphIndex.update();
     });
 
     for (let btn of productTypeArr) {
@@ -350,13 +327,25 @@ function createGraphIndex(arrLabels, arrData) {
     const productNum = document.querySelector(".product-tab.active").getAttribute("data-product");
     const periodNum = e.target.getAttribute("data-period");
 
-    for (let btn of periodArr) {
-      btn.classList.remove("active");
-    }
-    e.target.classList.add("active");
-    // updateChartProduct();
+    $.ajax({
+      url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&&dat=${periodNum}#st`,
+      type: "get",
+    }).done(function (res) {
+      console.log(res);
+
+      GraphIndex.config.data.datasets[0].data = res.dataset[0];
+      GraphIndex.config.data.datasets[1].data = res.dataset[1];
+      GraphIndex.config.data.datasets[2].data = res.dataset[2];
+      GraphIndex.config.data.labels = res.labels;
+      GraphIndex.update();
+
+      for (let btn of periodArr) {
+        btn.classList.remove("active");
+      }
+      e.target.classList.add("active");
+    });
   }
-  // ------------------------------------------------
+  // ------------------------------------------------------------------------------------
 }
 
 // ------------------график для страницы CROSS price-index-cross  ------------------------------
