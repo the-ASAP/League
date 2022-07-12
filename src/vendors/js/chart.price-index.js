@@ -1,3 +1,31 @@
+function changeCheckboxTextIndex(tag) {
+  const checkboxText1 = document.querySelector("#checkbox__text__1");
+  const checkboxText2 = document.querySelector("#checkbox__text__2");
+  const checkboxText3 = document.querySelector("#checkbox__text__3");
+
+  switch (tag) {
+    case "1":
+      checkboxText1.innerText = "МС-5Б";
+      checkboxText2.innerText = "Целлюлозная Б1";
+      checkboxText3.innerText = "Макулатурная Б1";
+      break;
+    case "2":
+      checkboxText1.innerText = "Гофрокартон Т23 клапан";
+      checkboxText2.innerText = "Гофрокартон Т23 товарный";
+      checkboxText3.innerText = "Крахмал";
+      break;
+    case "3":
+      checkboxText1.innerText = "Макулатурный картон";
+      checkboxText2.innerText = "Белёный картон";
+      checkboxText3.innerText = "Целлюлозный картон К1";
+      break;
+    default:
+      checkboxText1.innerText = "МС-5Б";
+      checkboxText2.innerText = "Целлюлозная Б1";
+      checkboxText3.innerText = "Макулатурная Б1";
+  }
+}
+
 // -----------------------моковые данные----------------------------------------------------
 const priceIndexData = {
   labels: [
@@ -308,13 +336,12 @@ function createGraphIndex(arrLabels, arrData) {
       url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
       type: "get",
     }).done(function (res) {
-      console.log(res);
-
       GraphIndex.config.data.datasets[0].data = res.dataset[0];
       GraphIndex.config.data.datasets[1].data = res.dataset[1];
       GraphIndex.config.data.datasets[2].data = res.dataset[2];
       GraphIndex.config.data.labels = res.labels;
       GraphIndex.update();
+      changeCheckboxTextIndex(productNum);
     });
 
     for (let btn of productTypeArr) {
@@ -555,13 +582,6 @@ function createGraphCross(arrLabels, arrData) {
   $("#checkbox__5").change(function () {
     hiddenGraph(this, 4);
   });
-
-  const updateChartProduct = async () => {
-    // получение данных ....
-    // console.log(GraphCross.config.data.datasets[0].data);
-    // console.log(GraphCross.config.data.labels);
-    // GraphCross.update();
-  };
 
   // табы для графика, временное решение
   const productTypeArr = document.querySelectorAll(".product-tab");
