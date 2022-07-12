@@ -288,10 +288,10 @@
     line-height: 1.36;
     color: $darkGray !important;
 
-    max-width: 8.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    max-width: 8.5rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 }
 
