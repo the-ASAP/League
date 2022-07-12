@@ -583,53 +583,44 @@ function createGraphCross(arrLabels, arrData) {
     hiddenGraph(this, 4);
   });
 
-  // табы для графика, временное решение
-  const productTypeArr = document.querySelectorAll(".product-tab");
+  // табы для графика CROSS
   const periodArr = document.querySelectorAll(".period-tab");
-
-  for (let btn of productTypeArr) {
-    btn.addEventListener("click", (e) => toggleProductType(e));
-  }
 
   for (let btn of periodArr) {
     btn.addEventListener("click", (e) => togglePeriodType(e));
   }
 
-  function toggleProductType(e) {
-    $.ajax({
-      url: "http://liga.asap-lp.ru/analytics/",
-      type: "post",
-      data: { product: e.target.id },
-    }).done(function (res) {
-      for (let btn of productTypeArr) {
-        btn.classList.remove("active");
-      }
-      e.target.classList.add("active");
-      updateChartProduct();
-    });
-  }
-
   function togglePeriodType(e) {
     $.ajax({
-      url: "http://liga.asap-lp.ru/analytics/",
+      url: `http://liga.asap-lp.ru/analytics/price_index_cross.php?dat=${periodArr}`,
       type: "post",
       data: { period: e.target.id },
     }).done(function (res) {
+      console.log(res);
+      // GraphCross.config.data.datasets[0].data = res.dataset[0];
+      // GraphCross.config.data.datasets[1].data = res.dataset[1];
+      // GraphCross.config.data.datasets[2].data = res.dataset[2];
+      // GraphCross.config.data.labels = res.labels;
+      // GraphCross.update();
+
       for (let btn of periodArr) {
         btn.classList.remove("active");
       }
       e.target.classList.add("active");
-      updateChartProduct();
     });
   }
 }
 // ----------------------------------------------------
 
 $().ready(() => {
-  createGraphIndex(priceIndexData.labels, priceIndexData.data);
+  if (document.getElementById("myChart")) {
+    createGraphIndex(priceIndexData.labels, priceIndexData.data);
+  }
 });
 
 $().ready(() => {
-  createGraphCross(crossData.labels, crossData.data);
+  if (document.getElementById("Graph-Cross")) {
+    createGraphCross(crossData.labels, crossData.data);
+  }
 });
 // --------------------------------------------------------------------------
