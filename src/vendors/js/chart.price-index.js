@@ -330,7 +330,6 @@ function createGraphIndex(arrLabels, arrData) {
   function toggleProductType(e) {
     const productNum = e.target.getAttribute("data-product");
     const periodNum = document.querySelector(".period-tab.active").getAttribute("data-period");
-    // console.log(productNum);
 
     $.ajax({
       url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
@@ -591,17 +590,22 @@ function createGraphCross(arrLabels, arrData) {
   }
 
   function togglePeriodType(e) {
+    const periodNum = e.target.getAttribute("data-period");
+
     $.ajax({
-      url: `http://liga.asap-lp.ru/analytics/price_index_cross.php?dat=${periodArr}`,
+      url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?dat=${periodNum}`,
       type: "post",
       data: { period: e.target.id },
     }).done(function (res) {
+      console.log(periodNum);
       console.log(res);
-      // GraphCross.config.data.datasets[0].data = res.dataset[0];
-      // GraphCross.config.data.datasets[1].data = res.dataset[1];
-      // GraphCross.config.data.datasets[2].data = res.dataset[2];
-      // GraphCross.config.data.labels = res.labels;
-      // GraphCross.update();
+      GraphCross.config.data.datasets[0].data = res.datasetsCross[0];
+      GraphCross.config.data.datasets[1].data = res.datasetsCross[1];
+      GraphCross.config.data.datasets[2].data = res.datasetsCross[2];
+      GraphCross.config.data.datasets[3].data = res.datasetsCross[3];
+      GraphCross.config.data.datasets[4].data = res.datasetsCross[4];
+      GraphCross.config.data.labels = res.labels;
+      GraphCross.update();
 
       for (let btn of periodArr) {
         btn.classList.remove("active");
