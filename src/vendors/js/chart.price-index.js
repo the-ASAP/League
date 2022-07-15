@@ -236,15 +236,16 @@ function createGraphIndex(arrLabels, arrData) {
             const { chart } = context;
             var currentTooltip = context.tooltip.dataPoints[0].dataIndex;
             var keys = Object.keys(context.tooltip.dataPoints[0].dataset.data);
+            console.log(window.innerWidth);
 
             if (
-              currentTooltip == keys[keys.length - 1] ||
-              currentTooltip == keys[keys.length - 2] ||
-              currentTooltip == keys[keys.length - 3] ||
-              currentTooltip == keys[keys.length - 4]
+              window.innerWidth < 500 &&
+              (currentTooltip == keys[keys.length - 1] ||
+                currentTooltip == keys[keys.length - 2] ||
+                currentTooltip == keys[keys.length - 3] ||
+                currentTooltip == keys[keys.length - 4])
             ) {
-              tooltipEl.style.left =
-                chart.canvas.offsetLeft + context.tooltip.caretX - tooltipEl.style.length + "px";
+              tooltipEl.style.left = chart.canvas.offsetLeft + context.tooltip.caretX - 100 + "px";
             }
           },
         },
@@ -547,13 +548,13 @@ function createGraphCross(arrLabels, arrData) {
             var keys = Object.keys(context.tooltip.dataPoints[0].dataset.data);
 
             if (
-              currentTooltip == keys[keys.length - 1] ||
-              currentTooltip == keys[keys.length - 2] ||
-              currentTooltip == keys[keys.length - 3] ||
-              currentTooltip == keys[keys.length - 4]
+              window.innerWidth < 500 &&
+              (currentTooltip == keys[keys.length - 1] ||
+                currentTooltip == keys[keys.length - 2] ||
+                currentTooltip == keys[keys.length - 3] ||
+                currentTooltip == keys[keys.length - 4])
             ) {
-              tooltipEl.style.left =
-                chart.canvas.offsetLeft + context.tooltip.caretX - tooltipEl.style.length + "px";
+              tooltipEl.style.left = chart.canvas.offsetLeft + context.tooltip.caretX - 100 + "px";
             }
           },
         },
