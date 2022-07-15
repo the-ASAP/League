@@ -76,13 +76,15 @@
   margin: 0;
 }
 
-.modal__burger {
+.modal__burger,
+.modal__burger_index {
   position: relative;
   width: 50%;
   display: flex;
 }
 
-.modal__burger::after {
+.modal__burger::after,
+.modal__burger_index::after {
   content: "";
   width: 5px;
   height: 1px;
@@ -94,7 +96,8 @@
   transition: transform 0.3s ease-in;
 }
 
-.modal__burger::before {
+.modal__burger::before,
+.modal__burger_index::before {
   content: "";
   width: 5px;
   height: 1px;
@@ -106,7 +109,8 @@
   transition: transform 0.3s ease-in;
 }
 
-.modal__hiddenRefs {
+.modal__hiddenRefs,
+.modal__hiddenRefs_index {
   margin-top: 1.125rem;
   margin-left: 1rem;
   overflow: hidden;
@@ -137,15 +141,18 @@
   opacity: 1;
 }
 
-.activeHiddenRefs {
+.activeHiddenRefs,
+.activeHiddenRefs_index {
   display: flex;
 }
 
-.activeHiddenRefs::before {
+.activeHiddenRefs::before,
+.activeHiddenRefs_index::before {
   transform: rotate(-45deg);
 }
 
-.activeHiddenRefs::after {
+.activeHiddenRefs::after,
+.activeHiddenRefs_index::after {
   transform: rotate(45deg);
 }
 

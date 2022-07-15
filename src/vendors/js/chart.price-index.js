@@ -613,8 +613,8 @@ function createGraphCross(arrLabels, arrData) {
       e.target.classList.add("active");
     });
   }
+  // ----------------------------------------------------
 }
-// ----------------------------------------------------
 
 $().ready(() => {
   if (document.getElementById("myChart")) {

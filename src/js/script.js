@@ -181,6 +181,7 @@ const refreshScript = () => {
   accordion(".accordion__main", ".accordion__information", "activeAccordion");
   accordion(".faq__head", ".faq__content", "faq__active");
   select(".modal__burger", ".modal__hiddenRefs", "activeHiddenRefs");
+  select(".modal__burger_index", ".modal__hiddenRefs_index", "activeHiddenRefs_index");
   select(".footer__burger", ".footer__hiddenRefs", "footer__activeHiddenRefs");
   hoverSelect(
     ".associationModal__button",

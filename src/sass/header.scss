@@ -63,7 +63,8 @@
     }
   }
 
-  &__burger {
+  &__burger,
+  &__burger_index {
     position: relative;
     width: 50%;
     display: flex;
@@ -93,7 +94,8 @@
     }
   }
 
-  &__hiddenRefs {
+  &__hiddenRefs,
+  &__hiddenRefs_index {
     margin-top: 1.125rem;
     margin-left: 1rem;
     overflow: hidden;
@@ -124,7 +126,8 @@
   opacity: 1;
 }
 
-.activeHiddenRefs {
+.activeHiddenRefs,
+.activeHiddenRefs_index {
   display: flex;
 
   &::before {
