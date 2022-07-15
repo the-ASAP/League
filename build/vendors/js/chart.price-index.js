@@ -1,3 +1,4 @@
+// =========================================================================
 function changeCheckboxTextIndex(tag) {
   const checkboxText1 = document.querySelector("#checkbox__text__1");
   const checkboxText2 = document.querySelector("#checkbox__text__2");
@@ -207,8 +208,8 @@ function createGraphIndex(arrLabels, arrData) {
                 }
 
                 // Set Text
-                tooltipText = `<span class='tooltip__title'> ${curValue} ₽ 
-               <span class='tooltip__diff ${dynamics}'>  ${diffPercent.toFixed(1)}% 
+                tooltipText = `<span class='tooltip__title'> ${curValue} ₽
+               <span class='tooltip__diff ${dynamics}'>  ${diffPercent.toFixed(1)}%
                </span>
                 </span>`;
               } else if (currentIndex === 0) {
@@ -231,6 +232,20 @@ function createGraphIndex(arrLabels, arrData) {
             tooltipEl.style.font = bodyFont.string;
             tooltipEl.style.padding = tooltipModel.padding + "px " + tooltipModel.padding + "px";
             tooltipEl.style.pointerEvents = "none";
+
+            const { chart } = context;
+            var currentTooltip = context.tooltip.dataPoints[0].dataIndex;
+            var keys = Object.keys(context.tooltip.dataPoints[0].dataset.data);
+
+            if (
+              currentTooltip == keys[keys.length - 1] ||
+              currentTooltip == keys[keys.length - 2] ||
+              currentTooltip == keys[keys.length - 3] ||
+              currentTooltip == keys[keys.length - 4]
+            ) {
+              tooltipEl.style.left =
+                chart.canvas.offsetLeft + context.tooltip.caretX - tooltipEl.style.length + "px";
+            }
           },
         },
         // ------------------------------------------------
@@ -526,6 +541,20 @@ function createGraphCross(arrLabels, arrData) {
             tooltipEl.style.font = bodyFont.string;
             tooltipEl.style.padding = tooltipModel.padding + "px " + tooltipModel.padding + "px";
             tooltipEl.style.pointerEvents = "none";
+
+            const { chart } = context;
+            var currentTooltip = context.tooltip.dataPoints[0].dataIndex;
+            var keys = Object.keys(context.tooltip.dataPoints[0].dataset.data);
+
+            if (
+              currentTooltip == keys[keys.length - 1] ||
+              currentTooltip == keys[keys.length - 2] ||
+              currentTooltip == keys[keys.length - 3] ||
+              currentTooltip == keys[keys.length - 4]
+            ) {
+              tooltipEl.style.left =
+                chart.canvas.offsetLeft + context.tooltip.caretX - tooltipEl.style.length + "px";
+            }
           },
         },
       },
