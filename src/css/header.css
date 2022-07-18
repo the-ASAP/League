@@ -76,15 +76,13 @@
   margin: 0;
 }
 
-.modal__burger,
-.modal__burger_index {
+.modal__burger {
   position: relative;
   width: 50%;
   display: flex;
 }
 
-.modal__burger::after,
-.modal__burger_index::after {
+.modal__burger::after {
   content: "";
   width: 5px;
   height: 1px;
@@ -96,8 +94,7 @@
   transition: transform 0.3s ease-in;
 }
 
-.modal__burger::before,
-.modal__burger_index::before {
+.modal__burger::before {
   content: "";
   width: 5px;
   height: 1px;
@@ -106,6 +103,36 @@
   background: var(--light-gray);
   left: 136px;
   transform: rotate(45deg);
+  transition: transform 0.3s ease-in;
+}
+
+.modal__burger_index {
+  position: relative;
+  width: 50%;
+  display: flex !important;
+}
+
+.modal__burger_index::after {
+  content: "";
+  width: 5px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  background: var(--light-gray);
+  left: 139px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in;
+}
+
+.modal__burger_index::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  background: var(--light-gray);
+  left: 136px;
+  transform: rotate(-45deg);
   transition: transform 0.3s ease-in;
 }
 
@@ -141,19 +168,28 @@
   opacity: 1;
 }
 
-.activeHiddenRefs,
+.activeHiddenRefs {
+  display: flex;
+}
+
+.activeHiddenRefs::before {
+  transform: rotate(-45deg);
+}
+
+.activeHiddenRefs::after {
+  transform: rotate(45deg);
+}
+
 .activeHiddenRefs_index {
   display: flex;
 }
 
-.activeHiddenRefs::before,
 .activeHiddenRefs_index::before {
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 
-.activeHiddenRefs::after,
 .activeHiddenRefs_index::after {
-  transform: rotate(45deg);
+  transform: rotate(-45deg);
 }
 
 .header__container {
