@@ -236,7 +236,7 @@ function createGraphIndex(arrLabels, arrData) {
             const { chart } = context;
             var currentTooltip = context.tooltip.dataPoints[0].dataIndex;
             var keys = Object.keys(context.tooltip.dataPoints[0].dataset.data);
-            console.log(window.innerWidth);
+            // console.log(window.innerWidth);
 
             if (
               window.innerWidth < 500 &&
@@ -349,8 +349,11 @@ function createGraphIndex(arrLabels, arrData) {
 
     $.ajax({
       url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
+      // url: `https://liga-pm.ru/analytics/index.php?tag=${productNum}&dat=${periodNum}`,
       type: "get",
     }).done(function (res) {
+      // console.log("res!!!! ", res);
+
       GraphIndex.config.data.datasets[0].data = res.dataset[0];
       GraphIndex.config.data.datasets[1].data = res.dataset[1];
       GraphIndex.config.data.datasets[2].data = res.dataset[2];

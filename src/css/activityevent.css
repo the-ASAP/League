@@ -599,10 +599,6 @@
     line-height: 1.42;
   }
 
-  .event__text {
-    display: none;
-  }
-
   .event__image {
     width: 100%;
     height: auto;
