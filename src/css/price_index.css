@@ -519,6 +519,7 @@
 
 .product__checkboxes {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 1rem;
@@ -569,6 +570,14 @@
 
 .checkbox__input__3:checked + .checkbox__fake {
   background-color: #fec859;
+}
+
+.checkbox__input__4:checked + .checkbox__fake {
+  background-color: #39c655;
+}
+
+.checkbox__input__5:checked + .checkbox__fake {
+  background-color: #fd7b1e;
 }
 
 .chart__download_btn {
@@ -772,6 +781,10 @@
 .tooltip__diff.down {
   color: #ff0000;
   background: url("./../img/index-price/arrow_down.svg") no-repeat left;
+}
+
+.test {
+  color: #fd7b1e;
 }
 
 @media (max-width: 768px) {
