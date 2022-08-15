@@ -46,31 +46,6 @@ function createCheckboxes(tag, checkboxListen) {
 
   checkboxListen();
 }
-// =========================================================================
-
-// -----------------------моковые данные----------------------------------------------------
-const priceIndexData = {
-  labels: [
-    "",
-    "Янв 21",
-    "фев 21",
-    "мар 21",
-    "апр2 21",
-    "май 21",
-    "июнь 21",
-    "июнь 21",
-    "авг 21",
-    "сен 21",
-    "окт 21",
-    "ноя 21",
-    "дек 21",
-  ],
-  data: [
-    [20578, 23934, 28278, 35459, 40224, 45046, 47485, 49245, 52678, 54234, 50764, 49356, 47467],
-    [30946, 33385, 38935, 42956, 50395, 53835, 48935, 42926, 39935, 44568, 47935, 57853, 59457],
-    [35846, 37936, 40752, 44982, 48340, 52486, 55497, 54123, 58345, 57556, 55348, 57654, 55458],
-  ],
-};
 
 // ------------------график для ГЛАВНОЙ страницы price-index ------------------------------
 function createGraphIndex(arrLabels, arrData) {
@@ -132,6 +107,26 @@ function createGraphIndex(arrLabels, arrData) {
         pointBorderWidth: 2,
         pointBorderColor: "#FEC859",
         borderColor: "#FEC859",
+        pointBackgroundColor: "#fff",
+        tension: 0.4,
+      },
+      {
+        data: arrData[3],
+        radius: 6,
+        hoverRadius: 10,
+        pointBorderWidth: 2,
+        pointBorderColor: "#39c655",
+        borderColor: "#39c655",
+        pointBackgroundColor: "#fff",
+        tension: 0.4,
+      },
+      {
+        data: arrData[4],
+        radius: 6,
+        hoverRadius: 10,
+        pointBorderWidth: 2,
+        pointBorderColor: "#fd7b1e",
+        borderColor: "#fd7b1e",
         pointBackgroundColor: "#fff",
         tension: 0.4,
       },
@@ -337,7 +332,6 @@ function createGraphIndex(arrLabels, arrData) {
   }
   checkboxListen();
 
-  // ========================================================================
   // табы для графика навешивание слушателей
   const productTypeArr = document.querySelectorAll(".product-tab");
   const periodArr = document.querySelectorAll(".period-tab");
@@ -376,7 +370,6 @@ function createGraphIndex(arrLabels, arrData) {
     }
     e.target.classList.add("active");
   }
-  // --------------------------------
 
   // табы преключение периода
   function togglePeriodType(e) {
@@ -402,11 +395,15 @@ function createGraphIndex(arrLabels, arrData) {
       e.target.classList.add("active");
     });
   }
-  // ------------------------------------------------------------------------------------
 }
+// ------------------------------------------------------------------------------------
 
+// запуск основной функции createGraphIndex
 $().ready(() => {
-  if (document.getElementById("myChart")) {
-    createGraphIndex(priceIndexData.labels, priceIndexData.data);
-  }
+  $.ajax({
+    url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=1&dat=1`,
+    type: "get",
+  }).done(function (res) {
+    createGraphIndex(res.labels, res.dataset);
+  });
 });
