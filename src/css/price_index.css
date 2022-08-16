@@ -468,6 +468,10 @@
   border-radius: 0.625rem;
 }
 
+.canvas {
+  margin-top: 0.625rem;
+}
+
 .controller__group {
   display: flex;
   justify-content: flex-start;

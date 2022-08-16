@@ -399,7 +399,7 @@ function createGraphIndex(arrLabels, arrData) {
 // запуск основной функции createGraphIndex
 $().ready(() => {
   $.ajax({
-    url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=1&dat=1`,
+    url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=1&dat=3`,
     type: "get",
   }).done(function (res) {
     createGraphIndex(res.labels, res.dataset);
