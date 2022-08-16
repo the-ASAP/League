@@ -1086,6 +1086,12 @@ td {
   }
 }
 
+@media (max-width: 400px) {
+  .feedback__form__button {
+    width: 100%;
+  }
+}
+
 @media (max-width: 380px) {
   .scheme__title {
     top: 27%;

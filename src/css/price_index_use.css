@@ -763,3 +763,9 @@
     margin-bottom: 1.0625rem;
   }
 }
+
+@media (max-width: 400px) {
+  .feedback__form__button {
+    width: 100%;
+  }
+}

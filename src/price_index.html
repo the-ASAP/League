@@ -33,6 +33,43 @@
             <div class="chart">
               <div class="controller">
                 <div class="controller__group">
+                  <div class="controller__period">
+                    <p class="controller__title">Период</p>
+                    <div class="period__group">
+                      <div class="period__item">
+                        <input
+                          class="period__input"
+                          type="radio"
+                          id="month"
+                          name="period__radio"
+                          value="1"
+                          checked
+                        />
+                        <label for="month">Месяц</label>
+                      </div>
+                      <div class="period__item">
+                        <input
+                          class="period__input"
+                          type="radio"
+                          id="six-months"
+                          name="period__radio"
+                          value="2"
+                        />
+                        <label for="six-months">Полгода</label>
+                      </div>
+                      <div class="period__item">
+                        <input
+                          class="period__input"
+                          type="radio"
+                          id="year"
+                          name="period__radio"
+                          value="3"
+                        />
+                        <label for="year">Год</label>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="controller__product_type">
                     <p class="controller__title">Вид продукции</p>
                     <div class="tab__group">
@@ -44,20 +81,6 @@
                       </button>
                       <button href="#" class="controller__tab product-tab" data-product="3">
                         Тарные картоны
-                      </button>
-                    </div>
-                  </div>
-                  <div class="controller__period">
-                    <p class="controller__title">Период</p>
-                    <div class="tab__group">
-                      <button href="#" class="controller__tab period-tab active" data-period="1">
-                        Месяц
-                      </button>
-                      <button href="#" class="controller__tab period-tab" data-period="2">
-                        Полгода
-                      </button>
-                      <button href="#" class="controller__tab period-tab" data-period="3">
-                        Год
                       </button>
                     </div>
                   </div>

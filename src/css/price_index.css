@@ -471,7 +471,6 @@
 .controller__group {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   margin-bottom: 1.3375rem;
 }
 
@@ -483,8 +482,46 @@
   margin-bottom: 1.25rem;
 }
 
+.period__item {
+  margin-bottom: 5px;
+}
+
+.period__input {
+  z-index: 1;
+  cursor: pointer;
+  width: 0.8125rem;
+  height: 0.8125rem;
+  margin-right: 6px;
+  position: relative;
+  border: 1px solid #828282;
+  border-radius: 0.8125rem;
+  transition: border 0.2s ease-in;
+}
+
+.period__input::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  background-color: transparent;
+  width: 70%;
+  height: 70%;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in;
+}
+
+.period__input:checked {
+  border: 1px solid #379b42;
+}
+
+.period__input:checked::after {
+  background-color: #379b42;
+}
+
 .controller__product_type {
-  margin-right: 10rem;
+  margin-left: 4.375rem;
 }
 
 .tab__group {
@@ -523,6 +560,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 1rem;
+  margin-top: -2rem;
+  margin-left: 10rem;
 }
 
 .checkbox__wrapper {
@@ -783,10 +822,6 @@
   background: url("./../img/index-price/arrow_down.svg") no-repeat left;
 }
 
-.test {
-  color: #fd7b1e;
-}
-
 @media (max-width: 768px) {
   .sidebar {
     display: none;
@@ -855,6 +890,16 @@
     background-color: #fff;
   }
 
+  .period__group {
+    display: flex;
+    margin-bottom: 1.5625rem;
+  }
+
+  .period__item {
+    margin-right: 1.6875rem;
+    margin-bottom: 0;
+  }
+
   .weekly-index {
     flex-direction: column;
     align-items: flex-start;
@@ -904,8 +949,7 @@
   }
 
   .controller__product_type {
-    margin-right: 0;
-    margin-bottom: 1.875rem;
+    margin-left: 0;
   }
 
   .tab__group {
@@ -920,6 +964,7 @@
     flex-wrap: wrap;
     order: 2;
     margin-top: 1.875rem;
+    margin-left: 0;
   }
 
   .checkbox__wrapper {
@@ -939,5 +984,15 @@
   .chart__download_btn {
     order: 3;
     margin-top: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .feedback__form__button {
+    width: 100%;
+  }
+
+  .chart__download_btn {
+    width: 100%;
   }
 }

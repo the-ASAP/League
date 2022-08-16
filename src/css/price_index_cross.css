@@ -892,6 +892,12 @@ p {
   }
 }
 
+@media (max-width: 400px) {
+  .feedback__form__button {
+    width: 100%;
+  }
+}
+
 @media (max-width: 380px) {
   .tab-trigger .title {
     font-size: 1.3rem;

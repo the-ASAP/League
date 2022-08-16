@@ -290,11 +290,13 @@ function createGraphIndex(arrLabels, arrData) {
     const checkedCount = [];
 
     idArr.forEach((item) => {
-      document.querySelector(item.id).checked && checkedCount.push(item);
+      const checkboxItem = document.querySelector(item.id);
+      checkboxItem && checkboxItem.checked && checkedCount.push(item);
     });
 
     if (checkedCount.length === 1) {
       const { ind, gradient } = checkedCount[0];
+      console.log(checkedCount);
 
       GraphIndex.data.datasets[ind].fill = true;
       GraphIndex.data.datasets[ind].backgroundColor = gradient;
@@ -335,19 +337,20 @@ function createGraphIndex(arrLabels, arrData) {
   // табы для графика навешивание слушателей
   const productTypeArr = document.querySelectorAll(".product-tab");
   const periodArr = document.querySelectorAll(".period-tab");
+  const periodButtons = document.getElementsByName("period__radio");
+
+  for (let btn of periodButtons) {
+    btn.addEventListener("click", (e) => togglePeriodType(e));
+  }
 
   for (let btn of productTypeArr) {
     btn.addEventListener("click", (e) => toggleProductType(e));
   }
 
-  for (let btn of periodArr) {
-    btn.addEventListener("click", (e) => togglePeriodType(e));
-  }
-
   // табы преключение продукта
   function toggleProductType(e) {
     const productNum = e.target.getAttribute("data-product");
-    const periodNum = document.querySelector(".period-tab.active").getAttribute("data-period");
+    const periodNum = $('input[name="period__radio"]:checked').val();
 
     $.ajax({
       url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
@@ -371,10 +374,10 @@ function createGraphIndex(arrLabels, arrData) {
     e.target.classList.add("active");
   }
 
-  // табы преключение периода
+  // radio преключение периода
   function togglePeriodType(e) {
     const productNum = document.querySelector(".product-tab.active").getAttribute("data-product");
-    const periodNum = e.target.getAttribute("data-period");
+    const periodNum = e.target.value;
 
     $.ajax({
       url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&&dat=${periodNum}#st`,
@@ -388,11 +391,6 @@ function createGraphIndex(arrLabels, arrData) {
 
       GraphIndex.config.data.labels = res.labels;
       GraphIndex.update();
-
-      for (let btn of periodArr) {
-        btn.classList.remove("active");
-      }
-      e.target.classList.add("active");
     });
   }
 }

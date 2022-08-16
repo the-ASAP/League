@@ -91,3 +91,9 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .feedback__form__button {
+    width: 100%;
+  }
+}
