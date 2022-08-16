@@ -79,6 +79,10 @@ function checkGradient(gradients, GraphIndex) {
     GraphIndex.data.datasets[ind].fill = true;
     GraphIndex.data.datasets[ind].backgroundColor = gradient;
     GraphIndex.update();
+  } else if (checkedCount.length === 0) {
+    GraphIndex.data.datasets[0].fill = true;
+    GraphIndex.data.datasets[0].backgroundColor = gradients[0];
+    GraphIndex.update();
   } else {
     idArr.forEach((item) => {
       GraphIndex.data.datasets[item.ind].fill = false;
@@ -87,8 +91,15 @@ function checkGradient(gradients, GraphIndex) {
   }
 }
 
-//функция  табы преключение продукта
-function toggleProductType(e, GraphIndex, createCheckboxes, productTypeArr, checkboxListen) {
+//функция  табы преключение ПРОДУКТА
+function toggleProductType(
+  e,
+  GraphIndex,
+  createCheckboxes,
+  productTypeArr,
+  checkboxListen,
+  gradients
+) {
   const productNum = e.target.getAttribute("data-product");
   const periodNum = $('input[name="period__radio"]:checked').val();
   checkboxListen();
@@ -121,6 +132,7 @@ function toggleProductType(e, GraphIndex, createCheckboxes, productTypeArr, chec
     GraphIndex.config.data.labels = res.labels;
     GraphIndex.update();
     createCheckboxes(productNum, checkboxListen);
+    checkGradient(gradients, GraphIndex);
   });
 
   for (let btn of productTypeArr) {
@@ -129,7 +141,7 @@ function toggleProductType(e, GraphIndex, createCheckboxes, productTypeArr, chec
   e.target.classList.add("active");
 }
 
-// функция radio преключение периода
+// функция radio преключение ПЕРИОДА
 function togglePeriodType(e, GraphIndex) {
   const productNum = document.querySelector(".product-tab.active").getAttribute("data-product");
   const periodNum = e.target.value;
@@ -379,6 +391,7 @@ function createGraphIndex(arrLabels, arrData) {
 
   Chart.defaults.font.family = "Jost";
   const GraphIndex = new Chart(ctx, config);
+  checkGradient(gradients, GraphIndex);
 
   // чекбоксы навешивание слушателей
   function checkboxListen() {
@@ -416,7 +429,14 @@ function createGraphIndex(arrLabels, arrData) {
 
     for (let btn of productTypeArr) {
       btn.addEventListener("click", (e) =>
-        toggleProductType(e, GraphIndex, createCheckboxes, productTypeArr, checkboxListen)
+        toggleProductType(
+          e,
+          GraphIndex,
+          createCheckboxes,
+          productTypeArr,
+          checkboxListen,
+          gradients
+        )
       );
     }
   }
