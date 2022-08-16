@@ -1,3 +1,4 @@
+// список чекбоксов
 const checkboxContent = new Map();
 checkboxContent
   .set(1, [])
@@ -47,10 +48,95 @@ function createCheckboxes(tag, checkboxListen) {
   checkboxListen();
 }
 
-// ------------------график для ГЛАВНОЙ страницы price-index ------------------------------
-function createGraphIndex(arrLabels, arrData) {
-  const ctx = document.getElementById("myChart").getContext("2d");
+// функция чекбоксы переключения
+const hiddenGraph = (input, id, GraphIndex) => {
+  if (input.checked) {
+    GraphIndex.getDatasetMeta(id).hidden = false;
+    GraphIndex.update();
+  } else {
+    GraphIndex.getDatasetMeta(id).hidden = true;
+    GraphIndex.update();
+  }
+};
 
+// функция чекбоксы проверка на градиент
+function checkGradient(gradients, GraphIndex) {
+  const chartLinesArray = GraphIndex.config._config.data.datasets;
+
+  const idArr = chartLinesArray.map((item, index) => {
+    return { id: `#checkbox__${index + 1}`, ind: index, gradient: gradients[index] };
+  });
+  const checkedCount = [];
+
+  idArr.forEach((item) => {
+    const checkboxItem = document.querySelector(item.id);
+    checkboxItem && checkboxItem.checked && checkedCount.push(item);
+  });
+
+  if (checkedCount.length === 1) {
+    const { ind, gradient } = checkedCount[0];
+    console.log(checkedCount);
+
+    GraphIndex.data.datasets[ind].fill = true;
+    GraphIndex.data.datasets[ind].backgroundColor = gradient;
+    GraphIndex.update();
+  } else {
+    idArr.forEach((item) => {
+      GraphIndex.data.datasets[item.ind].fill = false;
+    });
+    GraphIndex.update();
+  }
+}
+
+//функция  табы преключение продукта
+function toggleProductType(e, GraphIndex, createCheckboxes, productTypeArr, checkboxListen) {
+  const productNum = e.target.getAttribute("data-product");
+  const periodNum = $('input[name="period__radio"]:checked').val();
+
+  $.ajax({
+    url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
+    // url: `https://liga-pm.ru/analytics/index.php?tag=${productNum}&dat=${periodNum}`,
+    type: "get",
+  }).done(function (res) {
+    res.dataset.forEach((item, ind) => {
+      if (item) {
+        GraphIndex.config.data.datasets[ind].data = res.dataset[ind];
+      }
+    });
+
+    GraphIndex.config.data.labels = res.labels;
+    GraphIndex.update();
+    createCheckboxes(productNum, checkboxListen);
+  });
+
+  for (let btn of productTypeArr) {
+    btn.classList.remove("active");
+  }
+  e.target.classList.add("active");
+}
+
+// функция radio преключение периода
+function togglePeriodType(e, GraphIndex) {
+  const productNum = document.querySelector(".product-tab.active").getAttribute("data-product");
+  const periodNum = e.target.value;
+
+  $.ajax({
+    url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&&dat=${periodNum}#st`,
+    type: "get",
+  }).done(function (res) {
+    res.dataset.forEach((item, ind) => {
+      if (item) {
+        GraphIndex.config.data.datasets[ind].data = res.dataset[ind];
+      }
+    });
+
+    GraphIndex.config.data.labels = res.labels;
+    GraphIndex.update();
+  });
+}
+
+// функция создания массива градиентов
+function createGradient(ctx) {
   // gradient 1
   const gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
   gradient1.addColorStop(0, "rgba(107, 87, 221, 0.5)");
@@ -75,6 +161,17 @@ function createGraphIndex(arrLabels, arrData) {
   const gradient5 = ctx.createLinearGradient(0, 0, 0, 400);
   gradient5.addColorStop(0, "rgba(253, 123, 30, 0.5)");
   gradient5.addColorStop(1, "rgba(253, 123, 30, 0)");
+
+  const gradients = [gradient1, gradient2, gradient3, gradient4, gradient5];
+
+  return gradients;
+}
+
+// ------------------график для ГЛАВНОЙ страницы price-index ------------------------------
+function createGraphIndex(arrLabels, arrData) {
+  const ctx = document.getElementById("myChart").getContext("2d");
+
+  const gradients = createGradient(ctx);
 
   const data = {
     labels: arrLabels,
@@ -268,135 +365,51 @@ function createGraphIndex(arrLabels, arrData) {
   Chart.defaults.font.family = "Jost";
   const GraphIndex = new Chart(ctx, config);
 
-  // чекбоксы переключения
-  const hiddenGraph = (input, id) => {
-    if (input.checked) {
-      GraphIndex.getDatasetMeta(id).hidden = false;
-      GraphIndex.update();
-    } else {
-      GraphIndex.getDatasetMeta(id).hidden = true;
-      GraphIndex.update();
-    }
-  };
-
-  // чекбоксы проверка на градиент
-  function checkGradient() {
-    const chartLinesArray = GraphIndex.config._config.data.datasets;
-    const gradients = [gradient1, gradient2, gradient3, gradient4, gradient5];
-
-    const idArr = chartLinesArray.map((item, index) => {
-      return { id: `#checkbox__${index + 1}`, ind: index, gradient: gradients[index] };
-    });
-    const checkedCount = [];
-
-    idArr.forEach((item) => {
-      const checkboxItem = document.querySelector(item.id);
-      checkboxItem && checkboxItem.checked && checkedCount.push(item);
-    });
-
-    if (checkedCount.length === 1) {
-      const { ind, gradient } = checkedCount[0];
-      console.log(checkedCount);
-
-      GraphIndex.data.datasets[ind].fill = true;
-      GraphIndex.data.datasets[ind].backgroundColor = gradient;
-      GraphIndex.update();
-    } else {
-      idArr.forEach((item) => {
-        GraphIndex.data.datasets[item.ind].fill = false;
-      });
-      GraphIndex.update();
-    }
-  }
-
   // чекбоксы навешивание слушателей
   function checkboxListen() {
     $("#checkbox__1").change(function () {
-      hiddenGraph(this, 0);
-      checkGradient();
+      hiddenGraph(this, 0, GraphIndex);
+      checkGradient(gradients, GraphIndex);
     });
     $("#checkbox__2").change(function () {
-      hiddenGraph(this, 1);
-      checkGradient();
+      hiddenGraph(this, 1, GraphIndex);
+      checkGradient(gradients, GraphIndex);
     });
     $("#checkbox__3").change(function () {
-      hiddenGraph(this, 2);
-      checkGradient();
+      hiddenGraph(this, 2, GraphIndex);
+      checkGradient(gradients, GraphIndex);
     });
     $("#checkbox__4").change(function () {
-      hiddenGraph(this, 3);
-      checkGradient();
+      hiddenGraph(this, 3, GraphIndex);
+      checkGradient(gradients, GraphIndex);
     });
     $("#checkbox__5").change(function () {
-      hiddenGraph(this, 4);
-      checkGradient();
+      hiddenGraph(this, 4, GraphIndex);
+      checkGradient(gradients, GraphIndex);
     });
   }
   checkboxListen();
 
   // табы для графика навешивание слушателей
-  const productTypeArr = document.querySelectorAll(".product-tab");
-  const periodArr = document.querySelectorAll(".period-tab");
-  const periodButtons = document.getElementsByName("period__radio");
+  function productAndPeriodLister() {
+    const productTypeArr = document.querySelectorAll(".product-tab");
+    const periodButtons = document.getElementsByName("period__radio");
 
-  for (let btn of periodButtons) {
-    btn.addEventListener("click", (e) => togglePeriodType(e));
-  }
-
-  for (let btn of productTypeArr) {
-    btn.addEventListener("click", (e) => toggleProductType(e));
-  }
-
-  // табы преключение продукта
-  function toggleProductType(e) {
-    const productNum = e.target.getAttribute("data-product");
-    const periodNum = $('input[name="period__radio"]:checked').val();
-
-    $.ajax({
-      url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
-      // url: `https://liga-pm.ru/analytics/index.php?tag=${productNum}&dat=${periodNum}`,
-      type: "get",
-    }).done(function (res) {
-      res.dataset.forEach((item, ind) => {
-        if (item) {
-          GraphIndex.config.data.datasets[ind].data = res.dataset[ind];
-        }
-      });
-
-      GraphIndex.config.data.labels = res.labels;
-      GraphIndex.update();
-      createCheckboxes(productNum, checkboxListen);
-    });
+    for (let btn of periodButtons) {
+      btn.addEventListener("click", (e) => togglePeriodType(e, GraphIndex));
+    }
 
     for (let btn of productTypeArr) {
-      btn.classList.remove("active");
+      btn.addEventListener("click", (e) =>
+        toggleProductType(e, GraphIndex, createCheckboxes, productTypeArr, checkboxListen)
+      );
     }
-    e.target.classList.add("active");
   }
-
-  // radio преключение периода
-  function togglePeriodType(e) {
-    const productNum = document.querySelector(".product-tab.active").getAttribute("data-product");
-    const periodNum = e.target.value;
-
-    $.ajax({
-      url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&&dat=${periodNum}#st`,
-      type: "get",
-    }).done(function (res) {
-      res.dataset.forEach((item, ind) => {
-        if (item) {
-          GraphIndex.config.data.datasets[ind].data = res.dataset[ind];
-        }
-      });
-
-      GraphIndex.config.data.labels = res.labels;
-      GraphIndex.update();
-    });
-  }
+  productAndPeriodLister();
 }
 // ------------------------------------------------------------------------------------
 
-// запуск основной функции createGraphIndex
+// запуск основной функции createGraphIndex (получение первоначальных данных)
 $().ready(() => {
   $.ajax({
     url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=1&dat=3`,
