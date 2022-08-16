@@ -75,7 +75,6 @@ function checkGradient(gradients, GraphIndex) {
 
   if (checkedCount.length === 1) {
     const { ind, gradient } = checkedCount[0];
-    console.log(checkedCount);
 
     GraphIndex.data.datasets[ind].fill = true;
     GraphIndex.data.datasets[ind].backgroundColor = gradient;
@@ -92,17 +91,32 @@ function checkGradient(gradients, GraphIndex) {
 function toggleProductType(e, GraphIndex, createCheckboxes, productTypeArr, checkboxListen) {
   const productNum = e.target.getAttribute("data-product");
   const periodNum = $('input[name="period__radio"]:checked').val();
+  checkboxListen();
 
   $.ajax({
-    url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
-    // url: `https://liga-pm.ru/analytics/index.php?tag=${productNum}&dat=${periodNum}`,
+    // url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
+    url: `https://liga-pm.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
     type: "get",
   }).done(function (res) {
+    // console.log("ajax", res);
+
+    // зануляем старые линии графика
+    GraphIndex.config.data.datasets.forEach((item, ind) => {
+      item.data = [];
+    });
+
     res.dataset.forEach((item, ind) => {
       if (item) {
         GraphIndex.config.data.datasets[ind].data = res.dataset[ind];
       }
     });
+
+    // воссатанавливаем скрытые чекбоксы после обновления
+    GraphIndex.getDatasetMeta(0).hidden = false;
+    GraphIndex.getDatasetMeta(1).hidden = false;
+    GraphIndex.getDatasetMeta(2).hidden = false;
+    GraphIndex.getDatasetMeta(3).hidden = false;
+    GraphIndex.getDatasetMeta(4).hidden = false;
 
     GraphIndex.config.data.labels = res.labels;
     GraphIndex.update();
@@ -121,7 +135,8 @@ function togglePeriodType(e, GraphIndex) {
   const periodNum = e.target.value;
 
   $.ajax({
-    url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&&dat=${periodNum}#st`,
+    // url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=${productNum}&&dat=${periodNum}#st`,
+    url: `https://liga-pm.ru/ajax/analytics-graphic.php?tag=${productNum}&dat=${periodNum}`,
     type: "get",
   }).done(function (res) {
     res.dataset.forEach((item, ind) => {
@@ -412,9 +427,11 @@ function createGraphIndex(arrLabels, arrData) {
 // запуск основной функции createGraphIndex (получение первоначальных данных)
 $().ready(() => {
   $.ajax({
-    url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=1&dat=3`,
+    // url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=1&dat=3`,
+    url: `https://liga-pm.ru/ajax/analytics-graphic.php?tag=1&dat=3`,
     type: "get",
   }).done(function (res) {
+    // console.log("1ajax", res);
     createGraphIndex(res.labels, res.dataset);
   });
 });
