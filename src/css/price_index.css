@@ -488,39 +488,35 @@
 
 .period__item {
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
 }
 
-.period__input {
-  z-index: 1;
+.period__input__fake {
   cursor: pointer;
   width: 0.8125rem;
   height: 0.8125rem;
   margin-right: 6px;
-  position: relative;
   border: 1px solid #828282;
-  border-radius: 0.8125rem;
+  border-radius: 50%;
   transition: border 0.2s ease-in;
+  padding: 0.125rem;
 }
 
-.period__input::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.period__input__fake span {
   display: block;
   background-color: transparent;
-  width: 70%;
-  height: 70%;
-  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   transition: background-color 0.2s ease-in;
 }
 
-.period__input:checked {
+.period__input:checked + .period__input__fake {
   border: 1px solid #379b42;
 }
 
-.period__input:checked::after {
+.period__input:checked + .period__input__fake span {
   background-color: #379b42;
 }
 
