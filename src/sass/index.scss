@@ -129,6 +129,10 @@
   transform: translateY(-50%);
 }
 
+.graph__text {
+  margin-bottom: 4.5rem;
+}
+
 .customCheckbox__1:checked + label::before {
   background-color: rgba(154, 87, 221, 1);
   border: 1px solid transparent;
