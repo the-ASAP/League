@@ -243,7 +243,8 @@ function createGraphCross(arrLabels, arrData) {
     const periodNum = e.target.getAttribute("data-period");
 
     $.ajax({
-      url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?dat=${periodNum}`,
+      // url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?dat=${periodNum}`,
+      url: `https://liga-pm.ru/ajax/analytics-graphic.php?dat=${periodNum}`,
       type: "post",
       data: { period: e.target.id },
     }).done(function (res) {
@@ -266,8 +267,13 @@ function createGraphCross(arrLabels, arrData) {
 }
 
 $().ready(() => {
-  if (document.getElementById("Graph-Cross")) {
-    createGraphCross(crossData.labels, crossData.data);
-  }
+  $.ajax({
+    // url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=1&dat=3`,
+    url: `https://liga-pm.ru/ajax/analytics-graphic.php?&dat=2`,
+    type: "get",
+  }).done(function (res) {
+    // console.log("1ajax", res);
+    createGraphCross(res.labels, res.datasetsCross);
+  });
 });
 // --------------------------------------------------------------------------

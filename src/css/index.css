@@ -1311,6 +1311,31 @@
   transform: translateY(-50%);
 }
 
+.customCheckbox__1:checked + label::before {
+  background-color: #9a57dd;
+  border: 1px solid transparent;
+}
+
+.customCheckbox__2:checked + label::before {
+  background-color: #20dab8;
+  border: 1px solid transparent;
+}
+
+.customCheckbox__3:checked + label::before {
+  background-color: #fec859;
+  border: 1px solid transparent;
+}
+
+.customCheckbox__4:checked + label::before {
+  background-color: #1172d3;
+  border: 1px solid transparent;
+}
+
+.customCheckbox__5:checked + label::before {
+  background-color: #fd7b1e;
+  border: 1px solid transparent;
+}
+
 @media (max-width: 768px) {
   .post:nth-child(3n+2) {
     margin: 0;
