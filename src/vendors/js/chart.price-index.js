@@ -1,8 +1,8 @@
-function scrollToElement() {
-  let top = document.getElementById("anchor").getBoundingClientRect().top - 40;
-  window.scrollTo(0, top);
-  console.log(top);
-}
+// function scrollToElement() {
+//   let top = document.getElementById("anchor").getBoundingClientRect().top - 40;
+//   window.scrollTo(0, top);
+//   console.log(top);
+// }
 
 // список чекбоксов
 const checkboxContent = new Map();
@@ -460,6 +460,4 @@ $().ready(() => {
     // console.log("1ajax", res);
     createGraphIndex(res.labels, res.dataset);
   });
-
-  setTimeout(scrollToElement, 500);
 });
