@@ -244,7 +244,8 @@ function createGraphCross(arrLabels, arrData) {
 
     $.ajax({
       // url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?dat=${periodNum}`,
-      url: `https://liga-pm.ru/ajax/analytics-graphic.php?dat=${periodNum}`,
+      url: `https://liga-pm.ru/ajax/cross-index-graphic.php?dat=${periodNum}`,
+
       type: "post",
       data: { period: e.target.id },
     }).done(function (res) {
@@ -269,7 +270,7 @@ function createGraphCross(arrLabels, arrData) {
 $().ready(() => {
   $.ajax({
     // url: `http://liga.asap-lp.ru/ajax/analytics-graphic.php?tag=1&dat=3`,
-    url: `https://liga-pm.ru/ajax/analytics-graphic.php?&dat=2`,
+    url: `https://liga-pm.ru/ajax/cross-index-graphic.php?&dat=2`,
     type: "get",
   }).done(function (res) {
     // console.log("1ajax", res);
