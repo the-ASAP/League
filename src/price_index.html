@@ -28,430 +28,435 @@
         <div class="price-index__container">
           @import "sidebar.html"
           <div class="content">
-            <h1 class="price-index__title">Ценовой индекс на основные виды ЦБП РФ</h1>
-
-            <div class="chart">
-              <div class="controller">
-                <div class="controller__group">
-                  <div class="controller__period">
-                    <p class="controller__title">Период</p>
-                    <div class="period__group">
-                      <div class="period__item">
-                        <input
-                          class="period__input"
-                          type="radio"
-                          id="month"
-                          name="period__radio"
-                          value="1"
-                        />
-                        <label class="period__input__fake" for="month"><span></span></label>
-                        <label for="month">Месяц</label>
-                      </div>
-                      <div class="period__item">
-                        <input
-                          class="period__input"
-                          type="radio"
-                          id="six-months"
-                          name="period__radio"
-                          value="2"
-                        />
-                        <label class="period__input__fake" for="six-months"><span></span></label>
-                        <label for="six-months">Полгода</label>
-                      </div>
-                      <div class="period__item">
-                        <input
-                          class="period__input"
-                          type="radio"
-                          id="year"
-                          name="period__radio"
-                          value="3"
-                          checked
-                        />
-                        <label class="period__input__fake" for="year"><span></span></label>
-                        <label for="year">Год</label>
+            <div class="content__top">
+              <h1 class="price-index__title">Ценовой индекс на основные виды ЦБП РФ</h1>
+              <div class="chart">
+                <div class="controller">
+                  <div class="controller__group">
+                    <div class="controller__period">
+                      <p class="controller__title">Период</p>
+                      <div class="period__group">
+                        <div class="period__item">
+                          <input
+                            class="period__input"
+                            type="radio"
+                            id="month"
+                            name="period__radio"
+                            value="1"
+                          />
+                          <label class="period__input__fake" for="month"><span></span></label>
+                          <label for="month">Месяц</label>
+                        </div>
+                        <div class="period__item">
+                          <input
+                            class="period__input"
+                            type="radio"
+                            id="six-months"
+                            name="period__radio"
+                            value="2"
+                          />
+                          <label class="period__input__fake" for="six-months"><span></span></label>
+                          <label for="six-months">Полгода</label>
+                        </div>
+                        <div class="period__item">
+                          <input
+                            class="period__input"
+                            type="radio"
+                            id="year"
+                            name="period__radio"
+                            value="3"
+                            checked
+                          />
+                          <label class="period__input__fake" for="year"><span></span></label>
+                          <label for="year">Год</label>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="controller__product_type">
-                    <p class="controller__title">Вид продукции</p>
-                    <div class="tab__group">
-                      <button href="#" class="controller__tab product-tab active" data-product="1">
-                        Макулатура МС-5Б
-                      </button>
-                      <button href="#" class="controller__tab product-tab" data-product="2">
-                        Гофропродукция
-                      </button>
-                      <button href="#" class="controller__tab product-tab" data-product="3">
-                        Тарные картоны
-                      </button>
+                    <div class="controller__product_type">
+                      <p class="controller__title">Вид продукции</p>
+                      <div class="tab__group">
+                        <button
+                          href="#"
+                          class="controller__tab product-tab active"
+                          data-product="1"
+                        >
+                          Макулатура МС-5Б
+                        </button>
+                        <button href="#" class="controller__tab product-tab" data-product="2">
+                          Гофропродукция
+                        </button>
+                        <button href="#" class="controller__tab product-tab" data-product="3">
+                          Тарные картоны
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="product__checkboxes">
-                <!-- контент вставляется динамически chart-price-index.js -->
-              </div>
-              <!-- <canvas id="myChart" class="canvas"></canvas> -->
-              <canvas id="myChart" class="canvas"></canvas>
-              <button class="chart__download_btn">
-                <p>Скачать</p>
+                <div class="product__checkboxes">
+                  <!-- контент вставляется динамически chart-price-index.js -->
+                </div>
+                <!-- <canvas id="myChart" class="canvas"></canvas> -->
+                <canvas id="myChart" class="canvas"></canvas>
+                <button class="chart__download_btn">
+                  <p>Скачать</p>
 
-                <svg
-                  width="15"
-                  height="17"
-                  viewBox="0 0 15 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M13.603 16.2083H0.906864C0.408089 16.2083 0 15.8002 0 15.3014C0 14.8027 0.408089 14.3946 0.906864 14.3946H13.603C14.1017 14.3946 14.5098 14.8027 14.5098 15.3014C14.5098 15.8002 14.1017 16.2083 13.603 16.2083Z"
-                    fill="white"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M1.81373 13.4878V15.3016C1.81373 15.8003 1.40564 16.2084 0.906864 16.2084C0.408089 16.2084 0 15.8003 0 15.3016V13.4878C0 12.9891 0.408089 12.581 0.906864 12.581C1.40564 12.581 1.81373 12.9891 1.81373 13.4878Z"
-                    fill="white"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M14.509 13.4878V15.3016C14.509 15.8003 14.101 16.2084 13.6022 16.2084C13.1034 16.2084 12.6953 15.8003 12.6953 15.3016V13.4878C12.6953 12.9891 13.1034 12.581 13.6022 12.581C14.101 12.581 14.509 12.9891 14.509 13.4878Z"
-                    fill="white"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.25522 11.674C7.07294 11.674 6.89066 11.6187 6.73377 11.509L3.10631 8.95707C2.69641 8.66868 2.59756 8.1028 2.88595 7.69381C3.17433 7.2839 3.7393 7.18505 4.14921 7.47344L7.23799 9.64628L10.3386 7.32108C10.7394 7.0191 11.308 7.10162 11.6082 7.50246C11.9092 7.90329 11.8276 8.47189 11.4268 8.77207L7.79934 11.4927C7.63882 11.6133 7.44657 11.674 7.25522 11.674Z"
-                    fill="white"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.2555 9.86024C6.754 9.86024 6.34863 9.45396 6.34863 8.95337V1.69846C6.34863 1.19787 6.754 0.791595 7.2555 0.791595C7.75699 0.791595 8.16236 1.19787 8.16236 1.69846V8.95337C8.16236 9.45396 7.75699 9.86024 7.2555 9.86024Z"
-                    fill="white"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <a name="anchor"></a>
-
-            <div class="weekly-index">
-              <h3 class="weekly-index__title">Еженедельный индекс</h3>
-              <span>31.01.22 – 06.02.22</span>
-            </div>
-
-            <div class="cards__container">
-              <div class="cards__row">
-                <h3 class="cards__row__title">Макулатура</h3>
-                <ul class="cards__list">
-                  <li class="card card__green">
-                    <div class="card__heading">
-                      <h4 class="card__title">
-                        Макулатура марки <br />
-                        МС-5Б
-                      </h4>
-                      <div class="card__trend card__trend__up">
-                        <svg
-                          width="16"
-                          height="14"
-                          viewBox="0 0 16 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
-                            fill="#0E7421"
-                          />
-                        </svg>
-                        <p class="card__trend__percent">68%</p>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <div class="last_week">
-                        <div class="last_week__price">18 480 ₽</div>
-                        <div class="last_week__desc">прошлая</div>
-                      </div>
-                      <div class="this_week">
-                        <div class="this_week__price">19 230 ₽</div>
-                        <div class="this_week__desc">эта неделя</div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="cards__row">
-                <h3 class="cards__row__title">Бумага для гофрирования</h3>
-                <ul class="cards__list">
-                  <li class="card card__yellow">
-                    <div class="card__heading">
-                      <h4 class="card__title">Гофрокартон товарный бурый Т-23</h4>
-                      <div class="card__trend card__trend__up">
-                        <svg
-                          width="16"
-                          height="14"
-                          viewBox="0 0 16 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
-                            fill="#0E7421"
-                          />
-                        </svg>
-                        <p class="card__trend__percent">68%</p>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <div class="last_week">
-                        <div class="last_week__price">18 480 ₽</div>
-                        <div class="last_week__desc">прошлая</div>
-                      </div>
-                      <div class="this_week">
-                        <div class="this_week__price">19 230 ₽</div>
-                        <div class="this_week__desc">эта неделя</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="card card__yellow">
-                    <div class="card__heading">
-                      <h4 class="card__title">Гофроящик 4-х клапанный бурый Т-23</h4>
-                      <div class="card__trend card__trend__up">
-                        <svg
-                          width="16"
-                          height="14"
-                          viewBox="0 0 16 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
-                            fill="#0E7421"
-                          />
-                        </svg>
-                        <p class="card__trend__percent">68%</p>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <div class="last_week">
-                        <div class="last_week__price">18 480 ₽</div>
-                        <div class="last_week__desc">прошлая</div>
-                      </div>
-                      <div class="this_week">
-                        <div class="this_week__price">19 230 ₽</div>
-                        <div class="this_week__desc">эта неделя</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="card card__yellow">
-                    <div class="card__heading">
-                      <h4 class="card__title">Крахмал</h4>
-                      <div class="card__trend card__trend__up">
-                        <svg
-                          width="16"
-                          height="14"
-                          viewBox="0 0 16 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
-                            fill="#0E7421"
-                          />
-                        </svg>
-                        <p class="card__trend__percent">68%</p>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <div class="last_week">
-                        <div class="last_week__price">18 480 ₽</div>
-                        <div class="last_week__desc">прошлая</div>
-                      </div>
-                      <div class="this_week">
-                        <div class="this_week__price">19 230 ₽</div>
-                        <div class="this_week__desc">эта неделя</div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="cards__row">
-                <h3 class="cards__row__title">Тарные картоны</h3>
-                <ul class="cards__list">
-                  <li class="card card__blue">
-                    <div class="card__heading">
-                      <h4 class="card__title">Тестлайнер К1 <br />140-150 г/м2</h4>
-                      <div class="card__trend card__trend__up">
-                        <svg
-                          width="16"
-                          height="14"
-                          viewBox="0 0 16 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
-                            fill="#0E7421"
-                          />
-                        </svg>
-                        <p class="card__trend__percent">68%</p>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <div class="last_week">
-                        <div class="last_week__price">18 480 ₽</div>
-                        <div class="last_week__desc">прошлая</div>
-                      </div>
-                      <div class="this_week">
-                        <div class="this_week__price">19 230 ₽</div>
-                        <div class="this_week__desc">эта неделя</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="card card__blue">
-                    <div class="card__heading">
-                      <h4 class="card__title">
-                        Топ-лайнер (белёный) <br />
-                        К1 140-150 г/м2
-                      </h4>
-                      <div class="card__trend card__trend__up">
-                        <svg
-                          width="16"
-                          height="14"
-                          viewBox="0 0 16 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
-                            fill="#0E7421"
-                          />
-                        </svg>
-                        <p class="card__trend__percent">68%</p>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <div class="last_week">
-                        <div class="last_week__price">18 480 ₽</div>
-                        <div class="last_week__desc">прошлая</div>
-                      </div>
-                      <div class="this_week">
-                        <div class="this_week__price">19 230 ₽</div>
-                        <div class="this_week__desc">эта неделя</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="card card__blue">
-                    <div class="card__heading">
-                      <h4 class="card__title">
-                        Крафтлайнер К1 <br />
-                        140-150 г/м2
-                      </h4>
-                      <div class="card__trend card__trend__up">
-                        <svg
-                          width="16"
-                          height="14"
-                          viewBox="0 0 16 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
-                            fill="#0E7421"
-                          />
-                        </svg>
-                        <p class="card__trend__percent">68%</p>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <div class="last_week">
-                        <div class="last_week__price">18 480 ₽</div>
-                        <div class="last_week__desc">прошлая</div>
-                      </div>
-                      <div class="this_week">
-                        <div class="this_week__price">19 230 ₽</div>
-                        <div class="this_week__desc">эта неделя</div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="card card__blue">
-                    <div class="card__heading">
-                      <h4 class="card__title">
-                        Флютинг целлюлозный <br />
-                        Б1 110-112 г/м2
-                      </h4>
-                      <div class="card__trend card__trend__up">
-                        <svg
-                          width="16"
-                          height="14"
-                          viewBox="0 0 16 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
-                            fill="#0E7421"
-                          />
-                        </svg>
-                        <p class="card__trend__percent">68%</p>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <div class="last_week">
-                        <div class="last_week__price">18 480 ₽</div>
-                        <div class="last_week__desc">прошлая</div>
-                      </div>
-                      <div class="this_week">
-                        <div class="this_week__price">19 230 ₽</div>
-                        <div class="this_week__desc">эта неделя</div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li class="card card__blue">
-                    <div class="card__heading">
-                      <h4 class="card__title">
-                        Флютинг макулатурный <br />
-                        Б1 110-112г/м2
-                      </h4>
-                      <div class="card__trend card__trend__up">
-                        <svg
-                          width="16"
-                          height="14"
-                          viewBox="0 0 16 14"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
-                            fill="#0E7421"
-                          />
-                        </svg>
-                        <p class="card__trend__percent">68%</p>
-                      </div>
-                    </div>
-                    <div class="card__body">
-                      <div class="last_week">
-                        <div class="last_week__price">18 480 ₽</div>
-                        <div class="last_week__desc">прошлая</div>
-                      </div>
-                      <div class="this_week">
-                        <div class="this_week__price">19 230 ₽</div>
-                        <div class="this_week__desc">эта неделя</div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                  <svg
+                    width="15"
+                    height="17"
+                    viewBox="0 0 15 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.603 16.2083H0.906864C0.408089 16.2083 0 15.8002 0 15.3014C0 14.8027 0.408089 14.3946 0.906864 14.3946H13.603C14.1017 14.3946 14.5098 14.8027 14.5098 15.3014C14.5098 15.8002 14.1017 16.2083 13.603 16.2083Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.81373 13.4878V15.3016C1.81373 15.8003 1.40564 16.2084 0.906864 16.2084C0.408089 16.2084 0 15.8003 0 15.3016V13.4878C0 12.9891 0.408089 12.581 0.906864 12.581C1.40564 12.581 1.81373 12.9891 1.81373 13.4878Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.509 13.4878V15.3016C14.509 15.8003 14.101 16.2084 13.6022 16.2084C13.1034 16.2084 12.6953 15.8003 12.6953 15.3016V13.4878C12.6953 12.9891 13.1034 12.581 13.6022 12.581C14.101 12.581 14.509 12.9891 14.509 13.4878Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.25522 11.674C7.07294 11.674 6.89066 11.6187 6.73377 11.509L3.10631 8.95707C2.69641 8.66868 2.59756 8.1028 2.88595 7.69381C3.17433 7.2839 3.7393 7.18505 4.14921 7.47344L7.23799 9.64628L10.3386 7.32108C10.7394 7.0191 11.308 7.10162 11.6082 7.50246C11.9092 7.90329 11.8276 8.47189 11.4268 8.77207L7.79934 11.4927C7.63882 11.6133 7.44657 11.674 7.25522 11.674Z"
+                      fill="white"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.2555 9.86024C6.754 9.86024 6.34863 9.45396 6.34863 8.95337V1.69846C6.34863 1.19787 6.754 0.791595 7.2555 0.791595C7.75699 0.791595 8.16236 1.19787 8.16236 1.69846V8.95337C8.16236 9.45396 7.75699 9.86024 7.2555 9.86024Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
-            @import "feedbackForm.html"
+
+            <div class="content__bottom">
+              <a name="anchor"></a>
+              <div class="weekly-index">
+                <h3 class="weekly-index__title">Еженедельный индекс</h3>
+                <span>31.01.22 – 06.02.22</span>
+              </div>
+              <div class="cards__container">
+                <div class="cards__row">
+                  <h3 class="cards__row__title">Макулатура</h3>
+                  <ul class="cards__list">
+                    <li class="card card__green">
+                      <div class="card__heading">
+                        <h4 class="card__title">
+                          Макулатура марки <br />
+                          МС-5Б
+                        </h4>
+                        <div class="card__trend card__trend__up">
+                          <svg
+                            width="16"
+                            height="14"
+                            viewBox="0 0 16 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                              fill="#0E7421"
+                            />
+                          </svg>
+                          <p class="card__trend__percent">68%</p>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <div class="last_week">
+                          <div class="last_week__price">18 480 ₽</div>
+                          <div class="last_week__desc">прошлая</div>
+                        </div>
+                        <div class="this_week">
+                          <div class="this_week__price">19 230 ₽</div>
+                          <div class="this_week__desc">эта неделя</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="cards__row">
+                  <h3 class="cards__row__title">Бумага для гофрирования</h3>
+                  <ul class="cards__list">
+                    <li class="card card__yellow">
+                      <div class="card__heading">
+                        <h4 class="card__title">Гофрокартон товарный бурый Т-23</h4>
+                        <div class="card__trend card__trend__up">
+                          <svg
+                            width="16"
+                            height="14"
+                            viewBox="0 0 16 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                              fill="#0E7421"
+                            />
+                          </svg>
+                          <p class="card__trend__percent">68%</p>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <div class="last_week">
+                          <div class="last_week__price">18 480 ₽</div>
+                          <div class="last_week__desc">прошлая</div>
+                        </div>
+                        <div class="this_week">
+                          <div class="this_week__price">19 230 ₽</div>
+                          <div class="this_week__desc">эта неделя</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card card__yellow">
+                      <div class="card__heading">
+                        <h4 class="card__title">Гофроящик 4-х клапанный бурый Т-23</h4>
+                        <div class="card__trend card__trend__up">
+                          <svg
+                            width="16"
+                            height="14"
+                            viewBox="0 0 16 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                              fill="#0E7421"
+                            />
+                          </svg>
+                          <p class="card__trend__percent">68%</p>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <div class="last_week">
+                          <div class="last_week__price">18 480 ₽</div>
+                          <div class="last_week__desc">прошлая</div>
+                        </div>
+                        <div class="this_week">
+                          <div class="this_week__price">19 230 ₽</div>
+                          <div class="this_week__desc">эта неделя</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card card__yellow">
+                      <div class="card__heading">
+                        <h4 class="card__title">Крахмал</h4>
+                        <div class="card__trend card__trend__up">
+                          <svg
+                            width="16"
+                            height="14"
+                            viewBox="0 0 16 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                              fill="#0E7421"
+                            />
+                          </svg>
+                          <p class="card__trend__percent">68%</p>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <div class="last_week">
+                          <div class="last_week__price">18 480 ₽</div>
+                          <div class="last_week__desc">прошлая</div>
+                        </div>
+                        <div class="this_week">
+                          <div class="this_week__price">19 230 ₽</div>
+                          <div class="this_week__desc">эта неделя</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="cards__row">
+                  <h3 class="cards__row__title">Тарные картоны</h3>
+                  <ul class="cards__list">
+                    <li class="card card__blue">
+                      <div class="card__heading">
+                        <h4 class="card__title">Тестлайнер К1 <br />140-150 г/м2</h4>
+                        <div class="card__trend card__trend__up">
+                          <svg
+                            width="16"
+                            height="14"
+                            viewBox="0 0 16 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                              fill="#0E7421"
+                            />
+                          </svg>
+                          <p class="card__trend__percent">68%</p>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <div class="last_week">
+                          <div class="last_week__price">18 480 ₽</div>
+                          <div class="last_week__desc">прошлая</div>
+                        </div>
+                        <div class="this_week">
+                          <div class="this_week__price">19 230 ₽</div>
+                          <div class="this_week__desc">эта неделя</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card card__blue">
+                      <div class="card__heading">
+                        <h4 class="card__title">
+                          Топ-лайнер (белёный) <br />
+                          К1 140-150 г/м2
+                        </h4>
+                        <div class="card__trend card__trend__up">
+                          <svg
+                            width="16"
+                            height="14"
+                            viewBox="0 0 16 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                              fill="#0E7421"
+                            />
+                          </svg>
+                          <p class="card__trend__percent">68%</p>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <div class="last_week">
+                          <div class="last_week__price">18 480 ₽</div>
+                          <div class="last_week__desc">прошлая</div>
+                        </div>
+                        <div class="this_week">
+                          <div class="this_week__price">19 230 ₽</div>
+                          <div class="this_week__desc">эта неделя</div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="card card__blue">
+                      <div class="card__heading">
+                        <h4 class="card__title">
+                          Крафтлайнер К1 <br />
+                          140-150 г/м2
+                        </h4>
+                        <div class="card__trend card__trend__up">
+                          <svg
+                            width="16"
+                            height="14"
+                            viewBox="0 0 16 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                              fill="#0E7421"
+                            />
+                          </svg>
+                          <p class="card__trend__percent">68%</p>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <div class="last_week">
+                          <div class="last_week__price">18 480 ₽</div>
+                          <div class="last_week__desc">прошлая</div>
+                        </div>
+                        <div class="this_week">
+                          <div class="this_week__price">19 230 ₽</div>
+                          <div class="this_week__desc">эта неделя</div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="card card__blue">
+                      <div class="card__heading">
+                        <h4 class="card__title">
+                          Флютинг целлюлозный <br />
+                          Б1 110-112 г/м2
+                        </h4>
+                        <div class="card__trend card__trend__up">
+                          <svg
+                            width="16"
+                            height="14"
+                            viewBox="0 0 16 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                              fill="#0E7421"
+                            />
+                          </svg>
+                          <p class="card__trend__percent">68%</p>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <div class="last_week">
+                          <div class="last_week__price">18 480 ₽</div>
+                          <div class="last_week__desc">прошлая</div>
+                        </div>
+                        <div class="this_week">
+                          <div class="this_week__price">19 230 ₽</div>
+                          <div class="this_week__desc">эта неделя</div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="card card__blue">
+                      <div class="card__heading">
+                        <h4 class="card__title">
+                          Флютинг макулатурный <br />
+                          Б1 110-112г/м2
+                        </h4>
+                        <div class="card__trend card__trend__up">
+                          <svg
+                            width="16"
+                            height="14"
+                            viewBox="0 0 16 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13L7 13ZM8.70711 0.292894C8.31658 -0.0976307 7.68342 -0.0976307 7.29289 0.292894L0.928933 6.65685C0.538409 7.04738 0.538408 7.68054 0.928933 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292894ZM9 13L9 1L7 1L7 13L9 13Z"
+                              fill="#0E7421"
+                            />
+                          </svg>
+                          <p class="card__trend__percent">68%</p>
+                        </div>
+                      </div>
+                      <div class="card__body">
+                        <div class="last_week">
+                          <div class="last_week__price">18 480 ₽</div>
+                          <div class="last_week__desc">прошлая</div>
+                        </div>
+                        <div class="this_week">
+                          <div class="this_week__price">19 230 ₽</div>
+                          <div class="this_week__desc">эта неделя</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              @import "feedbackForm.html"
+            </div>
           </div>
         </div>
       </div>

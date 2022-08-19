@@ -6,8 +6,15 @@
 
 .content {
   flex: 1 1 auto;
+}
+
+.content__top {
+  padding: 1.8125rem 1.875rem 3.9375rem 1.875rem;
   background-color: #f9f9fb;
-  padding: 1.8125rem 1.875rem 5.625rem 1.875rem;
+}
+
+.content__bottom {
+  padding: 1.875rem 1.875rem 5.625rem 1.875rem;
 }
 
 .price-index {
@@ -19,7 +26,7 @@
     font-size: 1.5rem;
     line-height: 2.125rem;
     font-weight: 600;
-    color: rgba(15, 14, 14, 1);
+    color: #252525;
     margin-bottom: 1.875rem;
   }
 }
@@ -43,7 +50,7 @@
 
   &__title {
     font-size: 1.125rem;
-    color: #000;
+    color: #252525;
     font-weight: 500;
     line-height: 1.625rem;
     margin-bottom: 1.25rem;
@@ -55,38 +62,6 @@
   display: flex;
   align-items: center;
 }
-
-// .period__input {
-//   cursor: pointer;
-//   width: 0.8125rem;
-//   height: 0.8125rem;
-//   margin-right: 6px;
-//   position: relative;
-//   border: 1px solid #828282;
-//   border-radius: 50%;
-//   transition: border 0.2s ease-in;
-
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     display: block;
-//     background-color: transparent;
-//     width: 0.5rem;
-//     height: 0.5rem;
-//     border-radius: 50%;
-//     transition: background-color 0.2s ease-in;
-//   }
-// }
-
-// .period__input:checked {
-//   border: 1px solid #379b42;
-//   &::after {
-//     background-color: #379b42;
-//   }
-// }
 
 .period__input__fake {
   cursor: pointer;
@@ -126,7 +101,7 @@
 }
 
 .controller__tab {
-  color: #000;
+  color: #252525;
   font-size: 0.875rem;
   padding: 5px 0.9375rem;
   border: 1px solid #828282;
@@ -146,7 +121,6 @@
 .chart {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3.9375rem;
 }
 
 .product__checkboxes {
@@ -307,7 +281,7 @@
   margin-bottom: 2.6875rem;
 }
 .card__title {
-  color: #000;
+  color: #252525;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.5rem;
@@ -395,9 +369,12 @@
     }
   }
 
-  .content {
-    padding: 1.25rem 1.25rem 3.4375rem 1.25rem;
+  .content__top {
     background-color: #fff;
+    padding: 1.25rem 1.25rem 4.0625rem 1.25rem;
+  }
+  .content__bottom {
+    padding: 1.25rem 1.25rem 3.4375rem 1.25rem;
   }
 
   .period__group {

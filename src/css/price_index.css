@@ -446,8 +446,15 @@
 
 .content {
   flex: 1 1 auto;
+}
+
+.content__top {
+  padding: 1.8125rem 1.875rem 3.9375rem 1.875rem;
   background-color: #f9f9fb;
-  padding: 1.8125rem 1.875rem 5.625rem 1.875rem;
+}
+
+.content__bottom {
+  padding: 1.875rem 1.875rem 5.625rem 1.875rem;
 }
 
 .price-index__container {
@@ -458,7 +465,7 @@
   font-size: 1.5rem;
   line-height: 2.125rem;
   font-weight: 600;
-  color: #0f0e0e;
+  color: #252525;
   margin-bottom: 1.875rem;
 }
 
@@ -480,7 +487,7 @@
 
 .controller__title {
   font-size: 1.125rem;
-  color: #000;
+  color: #252525;
   font-weight: 500;
   line-height: 1.625rem;
   margin-bottom: 1.25rem;
@@ -531,7 +538,7 @@
 }
 
 .controller__tab {
-  color: #000;
+  color: #252525;
   font-size: 0.875rem;
   padding: 5px 0.9375rem;
   border: 1px solid #828282;
@@ -551,7 +558,6 @@
 .chart {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3.9375rem;
 }
 
 .product__checkboxes {
@@ -718,7 +724,7 @@
 }
 
 .card__title {
-  color: #000;
+  color: #252525;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.5rem;
@@ -885,9 +891,13 @@
     margin-bottom: 1.4375rem;
   }
 
-  .content {
-    padding: 1.25rem 1.25rem 3.4375rem 1.25rem;
+  .content__top {
     background-color: #fff;
+    padding: 1.25rem 1.25rem 4.0625rem 1.25rem;
+  }
+
+  .content__bottom {
+    padding: 1.25rem 1.25rem 3.4375rem 1.25rem;
   }
 
   .period__group {
