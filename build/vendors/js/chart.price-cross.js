@@ -169,10 +169,10 @@ function createGraphCross(arrLabels, arrData) {
 
             if (
               window.innerWidth < 500 &&
-              (currentTooltip == keys[keys.length - 1] ||
-                currentTooltip == keys[keys.length - 2] ||
-                currentTooltip == keys[keys.length - 3] ||
-                currentTooltip == keys[keys.length - 4])
+              currentTooltip == keys[keys.length - 1]
+              // currentTooltip == keys[keys.length - 2] ||
+              // currentTooltip == keys[keys.length - 3] ||
+              // currentTooltip == keys[keys.length - 4]
             ) {
               tooltipEl.style.left = chart.canvas.offsetLeft + context.tooltip.caretX - 100 + "px";
             }
@@ -185,11 +185,11 @@ function createGraphCross(arrLabels, arrData) {
           grid: {
             borderWidth: 0,
           },
-          suggestedMin: 10000,
-          suggestedMax: 70000,
+          suggestedMin: 0,
+          suggestedMax: 6,
           ticks: {
             callback: function (value) {
-              return value / 1000 + " K \u00A0\u00A0\u00A0\u00A0";
+              return value + " \u00A0\u00A0\u00A0\u00A0";
             },
           },
         },
@@ -249,8 +249,8 @@ function createGraphCross(arrLabels, arrData) {
       type: "post",
       data: { period: e.target.id },
     }).done(function (res) {
-      console.log(periodNum);
-      console.log(res);
+      console.log("ajax cross ", res);
+
       GraphCross.config.data.datasets[0].data = res.datasetsCross[0];
       GraphCross.config.data.datasets[1].data = res.datasetsCross[1];
       GraphCross.config.data.datasets[2].data = res.datasetsCross[2];
@@ -273,7 +273,7 @@ $().ready(() => {
     url: `https://liga-pm.ru/ajax/cross-index-graphic.php?&dat=2`,
     type: "get",
   }).done(function (res) {
-    // console.log("1ajax", res);
+    console.log("1ajax cross ", res);
     createGraphCross(res.labels, res.datasetsCross);
   });
 });
