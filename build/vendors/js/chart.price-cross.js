@@ -138,12 +138,12 @@ function createGraphCross(arrLabels, arrData) {
                 }
 
                 // Set Text
-                tooltipText = `<span class='tooltip__title'> ${curValue} ₽ 
+                tooltipText = `<span class='tooltip__title'> ${curValue} 
                <span class='tooltip__diff ${dynamics}'>  ${diffPercent.toFixed(1)}% 
                </span>
                 </span>`;
               } else if (currentIndex === 0) {
-                tooltipText = `<span class='tooltip__title'> ${curValue} ₽ </span>`;
+                tooltipText = `<span class='tooltip__title'> ${curValue}  </span>`;
               }
 
               innerHtml += tooltipText;
