@@ -806,6 +806,12 @@
   color: #4f4f4f;
 }
 
+.anchor-feedback {
+  margin: 0;
+  height: 0;
+  width: 0;
+}
+
 .tooltip {
   background-color: #252525;
   border-radius: 4px;
