@@ -91,6 +91,12 @@ p {
   }
 }
 
+.anchor-feedback {
+  margin: 0;
+  height: 0;
+  width: 0;
+}
+
 @media (max-width: 768px) {
   .price-index-reliability .wrapper {
     width: 100%;

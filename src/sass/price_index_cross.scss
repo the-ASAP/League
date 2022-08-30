@@ -390,6 +390,13 @@ p {
     background-color: #ecf9ee;
   }
 }
+
+.anchor-feedback {
+  margin: 0;
+  height: 0;
+  width: 0;
+}
+
 @media (max-width: 768px) {
   .price-index-cross .wrapper {
     width: 100%;
